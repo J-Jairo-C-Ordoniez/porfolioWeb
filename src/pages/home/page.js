@@ -1,5 +1,9 @@
-export default function Home() {
+import Header from "../../ui/organisms/Header"
+
+export default function Home({ logo, links }) {
     return (
-        <h2>Hola</h2>
+        <div>
+            <Header logo={logo} links={links} />
+        </div>
     )
 }
