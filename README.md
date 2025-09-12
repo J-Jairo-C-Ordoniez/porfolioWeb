@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Profesional – Next.js + Atomic Design + FSD Adaptado  
 
-## Getting Started
+Este proyecto es un **portfolio web moderno, modular y escalable**, desarrollado con **Next.js 14**, **TailwindCSS** y una arquitectura híbrida basada en **Atomic Design (70%)** y **Feature-Sliced Design adaptado (30%)**.  
 
-First, run the development server:
+Su objetivo es ser una **carta de presentación profesional**, fácil de mantener y optimizar para SEO, con espacio para crecer en el tiempo (blog, proyectos, contacto).  
+
+## 📐 Arquitectura del Proyecto  
+- **Atomic Design**
+    - ATOMOS → Botón, Link, Input, Icono
+    - MOLECULAS → CardProyecto
+    - ORGANISMOS → Bloques UI reutilizables (Header, Footer, TestimoniosList)
+    - PLANTILLAS → Estructura visual base sin datos
+    - PÁGINAS → Plantilla + datos reales
+
+- **FSD Adaptado**
+    - /inicio → TemplateInicio + PageInicio
+    - /proyectos → TemplateProyectos + PageProyectos
+    - /testimonios → TemplateTestimonios + PageTestimonios
+    - /sobre-mi → TemplateSobreMi + PageSobreMi
+    - /habilidades → TemplateHabilidades + PageHabilidades
+    - /blog → TemplateBlog + PageBlog
+    - /contacto → TemplateContacto + PageContacto
+
+
+---
+
+## 🛠️ Stack Tecnológico  
+
+- **Framework principal**: [Next.js 14 (App Router)](https://nextjs.org/) → SEO + performance + server components.  
+- **Estilos**: [TailwindCSS](https://tailwindcss.com/) → rapidez, minimalismo y consistencia.  
+- **Animaciones**: [Framer Motion](https://www.framer.com/motion/) → transiciones suaves y modernas.  
+- **Arquitectura UI**: Atomic Design + FSD adaptado.  
+- **Estado**: React Hooks (`useState`, `useContext`).  
+  - Futuro: [Zustand](https://github.com/pmndrs/zustand) para features interactivas más pesadas.  
+- **Contenido**:  
+  - Blog con **MDX** → markdown + componentes React.  
+  - Datos iniciales en **JSON** (proyectos, testimonios).  
+- **SEO / Marketing**:  
+  - Metadata API de Next.js (title, description, og:image).  
+  - Sitemap + robots.txt con plugin oficial.  
+  - Rich Snippets (schema.org) para proyectos y artículos.  
+- **Infraestructura**:  
+  - Hosting en [Vercel](https://vercel.com/).  
+  - Dominio personalizado (.dev / .tech recomendado).  
+
+---
+
+## 📂 Estructura de Carpetas  
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/src
+ ├─ /app                     # App Router (Next.js)
+ │   ├─ layout.tsx           # Layout global (Header, Footer, ThemeProvider)
+ │   ├─ page.tsx             # Home (/inicio → por defecto en Next.js)
+ │   ├─ /proyectos
+ │   │   ├─ page.tsx
+ │   │   └─ [id]/page.tsx
+ │   └─ /blog
+ │       ├─ page.tsx
+ │       └─ [slug]/page.tsx
+ │
+ ├─ /ui                      # ATOMIC DESIGN
+ │   ├─ /atoms
+ │   ├─ /molecules
+ │   └─ /organisms
+ │
+ ├─ /sections                # FSD Adaptado
+ │   ├─ /inicio
+ │   ├─ /proyectos
+ │   ├─ /sobre-mi
+ │   ├─ /habilidades
+ │   ├─ /blog
+ │   └─ /contacto
+ │
+ ├─ /shared                  # Hooks, utils, config, constants
+ ├─ /content                 # Blog (MDX), proyectos.json, testimonios.json
+ └─ /styles                  # globals.css, tailwind.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Clonar el repositorio
+git clone https://github.com/J-Jairo-C-Ordoniez/portfolioWeb
+cd portfolio-next
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Instalar dependencias
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Ejecutar en modo desarrollo
+npm run dev
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build de producción
+npm run build
+npm run start
