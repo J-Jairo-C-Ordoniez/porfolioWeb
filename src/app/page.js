@@ -1,9 +1,6 @@
-import Image from "next/image";
-
+import Home from "./pages/home/page";
 export default function Home() {
   return (
-    <div>
-      Hola Mundo
-    </div>
+    <Home />
   );
 }
