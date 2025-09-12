@@ -1,9 +1,11 @@
+import Hero from "@/ui/organisms/Hero"
 import Header from "../../ui/organisms/Header"
 
-export default function Home({ logo, links }) {
+export default function Home({ home }) {
     return (
         <div>
-            <Header logo={logo} links={links} />
+            <Header logo={home.logo} links={home.links} />
+            <Hero user={home.user} cta={home.cta} />
         </div>
     )
 }

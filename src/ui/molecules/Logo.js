@@ -1,10 +1,10 @@
-import Picture from "../atoms/Picture";
+import PictureLogo from "../atoms/PictureLogo";
 import TitleMain from "../atoms/TitleMain";
 
 export default function Logo({ name, logo }) {
     return (
-        <div>
-            <Picture {...logo} />
+        <div className="flex items-center gap-4">
+            <PictureLogo {...logo} />
             <TitleMain title={name} />
         </div>
     )

@@ -11,7 +11,7 @@ export default function Menu({ links }) {
 
     return (
         <nav>
-            <ul>
+            <ul className="flex gap-4 items-center">
                 {li}
             </ul>
         </nav>

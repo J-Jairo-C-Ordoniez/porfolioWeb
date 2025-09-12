@@ -3,7 +3,7 @@ import Logo from "../molecules/Logo";
 
 export default function Header({logo, links}) {
     return (
-        <header>
+        <header className="bg-[#A4A296] flex justify-between items-center py-4 px-30 rounded-t-sm">
             <Logo {...logo} />
             <Menu links={links} />
         </header>

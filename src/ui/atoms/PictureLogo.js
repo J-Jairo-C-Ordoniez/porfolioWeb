@@ -1,15 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Picture({ src, alt, size }) {
+export default function PictureLogo({ src, alt, size }) {
     return (
-        <div className="hover:scale-105 transition-scale duration-300 ease-in-out">
+        <Link
+            href="/"
+            className="hover:scale-120 transition-scale duration-300 ease-in-out"
+        >
             <Image
                 src={src}
                 alt={alt}
                 layout="responsive"
                 width={size}
                 height={size} />
-        </div>
+        </Link>
     )
 }
