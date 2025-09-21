@@ -1,62 +1,34 @@
+import Testimonials from "@/pages/testimonials/page";
+import homeContent from "../content/home";
+import projectsContent from "../content/projects";
+import testimonialsContent from "../content/testimonials";
+import aboutContent from "../content/about";
+import skillsContent from "../content/skills";
+import blogContent from "../content/blog";
+
+import Header from "../ui/organisms/Header";
 import Start from "../pages/home/Page";
-
-
-const home = {
-  id: "home",
-  user: {
-    name: "Jhon Jairo",
-    lastName: "Cordoba Ordoñez",
-    rol: "DESARROLLADOR WEB",
-    description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
-    photo: {
-      src: "/photo.png",
-      alt: "Foto de perfil de Jhon",
-      size: 200,
-    }
-  },
-
-  cta: [
-    {
-      id: 1,
-      href: "#projects",
-      text: "Ver Proyectos",
-      icon: 'ChartNoAxesGantt',
-      type: "linear"
-    },
-
-    {
-      id: 2,
-      href: "#contact",
-      text: "Habemos",
-      icon: 'MessagesSquare',
-      type: "backdrop"
-    }
-  ],
-
-  links: [
-    { id: 1, href: "#home", text: "Inicio" },
-    { id: 2, href: "#projects", text: "Proyectos" },
-    { id: 3, href: "#testimonies", text: "Testimonios" },
-    { id: 4, href: "#about", text: "Sobre mí" },
-    { id: 5, href: "#skills", text: "Habilidades" },
-    { id: 6, href: "#blog", text: "Blog" },
-    { id: 7, href: "#contact", text: "Contacto" },
-  ],
-
-  logo: {
-    name: "J Jairo C Ordoñez",
-    logo: {
-      src: "/logo.svg",
-      alt: "Logo de mi portafolio",
-      size: 100,
-    }
-  }
-}
+import Projects from "../pages/projects/page";
+import About from "../pages/about/page";
+import Skills from "../pages/skills/page";
+import Blog from "../pages/blog/page";
+import Contact from "../pages/contact/page";
+import Footer from "../ui/organisms/Footer";
 
 export default function Home() {
   return (
     <>
-      <Start home={home} />
+      <Header logo={homeContent.logo} links={homeContent.links} />
+      <main>
+        <Start home={homeContent} />
+        <Projects projects={projectsContent} />
+        <Testimonials testimonials={testimonialsContent} />
+        <About about={aboutContent} />
+        <Skills skills={skillsContent} />
+        <Blog blog={blogContent} />
+        <Contact />
+      </main>
+      <Footer />
     </>
   );
 }

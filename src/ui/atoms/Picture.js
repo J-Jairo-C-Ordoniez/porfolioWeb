@@ -1,9 +1,11 @@
 import Image from "next/image"
-import Link from "next/link"
 
-export default function Picture({ src, alt, size }) {
+export default function Picture({ src, alt, size='100' }) {
     return (
-        <div className="hover:scale-105 transition-scale duration-300 ease-in-out">
+        <div 
+            className="hover:scale-105 transition-scale duration-300 ease-in-out"
+            style={{width: `${size}%`}}
+        >
             <Image
                 src={src}
                 alt={alt}

@@ -5,7 +5,7 @@ export default function BtnBackdrop({ children, href, target = "_self" }) {
         <Link
             href={href}
             target={target}
-            className="flex items-center gap-5 border-4 border-[#121212] text-[#121212] font-bold py-4 px-6 rounded-full hover:scale-105 transition-transform duration-300"
+            className="flex items-center gap-5 border-4 border-[#262626] text-[#e0e0e0] font-bold py-3 px-6 rounded-full hover:scale-105 transition-transform duration-300"
         >
             {children}
         </Link>

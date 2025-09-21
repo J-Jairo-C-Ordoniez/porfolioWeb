@@ -6,20 +6,17 @@ import CTAs from "../molecules/CTAs"
 
 export default function Hero({ user, cta }) {
     return (
-        <section 
-            id="home" 
-            className="flex justify-between bg-[#A4A296] rounded-b-sm px-30 pt-30 pb-20 h-[90vh]"
+        <section className="flex justify-between rounded-b-sm px-30 pt-30 pb-20 h-[90vh]"
         >
-            <article className="grid items-end w-[40%] h-[100%]">
+            <article className="grid items-end w-[50%] h-[100%]">
                 <div className="flex flex-col gap-5">
-                    <Name 
-                        name={user.name} 
-                        lastName={user.lastName} 
+                    <Name
+                        name={user.name}
+                        lastName={user.lastName}
                     />
 
-                    <TitleSpace 
-                        title={user.rol} 
-                        color="#4B473C" 
+                    <TitleSpace
+                        title={user.rol}
                     />
                 </div>
 
@@ -28,14 +25,18 @@ export default function Hero({ user, cta }) {
                 </div>
             </article>
 
-            <article className="w-[30%]">
-                <Picture {...user.photo} />
+            <article className="w-[25%]">
+                <Picture 
+                    src={user.photo.src} 
+                    alt={user.photo.alt} 
+                    size={user.photo.size}
+                />
             </article>
 
-            <article className="w-[30%] py-[20%] px-10">
-                <Text 
-                    text={user.description} 
-                    color="#343025" 
+            <article className="w-[25%] py-[20%]">
+                <Text
+                    text={user.description}
+                    fontSize="1.2rem"
                 />
             </article>
         </section>
