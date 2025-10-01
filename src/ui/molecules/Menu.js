@@ -1,10 +1,16 @@
+import Icon from "../atoms/Icon";
 import Link from "../atoms/Link";
+import Text from "../atoms/Text";
 
 export default function Menu({ links }) {
     const li = links.map(link => (
         <li key={link.id}>
             <Link href={link.href}>
-                {link.text}
+                {
+                    link.icon
+                        ? <Icon name={link.icon} />
+                        : link.text
+                }
             </Link>
         </li>
     ));

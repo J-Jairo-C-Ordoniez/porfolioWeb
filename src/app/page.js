@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Header logo={homeContent.logo} links={homeContent.links} />
-      <main>
+      <main className="px-4">
         <Start home={homeContent} />
         <Projects projects={projectsContent} />
         <Testimonials testimonials={testimonialsContent} />

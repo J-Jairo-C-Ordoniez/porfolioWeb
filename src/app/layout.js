@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${poppins.variable} ${inter.variable}`}>
-      <body className="bg-[#121212] text-white scroll-smooth p-4">
+      <body className="bg-[#121212] text-white scroll-smooth p-0 m-0 h-[100vh]">
         <MotionLayout>
           {children}
         </MotionLayout>
