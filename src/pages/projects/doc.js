@@ -13,6 +13,6 @@ export default function Doc({ project }) {
                 project={project}
                 setItem={setItem}
             />
-            : <div>No project selected</div>
+            : <div>project selected</div>
     )
 }

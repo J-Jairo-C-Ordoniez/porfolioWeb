@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function BtnBackdrop({ children, href, target = "_self" }) {
+export default function BtnLinear({ children, href, target = "_self" }) {
     return (
         <Link
             href={href}

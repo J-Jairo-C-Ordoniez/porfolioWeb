@@ -1,16 +1,150 @@
 export const bloodyyueDoc = {
     id: "bloodyyue",
-    title: "BloodyYue",
-    logo: '/projects/project1/logo.png',
-    description: 'Portal web concebido como un catálogo digital moderno, accesible y altamente escalable.',
+
     menu: [
         { id: 1, text: "GitHub", href: "https://github.com/miusuario/bloodyyue", icon: "Github" },
+        { id: 2, text: "Ver Demo", href: "https://bloodyyue.com", icon: "ExternalLink" }
     ],
 
-    links: [
-        { id: 1, text: "Ver Demo", href: "https://bloodyyue.com", icon: "ExternalLink" },
-        { id: 2, text: "Revisar", href: "https://github.com/miusuario/bloodyyue", icon: "Github" }
-    ],
+    hero: {
+        title: "BloodyYue",
+        logo: '/projects/project1/logo.png',
+        description: 'Portal web concebido como un catálogo digital moderno, accesible y altamente escalable.',
+        link: { id: 1, text: "Revisar Documentación", icon: "FileText" },
+
+        sections: [
+            {
+                id: 1,
+                title: 'Arquitectura',
+                text: 'BloodyYue implementa una arquitectura basada en MVC para el backend y Atomic Design en el frontend.',
+                description: 'El patrón MVC asegura un backend ordenado y mantenible, mientras que Atomic Design facilita la reutilización de componentes en el frontend, garantizando escalabilidad y consistencia visual.',
+                src: {
+                    id: 1,
+                    type: 'img',
+                    alt: 'Arquitectura',
+                    content: '/projects/project1/architecture.png'  
+                },
+                labels: [
+                    { id: 1, text: "Escalable", color: "#4CAF50" },
+                    { id: 2, text: "Modular", color: "#2196F3" }
+                ]
+            },
+            {
+                id: 2,
+                title: 'Base de Datos',
+                text: 'El sistema usa MySQL con relaciones controladas mediante stored procedures para optimizar rendimiento.',
+                description: 'Se implementaron procedimientos almacenados para manejar relaciones como etiquetas en posts, evitando múltiples queries y asegurando mejor rendimiento en operaciones complejas.',
+                src: {
+                    id: 1,
+                    type: 'code',
+                    language: 'sql',
+                    content: `
+CREATE TABLE users (
+  userId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  email VARCHAR(50) UNIQUE,
+  password VARCHAR(255),
+  avatar VARCHAR(255),
+  pitchVideo VARCHAR(255),
+  biography TEXT,
+  details TEXT,
+  rolId INT UNSIGNED,
+  country VARCHAR(255),
+  isVerified BOOLEAN DEFAULT false,
+    codeExpiresAt TIMESTAMP,
+  code VARCHAR(255),
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX iUsers (name, email),
+  FOREIGN KEY (rolId) REFERENCES roles(rolId)
+);
+
+-- ...`
+                },
+                labels: [
+                    { id: 1, text: "Performance", color: "#009688" },
+                    { id: 2, text: "Backend", color: "#795548" },
+                    { id: 3, text: "SQL", color: "#607D8B" }
+                ]
+            },
+            {
+                id: 3,
+                title: 'UI & UX',
+                text: 'Interfaz diseñada con Next.js y TailwindCSS, con un estilo minimalista y accesible, inspirado en Medium y la documentación de Next.',
+                description: 'La experiencia de usuario se centra en claridad y velocidad. El diseño minimalista evita distracciones y asegura compatibilidad en todos los dispositivos, reforzado con accesibilidad ARIA.',
+                src: {
+                    id: 1,
+                    type: 'img',
+                    alt: 'Diseño UI & UX - BloodyYue',
+                    content: '/projects/project1/ui.jpeg'
+                },
+                labels: [
+                    { id: 1, text: "Accesibilidad", color: "#8BC34A" },
+                    { id: 2, text: "Minimalista", color: "#E91E63" }
+                ]
+            },
+            {
+                id: 4,
+                title: 'Escalabilidad',
+                text: 'Pensado como un catálogo digital moderno y escalable, soporta integración de múltiples proyectos y documentación en Markdown.',
+                description: 'Cada proyecto puede tener su propia documentación en formato Markdown, lo que permite crecer sin modificar la base del sistema, ofreciendo modularidad y soporte para documentación avanzada.',
+                src: {
+                    id: 1,
+                    type: 'code',
+                    language: 'javascript',
+                    content: `
+const architecture = { 
+    backend: "MVC", 
+    frontend: "Atomic Design" 
+};`
+                },
+                labels: [
+                    { id: 1, text: "Modular", color: "#2196F3" },
+                    { id: 2, text: "Documentación", color: "#FFC107" }
+                ]
+            },
+            {
+                id: 5,
+                title: 'Integración',
+                text: 'El sistema permite enlazar demos, repositorios y documentación técnica de cada proyecto para consulta directa.',
+                description: 'Cada card de proyecto está conectada con su demo en vivo, repositorio en GitHub y página de documentación, facilitando la exploración tanto para usuarios como para desarrolladores.',
+                src: {
+                    id: 1,
+                    type: 'code',
+                    language: 'javascript',
+                    content: `
+const architecture = { 
+    backend: "MVC", 
+    frontend: "Atomic Design" 
+};`
+                },
+                labels: [
+                    { id: 1, text: "DevOps", color: "#00BCD4" },
+                    { id: 2, text: "Colaborativo", color: "#FFEB3B" }
+                ]
+            },
+            {
+                id: 6,
+                title: 'Algoritmos',
+                text: 'BloodyYue implementa lógicas clave como filtrado dinámico de proyectos y búsqueda optimizada por etiquetas.',
+                description: 'El filtrado avanzado asegura que los usuarios encuentren rápidamente proyectos por categorías o etiquetas. Estas búsquedas son dinámicas y optimizadas para grandes volúmenes de datos.',
+                src: {
+                    id: 1,
+                    type: 'code',
+                    language: 'javascript',
+                    content: `
+const architecture = { 
+    backend: "MVC", 
+    frontend: "Atomic Design" 
+};`
+                },
+                labels: [
+                    { id: 1, text: "Optimización", color: "#009688" },
+                    { id: 2, text: "Creativo", color: "#E91E63" }
+                ]
+            }
+        ]
+    },
 
     news: {
         title: 'Novedades',
