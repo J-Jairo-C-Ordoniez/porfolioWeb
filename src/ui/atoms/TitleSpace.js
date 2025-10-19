@@ -1,6 +1,6 @@
-export default function TitleSpace({ title, color = '#b3b3b3', fontSize = '.9rem' }) {
+export default function TitleSpace({ title, color = '#b3b3b3', fontSize = '.9rem', textAlign = 'left' }) {
     return (
-        <h2 className="font-semibold tracking-widest pl-2" style={{ color, fontSize }}>
+        <h2 className="font-semibold" style={{ color, fontSize, textAlign }}>
             {title}
         </h2>
     )

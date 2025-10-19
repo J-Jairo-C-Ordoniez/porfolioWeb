@@ -1,18 +1,20 @@
 "use client"
 
+import DocProject from "@/ui/organisms/DocProject"
 import HomeProject from "../../ui/organisms/HomeProject"
 import { useState } from "react"
 
 export default function Doc({ project }) {
-    const [open, setOpen] = useState(null)
-    const [item, setItem] = useState(null)
+    const [route, setRoute] = useState('home')
 
     return (
-        !item 
+        !route || route === 'home' 
             ? <HomeProject
                 project={project}
-                setItem={setItem}
+                setRoute={setRoute}
             />
-            : <div>project selected</div>
+            : <DocProject
+                documentation={project.documentation}
+            />
     )
 }

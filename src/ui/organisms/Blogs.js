@@ -33,9 +33,4 @@ export default function Blogs({ blogs }) {
             )}
         </section>
     )
-    return (
-        <section className="">
-            {blogsCards}
-        </section>
-    )
 }

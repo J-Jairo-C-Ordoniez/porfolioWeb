@@ -2,15 +2,29 @@ export const bloodyyueDoc = {
     id: "bloodyyue",
 
     menu: [
-        { id: 1, text: "GitHub", href: "https://github.com/miusuario/bloodyyue", icon: "Github" },
+        { id: 1, text: "Repositorio", href: "https://github.com/miusuario/bloodyyue", icon: "Github" },
         { id: 2, text: "Ver Demo", href: "https://bloodyyue.com", icon: "ExternalLink" }
     ],
 
     hero: {
         title: "BloodyYue",
         logo: '/projects/project1/logo.png',
-        description: 'Portal web concebido como un catálogo digital moderno, accesible y altamente escalable.',
-        link: { id: 1, text: "Revisar Documentación", icon: "FileText" },
+        description: 'Portal web concebido como catálogo digital moderno, accesible y altamente escalable. Esta documentación muestra la arquitectura, decisiones técnicas y resultados del proyecto.',
+        Btn: { id: 1, text: "Revisar Documentación", icon: "FileText" },
+        link: { id: 2, text: "Ver Galería", icon: "Image", href: '#gallery' },
+
+        tecnologies: [
+            { id: 1, text: "Next.js", color: "#607D8B" },
+            { id: 2, text: "TailwindCSS", color: "#38BDF8" },
+            { id: 3, text: "Node.js", color: "#8CC84B" },
+            { id: 4, text: "MySQL", color: "#FF5722" }
+        ],
+
+        gallery: [
+            { id: 1, title: "Pantalla principal", label: "UI", src: "/projects/project1/gallery/hero.jpg" },
+            { id: 2, title: "Detalle de proyecto", label: "Docs", src: "/projects/project1/gallery/studio.jpg" },
+            { id: 3, title: "Arquitectura simplificada", label: "Arquitectura", src: "/projects/project1/gallery/architecture.jpg" }
+        ],
 
         sections: [
             {
@@ -22,7 +36,7 @@ export const bloodyyueDoc = {
                     id: 1,
                     type: 'img',
                     alt: 'Arquitectura',
-                    content: '/projects/project1/architecture.png'  
+                    content: '/projects/project1/architecture.jpg'
                 },
                 labels: [
                     { id: 1, text: "Escalable", color: "#4CAF50" },
@@ -40,25 +54,10 @@ export const bloodyyueDoc = {
                     language: 'sql',
                     content: `
 CREATE TABLE users (
-  userId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  userId INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50),
   email VARCHAR(50) UNIQUE,
   password VARCHAR(255),
-  avatar VARCHAR(255),
-  pitchVideo VARCHAR(255),
-  biography TEXT,
-  details TEXT,
-  rolId INT UNSIGNED,
-  country VARCHAR(255),
-  isVerified BOOLEAN DEFAULT false,
-    codeExpiresAt TIMESTAMP,
-  code VARCHAR(255),
-  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    INDEX iUsers (name, email),
-  FOREIGN KEY (rolId) REFERENCES roles(rolId)
-);
-
 -- ...`
                 },
                 labels: [
@@ -76,7 +75,7 @@ CREATE TABLE users (
                     id: 1,
                     type: 'img',
                     alt: 'Diseño UI & UX - BloodyYue',
-                    content: '/projects/project1/ui.jpeg'
+                    content: '/projects/project1/ui.jpg'
                 },
                 labels: [
                     { id: 1, text: "Accesibilidad", color: "#8BC34A" },
@@ -93,10 +92,12 @@ CREATE TABLE users (
                     type: 'code',
                     language: 'javascript',
                     content: `
-const architecture = { 
-    backend: "MVC", 
-    frontend: "Atomic Design" 
-};`
+async function Talks({ confId }) {
+ return (
+    <ConferenceLayout conf={conf}>
+    </ConferenceLayout>
+  );
+}`
                 },
                 labels: [
                     { id: 1, text: "Modular", color: "#2196F3" },
@@ -133,10 +134,11 @@ const architecture = {
                     type: 'code',
                     language: 'javascript',
                     content: `
-const architecture = { 
-    backend: "MVC", 
-    frontend: "Atomic Design" 
-};`
+import { useState } from 'react';
+
+function SearchableVideoList({ videos }) {
+  return ();
+}`
                 },
                 labels: [
                     { id: 1, text: "Optimización", color: "#009688" },
@@ -146,147 +148,955 @@ const architecture = {
         ]
     },
 
-    news: {
-        title: 'Novedades',
-        menu: [],
-        content: {}
-    },
-
-    presentation: {
-        title: 'Introducción a BloodyYue',
-        menu: [
-            { id: 'intro', text: 'Presentación' }
-        ],
-
-        content: {
-            intro: {
-                data: {
-                    title: '¿Qué es Bloodyyue?',
-                    description: 'Bloodyyue es un portal web concebido como un catálogo digital moderno, accesible y altamente escalable. El proyecto nace de la necesidad de fusionar un diseño minimalista y elegante con un rendimiento técnico superior. Busca ofrecer una experiencia de usuario rápida y fluida, manteniendo siempre una arquitectura de código limpia y modular que facilite su crecimiento y mantenimiento a futuro.',
+    documentation: [
+        {
+            id: 'start',
+            title: 'Inicio',
+            items: [
+                {
+                    id: 1,
+                    title: 'BloodyYue',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'BloodyYue es una plataforma web creativa inspirada en la estética digital y el ritmo de la música electrónica, que combina diseño minimalista con una arquitectura sólida basada en Next.js y MySQL. Su objetivo es ofrecer una experiencia visual y fluida donde el arte digital, la música y la interacción se fusionan.',
+                        },
+                        {
+                            id: 2,
+                            type: 'quote',
+                            value: '“El minimalismo no es la ausencia de complejidad, sino el control absoluto sobre ella.”'
+                        },
+                    ]
                 },
-
-                properties: {
-                    title: 'Propiedades Clave',
-                    description: 'Estas son las características fundamentales que definen a Bloodyyue y lo diferencian de otros portales web:',
-                    items: [
-                        { id: 1, title: 'Accesibilidad:', text: 'Uso de etiquetas ARIA, estructura semántica y validadores personalizados y un diseño responsivo para garantizar usabilidad en distintos dispositivos y usuarios.' },
-                        { id: 2, title: 'Arquitectura modular y escalable:', text: 'Atomic Design en frontend (atoms, molecules, organisms, templates, pages) y MVC en backend, separando lógica de negocio, rutas y controladores.' },
-                        { id: 3, title: 'Optimización SEO y rendimiento:', text: 'Next.js con SSR/SSG para indexación eficiente y carga rápida con lazy loading, imágenes optimizadas y compresión.' },
-                        { id: 4, title: 'Documentación integrada:', text: 'Documentación estilo Next.js (clara y técnica para devs) y presentación de proyectos estilo Medium (narrativa amigable y visual).' }
+                {
+                    id: 2,
+                    title: "Problema",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Las plataformas de exhibición de arte digital suelen carecer de personalización, rendimiento y coherencia visual. Además, no ofrecen una experiencia fluida entre contenido visual y narrativo.',
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Solucion",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'BloodyYue propone una solución basada en componentes reutilizables, diseño atómico y un backend optimizado que gestiona obras, artistas y contenido multimedia de forma estructurada. El frontend usa SSR (Server Side Rendering) para mejorar el rendimiento y SEO.',
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Resultado",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Una plataforma moderna, visualmente coherente, con navegación fluida, tiempos de carga reducidos y una interfaz inspirada en el minimalismo de Avicii: simple, elegante y precisa.',
+                        }
                     ]
                 }
-            }
-        }
-    },
-
-    context: {
-        title: 'Contexto y Fundamentación',
-        menu: [
-            { id: 'problema', text: 'Planteamiento del Problema' },
-            { id: 'requerimientos', text: 'Requerimientos' },
-            { id: 'objetivos', text: 'Objetivos' }
-        ],
-
-        content: {
-            problema: 'El principal desafío en el mundo de los catálogos digitales es el pobre rendimiento y la falta de accesibilidad. Muchos portales existentes son lentos, difíciles de navegar en móviles y no están optimizados para motores de búsqueda, lo que resulta en una mala experiencia de usuario y una baja visibilidad orgánica. El cliente/usuario final necesitaba una solución que atacara directamente estos puntos débiles, demandando: Un portal totalmente accesible desde cualquier dispositivo, optimización para SEO que garantice un buen posicionamiento y una velocidad de carga casi instantánea sin sacrificar la calidad visual.',
-
-            requerimientos: {
-                title: 'Para garantizar el éxito del proyecto, se definieron los siguientes requerimientos clave, tanto funcionales como no funcionales:',
-                list: [
-                    { id: 1, title: 'Compatibilidad (Mobile-First)', text: 'El diseño y desarrollo deben priorizar la experiencia en dispositivos móviles y luego adaptarse a pantallas más grandes.' },
-                    { id: 2, title: 'Rendimiento (Performance)', text: 'Lograr tiempos de carga mínimos, implementando técnicas como Lazy Loading para imágenes y apuntando a excelentes métricas en Core Web Vitals.' },
-                    { id: 3, title: 'SEO Optimizado', text: 'Utilizar Server-Side Rendering (SSR) y Static Site Generation (SSG) para una indexación perfecta por parte de los motores de búsqueda.' },
-                    { id: 4, title: 'Accesibilidad (a11y)', text: 'Cumplir con los estándares de accesibilidad web, usando etiquetas ARIA, una estructura HTML semántica y un diseño de UI inclusivo.' },
-                    { id: 5, title: 'Escalabilidad', text: 'Construir sobre una arquitectura flexible basada en Atomic Design en el frontend y MVC en el backend para facilitar futuras expansiones.' },
-                ]
-            },
-
-            objetivos: {
-                title: 'Se establecieron objetivos claros y medibles para guiar el desarrollo:',
-                main: 'Crear un portal web de catálogo digital que sea **accesible, minimalista y esté completamente optimizado para SEO**, estableciendo un nuevo estándar de calidad en su nicho.',
-                second: [
-                    { id: 1, text: 'Garantizar una compatibilidad impecable en los principales navegadores y dispositivos.' },
-                    { id: 2, text: 'Mantener una **arquitectura modular y escalable** que soporte el crecimiento a largo plazo.' },
-                    { id: 3, text: 'Aplicar las **mejores prácticas de UI/UX** para asegurar una experiencia de usuario intuitiva y agradable.' }
-                ]
-            }
-        }
-    },
-
-    strategy: {
-        title: 'Estrategia y Desarrollo',
-        menu: [
-            { id: 'arquitectura', text: 'Arquitectura' },
-            { id: 'tecnologias', text: 'Tecnologías y Herramientas' },
-            { id: 'soluciones', text: 'Soluciones Específicas' }
-        ],
-
-        content: {
-            arquitectura: {
-                title: '¿Qué arquitectura se usa?',
-                description: 'La arquitectura fue la piedra angular del proyecto, diseñada para cumplir con los objetivos de rendimiento, escalabilidad y mantenibilidad.',
-                items: [
-                    { id: 1, title: 'Frontend (JAMstack)', text: 'Se optó por Next.js por su capacidad híbrida de renderizado (SSR/SSG), crucial para el SEO y la velocidad. La interfaz se construyó bajo la metodología de Atomic Design, que nos permitió crear un sistema de componentes reutilizables y consistentes, desde los átomos (botones, inputs) hasta las plantillas completas.' },
-                    { id: 2, title: 'Backend (MVC)', text: 'Para el servidor, se implementó una API REST con Node.js y Express, siguiendo el patrón arquitectónico Modelo-Vista-Controlador (MVC). Esta separación de responsabilidades (lógica de negocio, datos y presentación) hace que el código sea increíblemente organizado y fácil de depurar.' },
-                    { id: 3, title: 'Base de Datos (Relacional)', text: 'Se eligió MySQL por su robustez y fiabilidad. El uso de procedimientos almacenados permitió encapsular la lógica de negocio compleja directamente en la base de datos, optimizando las consultas.' }
-                ]
-            },
-
-            tecnologias: {
-                title: 'El stack tecnológico fue seleccionado cuidadosamente para maximizar la eficiencia y el rendimiento',
-                items: [
-                    { id: 1, title: 'Framework Frontend', text: 'Next.js (React)' },
-                    { id: 2, title: 'Estilos', text: 'TailwindCSS' },
-                    { id: 3, title: 'Backend', text: 'Node.js + Express' },
-                    { id: 4, title: 'Base de Datos', text: 'MySQL' },
-                    { id: 5, title: 'Hosting', text: 'Vercel (Frontend) y Railway (Backend)' },
-                    { id: 6, title: 'Control de Versiones', text: 'Git y GitHub' }
-                ]
-            },
-
-            soluciones: {
-                title: 'Se implementaron varias soluciones técnicas para abordar los desafíos clave del proyecto',
-                items: [
-                    { id: 1, title: 'SEO Avanzado', text: 'Se crearon metadatos dinámicos para cada página del catálogo y un script para generar el sitemap.xml automáticamente, asegurando que todo el contenido fuera visible para los motores de búsqueda.' },
-                    { id: 2, title: 'Performance Web', text: 'Se optimizaron todas las imágenes al formato WebP, se aplicó Lazy Loading de forma nativa con Next.js y se comprimieron los activos para reducir el tiempo de carga.' },
-                    { id: 3, title: 'Gestión de Estado', text: 'En lugar de una librería pesada, se utilizó la Context API de React junto con hooks personalizados para gestionar el estado global de la aplicación (como el carrito o la sesión de usuario), manteniendo la ligereza.' }
-                ]
-            }
-        }
-    },
-
-    result: {
-        title: 'Resultado y Evidencias',
-        menu: [
-            { id: 'resultado-final', text: 'Resultado Final' },
-            { id: 'metricas', text: 'Métricas y Pruebas' },
-            { id: 'aprendizajes', text: 'Aprendizajes y Reflexión' },
-            { id: 'codigo-clave', text: 'Código Clave' }
-        ],
-
-        content: {
-            result: {
-                title: 'Resultado final',
-                subtitle: 'El resultado es un portal web que no solo cumple, sino que supera las expectativas iniciales. Se logró un producto digital:',
-                items: [
-                    { id: 1, title: 'Excepcionalmente Rápido', text: 'Con una carga inicial casi instantánea y transiciones fluidas.' },
-                    { id: 2, title: 'Accesible', text: 'Garantizando una experiencia inclusiva para todos los usuarios.' },
-                    { id: 3, title: 'Estéticamente Elegante', text: 'Con un diseño minimalista que pone el foco en el contenido.' },
-                    { id: 4, title: 'Robusto y Escalable', text: 'Preparado para crecer y adaptarse a futuras necesidades sin problemas.' }
-                ]
-            },
-
-            merics: {
-                title: 'Metricas',
-                description: 'Las pruebas de rendimiento validaron el éxito de la arquitectura y las optimizaciones implementadas.Se alcanzó y mantuvo de forma consistente una puntuación en Lighthouse de 95/100 o superior en la categoría de Performance. Además, se realizaron pruebas de compatibilidad manuales en los principales navegadores(Chrome, Firefox, Safari) y dispositivos para asegurar una experiencia de usuario consistente.'
-            },
-
-            aprendizajes: {
-                title: 'Aprendisaje',
-                description: 'Este proyecto fue un campo de aprendizaje inmenso.La mayor lección fue la confirmación de que ** una buena arquitectura inicial ahorra incontables horas de trabajo a futuro**.La implementación de Atomic Design y MVC desde el día uno fue clave para mantener la organización a medida que el proyecto crecía. Si tuviera que hacer algo diferente, sería integrar un sistema de pruebas automatizadas(como Jest o Cypress) desde una etapa más temprana para agilizar el proceso de QA y garantizar una mayor robustez en cada despliegue.'
-            }
+            ]
         },
-    }
+
+        {
+            id: 'changelog',
+            title: 'Registro de Cambios',
+            items: [
+                {
+                    id: 1,
+                    title: "Versión 1.0.0",
+                    content: [
+                        {
+                            id: 1,
+                            type: "text",
+                            value: `
+        Se definió el diseño atómico y se crearon los primeros componentes base, estableciendo una estructura modular
+        que permite escalar el proyecto sin perder coherencia. El objetivo fue crear un entorno limpio, con componentes
+        reutilizables, tipografía fluida y variables globales que definieran la estética general.`
+                        },
+                        {
+                            id: 2,
+                            type: "table",
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Tipo" },
+                                    { id: 2, title: "Fecha" },
+                                    { id: 3, title: "Autor" },
+                                    { id: 4, title: "Cambio" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Feature" },
+                                    { id: 2, title: "2025-10-16" },
+                                    { id: 3, title: "J. Ordoñez" },
+                                    { id: 4, title: "Implementación inicial del frontend con Next.js y Tailwind." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 3,
+                            type: "text",
+                            value: `
+        Se añadieron los primeros componentes atómicos como botones, textos, inputs y encabezados, cada uno diseñado
+        con enfoque accesible y semántico. También se definieron las escalas de espaciado y color, asegurando consistencia
+        visual en todas las futuras capas del diseño.`
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Versión 1.1.0",
+                    content: [
+                        {
+                            id: 1,
+                            type: "text",
+                            value: `
+        Se incorporaron moléculas como botones, campos de formulario y contenedores reutilizables. Estos componentes
+        combinan los átomos previamente creados, aplicando principios de composición que mejoran la mantenibilidad.`
+                        },
+                        {
+                            id: 2,
+                            type: "table",
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Tipo" },
+                                    { id: 2, title: "Fecha" },
+                                    { id: 3, title: "Autor" },
+                                    { id: 4, title: "Cambio" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Feature" },
+                                    { id: 2, title: "2025-10-17" },
+                                    { id: 3, title: "J. Ordoñez" },
+                                    { id: 4, title: "Creación de moléculas y definición de variables globales en Tailwind." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 3,
+                            type: "text",
+                            value: `
+        En esta versión también se integró la estructura de tipografía fluida con escalado responsivo, garantizando que
+        el diseño se mantuviera equilibrado en distintos tamaños de pantalla. Se ajustaron espaciados internos y márgenes
+        mediante una jerarquía visual coherente.`
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Versión 1.2.0",
+                    content: [
+                        {
+                            id: 1,
+                            type: "text",
+                            value: `
+        Se añadieron templates para las vistas principales, conectando organismos con datos estáticos.
+        Este paso marcó el inicio de la estructura de navegación dentro del sitio, definiendo cómo se presentarían las
+        secciones clave y cómo interactuarían con los componentes del sistema atómico.`
+                        },
+                        {
+                            id: 2,
+                            type: "table",
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Tipo" },
+                                    { id: 2, title: "Fecha" },
+                                    { id: 3, title: "Autor" },
+                                    { id: 4, title: "Cambio" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Feature" },
+                                    { id: 2, title: "2025-10-18" },
+                                    { id: 3, title: "J. Ordoñez" },
+                                    { id: 4, title: "Implementación de templates y sistema de navegación inicial." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 3,
+                            type: "text",
+                            value: `
+        Se documentó la estructura de carpetas bajo Atomic Design para mantener la trazabilidad y facilitar
+        la integración de nuevos componentes. La documentación se convirtió en un punto de referencia para el desarrollo
+        futuro, asegurando que cada pieza del sistema se integrara con una lógica clara y reutilizable.`
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Versión 1.3.0",
+                    content: [
+                        {
+                            id: 1,
+                            type: "text",
+                            value: `
+        Se agregó soporte para modo oscuro y tema dinámico basado en las preferencias del usuario. Se diseñaron
+        variables CSS y tokens de color adaptables que reaccionan automáticamente según el sistema operativo, ofreciendo
+        una experiencia visual fluida tanto en entornos oscuros como claros.`
+                        },
+                        {
+                            id: 2,
+                            type: "table",
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Tipo" },
+                                    { id: 2, title: "Fecha" },
+                                    { id: 3, title: "Autor" },
+                                    { id: 4, title: "Cambio" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Enhancement" },
+                                    { id: 2, title: "2025-10-18" },
+                                    { id: 3, title: "J. Ordoñez" },
+                                    { id: 4, title: "Implementación de modo oscuro con preferencia guardada en localStorage." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 3,
+                            type: "text",
+                            value: `
+        También se añadieron animaciones suaves entre transiciones de color, mejorando la percepción visual y evitando
+        cortes abruptos. Esta actualización marcó un paso importante hacia una interfaz más madura y profesional.`
+                        }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Versión 1.4.0",
+                    content: [
+                        {
+                            id: 1,
+                            type: "text",
+                            value: `
+        Se conectó el frontend con la base de datos MySQL mediante un backend estructurado con controladores,
+        middleware y un sistema de rutas modular. Esto permitió gestionar datos de forma centralizada y controlada,
+        garantizando integridad en las relaciones entre entidades.`
+                        },
+                        {
+                            id: 2,
+                            type: "table",
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Tipo" },
+                                    { id: 2, title: "Fecha" },
+                                    { id: 3, title: "Autor" },
+                                    { id: 4, title: "Cambio" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Integration" },
+                                    { id: 2, title: "2025-10-19" },
+                                    { id: 3, title: "J. Ordoñez" },
+                                    { id: 4, title: "Integración del backend con el frontend y validación de endpoints REST." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 3,
+                            type: "text",
+                            value: `
+        Se implementaron logs de servidor, middleware de sanitización y validadores personalizados para asegurar la
+        protección frente a inyecciones SQL y ataques XSS. Con esto, el proyecto alcanzó un nivel sólido en su capa
+        de seguridad y trazabilidad de errores.`
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            id: 'requirements',
+            title: 'Objetivos y Requerimientos',
+            items: [
+                {
+                    id: 1,
+                    title: "Objetivo Principal",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Captar nuevos usuarios mediante SEO, demos y una experiencia visual atractiva; mejorar la retención ofreciendo navegación fluida, accesibilidad y recomendaciones relevantes; y automatizar procesos administrativos (publicación de contenido, gestión multimedia y despliegues) para escalar eficientemente.'
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Requerimientos Funcionales Clave",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: "El sistema debe ofrecer una administración completa de contenido digital, asegurando flexibilidad y escalabilidad."
+                        },
+                        {
+                            id: 2,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Gestión de usuarios con roles diferenciados (admin, editor, visitante)." },
+                                { id: 2, text: "Panel administrativo para crear, editar y eliminar publicaciones." },
+                                { id: 3, text: "Soporte para carga y visualización de imágenes, audio y video." },
+                                { id: 4, text: "Sistema de etiquetas (labels_x_post) con manejo de arrays serializados en MySQL." },
+                                { id: 5, text: "Control de versiones para cada publicación y registro de auditoría." }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Requerimientos No Funcionales",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: "Los aspectos no funcionales se enfocan en la calidad, accesibilidad y seguridad del sistema."
+                        },
+                        {
+                            id: 2,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Rendimiento optimizado (puntaje Lighthouse > 90)." },
+                                { id: 2, text: "Uso de SSR (Server Side Rendering) y Lazy Loading de imágenes." },
+                                { id: 3, text: "Cumplimiento de estándares WCAG 2.1 de accesibilidad." },
+                                { id: 4, text: "Protección de endpoints mediante CORS y sanitización de entradas." },
+                                { id: 5, text: "Gestión segura de sesiones y tokens de autenticación." },
+                                { id: 6, text: "Logs de servidor y monitorización de errores en tiempo real." }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            id: 'desicionsArchitectonicas',
+            title: 'Decisiones Arquitectónicas y Tecnológicas',
+            items: [
+                {
+                    id: 1,
+                    title: "Opciones Clave",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: "Se optó por una arquitectura basada en Next.js con SSR para mejorar SEO y rendimiento, combinada con MySQL y procedimientos almacenados para optimizar la gestión de datos complejos. TailwindCSS se eligió por su flexibilidad y rapidez en el desarrollo frontend."
+                        },
+                        {
+                            id: 2,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Next.js + MySQL con API Routes integradas" },
+                                { id: 2, text: "React SPA + API separada en Node" },
+                                { id: 3, text: "Frameworks Full-Stack como Meteor o RedwoodJS" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Alternativas Consideradas",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: "Se consideraron varias alternativas antes de tomar la decisión final."
+                        },
+                        {
+                            id: 2,
+                            type: 'table',
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Opción" },
+                                    { id: 2, title: "Descripción" },
+                                    { id: 3, title: "¿Por qué no?" }
+                                ],
+                                values: [
+                                    { id: 1, title: "React SPA + API separada en Node" },
+                                    { id: 2, title: "Arquitectura tradicional de SPA con backend independiente." },
+                                    { id: 3, title: "Aumenta la complejidad de despliegue y reduce el SEO debido al renderizado en cliente." }
+                                ]
+                            }
+                        },
+
+                        {
+                            id: 3,
+                            type: 'table',
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Opción" },
+                                    { id: 2, title: "Descripción" },
+                                    { id: 3, title: "¿Por qué no?" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Frameworks Full-Stack como Meteor o RedwoodJS" },
+                                    { id: 2, title: "Soluciones todo en uno que integran frontend y backend." },
+                                    { id: 3, title: "Menor flexibilidad y control sobre componentes específicos, además de una comunidad más pequeña." }
+                                ]
+                            }
+                        },
+
+                        {
+                            id: 4,
+                            type: 'table',
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Opción" },
+                                    { id: 2, title: "Descripción" },
+                                    { id: 3, title: "¿Por qué no?" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Headless CMS con frontend estático" },
+                                    { id: 2, title: "Uso de CMS como Strapi o Contentful con un frontend estático." },
+                                    { id: 3, title: "Limitaciones en personalización y rendimiento dinámico, además de costos asociados al CMS." }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "Decisión Detallada",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: "A continuación se detallan las principales decisiones arquitectónicas y tecnológicas adoptadas en el desarrollo de BloodyYue. Cada elección responde a criterios de escalabilidad, rendimiento, y coherencia con una visión de producto moderno y sostenible."
+                        },
+                        {
+                            id: 2,
+                            type: 'title',
+                            value: "Arquitectura Base: Next.js + MySQL con API Routes"
+                        },
+                        {
+                            id: 3,
+                            type: 'text',
+                            value: "Se optó por una arquitectura full-stack integrada en Next.js, aprovechando sus API Routes para construir un backend ligero y coherente con el entorno frontend. Esto elimina la necesidad de servidores externos (como Express) y reduce el tiempo de despliegue al centralizar la aplicación en un solo stack. MySQL fue elegido como gestor relacional por su estabilidad, soporte maduro y compatibilidad con relaciones complejas (por ejemplo, 'labels_x_post')."
+                        },
+                        {
+                            id: 4,
+                            type: 'text',
+                            value: "Esta combinación permite un flujo de desarrollo ágil: los endpoints se definen directamente dentro del proyecto Next.js, facilitando la comunicación con el frontend mediante fetch asíncrono, y garantizando una arquitectura mantenible y escalable sin recurrir a microservicios innecesarios."
+                        }
+                    ]
+
+                },
+                {
+                    id: 4,
+                    title: "Stack Tecnológico Principal",
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: "Se seleccionaron tecnologías que optimizan el desarrollo, rendimiento y escalabilidad del proyecto."
+                        },
+                        {
+                            id: 2,
+                            type: 'title',
+                            value: "Frontend"
+                        },
+                        {
+                            id: 3,
+                            type: 'text',
+                            value: "Next.js con TailwindCSS y Framer Motion para una UI rápida, responsiva y animada."
+                        },
+                        {
+                            id: 4,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Next.js 15" },
+                                { id: 2, text: "TailwindCSS" },
+                                { id: 3, text: "Framer Motion" },
+                            ]
+                        },
+                        {
+                            id: 5,
+                            type: 'title',
+                            value: "Backend"
+                        },
+                        {
+                            id: 6,
+                            type: 'text',
+                            value: "Next.js API Routes con Node.js y Express para manejar lógica del servidor y endpoints RESTful."
+                        },
+                        {
+                            id: 7,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Next.js API Routes" },
+                                { id: 2, text: "Node.js" },
+                                { id: 3, text: "Express Middleware" },
+                            ]
+                        },
+                        {
+                            id: 8,
+                            type: 'title',
+                            value: "Base de Datos"
+                        },
+                        {
+                            id: 9,
+                            type: 'text',
+                            value: "MySQL como sistema de gestión de bases de datos relacional."
+                        },
+                        {
+                            id: 10,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "MySQL" },
+                                { id: 2, text: "Procedimientos almacenados" },
+                                { id: 3, text: "PlanetScale (opcional)" },
+                            ]
+                        },
+                        {
+                            id: 11,
+                            type: 'title',
+                            value: "Vercel - Plataforma e Infraestructura (Logística)"
+                        },
+                        {
+                            id: 12,
+                            type: 'text',
+                            value: "Se eligió una plataforma que facilita el despliegue continuo, escalabilidad automática y optimización de recursos."
+                        },
+                        {
+                            id: 13,
+                            type: 'text',
+                            value: "Ofrece integración nativa con Next.js, despliegue automático desde GitHub, y escalabilidad sin complicaciones."
+                        },
+                    ]
+                }
+            ]
+        },
+
+        {
+            id: 'technicalDetails',
+            title: 'Detalles Técnicos y de Implementación',
+            items: [
+                {
+                    id: 1,
+                    title: 'Patrones de Diseño',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Descripción de la estructura del código y los patrones de diseño utilizados en el proyecto.'
+                        },
+                        {
+                            id: 2,
+                            type: 'table',
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Nombre" },
+                                    { id: 2, title: "Descripción" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Patrón de Diseño: Componente" },
+                                    { id: 2, title: "Cada parte de la UI se implementa como un componente reutilizable." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 3,
+                            type: 'table',
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Nombre" },
+                                    { id: 2, title: "Descripción" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Patrón de Diseño: Contenedor" },
+                                    { id: 2, title: "Los componentes se agrupan en contenedores para gestionar el estado y la lógica." }
+                                ]
+                            }
+                        },
+                        {
+                            id: 4,
+                            type: 'table',
+                            value: {
+                                heads: [
+                                    { id: 1, title: "Nombre" },
+                                    { id: 2, title: "Descripción" }
+                                ],
+                                values: [
+                                    { id: 1, title: "Patrón de Diseño: Presentación" },
+                                    { id: 2, title: "Los contenedores se encargan de la lógica, mientras que los componentes de presentación se centran en la UI." }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: 'Estructura del Código',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Descripción de la estructura del código y los patrones de diseño utilizados en el proyecto.'
+                        },
+                        {
+                            id: 2,
+                            type: 'code',
+                            language: 'markdown',
+                            value: `
+/src
+ ├─ /app                     # App Router (Next.js)
+ │   ├─ layout.tsx           # Layout global (Header, Footer, ThemeProvider)
+ │   ├─ page.tsx             # Home (/inicio → por defecto en Next.js)
+ │   ├─ /proyectos
+ │   │   ├─ page.tsx
+ │   │   └─ [id]/page.tsx
+ │   └─ /blog
+ │       ├─ page.tsx
+ │       └─ [slug]/page.tsx
+ │
+ ├─ /ui                      # ATOMIC DESIGN
+ │   ├─ /atoms
+ │   ├─ /molecules
+ │   └─ /organisms
+ │
+ ├─ /sections                # FSD Adaptado
+ │   ├─ /inicio
+ │   ├─ /proyectos
+ │   ├─ /sobre-mi
+ │   ├─ /habilidades
+ │   ├─ /blog
+ │   └─ /contacto
+ │
+ ├─ /shared                  # Hooks, utils, config, constants
+ ├─ /content                 # Blog (MDX), proyectos.json, testimonios.json
+ └─ /styles                  # globals.css, tailwind.css`
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: 'Nomenclatura',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Archivos y carpetas en kebab-case" },
+                                { id: 2, text: "IDs en camelCase" },
+                                { id: 3, text: "Componentes React en PascalCase" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: 'Componentes, Módulos o Algoritmos Notables',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'title',
+                            value: 'Algoritmo de búsqueda dinámica'
+                        },
+                        {
+                            id: 2,
+                            type: 'text',
+                            value: 'Algoritmo que permite filtrar los proyectos por etiquetas de forma dinámica.'
+                        },
+                        {
+                            id: 3,
+                            type: 'code',
+                            language: 'javascript',
+                            value: `
+import { useState } from 'react';
+
+function SearchableVideoList({ videos }) {
+    return (
+        <div>
+            <input type="text" placeholder="Buscar" onChange={handleSearch} />
+        </div>
+    )
+}`
+                        }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: 'Componente de visualización de proyectos',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Componente que permite visualizar los proyectos de forma dinámica.'
+                        },
+                        {
+                            id: 2,
+                            type: 'code',
+                            language: 'javascript',
+                            value: `
+import { useState } from 'react';
+
+function SearchableVideoList({ videos }) {
+    return (
+        <div>
+            <input type="text" placeholder="Buscar" onChange={handleSearch} />
+        </div>
+    )
+}`
+                        }
+                    ]
+                },
+                {
+                    id: 6,
+                    title: 'Servicios Externos',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'title',
+                            value: 'API de proyectos'
+                        },
+                        {
+                            id: 2,
+                            type: 'text',
+                            value: 'API que permite obtener los proyectos de forma dinámica.'
+                        }
+                    ]
+                },
+                {
+                    id: 7,
+                    title: 'API del proyecto',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'API que permite obtener los proyectos de forma dinámica.'
+                        }
+                    ]
+                },
+                {
+                    id: 8,
+                    title: 'Testing y Calidad del Código',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Testing funcional mediante pruebas manuales + Jest para componentes clave.'
+                        },
+                        {
+                            id: 2,
+                            type: 'title',
+                            value: 'Herramientas'
+                        },
+                        {
+                            id: 3,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: "Jest" },
+                                { id: 2, text: "React Testing Library" },
+                                { id: 3, text: "Lighthouse" }
+                            ]
+                        },
+                        {
+                            id: 4,
+                            type: 'title',
+                            value: 'Calidad'
+                        },
+                        {
+                            id: 5,
+                            type: 'text',
+                            value: 'El código se mantiene con métricas de legibilidad y rendimiento en tiempo real.'
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            id: 'retrospective',
+            title: 'Retrospectiva',
+            items: [
+                {
+                    id: 1,
+                    title: 'Logros Principales',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'title',
+                            value: 'A nivel de proyecto'
+                        },
+                        {
+                            id: 2,
+                            type: 'text',
+                            value: 'Base sólida para escalabilidad futura.'
+                        },
+                        {
+                            id: 3,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: 'Base sólida para escalabilidad futura.' },
+                                { id: 2, text: 'Integración fluida de arquitectura Atomic con Next.js.' },
+                            ]
+                        },
+                        {
+                            id: 4,
+                            type: 'title',
+                            value: 'A nivel personal'
+                        },
+                        {
+                            id: 5,
+                            type: 'text',
+                            value: 'Profundización en arquitectura SSR y gestión avanzada de MySQL.'
+                        },
+                        {
+                            id: 6,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: 'Profundización en arquitectura SSR y gestión avanzada de MySQL.' },
+                                { id: 2, text: 'Mejora en la organización modular de componentes.' },
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: 'Desafíos y Complicaciones',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'title',
+                            value: 'Mayor Desafío Técnico'
+                        },
+                        {
+                            id: 2,
+                            type: 'text',
+                            value: 'Optimización de consultas SQL con procedimientos almacenados y su integración en Next.js.'
+                        },
+                        {
+                            id: 3,
+                            type: 'title',
+                            value: 'Desafíos no técnicos'
+                        },
+                        {
+                            id: 4,
+                            type: 'text',
+                            value: 'Gestión de tiempo entre desarrollo, documentación y diseño visual.'
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: 'Aprendizajes Clave',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'title',
+                            value: 'Tecnologías Nuevas'
+                        },
+                        {
+                            id: 2,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: 'Next.js avanzado' },
+                                { id: 2, text: 'Framer Motion' },
+                                { id: 3, text: 'MySQL Procedures.' }
+                            ]
+                        },
+                        {
+                            id: 3,
+                            type: 'title',
+                            value: 'Conceptos o Habilidades'
+                        },
+                        {
+                            id: 4,
+                            type: 'text',
+                            value: 'Atomic Design aplicado a entornos SSR.'
+                        },
+                        {
+                            id: 5,
+                            type: 'title',
+                            value: 'Soft Skills'
+                        },
+                        {
+                            id: 6,
+                            type: 'text',
+                            value: 'Gestión de versiones efectiva, Comunicación técnica clara, Documentación estructurada.'
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: '¿Qué Haría Diferente la Próxima Vez?',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'title',
+                            value: 'Tecnológicas'
+                        },
+                        {
+                            id: 2,
+                            type: 'text',
+                            value: 'Adoptar TypeScript desde el inicio.'
+                        },
+                        {
+                            id: 3,
+                            type: 'title',
+                            value: 'De Proceso'
+                        },
+                        {
+                            id: 4,
+                            type: 'text',
+                            value: 'Mejorar la organización de tareas y documentación.'
+                        },
+                        {
+                            id: 5,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: 'Adoptar TypeScript desde el inicio.' },
+                                { id: 2, text: 'Mejorar la organización de tareas y documentación.' },
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 5,
+                    title: 'Vision Futura',
+                    content: [
+                        {
+                            id: 1,
+                            type: 'text',
+                            value: 'Escalar BloodyYue hacia una plataforma de portafolios interactivos con experiencias visuales en tiempo real, integrando WebGL y un sistema de usuarios completo'
+                        },
+                        {
+                            id: 2,
+                            type: 'title',
+                            value: 'Tecnológicas',
+                        },
+                        {
+                            id: 3,
+                            type: 'text',
+                            value: 'Adoptar TypeScript desde el inicio.'
+                        },
+                        {
+                            id: 4,
+                            type: 'title',
+                            value: 'De Proceso',
+                        },
+                        {
+                            id: 5,
+                            type: 'text',
+                            value: 'Mejorar la organización de tareas y documentación'
+                        },
+                        {
+                            id: 6,
+                            type: 'list',
+                            value: [
+                                { id: 1, text: 'Adoptar TypeScript desde el inicio.' },
+                                { id: 2, text: 'Mejorar la organización de tareas y documentación.' },
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 };
 
 export default bloodyyueDoc;

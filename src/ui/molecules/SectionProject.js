@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import Code from "../atoms/Code";
 import Picture from "../atoms/Picture";
 import Text from "../atoms/Text";
-import TitleSection from "../atoms/TitleSection";
 import Label from "../atoms/Label";
+import TitleSpace from "../atoms/TitleSpace";
+import TitleSection from "../atoms/TitleSection";
 
 export default function SectionProject({ section }) {
     const labels = section.labels.map(label => (
@@ -20,46 +21,42 @@ export default function SectionProject({ section }) {
         : <Picture
             src={section.src.content}
             alt={section.src.alt}
-            size="50"
+            size="70"
         />
 
     return (
-        <>
-            <motion.section
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="m-auto flex flex-col gap-5 justify-center items-center py-10 px-50"
-            >
-                <TitleSection
-                    color="#e0e0e0"
-                    title={section.title}
-                    fontSize="3rem"
-                />
+        <motion.article
+            className="bg-[#101010] p-6 rounded-2xl shadow-md border border-[#1b1b1b]"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08 }}
+        >
+            <TitleSection
+                title={section.title}
+                fontSize="1.5rem"
+            />
 
-                <div className="flex flex-wrap justify-center gap-3">
-                    {labels}
-                </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+                {labels}
+            </div>
 
+            <span className="flex flex-col gap-4 mt-6">
                 <Text
                     text={section.text}
-                    color="#b3b3b3"
-                    fontSize="1.2rem"
-                    textAlign="center"
                 />
-
-                <div className="w-full flex justify-center">
-                    {content}
-                </div>
 
                 <Text
                     text={section.description}
                     color="#b3b3b3"
-                    fontSize="1.2rem"
-                    textAlign="center"
                 />
-            </motion.section>
-        </>
+            </span>
+
+            <div className="my-6 flex justify-center items-center">
+                {content}
+            </div>
+
+        </motion.article>
 
     )
 }

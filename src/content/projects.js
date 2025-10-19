@@ -18,7 +18,7 @@ const projects = {
                     { id: 3, text: "UI/UX", color: "#03A9F4" },
                 ],
                 description: "Proyecto experimental con estética oscura y visuales impactantes. Buscó transmitir una identidad digital alternativa con animaciones fluidas y transiciones dramáticas.",
-                poster: "/projects/project1/ui.jpeg",
+                poster: "/projects/project1/ui.jpg",
                 links: [
                     { id: 1, text: "Ver Demo", href: "https://bloodyyue.com", icon: "ExternalLink" },
                     { id: 2, text: "Ver Código", href: "https://github.com/miusuario/bloodyyue", icon: "Github" },

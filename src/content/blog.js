@@ -11,6 +11,7 @@ const blog = {
         {
             id: 1,
             category: { text: "UI/UX", color: "#2196F3" },
+            href: '/blog/desingUI',
             title: "Cómo diseñar interfaces minimalistas sin perder funcionalidad",
             excerpt:
                 "Explora las claves del diseño minimalista aplicado al desarrollo web: desde la jerarquía visual hasta la elección de tipografías y colores.",
@@ -24,6 +25,7 @@ const blog = {
         {
             id: 2,
             category: { text: "Arquitectura", color: "#FF9800" },
+            href: '/blog/archiquecture',
             title: "Atomic Design: mi experiencia aplicándolo en proyectos reales",
             excerpt:
                 "Una guía práctica sobre cómo dividir interfaces en átomos, moléculas y organismos para mantener proyectos escalables y bien organizados.",
@@ -37,6 +39,7 @@ const blog = {
         {
             id: 3,
             category: { text: "Bases de Datos", color: "#4CAF50" },
+            href: '/blog/dataBase',
             title: "Cómo estructuro bases de datos relacionales con MySQL",
             excerpt:
                 "Un repaso de buenas prácticas para modelar datos, manejar claves foráneas y optimizar consultas en proyectos pequeños y medianos.",
@@ -50,6 +53,7 @@ const blog = {
         {
             id: 4,
             category: { text: "Frontend", color: "#9C27B0" },
+            href: '/blog/reactNext',
             title: "React + Next.js: patrones que realmente funcionan",
             excerpt:
                 "Comparto los patrones de arquitectura y organización que más me han servido para mantener proyectos Next.js escalables y fáciles de mantener.",
@@ -63,6 +67,7 @@ const blog = {
         {
             id: 5,
             category: { text: "Productividad", color: "#FF5722" },
+            href: '/blog/productivity',
             title: "Mi flujo de trabajo con Git y control de versiones",
             excerpt:
                 "Desde ramas principales hasta convenciones de commits, un vistazo a cómo organizo mis repositorios para no perder el control.",
@@ -76,6 +81,7 @@ const blog = {
         {
             id: 6,
             category: { text: "UI/UX", color: "#00BCD4" },
+            href: '/blog/typografia',
             title: "El arte de elegir tipografías en proyectos web",
             excerpt:
                 "Más allá de la estética: cómo usar la tipografía para mejorar la legibilidad y transmitir la identidad de un producto digital.",
@@ -89,6 +95,7 @@ const blog = {
         {
             id: 7,
             category: { text: "Backend", color: "#3F51B5" },
+            href: '/blog/middlewares',
             title: "Middleware esenciales en una API Node.js",
             excerpt:
                 "Exploro middlewares clave como logs, CORS, sanitización y seguridad para mantener APIs limpias y confiables.",
@@ -102,6 +109,7 @@ const blog = {
         {
             id: 8,
             category: { text: "Reflexión", color: "#607D8B" },
+            href: '/blog/reflexion',
             title: "Lo que aprendí al migrar proyectos de monolito a microservicios",
             excerpt:
                 "Una reflexión sobre los desafíos técnicos y de organización al cambiar a arquitecturas distribuidas.",
