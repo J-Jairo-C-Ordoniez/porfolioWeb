@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from './Text';
+import Text from './aText';
 
 export default function List({ list, fontSize = '1rem' }) {
     return (

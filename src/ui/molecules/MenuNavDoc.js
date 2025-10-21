@@ -1,5 +1,5 @@
 import BtnDoc from "../atoms/btnDoc";
-import Text from "../atoms/Text";
+import Text from "../atoms/aText";
 
 export default function MenuNavDoc({ sections, setActiveSection, activeSection }) {
     return (

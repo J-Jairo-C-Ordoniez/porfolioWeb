@@ -1,10 +1,10 @@
 // src/components/Footer.tsx
-import Picture from "../atoms/Picture";
+import Picture from "../atoms/aPicture";
 import TitleSection from "../atoms/TitleSection";
 import Menu from "../molecules/Menu";
-import Red from "../atoms/Red";
-import Icon from "../atoms/Icon";
-import Text from "../atoms/Text";
+import Red from "../atoms/aRed";
+import Icon from "../atoms/aIcon";
+import Text from "../atoms/aText";
 
 const links = [
     { id: 1, href: "#home", text: "Inicio" },

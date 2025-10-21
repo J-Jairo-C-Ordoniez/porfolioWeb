@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Text from "../atoms/Text";
+import Text from "../atoms/aText";
 import MenuNavDoc from "../molecules/MenuNavDoc";
 import SearchDoc from "../molecules/SearchDoc";
 import CardDoc from "../molecules/CardDoc";

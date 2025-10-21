@@ -1,6 +1,6 @@
 import Btn from "../atoms/Btn"
-import Icon from "../atoms/Icon"
-import Text from "../atoms/Text"
+import Icon from "../atoms/aIcon"
+import Text from "../atoms/aText"
 import TitleSpace from "../atoms/TitleSpace"
 
 export default function AsideProjectPage({ data, open, handleClick, setItem }) {

@@ -1,8 +1,8 @@
-import Link from "../atoms/Link";
-import Icon from "../atoms/Icon";
-import Label from "../atoms/Label";
-import Picture from "../atoms/Picture";
-import Text from "../atoms/Text";
+import Link from "../atoms/aLink";
+import Icon from "../atoms/aIcon";
+import Label from "../atoms/aLabel";
+import Picture from "../atoms/aPicture";
+import Text from "../atoms/aText";
 import TitleSection from "../atoms/TitleSection";
 
 export default function Blog({ blog }) {

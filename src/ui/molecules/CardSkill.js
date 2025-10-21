@@ -1,5 +1,5 @@
-import Text from "../atoms/Text"
-import Icon from "../atoms/Icon"
+import Text from "../atoms/aText"
+import Icon from "../atoms/aIcon"
 
 export default function CardSkill({ skill }) {
     return (

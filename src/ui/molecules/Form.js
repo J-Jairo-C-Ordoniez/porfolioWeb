@@ -1,7 +1,7 @@
-import Link from "../atoms/Link"
+import Link from "../atoms/aLink"
 import Btn from "../atoms/Btn"
-import Text from "../atoms/Text"
-import Icon from "../atoms/Icon"
+import Text from "../atoms/aText"
+import Icon from "../atoms/aIcon"
 
 export default function Form() {
     return (

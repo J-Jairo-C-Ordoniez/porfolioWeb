@@ -1,6 +1,6 @@
 import TitleSection from "../atoms/TitleSection"
-import Icon from "../atoms/Icon"
-import Label from "../atoms/Label"
+import Icon from "../atoms/aIcon"
+import Label from "../atoms/aLabel"
 
 export default function CardMetric({ metric, handleClick }) {
     return (

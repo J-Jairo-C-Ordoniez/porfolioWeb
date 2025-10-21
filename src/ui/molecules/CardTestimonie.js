@@ -1,6 +1,6 @@
-import Icon from '../atoms/Icon'
-import Text from '../atoms/Text'
-import Link from '../atoms/Link'
+import Icon from '../atoms/aIcon'
+import Text from '../atoms/aText'
+import Link from '../atoms/aLink'
 
 export default function CardTestimonie({ testimonie }) {
     return (

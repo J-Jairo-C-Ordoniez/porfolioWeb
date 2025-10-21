@@ -1,7 +1,7 @@
 // components/DocCard.jsx
 import React from "react";
 import TitleSpace from "../atoms/TitleSpace";
-import Text from "../atoms/Text";
+import Text from "../atoms/aText";
 import Quote from "../atoms/Quote";
 import TableDoc from "../atoms/Table";
 import List from "../atoms/List";

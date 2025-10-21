@@ -1,4 +1,4 @@
-import Icon from '../atoms/Icon';
+import Icon from '../atoms/aIcon';
 import Btn from '../atoms/Btn';
 
 export default function MenuProjects({ links, setStateMenu, stateMenu }) {

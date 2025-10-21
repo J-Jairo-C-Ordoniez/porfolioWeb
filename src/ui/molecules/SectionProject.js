@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 
 import Code from "../atoms/Code";
-import Picture from "../atoms/Picture";
-import Text from "../atoms/Text";
-import Label from "../atoms/Label";
+import Picture from "../atoms/aPicture";
+import Text from "../atoms/aText";
+import Label from "../atoms/aLabel";
 import TitleSpace from "../atoms/TitleSpace";
 import TitleSection from "../atoms/TitleSection";
 

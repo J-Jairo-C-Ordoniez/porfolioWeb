@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Blog from "../molecules/Blog"
 import Btn from "../atoms/Btn"
-import Text from "../atoms/Text"
+import Text from "../atoms/aText"
 
 export default function Blogs({ blogs }) {
     const [showAll, setShowAll] = useState(false)

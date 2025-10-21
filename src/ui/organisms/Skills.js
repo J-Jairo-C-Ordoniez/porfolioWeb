@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import CardSkill from "../molecules/CardSkill"
-import WithoutProjects from "../molecules/WithoutProjects"
+import WithoutProjects from "../molecules/mError404"
 
 const container = {
     hidden: { opacity: 0 },

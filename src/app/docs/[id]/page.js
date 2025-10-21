@@ -1,8 +1,8 @@
-import homeContent from "../../../content/home";
-import Header from "../../../ui/organisms/Header";
-import WithoutProjects from '../../../ui/molecules/WithoutProjects'
+import homeContent from "../../../content/home/cHero";
+import Header from "../../../ui/organisms/oHeader";
+import WithoutProjects from '../../../ui/molecules/mError404'
 import projects from '../../../content/docs/main';
-import Doc from '../../../pages/projects/doc';
+import Doc from '../../../pages/doc/hero/doc';
 
 
 export default async function DocPage({ params }) {

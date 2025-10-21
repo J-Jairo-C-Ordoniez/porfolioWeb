@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import Btn from "../atoms/Btn"
-import Icon from "../atoms/Icon"
-import Text from "../atoms/Text"
+import Icon from "../atoms/aIcon"
+import Text from "../atoms/aText"
 
 export default function Order({ orders, setOption, optionCurrent }) {
   const dialogRef = useRef(null)

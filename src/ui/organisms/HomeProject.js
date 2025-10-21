@@ -1,16 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 
-import Picture from "../atoms/Picture";
-import Text from "../atoms/Text";
+import Picture from "../atoms/aPicture";
+import Text from "../atoms/aText";
 import TitleSpace from "../atoms/TitleSpace";
 import SectionProject from "../molecules/SectionProject";
 import BtnCTA from "../atoms/BtnCTA";
 import BtnBackdrop from "../atoms/BtnBackdrop";
-import Label from "../atoms/Label";
+import Label from "../atoms/aLabel";
 import GalleryProject from "../molecules/GalleryProject";
-import Icon from "../atoms/Icon";
-import Red from "../atoms/Red";
+import Icon from "../atoms/aIcon";
+import Red from "../atoms/aRed";
 
 export default function HomeProject({ project, setRoute }) {
 

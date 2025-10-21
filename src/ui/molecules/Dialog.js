@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import TitleSection from "../atoms/TitleSection"
-import Text from "../atoms/Text"
-import Icon from "../atoms/Icon"
+import Text from "../atoms/aText"
+import Icon from "../atoms/aIcon"
 
 export default function Dialog({ dialog, open, setOpen }) {
     const dialogRef = useRef(null);

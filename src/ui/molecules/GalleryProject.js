@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 
-import Picture from "../atoms/Picture";
-import Text from "../atoms/Text";
+import Picture from "../atoms/aPicture";
+import Text from "../atoms/aText";
 import TitleSection from "../atoms/TitleSection";
 
 export default function GalleryProject({ item }) {
