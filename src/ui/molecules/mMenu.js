@@ -3,7 +3,7 @@ import Text from "../atoms/aText";
 
 export default function MMenu({ data }) {
     return (
-        <nav>
+        <nav aria-label="Menú principal">
             <ul className="flex gap-4 items-center">
                 {data.map(link => (
                     <li key={link.id}>

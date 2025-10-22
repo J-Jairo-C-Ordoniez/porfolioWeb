@@ -2,27 +2,26 @@ import cHeader from "../content/home/cHeader";
 import cHero from "../content/home/cHero";
 import cProject from "../content/home/cProject";
 import cTestimonials from "../content/home/cTestimonial";
+import cAbout from "../content/home/cAbout";
+import cSkill from "../content/home/cSkill";
+import cBlog from "../content/home/cBlog";
+import cContact from "../content/home/cContact";
 
 import SHero from "../pages/home/hero/sHero";
 import SProject from "../pages/home/project/sProject";
 import STestimonials from "../pages/home/testimonials/sTestimonials";
+import SAbout from "../pages/home/about/sAbout";
+import SSkill from "../pages/home/skills/sSkill";
+import SBlog from "../pages/home/blog/sBlog";
+import SContact from "../pages/home/contact/sContact";
 
 import OHeader from "../ui/organisms/oHeader";
 
 
 
 /* 
-import aboutContent from "../content/cAbout";
-import skillsContent from "../content/cSkill";
-import blogContent from "../content/cBlog";
-
-
-
-import About from "../pages/about/page";
-import Skills from "../pages/skills/page";
-import Blog from "../pages/blog/page";
-import Contact from "../pages/contact/page";
-import Footer from "../ui/organisms/Footer"; */
+import Footer from "../ui/organisms/Footer"; 
+*/
 
 export default function Home() {
   return (
@@ -32,17 +31,14 @@ export default function Home() {
         <SHero data={cHero} />
         <SProject data={cProject} />
         <STestimonials data={cTestimonials} />
+        <SAbout data={cAbout} />
+        <SSkill data={cSkill} />
+        <SBlog data={cBlog} />
+        <SContact data={cContact} />
       </main>
 
 
       {/* 
-        
-        <Testimonials testimonials={testimonialsContent} />
-        <About about={aboutContent} />
-        <Skills skills={skillsContent} />
-        <Blog blog={blogContent} />
-        <Contact />
-      </main>
       <Footer /> */}
     </>
   );

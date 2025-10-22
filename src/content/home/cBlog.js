@@ -1,13 +1,8 @@
-const blog = {
+const cBlog = {
+    id: 'blog',
     title: "Ideas y Experiencias",
 
-    orders: [
-        { id: "recent", label: "Recientes", type: 'recents' },
-        { id: "alpha", label: "A-Z", type: 'alpha' },
-        { id: "time", label: "Duración", type: 'duration' }
-    ],
-
-    blogs: [
+    items: [
         {
             id: 1,
             category: { text: "UI/UX", color: "#2196F3" },
@@ -123,4 +118,4 @@ const blog = {
     ],
 };
 
-export default blog;
+export default cBlog;

@@ -2,7 +2,7 @@ import homeContent from "../../../content/home/cHero";
 import Header from "../../../ui/organisms/oHeader";
 import WithoutProjects from '../../../ui/molecules/mError404'
 import blogs from '../../../content/blogs/main';
-import Blog from "../../../pages/home/blog/Blog";
+import Blog from "../../../pages/blog/hero/Blog";
 
 
 export default async function DocPage({ params }) {

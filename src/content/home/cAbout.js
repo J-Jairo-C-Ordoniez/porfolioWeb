@@ -1,4 +1,5 @@
-const about = {
+const cAbout = {
+    id: 'about',
     title: "Jhon Jairo - Desarrollador Web",
     subtitle: "Creativo • Minimalista • Técnico",
     photo: {
@@ -54,9 +55,9 @@ const about = {
             id: 4,
             icon: "Users",
             text: "Construir soluciones escalables",
-            color: "#660066",
+            color: "#00C896",
         }
     ]
 }
 
-export default about
+export default cAbout

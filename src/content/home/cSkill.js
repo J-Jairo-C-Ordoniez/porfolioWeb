@@ -1,4 +1,5 @@
-const skills = {
+const cSkill = {
+    id: 'skills',
     title: 'Habilidades',
     menu: [
         { id: 1, status: "soft", text: "Blandas", icon: "Smile" },
@@ -79,4 +80,4 @@ const skills = {
     }
 }
 
-export default skills;
+export default cSkill;

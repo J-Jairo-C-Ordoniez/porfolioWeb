@@ -37,7 +37,7 @@ export default function MCardProject({ data }) {
                 <AText
                     data={data.description}
                     color='#b3b3b3'
-                    fontSize='1rem'
+                    fontSize='1.1rem'
                 />
 
                 <div className="flex gap-3 flex-wrap ">
