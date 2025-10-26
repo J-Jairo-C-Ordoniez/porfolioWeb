@@ -10,9 +10,10 @@ export default function APicture({ src, alt, size = '100' }) {
                 title={alt}
                 src={src}
                 alt={alt}
-                layout="responsive"
                 width={size}
                 height={size}
+                layout="responsive"
+                loading="lazy"
                 style={{
                     objectFit: "contain",
                     objectPosition: "center",
