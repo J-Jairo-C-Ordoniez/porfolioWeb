@@ -6,6 +6,7 @@ import cAbout from "../content/home/cAbout";
 import cSkill from "../content/home/cSkill";
 import cBlog from "../content/home/cBlog";
 import cContact from "../content/home/cContact";
+import cFooter from "../content/home/cFooter";
 
 import SHero from "../pages/home/hero/sHero";
 import SProject from "../pages/home/project/sProject";
@@ -16,12 +17,34 @@ import SBlog from "../pages/home/blog/sBlog";
 import SContact from "../pages/home/contact/sContact";
 
 import OHeader from "../ui/organisms/oHeader";
+import OFooter from "../ui/organisms/oFooter";
 
+export async function generateMetadata() {
+  return ({
+    title: "J Jairo C Ordoñez",
+    description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
+    openGraph: {
+      title: "J Jairo C Ordoñez",
+      description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
+      url: "https://jj.com/",
+      siteName: "J Jairo C Ordoñez",
+      images: [
+        {
+          url: "/avatar.png",
+          width: 1200,
+          height: 630,
+          alt: "Avatar de J Jairo C Ordoñez",
+        },
+      ],
+      locale: "es_COL",
+      type: "website",
+    },
 
-
-/* 
-import Footer from "../ui/organisms/Footer"; 
-*/
+    icons: {
+      icon: "/Logo.svg",
+    }
+  })
+}
 
 export default function Home() {
   return (
@@ -36,10 +59,7 @@ export default function Home() {
         <SBlog data={cBlog} />
         <SContact data={cContact} />
       </main>
-
-
-      {/* 
-      <Footer /> */}
+      <OFooter data={cFooter} />
     </>
   );
 }

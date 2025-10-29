@@ -77,23 +77,13 @@ export default function ContactSection() {
                         required
                     ></textarea>
                 </div>
-                {
-                    state.succeeded
-                        ? <button 
-                            onClick={reset}
-                            className="px-6 py-2 bg-white text-black font-semibold rounded-full cursor-pointer hover:bg-gray-200 transition"
-                        >
-                            Reset
-                        </button>
-
-                        : <button
-                            type="submit"
-                            disabled={state.submitting}
-                            className="px-6 py-2 bg-white text-black font-semibold rounded-full cursor-pointer hover:bg-gray-200 transition"
-                        >
-                            {state.submitting ? "ENVIANDO..." : "ENVIAR"}
-                        </button>
-                }
+                <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="px-6 py-2 bg-white text-black font-semibold rounded-full cursor-pointer hover:bg-gray-200 transition"
+                >
+                    {state.submitting ? "ENVIANDO..." : "ENVIAR"}
+                </button>
 
                 {state.succeeded && (
                     <AText

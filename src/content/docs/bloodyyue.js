@@ -1,10 +1,23 @@
 export const bloodyyueDoc = {
     id: "bloodyyue",
+    title: "BloodyYue - Documentación",
+    description: "Documentación técnica detallada del proyecto BloodyYue, un portal web moderno y escalable construido con Next.js y MySQL.",
+    avatar: '/projects/project1/logo.png',
+    url: 'https://bloodyyue.com',
 
-    menu: [
-        { id: 1, text: "Repositorio", href: "https://github.com/miusuario/bloodyyue", icon: "Github" },
-        { id: 2, text: "Ver Demo", href: "https://bloodyyue.com", icon: "ExternalLink" }
-    ],
+    head: {
+        name: 'J Jairo | BloodyYue',
+        logo: {
+            src: '/logo.svg',
+            alt: 'Logo de mi portafolio',
+            link: '/docs/bloodyyue'
+        },
+
+        menu: [
+            { id: 1, text: "Repositorio", href: "https://github.com/miusuario/bloodyyue", icon: "Github" },
+            { id: 2, text: "Ver Demo", href: "https://bloodyyue.com", icon: "ExternalLink" }
+        ],
+    },
 
     hero: {
         title: "BloodyYue",
@@ -21,9 +34,9 @@ export const bloodyyueDoc = {
         ],
 
         gallery: [
-            { id: 1, title: "Pantalla principal", label: "UI", src: "/projects/project1/gallery/hero.jpg" },
-            { id: 2, title: "Detalle de proyecto", label: "Docs", src: "/projects/project1/gallery/studio.jpg" },
-            { id: 3, title: "Arquitectura simplificada", label: "Arquitectura", src: "/projects/project1/gallery/architecture.jpg" }
+            { id: 1, title: "Pantalla principal", description: "UI - Diseño de la sección de inicio del proyecto siguiendo las mejores prácticas de diseño", src: "/projects/project1/gallery/hero.jpg" },
+            { id: 2, title: "Detalle de proyecto", description: "Docs - Detalles mientras trabajaba en la documentación", src: "/projects/project1/gallery/studio.jpg" },
+            { id: 3, title: "Arquitectura simplificada", description: "Arquitectura - Diseño de la arquitectura en un gráfico general", src: "/projects/project1/gallery/architecture.jpg" }
         ],
 
         sections: [

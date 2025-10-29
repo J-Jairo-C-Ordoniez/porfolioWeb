@@ -14,7 +14,7 @@ export function ATitleMain({ data, color = '#e0e0e0', fontSize = '2rem', textAli
 }
 
 
-export function ATitleSection({ data, color = '#b3b3b3', fontSize = '2rem', textAlign = 'left' }) {
+export function ATitleSection({ data, color = '#e0e0e0', fontSize = '2rem', textAlign = 'left' }) {
     return (
         <h2
             className="font-light tracking-widest"

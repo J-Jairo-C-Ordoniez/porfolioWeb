@@ -1,5 +1,5 @@
 import Btn from "@/ui/atoms/Btn";
-import Code from "@/ui/atoms/Code";
+import Code from "@/ui/atoms/aCode";
 import Icon from "@/ui/atoms/aIcon";
 import List from "@/ui/atoms/List";
 import Picture from "@/ui/atoms/aPicture";

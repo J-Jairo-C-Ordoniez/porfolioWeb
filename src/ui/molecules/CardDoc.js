@@ -5,7 +5,7 @@ import Text from "../atoms/aText";
 import Quote from "../atoms/Quote";
 import TableDoc from "../atoms/Table";
 import List from "../atoms/List";
-import Code from "../atoms/Code";
+import Code from "../atoms/aCode";
 
 export default function DocCard({ item }) {
     return (

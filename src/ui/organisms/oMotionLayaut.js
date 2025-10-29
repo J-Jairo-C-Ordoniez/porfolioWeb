@@ -2,13 +2,13 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import Loader from "../atoms/Loader";
+import ALoader from "../atoms/aLoader";
 
-export default function MotionLayout({ children }) {
+export default function OMotionLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsLoading(false), 1200);
+    const timeout = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -21,7 +21,7 @@ export default function MotionLayout({ children }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <Loader />
+          <ALoader />
         </motion.div>
       ) : (
         <motion.div

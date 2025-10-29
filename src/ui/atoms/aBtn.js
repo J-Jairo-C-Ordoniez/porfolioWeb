@@ -57,3 +57,21 @@ export function ABtnBold({ data }) {
         </Link>
     )
 }
+
+
+export function ABtnCTA({ data, onClick, dataId = '', color = '#b3b3b3' }) {
+    return (
+        <button
+            className="font-bold py-5 px-10 cursor-pointer rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-sky-500 shadow-lg shadow-fuchsia-500/20 hover:scale-106 hover:shadow-fuchsia-400/30 transition-all duration-300"
+            style={{ color }}
+            data-id={dataId}
+            onClick={onClick}
+        >
+            <AText
+                data={data.text}
+                color="#b3b3b3"
+                fontSize="1rem"
+            />
+        </button>
+    )
+}

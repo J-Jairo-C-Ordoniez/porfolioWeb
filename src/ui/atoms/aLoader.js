@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function Loader() {
+export default function ALoader() {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#121212] z-50">
       <motion.div
