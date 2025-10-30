@@ -2,6 +2,7 @@
 import { useState } from "react"
 
 import OHomeDoc from "../../ui/organisms/oHomeDoc"
+import ODoc from "@/ui/organisms/oDoc"
 
 export default function SDoc({ data }) {
     const [route, setRoute] = useState('home')
@@ -12,6 +13,6 @@ export default function SDoc({ data }) {
                 data={data}
                 setState={setRoute}
             />
-            : <p>hola</p> 
+            : <ODoc data={data.documentation} /> 
     )
 }

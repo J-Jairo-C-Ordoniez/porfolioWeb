@@ -75,3 +75,15 @@ export function ABtnCTA({ data, onClick, dataId = '', color = '#b3b3b3' }) {
         </button>
     )
 }
+
+export default function ABtnDoc({ children, onClick, color = '#b3b3b3', background = '#121212' }) {
+    return (
+        <button
+            className='w-full px-10 py-3 rounded-r-full cursor-pointer hover:bg-[#00C89605] transition-all duration-300'
+            style={{ background, color }}
+            onClick={onClick}
+        >
+            {children}
+        </button>
+    )
+}

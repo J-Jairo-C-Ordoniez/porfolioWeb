@@ -1,11 +1,33 @@
+'use client'
+
+import { useRef, useEffect } from "react";
 import { Search } from "lucide-react";
 
-export default function SearchDoc({ currentSection, searchTerm, setSearchTerm }) {
+export default function MSearchDoc({ currentSection, searchTerm, setSearchTerm }) {
+    const inputRef = useRef(false)
+
+    useEffect(() => {
+        if (!inputRef.current) return
+
+        const handleKeyDown = (e) => {
+            if (e.ctrlKey && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                inputRef.current.focus()
+            };
+        }
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        }
+    }, [])
+
     return (
         <>
             <div className="flex gap-4 items-center w-[90%]">
                 <Search />
                 <input
+                    ref={inputRef}
                     type="text"
                     placeholder={`Buscar en ${currentSection?.title || "documentación"}...`}
                     value={searchTerm}

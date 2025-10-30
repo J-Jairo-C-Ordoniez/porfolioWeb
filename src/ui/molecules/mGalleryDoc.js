@@ -23,7 +23,6 @@ export default function MGalleryDoc({ data }) {
         };
     }, [open]); */
 
-    console.log(open)
 
     return (
         <>

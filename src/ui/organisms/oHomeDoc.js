@@ -1,10 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 
-import { ATitleSection } from "../atoms/aTitle";
+import { ATitleBold, ATitleSection } from "../atoms/aTitle";
 import MHeroDoc from "../molecules/mHeroDoc";
 import MSectionDoc from "../molecules/mSectionDoc";
 import MGalleryDoc from "../molecules/mGalleryDoc";
+import AText from "../atoms/aText";
+import ARed from "../atoms/aRed";
+import AIcon from "../atoms/aIcon";
 
 
 export default function OHomeProject({ data, setState }) {
@@ -50,42 +53,35 @@ export default function OHomeProject({ data, setState }) {
                 </div>
             </section>
 
-            {/* 
+            <footer className="container mx-auto px-12 py-16">
+                <ATitleBold
+                    data="¿Quieres ver el proyecto completo?"
+                    color="#e0e0e0"
+                    fontSize="1.4rem"
+                    textAlign="center"
+                />
 
-            
+                <AText
+                    data='Accede al demo y al repositorio para ver la implementación completa.'
+                    textAlign="center"
+                />
 
-            <footer className="container mx-auto px-6 py-16">
-                <div className="p-8 text-center">
-                    <TitleSpace
-                        title="¿Quieres ver el proyecto completo?"
-                        color="#e0e0e0"
-                        fontSize="1.4rem"
-                    />
-
-                    <Text
-                        text='Accede al demo y al repositorio para ver la implementación completa.'
-                        textAlign="center"
-                        color="#b3b3b3"
-                    />
-
-                    <ul className="flex justify-center gap-4 list-none mt-10">
-                        {
-                            data.menu.map(link => (
-                                <li key={link.id}>
-                                    <Red href={link.href}>
-                                        <Icon name={link.icon} />
-                                        <Text
-                                            text={link.text}
-                                            color="#b3b3b3"
-                                        />
-                                    </Red>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+                <ul className="flex justify-center gap-4 list-none mt-10">
+                    {
+                        data.head.menu.map(link => (
+                            <li key={link.id}>
+                                <ARed href={link.href}>
+                                    <AIcon data={link.icon} />
+                                    <AText
+                                        data={link.text}
+                                        textAlign="center"
+                                    />
+                                </ARed>
+                            </li>
+                        ))
+                    }
+                </ul>
             </footer>
- */}
         </main>
     )
 }

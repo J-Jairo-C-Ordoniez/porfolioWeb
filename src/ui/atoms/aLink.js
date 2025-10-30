@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AText from './aText';
 
 export default function ALink({ children, href, target = '_self' }) {
     return (
@@ -8,6 +9,22 @@ export default function ALink({ children, href, target = '_self' }) {
             target={target}
         >
             {children}
+        </Link>
+    )
+}
+
+
+export function ALinkDoc({ data, href , background = '#121212', color = "#999999"}) {
+    return (
+        <Link
+            className='block px-2 py-1 rounded-l-full transition-colors hover:scale-106 transition-scale duration-300'
+            style={{background}}
+            href={href}
+        >
+            <AText
+                data={data.title}
+                color={color}
+            />
         </Link>
     )
 }
