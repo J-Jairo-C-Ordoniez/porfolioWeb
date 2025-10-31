@@ -12,20 +12,20 @@ export default function MCardDoc({ data }) {
             className="doc-card space-y-4"
         >
             <div className="mb-4">
-                <ATitleSection
+                <ATitleBold
                     data={data.title}
                     color="#e0e0e0"
-                    fontSize="1.6rem"
+                    fontSize="1.8rem"
                 />
             </div>
 
             {
                 data.content.map(item => {
                     if (item.type === 'title') return (
-                        <ATitleBold 
+                        <ATitleSection
                             key={item.id} 
                             data={item.value} 
-                            fontSize="1.2rem" 
+                            fontSize="1.4rem" 
                             color="#e0e0e0"
                         />
                     )
@@ -34,6 +34,7 @@ export default function MCardDoc({ data }) {
                         <AText 
                             key={item.id} 
                             data={item.value} 
+                            fontSize="1.2rem"
                         />
                     )
 

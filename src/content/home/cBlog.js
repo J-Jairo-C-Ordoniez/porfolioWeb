@@ -4,7 +4,7 @@ const cBlog = {
 
     items: [
         {
-            id: 1,
+            id: 'desingUI',
             category: { text: "UI/UX", color: "#2196F3" },
             href: '/blog/desingUI',
             title: "Cómo diseñar interfaces minimalistas sin perder funcionalidad",

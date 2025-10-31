@@ -1,7 +1,6 @@
 import AText from './aText';
-import Text from './aText';
 
-export default function AList({ data, fontSize = '1rem' }) {
+export default function AList({ data, fontSize = '1.2rem' }) {
     return (
         <ul className="my-4 pl-6">
             {data.map(item => (
@@ -12,9 +11,10 @@ export default function AList({ data, fontSize = '1rem' }) {
                     />
                     <div className="min-w-0">
                         <div className="text-sm text-gray-800 dark:text-gray-200">
-                            <AText 
-                                data={item.text} 
-                                fontSize={fontSize} 
+                            <AText
+                                data={item.text}
+                                fontSize={fontSize}
+                                color="#ACB4BF"
                             />
                         </div>
                     </div>

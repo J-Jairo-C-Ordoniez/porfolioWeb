@@ -1,9 +1,20 @@
-import { language } from "gray-matter";
-
 const desingUI = {
     id: 'desingUI',
     title: 'Cómo diseñar interfaces minimalistas sin perder funcionalidad',
+    subtitle: 'UI/UX Minimalistas',
     description: 'Explora las claves del diseño minimalista aplicado al desarrollo web: desde la jerarquía visual hasta la elección de tipografías y colores.',
+    avatar: '/logo.svg',
+    url: 'https://jj/blog/desingUI',
+
+    head: {
+        name: 'J Jairo | UI/UX Minimalistas',
+        logo: {
+            src: '/logo.svg',
+            alt: 'Logo de mi portafolio',
+            link: '/docs/bloodyyue'
+        }
+    },
+
     author: {
         name: 'J Jairo C Ordoñez',
         avatar: '/avatar.png',

@@ -13,7 +13,7 @@ export default function MCardBlog({ data }) {
     return (
         <ALink href={data.href}>
             <motion.article
-                className="flex justify-between cursor-pointer border-b-4 border-[#181818] pb-4 transition-all duration-300 hover:shadow-lg  hover:bg-[#111111] rounded-4xl"
+                className="flex justify-between cursor-pointer border-b-4 border-[#181818] pb-4 hover:shadow-lg hover:bg-[#111111] hover:scale-102 duration-300 transition-all rounded-4xl"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{

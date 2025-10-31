@@ -21,7 +21,10 @@ export default function MHeroDoc({ data, onClick }) {
                     fontSize="3rem"
                 />
 
-                <AText data={data.description} />
+                <AText 
+                    data={data.description} 
+                    fontSize="1.2rem"
+                />
 
                 <div className="mt-8 flex gap-6 items-center">
                     <ABtnCTA
