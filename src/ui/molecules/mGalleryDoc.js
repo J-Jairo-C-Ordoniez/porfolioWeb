@@ -40,7 +40,7 @@ export default function MGalleryDoc({ data }) {
                     <APicture
                         src={data.src}
                         alt={data.title}
-                        size="85"
+                        size="400"
                     />
                 </button>
 

@@ -6,15 +6,15 @@ export default function SHero({ data }) {
     return (
         <section
             id={data.id}
-            className="flex justify-between px-30 py-25 h-[90vh]"
+            className="flex justify-between px-30 py-25 h-[90vh] overflow-x-hidden"
         >
             <ODetail data={data} />
 
-            <article className="w-[25%]">
+            <article className="w-[25%] flex justify-center items-center">
                 <APicture
                     src={data.user.photo.src}
                     alt={data.user.photo.alt}
-                    size={data.user.photo.size}
+                    size='400'
                 />
             </article>
 

@@ -9,11 +9,11 @@ export default function MCardProject({ data }) {
     return (
         <>
             {data.direction === 'left' &&
-                <figure className="w-[50%]">
+                <figure className="w-[50%] flex justify-center items-center">
                     <APicture
                         src={data.poster}
                         alt={data.title}
-                        size={100}
+                        size="500"
                     />
                 </figure>
             }
@@ -56,7 +56,7 @@ export default function MCardProject({ data }) {
                     <APicture
                         src={data.poster}
                         alt={data.title}
-                        size={100}
+                        size="500"
                     />
                 </figure>
             }

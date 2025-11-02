@@ -21,6 +21,7 @@ import OFooter from "../ui/organisms/oFooter";
 
 export async function generateMetadata() {
   return ({
+    metadataBase: new URL("https://tu-dominio.com"),
     title: "J Jairo C Ordoñez",
     description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
     openGraph: {

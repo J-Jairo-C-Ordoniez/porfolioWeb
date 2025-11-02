@@ -35,7 +35,7 @@ export default function MSectionDoc({ data }) {
                     : <APicture
                         src={data.src.content}
                         alt={data.src.alt}
-                        size="70"
+                        size="400"
                     />
                 }
             </div>

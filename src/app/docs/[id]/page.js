@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
   }
 
   return ({
+    metadataBase: new URL("https://tu-dominio.com"),
     title: dataProject.title,
     description: dataProject.description,
     openGraph: {

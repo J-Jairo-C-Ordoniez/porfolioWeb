@@ -56,7 +56,7 @@ export default function MHeroDoc({ data, onClick }) {
                 <APicture
                     src={data.logo}
                     alt={data.title}
-                    size="80"
+                    size="200"
                 />
             </motion.figure>
         </motion.section>

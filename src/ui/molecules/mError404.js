@@ -10,14 +10,16 @@ export default function MError404({ title, description }) {
     return (
         <motion.section
             className="w-[60%] flex flex-col justify-center items-center my-10 m-auto p-10 overflow-hidden h-[80vh]"
-            initial={{ scale: 0 }} 
+            initial={{ scale: 0 }}
             animate={{ scale: 1 }}
         >
-            <APicture
-                src="/404.png"
-                alt="Avatar - Error 404"
-                size={20}
-            />
+            <div>
+                <APicture
+                    src="/404.png"
+                    alt="Avatar - Error 404"
+                    size="200"
+                />
+            </div>
 
             <ATitleBold
                 data={title}

@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function APicture({ src, alt, size = '100' }) {
     return (
         <div
-            className="hover:scale-105 transition-scale duration-300 ease-in-out"
+            className="hover:scale-102 transition-scale duration-300 ease-in-out"
             style={{ width: `${size}%` }}
         >
             <Image
@@ -12,12 +12,10 @@ export default function APicture({ src, alt, size = '100' }) {
                 alt={alt}
                 width={size}
                 height={size}
-                layout="responsive"
-                loading="lazy"
+                priority
                 style={{
                     objectFit: "contain",
-                    objectPosition: "center",
-                    borderRadius: "0.75rem"
+                    objectPosition: "center"
                 }}
             />
         </div>

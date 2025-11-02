@@ -7,6 +7,7 @@ export default function MLogo({ data }) {
             <APicture
                 src={data.src}
                 alt={data.alt}
+                size="60"
             />
         </ALink>
     )

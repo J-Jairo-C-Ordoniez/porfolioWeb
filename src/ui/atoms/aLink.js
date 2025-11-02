@@ -4,9 +4,14 @@ import AText from './aText';
 export default function ALink({ children, href, target = '_self' }) {
     return (
         <Link
-            className='flex items-center gap-1 text-[#e0e0e0] text-sm font-poppins font-[500] hover:scale-106 transition-scale duration-1000 transition-colors'
             href={href}
             target={target}
+            className="
+                flex items-center gap-1 sm:gap-2 md:gap-3 
+                text-[#e0e0e0] font-poppins font-[500]
+                text-xs sm:text-sm md:text-base
+                hover:scale-[1.02] transition-transform duration-500 ease-in-out
+            "
         >
             {children}
         </Link>
@@ -14,11 +19,11 @@ export default function ALink({ children, href, target = '_self' }) {
 }
 
 
-export function ALinkDoc({ data, href , background = '#121212', color = "#999999"}) {
+export function ALinkDoc({ data, href, background = '#121212', color = "#999999" }) {
     return (
         <Link
-            className='block px-2 py-1 rounded-l-full transition-colors hover:scale-106 transition-scale duration-300'
-            style={{background}}
+            className='block p-1 rounded-l-full transition-colors hover:scale-106 transition-scale duration-300'
+            style={{ background }}
             href={href}
         >
             <AText

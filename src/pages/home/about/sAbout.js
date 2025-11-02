@@ -56,7 +56,8 @@ export default function SAbout({ data }) {
             >
                 <APicture 
                     src={data.photo.src} 
-                    alt={data.photo.alt} 
+                    alt={data.photo.alt}
+                    size="400" 
                 />
 
                 <motion.div
