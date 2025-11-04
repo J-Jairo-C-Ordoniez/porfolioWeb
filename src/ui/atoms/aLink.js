@@ -10,7 +10,7 @@ export default function ALink({ children, href, target = '_self' }) {
                 flex items-center gap-1 sm:gap-2 md:gap-3 
                 text-[#e0e0e0] font-poppins font-[500]
                 text-xs sm:text-sm md:text-base
-                hover:scale-[1.02] transition-transform duration-500 ease-in-out
+                hover:scale-106 transition-transform duration-500 ease-in-out
             "
         >
             {children}

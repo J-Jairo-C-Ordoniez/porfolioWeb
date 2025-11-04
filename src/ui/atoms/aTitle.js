@@ -1,58 +1,89 @@
-export function ATitleMain({ data, color = '#e0e0e0', fontSize = '2rem', textAlign = 'left' }) {
+export function ATitleMain({
+    data,
+    color = "#e0e0e0",
+    textAlign = "left",
+    fontSize = "text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]",
+}) {
     return (
         <h1
-            className="font-bold text-[#e0e0e0] font-poppins"
+            className={`
+        font-bold font-poppins 
+        ${fontSize}
+      `}
             style={{
                 color,
                 textAlign,
-                fontSize
             }}
         >
             {data}
         </h1>
-    )
+    );
 }
 
-
-export function ATitleSection({ data, color = '#e0e0e0', fontSize = '2rem', textAlign = 'left' }) {
+export function ATitleSection({
+    data,
+    color = "#e0e0e0",
+    textAlign = "left",
+    fontSize = "text-[1.8rem] sm:text-[2rem] md:text-[2.2rem] lg:text-[2.4rem]",
+}) {
     return (
         <h2
-            className="font-light tracking-widest"
+            className={`
+        font-light tracking-widest font-poppins 
+        ${fontSize}
+      `}
             style={{
                 color,
                 textAlign,
-                fontSize
             }}
         >
             {data}
         </h2>
-    )
+    );
 }
 
-
-export function ATitleName({ name, lastName }) {
+export function ATitleName({
+    name,
+    lastName,
+    color = "#e0e0e0",
+    fontSize = "text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3rem]",
+    textAlign = "left",
+}) {
     return (
-        <h2 className="flex flex-col text-[#e0e0e0] text-[4rem] font-[500] font-poppins leading-14">
-            {name}
-            <strong className="font-extrabold">
-                {lastName}
-            </strong>
-        </h2>
-    )
-}
-
-
-export function ATitleBold({ data, color = '#b3b3b3', fontSize = '1rem', textAlign = 'left' }) {
-    return (
-        <h3
-            className="font-semibold"
+        <h2
+            className={`
+        flex flex-col font-poppins leading-tight
+        ${fontSize}
+      `}
             style={{
                 color,
-                fontSize,
-                textAlign
+                textAlign,
+            }}
+        >
+            {name}
+            <strong className="font-extrabold">{lastName}</strong>
+        </h2>
+    );
+}
+
+export function ATitleBold({
+    data,
+    color = "#b3b3b3",
+    textAlign = "left",
+    fontSize = "text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.6rem]",
+}) {
+    return (
+        <h3
+            className={`
+        font-semibold font-poppins 
+        ${fontSize}
+      `}
+            style={{
+                color,
+                textAlign,
             }}
         >
             {data}
         </h3>
-    )
+    );
 }

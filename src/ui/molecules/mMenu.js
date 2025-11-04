@@ -7,7 +7,7 @@ export default function MMenu({ data, isOpen = false, onClose }) {
             <ul
                 className={`
                     flex flex-col md:flex-row
-                    gap-6 items-center justify-center
+                    gap-5 items-center justify-center
                     fixed md:static
                     top-20 left-0
                     w-full h-full md:h-auto
