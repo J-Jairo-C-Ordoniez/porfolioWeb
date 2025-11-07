@@ -1,7 +1,7 @@
-import bloodyyue from "./bloodyyue"
+import bloodyyue from "./bloodyyue";
 
 const projects = {
-    bloodyyue: bloodyyue
-}
+  bloodyyue: bloodyyue,
+};
 
 export default projects;

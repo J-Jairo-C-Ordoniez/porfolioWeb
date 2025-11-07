@@ -1,22 +1,20 @@
-import MError404 from '../../../ui/molecules/mError404'
+import MError404 from "../../../ui/molecules/mError404";
 import OHeader from "../../../ui/organisms/oHeader";
-import blogs from '../../../content/blogs/main';
-import SBlog from '../../../pages/blog/sBlog';
-
+import blogs from "../../../content/blogs/main";
+import SBlog from "../../../pages/blog/sBlog";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const dataBlog = await blogs[id];
 
   if (!dataBlog) {
-    return ({
+    return {
       title: "J Jairo | Blog",
       description: "Blog no encontrado",
-    })
-
+    };
   }
 
-  return ({
+  return {
     metadataBase: new URL("https://tu-dominio.com"),
     title: dataBlog.subtitle,
     description: dataBlog.description,
@@ -39,10 +37,9 @@ export async function generateMetadata({ params }) {
 
     icons: {
       icon: dataBlog.avatar,
-    }
-  })
+    },
+  };
 }
-
 
 export default async function BlogPage({ params }) {
   const { id } = await params;
@@ -54,7 +51,7 @@ export default async function BlogPage({ params }) {
         title={`Upss! Blog ${id} no encontrado`}
         description="Lo sentimos, pero el blog que estás buscando no existe o ha sido movido."
       />
-    )
+    );
   }
 
   return (
@@ -62,5 +59,5 @@ export default async function BlogPage({ params }) {
       <OHeader data={dataBlog.head} />
       <SBlog data={dataBlog} />
     </>
-  )
+  );
 }

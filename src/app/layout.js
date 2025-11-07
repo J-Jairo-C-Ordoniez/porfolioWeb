@@ -16,10 +16,8 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${poppins.variable} ${inter.variable}`}>
-      <body className="bg-[#121212] text-white scroll-smooth p-0 m-0 h-[100vh]">
-        <OMotionLayout>
-          {children}
-        </OMotionLayout>
+      <body className="m-0 h-[100vh] scroll-smooth bg-[#121212] p-0 text-white">
+        <OMotionLayout>{children}</OMotionLayout>
       </body>
     </html>
   );

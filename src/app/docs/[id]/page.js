@@ -1,21 +1,20 @@
-import MError404 from '../../../ui/molecules/mError404'
-import projects from '../../../content/docs/main';
+import MError404 from "../../../ui/molecules/mError404";
+import projects from "../../../content/docs/main";
 import OHeader from "../../../ui/organisms/oHeader";
-import SDoc from '../../../pages/doc/sDoc';
+import SDoc from "../../../pages/doc/sDoc";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const dataProject = await projects[id]
+  const dataProject = await projects[id];
 
   if (!dataProject) {
-    return ({
+    return {
       title: "J Jairo | proyecto",
       description: "Proyecto no encontrado",
-    })
-
+    };
   }
 
-  return ({
+  return {
     metadataBase: new URL("https://tu-dominio.com"),
     title: dataProject.title,
     description: dataProject.description,
@@ -38,14 +37,13 @@ export async function generateMetadata({ params }) {
 
     icons: {
       icon: dataProject.avatar,
-    }
-  })
+    },
+  };
 }
-
 
 export default async function DocPage({ params }) {
   const { id } = await params;
-  const dataProject = await projects[id]
+  const dataProject = await projects[id];
 
   if (!dataProject) {
     return (
@@ -53,7 +51,7 @@ export default async function DocPage({ params }) {
         title={`Upss! Proyecto ${id} no encontrado`}
         description="Lo sentimos, pero el proyecto que estás buscando no existe o ha sido movido."
       />
-    )
+    );
   }
 
   return (
@@ -61,5 +59,5 @@ export default async function DocPage({ params }) {
       <OHeader data={dataProject.head} />
       <SDoc data={dataProject} />
     </>
-  )
+  );
 }

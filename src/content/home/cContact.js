@@ -1,6 +1,6 @@
 const cContact = {
-    id: 'contact',
-    title: 'Contactame'
-}
+  id: "contact",
+  title: "Contactame",
+};
 
-export default cContact
+export default cContact;

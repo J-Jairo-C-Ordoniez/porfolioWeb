@@ -20,13 +20,15 @@ import OHeader from "../ui/organisms/oHeader";
 import OFooter from "../ui/organisms/oFooter";
 
 export async function generateMetadata() {
-  return ({
+  return {
     metadataBase: new URL("https://tu-dominio.com"),
     title: "J Jairo C Ordoñez",
-    description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
+    description:
+      "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
     openGraph: {
       title: "J Jairo C Ordoñez",
-      description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
+      description:
+        "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
       url: "https://jj.com/",
       siteName: "J Jairo C Ordoñez",
       images: [
@@ -43,8 +45,8 @@ export async function generateMetadata() {
 
     icons: {
       icon: "/Logo.svg",
-    }
-  })
+    },
+  };
 }
 
 export default function Home() {
