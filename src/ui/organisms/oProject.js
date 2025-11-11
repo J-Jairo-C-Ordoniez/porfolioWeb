@@ -64,12 +64,12 @@ export default function OProject({ data }) {
   return (
     <div
       ref={containerRef}
-      className="scrollProject m-10 h-[80vh] overflow-hidden overscroll-contain rounded-2xl p-6 focus:outline-none"
+      className="scrollProject mt-4 h-[80vh] overflow-hidden overscroll-contain rounded-2xl focus:outline-none"
     >
       {data.map((project, i) => (
         <motion.article
           key={project.id}
-          className="mx-auto my-10 flex w-[80%] gap-10 rounded-4xl border border-slate-600/20 bg-[#181818] p-10 ring-1 ring-slate-700/6"
+          className="mx-auto my-10 flex flex-col items-center justify-between gap-10 rounded-4xl border border-slate-600/20 bg-[#181818] p-10 ring-1 ring-slate-700/6 w-[100%] sm:w-[98%] sm:flex-col lg:w-[96%] lg:flex-row xl:w-[90%]"
           initial="hidden"
           animate={active ? "visible" : "hidden"}
           custom={i}

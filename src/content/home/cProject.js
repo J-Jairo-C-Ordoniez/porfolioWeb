@@ -1,6 +1,6 @@
 const cProject = {
   id: "projects",
-  title: "Mi Tabajo Reciente",
+  title: "Mi Trabajo Reciente",
 
   menu: [
     { id: 1, status: "personal", text: "Personales", icon: "BookUser" },

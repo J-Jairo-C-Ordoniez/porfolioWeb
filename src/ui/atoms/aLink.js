@@ -25,7 +25,11 @@ export function ALinkDoc({
       style={{ background }}
       href={href}
     >
-      <AText data={data.title} color={color} />
+      <AText 
+        data={data.title} 
+        color={color} 
+        fontSize="text-4xl"
+      />
     </Link>
   );
 }

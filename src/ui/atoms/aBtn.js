@@ -11,7 +11,9 @@ export function ABtn({ data, onClick, dataId = "", color = "#b3b3b3" }) {
       onClick={onClick}
     >
       <AIcon data={data.icon} />
-      <AText data={data.text} color={color} fontSize="1rem" />
+      <span className="hidden sm:block">
+        <AText data={data.text} color={color} fontSize="text-sm md:text-base" />
+      </span>
     </button>
   );
 }
@@ -20,9 +22,13 @@ export function ABtnLinear({ data }) {
   return (
     <Link
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-[#262626] px-6 py-3 font-bold text-[#e0e0e0] transition-transform duration-300 hover:scale-105"
+      className="flex items-center gap-5 rounded-full border-4 border-[#262626] font-bold text-[#e0e0e0] transition-transform duration-300 hover:scale-105 px-6 py-3"
     >
-      <AText data={data.text} color="#b3b3b3" fontSize="1rem" />
+      <AText
+        data={data.text}
+        color="#b3b3b3"
+        fontSize="text-1xl"
+      />
 
       <div className="rounded-full bg-[#262626] p-2 text-[#b3b3b3]">
         <AIcon data={data.icon} />
@@ -37,7 +43,11 @@ export function ABtnBold({ data }) {
       href={data.href}
       className="flex items-center gap-5 rounded-full border-4 border-[#262626] bg-[#262626] px-10 py-5 font-bold text-[#b3b3b3] transition-transform duration-300 hover:scale-105"
     >
-      <AText data={data.text} color="#b3b3b3" fontSize="1rem" />
+      <AText
+        data={data.text}
+        color="#b3b3b3"
+        fontSize="text-1xl"
+      />
 
       <AIcon data={data.icon} />
     </Link>

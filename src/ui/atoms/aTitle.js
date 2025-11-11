@@ -21,11 +21,11 @@ export function ATitleSection({
   data,
   color = "#e0e0e0",
   textAlign = "left",
-  fontSize = "text-[1.8rem] sm:text-[2rem] md:text-[2.2rem] lg:text-[2.4rem]",
+  fontSize = "text-3xl sm:text-3xl md:text-4xl",
 }) {
   return (
     <h2
-      className={`font-poppins font-light tracking-widest ${fontSize} `}
+      className={`font-poppins font-light tracking-tighter ${fontSize} `}
       style={{
         color,
         textAlign,
@@ -40,12 +40,11 @@ export function ATitleName({
   name,
   lastName,
   color = "#e0e0e0",
-  fontSize = "text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3rem]",
   textAlign = "left",
 }) {
   return (
     <h2
-      className={`font-poppins flex flex-col leading-tight ${fontSize} `}
+      className='font-poppins flex flex-col leading-8 text-3xl sm:text-4xl md:text-4xl md:leading-8 lg:text-4xl lg:leading-8 xl:text-5xl xl:leading-12'
       style={{
         color,
         textAlign,
@@ -61,7 +60,7 @@ export function ATitleBold({
   data,
   color = "#b3b3b3",
   textAlign = "left",
-  fontSize = "text-[1rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.6rem]",
+  fontSize = "text-1xl"
 }) {
   return (
     <h3

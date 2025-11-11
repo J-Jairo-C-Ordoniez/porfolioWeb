@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 
 import { ATitleSection } from "../../../ui/atoms/aTitle";
-import { MMenuProjects } from "../../../ui/molecules/mMenuList";
+import { MMenuProject } from "../../../ui/molecules/mMenuList";
 import OProject from "../../../ui/organisms/oProject";
 import MError404 from "../../../ui/molecules/mError404";
 
@@ -72,10 +72,18 @@ export default function SProject({ data }) {
   }, [activeMenu]);
 
   return (
-    <section id={data.id} className="p-4">
-      <ATitleSection data={data.title} color="#e0e0e0" textAlign="center" />
+    <section 
+      id={data.id} 
+      className="overflow-x-hidden px-10 py-4 sm:px-12 md:px-20 lg:px-32 xl:px-35"
+    >
 
-      <MMenuProjects
+      <ATitleSection 
+        data={data.title} 
+        color="#e0e0e0" 
+        textAlign="center" 
+      />
+
+      <MMenuProject
         data={data.menu}
         setStateMenu={setActiveMenu}
         stateMenu={activeMenu}

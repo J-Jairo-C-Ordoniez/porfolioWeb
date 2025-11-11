@@ -9,21 +9,36 @@ export default function MCardProject({ data }) {
   return (
     <>
       {data.direction === "left" && (
-        <figure className="flex w-[50%] items-center justify-center">
-          <APicture src={data.poster} alt={data.title} size="500" />
+        <figure className="flex w-[100%] lg:w-[50%]">
+          <APicture
+            src={data.poster}
+            alt={data.title}
+            size="500"
+          />
         </figure>
       )}
 
-      <article className="flex w-[50%] flex-col justify-center gap-4">
-        <ATitleBold data={data.title} fontSize="2rem" color="#b5b5b5" />
+      <article className="flex w-[100%] flex-col justify-center gap-2">
+        <ATitleBold
+          data={data.title}
+          color="#b5b5b5"
+          fontSize="text-2xl lg:text-3xl"
+        />
 
         <div className="mb-4 flex flex-wrap gap-2">
           {data.labels.map((label) => (
-            <ALabel key={label.id} data={label} />
+            <ALabel 
+              key={label.id} 
+              data={label} 
+            />
           ))}
         </div>
 
-        <AText data={data.description} color="#b3b3b3" fontSize="1.1rem" />
+        <AText 
+          data={data.description} 
+          color="#b3b3b3" 
+          fontSize="text-md lg:text-lg" 
+        />
 
         <div className="flex flex-wrap gap-3">
           {data.links.map((link) => (
@@ -37,7 +52,7 @@ export default function MCardProject({ data }) {
       </article>
 
       {data.direction === "right" && (
-        <figure className="w-[50%]">
+        <figure className="flex w-[100%] order-first lg:order-none lg:w-[50%]">
           <APicture src={data.poster} alt={data.title} size="500" />
         </figure>
       )}

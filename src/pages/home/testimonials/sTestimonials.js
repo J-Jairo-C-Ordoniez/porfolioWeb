@@ -5,10 +5,21 @@ import OMetric from "../../../ui/organisms/oMetric";
 
 export default function STestimonials({ data }) {
   return (
-    <section id="testimonies" className="relative bg-[#12121] px-0 py-20">
-      <div className="px-30">
-        <AText data={data.subTitle} />
-        <ATitleSection data={data.title} color="#e0e0e0" fontSize="1.6rem" />
+    <section 
+      id="testimonies" 
+      className="relative overflow-x-hidden py-10"
+    >
+      <div className="overflow-x-hidden px-10 py-4 sm:px-12 md:px-20 lg:px-32 xl:px-35">
+        <AText 
+          data={data.subTitle} 
+          fontSize="text-xl"
+        />
+
+        <ATitleSection 
+          data={data.title} 
+          color="#e0e0e0" 
+          fontSize="text-2xl sm:text-2xl md:text-3xl"
+        />
       </div>
 
       <OTestimonie data={data.items} />

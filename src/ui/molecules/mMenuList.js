@@ -1,8 +1,8 @@
 import { ABtn } from "../atoms/aBtn";
 
-export function MMenuProjects({ data, setStateMenu, stateMenu }) {
+export function MMenuProject({ data, setStateMenu, stateMenu }) {
   return (
-    <ul className="m-auto mt-10 flex w-fit items-center justify-center gap-5 rounded-full bg-[#262626] px-5 py-4 shadow-sm shadow-slate-500">
+    <ul className="m-auto mt-10 flex w-fit items-center justify-center gap-5 rounded-full bg-[#262626] px-5 py-3 shadow-sm shadow-slate-500 sm:px-5 sm:py-4">
       {data.map((link) =>
         link.status === stateMenu ? (
           <li key={link.id}>
