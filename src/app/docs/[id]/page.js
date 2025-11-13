@@ -50,6 +50,7 @@ export default async function DocPage({ params }) {
       <MError404
         title={`Upss! Proyecto ${id} no encontrado`}
         description="Lo sentimos, pero el proyecto que estás buscando no existe o ha sido movido."
+        isPage
       />
     );
   }

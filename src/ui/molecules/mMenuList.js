@@ -2,17 +2,17 @@ import { ABtn } from "../atoms/aBtn";
 
 export function MMenuProject({ data, setStateMenu, stateMenu }) {
   return (
-    <ul className="m-auto mt-10 flex w-fit items-center justify-center gap-5 rounded-full bg-[#262626] px-5 py-3 shadow-sm shadow-slate-500 sm:px-5 sm:py-4">
+    <ul className="m-auto mt-10 flex w-fit items-center justify-center gap-5 rounded-full bg-[#1A2534] px-5 py-3 shadow-sm shadow-slate-500 sm:px-5 sm:py-4">
       {data.map((link) =>
         link.status === stateMenu ? (
           <li key={link.id}>
-            <ABtn data={link} color="#e0e0e0" />
+            <ABtn data={link} color="#fff" />
           </li>
         ) : (
           <li key={link.id}>
             <ABtn
               data={link}
-              color="#777"
+              color="#b3b3b3"
               onClick={() => setStateMenu(link.status)}
             />
           </li>

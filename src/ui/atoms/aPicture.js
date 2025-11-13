@@ -4,7 +4,7 @@ export default function APicture({ src, alt, size = "100" }) {
   return (
     <div
       className="transition-scale duration-300 ease-in-out hover:scale-102 flex justify-center items-center"
-      style={{ width: `${size}%` }}
+      style={{ width: `${size}%`, height: `${size}%` }}
     >
       <Image
         title={alt}
@@ -16,6 +16,7 @@ export default function APicture({ src, alt, size = "100" }) {
         style={{
           objectFit: "contain",
           objectPosition: "center",
+          borderRadius: "8px",
         }}
       />
     </div>

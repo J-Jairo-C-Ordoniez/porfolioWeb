@@ -25,7 +25,7 @@ const cHero = {
     {
       id: 2,
       href: "#contact",
-      text: "Habemos",
+      text: "Hablemos",
       icon: "MessagesSquare",
       type: "backdrop",
     },

@@ -5,25 +5,46 @@ import { motion } from "framer-motion";
 import { ATitleBold } from "../atoms/aTitle";
 import APicture from "../atoms/aPicture";
 import AText from "../atoms/aText";
+import ARed from "../atoms/aRed";
+import AIcon from "../atoms/aIcon";
 
-export default function MError404({ title, description }) {
+export default function MError404({ title, description, isPage }) {
   return (
     <motion.section
-      className="m-auto my-10 flex h-[80vh] w-[60%] flex-col items-center justify-center overflow-hidden p-10"
+      className="m-auto my-10 flex flex-col items-center justify-center overflow-hidden p-10 h-[80vh] w-[80vw]"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
     >
-      <div>
-        <APicture src="/404.png" alt="Avatar - Error 404" size="200" />
+      <div className="w-30 h-30">
+        <APicture 
+          src="/404.png" 
+          alt="Avatar - Error 404" 
+          size="100" 
+        />
       </div>
 
-      <ATitleBold data={title} color="#e0e0e0" fontSize="1.4rem" />
+      <ATitleBold 
+        data={title} 
+        color="#e0e0e0" 
+        textAlign="center"
+        fontSize="text-md lg:text-xl" 
+      />
 
-      <AText data={description} />
+      <AText 
+        data={description} 
+        textAlign="center"
+      />
 
-      <div className="mt-10 flex items-center justify-center rounded-2xl border-2 border-[#00C896] bg-[#00C89615] px-6 py-3 shadow-md">
+      <div className="my-10 flex items-center justify-center rounded-2xl border-2 border-[#00C896] bg-[#00C89615] px-6 py-3 shadow-md">
         <AText data="404" color="#00C896" />
       </div>
+
+      {isPage && (
+        <ARed href='/'>
+          <AIcon data="ArrowLeft" />
+          <AText data="Volver" />
+        </ARed>
+      )}
     </motion.section>
   );
 }

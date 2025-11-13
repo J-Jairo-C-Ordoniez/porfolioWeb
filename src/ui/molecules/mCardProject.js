@@ -21,7 +21,7 @@ export default function MCardProject({ data }) {
       <article className="flex w-[100%] flex-col justify-center gap-2">
         <ATitleBold
           data={data.title}
-          color="#b5b5b5"
+          color="#e0e0e0"
           fontSize="text-2xl lg:text-3xl"
         />
 

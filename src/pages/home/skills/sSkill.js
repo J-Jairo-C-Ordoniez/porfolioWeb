@@ -17,7 +17,7 @@ export default function SSkill({ data }) {
   }, [activeMenu]);
 
   return (
-    <section id={data.id} className="px-40 py-10">
+    <section id={data.id} className="overflow-hidden px-10 py-5 sm:px-12 md:px-20 lg:flex-row lg:px-32 xl:px-35">
       <ATitleSection data={data.title} color="#e0e0e0" />
 
       <MMenuSkill

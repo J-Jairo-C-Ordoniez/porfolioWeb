@@ -50,6 +50,7 @@ export default async function BlogPage({ params }) {
       <MError404
         title={`Upss! Blog ${id} no encontrado`}
         description="Lo sentimos, pero el blog que estás buscando no existe o ha sido movido."
+        isPage
       />
     );
   }

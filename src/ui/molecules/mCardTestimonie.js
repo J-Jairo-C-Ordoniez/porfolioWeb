@@ -1,7 +1,6 @@
 import { ATitleBold } from "../atoms/aTitle";
 import AIcon from "../atoms/aIcon";
 import AText from "../atoms/aText";
-import ALink from "../atoms/aLink";
 import ARed from "../atoms/aRed";
 
 export default function MCardTestimonie({ data }) {
@@ -12,18 +11,29 @@ export default function MCardTestimonie({ data }) {
       </figure>
 
       <div className="relative z-10 mb-6 text-center">
-        <AText data={`“${data.text}”`} fontSize="1.1rem" textAlign="center" />
+        <AText 
+          data={`“${data.text}”`} 
+          textAlign="center" 
+          fontSize="text-md lg:text-lg"
+          color="#b3b3b3"
+        />
       </div>
 
       <div className="relative z-10 mt-16 flex items-center gap-4">
-        <figure className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 ring-2 ring-white/10">
+        <figure className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 ring-2 ring-white/10">
           <AIcon data="User" />
         </figure>
 
         <span>
-          <ATitleBold data={data.author} color="#00C896" />
+          <ATitleBold 
+            data={data.author} 
+            color="#00C896" 
+          />
 
-          <AText data={data.rol} fontSize=".9rem" />
+          <AText 
+            data={data.rol} 
+            fontSize="text-sm lg:text-md" 
+          />
         </span>
 
         <div className="ml-auto">

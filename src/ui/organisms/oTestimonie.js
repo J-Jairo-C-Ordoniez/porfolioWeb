@@ -5,10 +5,10 @@ import MCardTestimonie from "../molecules/mCardTestimonie";
 
 export default function OTestimonie({ data }) {
   return (
-    <div className="flex gap-20 px-30 py-20">
+    <div className="flex flex-wrap justify-center gap-20 overflow-hidden px-10 py-10 sm:px-12 md:px-20 lg:px-32 xl:px-35">
       {data.map((testimonie) => (
         <motion.article
-          className="relative rounded-2xl border border-slate-600/20 bg-[#181818] p-6 shadow-lg transition-transform duration-300 hover:scale-106 hover:shadow-2xl"
+          className="w-[100%] md:w-[40%] lg:w-[40%] xl:w-[20%] relative rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 p-6 transition-transform duration-300 hover:scale-106 hover:shadow-2xl"
           key={testimonie.id}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

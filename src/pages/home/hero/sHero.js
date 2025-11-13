@@ -10,7 +10,7 @@ export default function SHero({ data }) {
     >
       <ODetail data={data} />
 
-      <article className="rounded-full order-first flex w-50 h-50 mb-10 bg-[#00C896] items-center justify-center sm:w-60 sm:h-60 lg:order-none lg:w-[30%] lg:bg-[#121212]">
+      <article className="rounded-full order-first flex w-50 h-50 mb-10 bg-[#00C896] items-center justify-center sm:w-60 sm:h-60 lg:order-none lg:w-[30%] lg:bg-[#00000000]">
         <APicture
           src={data.user.photo.src}
           alt={data.user.photo.alt}

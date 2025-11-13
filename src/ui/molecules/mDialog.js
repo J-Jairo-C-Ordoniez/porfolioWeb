@@ -36,32 +36,42 @@ export default function MDialog({ data, open, setOpen }) {
         <motion.dialog
           ref={dialogRef}
           open={open}
-          className="animate-fadeIn absolute inset-[40%] z-10000 w-[90%] max-w-md rounded-2xl border border-slate-600/20 bg-[#181818] p-6"
+          className="animate-fadeIn relative z-10000 w-[90%] max-w-md rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 p-6"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           key="box"
         >
           <div className="mb-4 flex items-center gap-3">
-            <figure className="rounded-full border border-slate-500 bg-zinc-800 p-2 text-slate-500">
+            <figure className="rounded-full border border-slate-500 ring-1 ring-slate-700/6 bg-[#131d2b] p-2 text-slate-500">
               <AIcon data={data.icon} />
             </figure>
-            <ATitleBold data={data.value} color="#e0e0e0" fontSize="1.2rem" />
+            <ATitleBold 
+              data={data.value} 
+              color="#e0e0e0" 
+              fontSize="text-md lg:text-lg" 
+            />
           </div>
 
-          <AText data={data.detail} />
+          <AText 
+            data={data.detail} 
+            fontSize="text-md"
+          />
 
           <ul className="m-6 space-y-2">
             {data.extra.map((extra) => (
               <li
                 key={extra.id}
-                className="flex items-center text-sm text-gray-600"
+                className="flex items-center text-gray-600"
               >
                 <div
                   style={{ backgroundColor: data.label.color }}
                   className="mr-2 h-2 w-2 rounded-full"
                 ></div>
-                <AText data={extra.text} />
+                <AText 
+                  data={extra.text} 
+                  fontSize="text-md"
+                />
               </li>
             ))}
           </ul>

@@ -74,7 +74,7 @@ export default function SProject({ data }) {
   return (
     <section 
       id={data.id} 
-      className="overflow-x-hidden px-10 py-4 sm:px-12 md:px-20 lg:px-32 xl:px-35"
+      className="overflow-x-hidden px-10 py-10 sm:px-12 md:px-20 lg:px-32 xl:px-35"
     >
 
       <ATitleSection 
