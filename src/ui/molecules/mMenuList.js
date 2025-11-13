@@ -24,7 +24,7 @@ export function MMenuProject({ data, setStateMenu, stateMenu }) {
 
 export function MMenuSkill({ data, setStateMenu, stateMenu }) {
   return (
-    <nav className="w-100% mt-10 border-b-2 border-[#181818]">
+    <nav className="w-100% mt-10 border-b-2 border-slate-600/20 ring-b-1 ring-slate-700/6">
       <ul className="flex items-center gap-5">
         {data.map((link) =>
           link.status === stateMenu ? (

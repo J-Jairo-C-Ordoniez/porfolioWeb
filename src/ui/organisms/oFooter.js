@@ -7,11 +7,10 @@ import AText from "../atoms/aText";
 
 export default function OFooter({ data }) {
   return (
-    <footer className="w-full bg-[#181818] py-10">
+    <footer className="w-full bg-[#1A2534] py-10">
       <article className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4">
         <div className="flex flex-col items-center justify-center gap-4">
-          <APicture src={data.logo.src} alt={data.logo.alt} size="40" />
-          <ATitleBold data={data.title} fontSize="1.4rem" color="#e0e0e0" />
+          <ATitleBold data={data.title} fontSize="text-xl" color="#e0e0e0" />
         </div>
 
         <MMenu data={data.menu} />
@@ -25,7 +24,7 @@ export default function OFooter({ data }) {
         </div>
 
         <div className="mt-4 flex flex-col items-center gap-2 text-xs text-gray-500">
-          <AText data={data.copyright} />
+          <AText data={data.copyright} fontSize="text-lg" />
         </div>
       </article>
     </footer>

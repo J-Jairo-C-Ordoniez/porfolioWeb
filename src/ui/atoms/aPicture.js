@@ -3,15 +3,14 @@ import Image from "next/image";
 export default function APicture({ src, alt, size = "100" }) {
   return (
     <div
-      className="transition-scale duration-300 ease-in-out hover:scale-102 flex justify-center items-center"
+      className="relative transition-scale duration-300 ease-in-out hover:scale-102 flex justify-center items-center"
       style={{ width: `${size}%`, height: `${size}%` }}
     >
       <Image
-        title={alt}
         src={src}
         alt={alt}
-        width={size}
-        height={size}
+        title={alt}
+        fill
         priority
         style={{
           objectFit: "contain",

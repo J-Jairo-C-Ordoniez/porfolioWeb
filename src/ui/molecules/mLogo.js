@@ -4,7 +4,13 @@ import APicture from "../atoms/aPicture";
 export default function MLogo({ data }) {
   return (
     <ALink href={data.link}>
-      <APicture src={data.src} alt={data.alt} size="60" />
+      <div className="w-10 h-10">
+        <APicture 
+          src={data.src} 
+          alt={data.alt} 
+          size="100" 
+        />
+      </div>
     </ALink>
   );
 }

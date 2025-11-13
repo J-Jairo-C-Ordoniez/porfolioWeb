@@ -11,7 +11,7 @@ export default function OHeader({ data }) {
 
   return (
     <header className="flex w-full flex-wrap items-center justify-between px-10 py-6 sm:px-12 md:px-20 lg:px-32 xl:px-35">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <MLogo data={data.logo} />
         <ATitleMain data={data.name} fontSize="1rem" />
       </div>
@@ -29,7 +29,7 @@ export default function OHeader({ data }) {
       </button>
 
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 z-10 w-full bg-[#121212] px-8 py-4 lg:hidden">
+        <div className="absolute top-16 left-0 z-10 w-full bg-[#101828] px-8 py-4 lg:hidden">
           {data.menu && (
             <MMenu
               data={data.menu}

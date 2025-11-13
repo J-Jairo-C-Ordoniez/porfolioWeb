@@ -23,7 +23,7 @@ export default function ContactSection() {
     <article className="w-full space-y-10 px-10">
       <form
         onSubmit={handleSubmit}
-        className="m-auto w-[50%] space-y-6 border-t-2 border-[#181818] pt-6"
+        className="m-auto w-[100%] lg:w-[70%] xl:w-[50%] space-y-6 border-t-2 border-[#1A2534] pt-6"
       >
         <div>
           <label className="mb-3 block">Nombre (obligatorio)</label>
@@ -33,7 +33,7 @@ export default function ContactSection() {
               type="text"
               name="firstName"
               placeholder="Juan Manuel"
-              className="w-1/2 border-b-2 border-[#181818] bg-transparent focus:border-[#999] focus:outline-none"
+              className="w-1/2 border-b-2 border-[#1A2534] bg-transparent focus:border-[#999] focus:outline-none"
               value={formData.firstName}
               onChange={handleChange}
               required
@@ -42,7 +42,7 @@ export default function ContactSection() {
               type="text"
               name="lastName"
               placeholder="Cardenas"
-              className="w-1/2 border-b-2 border-[#181818] bg-transparent focus:border-[#999] focus:outline-none"
+              className="w-1/2 border-b-2 border-[#1A2534] bg-transparent focus:border-[#999] focus:outline-none"
               value={formData.lastName}
               onChange={handleChange}
             />
@@ -55,7 +55,7 @@ export default function ContactSection() {
             type="email"
             name="email"
             placeholder="ejemplo21@gmail.com"
-            className="w-full border-b-2 border-[#181818] bg-transparent focus:border-[#999] focus:outline-none"
+            className="w-full border-b-2 border-[#1A2534] bg-transparent focus:border-[#999] focus:outline-none"
             value={formData.email}
             onChange={handleChange}
             required
@@ -68,7 +68,7 @@ export default function ContactSection() {
             name="message"
             placeholder="Escribe tu Mensaje..."
             rows="4"
-            className="w-full resize-none border-b border-gray-600 bg-transparent focus:border-white focus:outline-none"
+            className="w-full resize-none border-b border-slate-600/20 ring-b-1 ring-slate-700/6  bg-transparent focus:border-white focus:outline-none"
             value={formData.message}
             onChange={handleChange}
             required
@@ -100,46 +100,3 @@ export default function ContactSection() {
     </article>
   );
 }
-
-/* 
-// Make sure to run npm install @formspree/react
-// For more help visit https://formspr.ee/react-help
-import React from 'react';
-
-
-function ContactForm() {
-  
-  if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
-  }
-  return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="email">
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email" 
-        name="email"
-      />
-      <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-      <textarea
-        id="message"
-        name="message"
-      />
-      <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
-    </form>
-  );
-}
-*/

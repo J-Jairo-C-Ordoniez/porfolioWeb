@@ -24,7 +24,7 @@ export default function OSkill({ data }) {
         {data.map((skill) => (
           <motion.article
             key={skill.id}
-            className="flex w-fit items-center gap-4 rounded-2xl bg-[#181818] px-6 py-4 text-[#b3b3b3] duration-300 ease-in hover:scale-105"
+            className="flex w-fit items-center gap-4 rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 px-6 py-4 text-[#e0e0e0] duration-300 ease-in hover:scale-105"
             exit="exit"
             variants={{
               hidden: { opacity: 0, x: -40 },
@@ -36,8 +36,10 @@ export default function OSkill({ data }) {
               exit: { opacity: 0, x: 40, transition: { duration: 0.3 } },
             }}
           >
-            <AIcon data={skill.icon} />
-            <ATitleBold data={skill.name} fontSize="1.1rem" color="#e0e0e0" />
+            <div className="hidden md:block">
+              <AIcon data={skill.icon} />
+            </div>
+            <ATitleBold data={skill.name} fontSize="text-md" color="#e0e0e0" />
 
             <AText data={skill.description} />
           </motion.article>

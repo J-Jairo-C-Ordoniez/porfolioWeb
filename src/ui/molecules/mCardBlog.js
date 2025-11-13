@@ -13,7 +13,7 @@ export default function MCardBlog({ data }) {
   return (
     <ALink href={data.href}>
       <motion.article
-        className="flex cursor-pointer justify-between rounded-4xl border-b-4 border-[#181818] p-4 transition-all duration-300 hover:scale-102 hover:bg-[#111111] hover:shadow-lg"
+        className="w-full flex flex-col cursor-pointer justify-between rounded-4xl border-b-5 border-slate-600/20 ring-b-5 ring-slate-700/6 p-4 transition-all duration-30 hover:bg-[#1A2534] md:flex-row"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -22,11 +22,11 @@ export default function MCardBlog({ data }) {
           ease: "easeOut",
         }}
       >
-        <div className="w-[60%] space-y-4 p-5">
+        <div className="w-[100%] md:w-[60%] space-y-4 p-5">
           <ALabel data={data.category} />
-          <ATitleBold data={data.title} color="#e0e0e0" fontSize="1.4rem" />
+          <ATitleBold data={data.title} color="#e0e0e0" fontSize="text-2xl lg:text-3xl" />
 
-          <AText data={data.excerpt} />
+          <AText data={data.excerpt} fontSize="text-md lg:text-lg" />
 
           <span className="flex items-center gap-6">
             <div className="flex items-center gap-2 text-[#0B84F3]">
@@ -41,8 +41,8 @@ export default function MCardBlog({ data }) {
           </span>
         </div>
 
-        <figure className="flex w-[30%] items-center justify-end px-20">
-          <APicture src={data.poster.src} alt={data.poster.alt} size="300" />
+        <figure className="flex w-[100%] h-50 order-first md:order-none lg:h-60 lg:w-[50%]">
+          <APicture src={data.poster.src} alt={data.poster.alt} size="100" />
         </figure>
       </motion.article>
     </ALink>

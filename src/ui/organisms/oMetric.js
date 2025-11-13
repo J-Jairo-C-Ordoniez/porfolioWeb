@@ -33,7 +33,7 @@ export default function OMetric({ data }) {
   };
 
   return (
-    <article className="overflow-x-hidden py-20">
+    <article className="overflow-hidden py-20 relative">
       <motion.div
         className="flex w-full gap-10"
         animate={controls}

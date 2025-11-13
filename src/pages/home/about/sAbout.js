@@ -19,15 +19,15 @@ export default function SAbout({ data }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <ATitleBold 
-          data={data.title} 
-          color="#e0e0e0" 
-          fontSize="text-2xl sm:text-3xl md:text-4xl" 
+        <ATitleBold
+          data={data.title}
+          color="#e0e0e0"
+          fontSize="text-2xl sm:text-3xl md:text-4xl"
         />
 
-        <AText 
-          data={data.subtitle} 
-          color="#00C896" 
+        <AText
+          data={data.subtitle}
+          color="#00C896"
         />
 
         <AText data={data.start} />
@@ -41,14 +41,19 @@ export default function SAbout({ data }) {
       </motion.article>
 
       <motion.article
-        className="w-[20%] flex items-end justify-center gap-2 p-0 sm:p-4 md:p-8 md:gap-4 lg:p-12 lg:w-[50%] xl:p-20"
+        className="w-[100%] flex items-end justify-center gap-2 p-6 sm:p-8 md:p-10 md:gap-4 lg:p-12 lg:w-[50%] xl:p-16"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <APicture src={data.photo.src} alt={data.photo.alt} size="300" />
-
+        <div className="w-80 h-80 lg:w-[70%] lg:h-full">
+          <APicture
+            src={data.photo.src} 
+            alt={data.photo.alt} 
+            size="100"
+          />
+        </div>
         <motion.div
           className="flex w-[20%] gap-5 p-4"
           initial={{ opacity: 0, scale: 0.8 }}

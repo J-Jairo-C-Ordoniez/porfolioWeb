@@ -9,11 +9,11 @@ export default function MCardProject({ data }) {
   return (
     <>
       {data.direction === "left" && (
-        <figure className="flex w-[100%] lg:w-[50%]">
+        <figure className="flex w-[100%] h-50 lg:h-100 lg:w-[50%]">
           <APicture
             src={data.poster}
             alt={data.title}
-            size="500"
+            size="100"
           />
         </figure>
       )}
@@ -27,17 +27,17 @@ export default function MCardProject({ data }) {
 
         <div className="mb-4 flex flex-wrap gap-2">
           {data.labels.map((label) => (
-            <ALabel 
-              key={label.id} 
-              data={label} 
+            <ALabel
+              key={label.id}
+              data={label}
             />
           ))}
         </div>
 
-        <AText 
-          data={data.description} 
-          color="#b3b3b3" 
-          fontSize="text-md lg:text-lg" 
+        <AText
+          data={data.description}
+          color="#b3b3b3"
+          fontSize="text-md lg:text-lg"
         />
 
         <div className="flex flex-wrap gap-3">
@@ -52,8 +52,8 @@ export default function MCardProject({ data }) {
       </article>
 
       {data.direction === "right" && (
-        <figure className="flex w-[100%] order-first lg:order-none lg:w-[50%]">
-          <APicture src={data.poster} alt={data.title} size="500" />
+        <figure className="flex w-[100%] h-50 order-first lg:order-none lg:h-100 lg:w-[50%]">
+          <APicture src={data.poster} alt={data.title} size="100" />
         </figure>
       )}
     </>
