@@ -18,13 +18,13 @@ export default function MCardDoc({ data }) {
             <ATitleSection
               key={item.id}
               data={item.value}
-              fontSize="text-2xl"
+              fontSize="text-xl"
               color="#e0e0e0"
             />
           );
 
         if (item.type === "text")
-          return <AText key={item.id} data={item.value} fontSize="1.2rem" />;
+          return <AText key={item.id} data={item.value} />;
 
         if (item.type === "quote")
           return <AQuote key={item.id} data={item.value} />;

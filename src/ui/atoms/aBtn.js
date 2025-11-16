@@ -22,7 +22,7 @@ export function ABtnLinear({ data }) {
   return (
     <Link
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-[#00C896] transition-transform duration-300 hover:scale-105 px-6 py-3"
+      className="flex items-center gap-5 rounded-full border-4 border-[#243347] transition-transform duration-300 hover:scale-105 px-6 py-3"
     >
       <AText
         data={data.text}
@@ -30,7 +30,7 @@ export function ABtnLinear({ data }) {
         fontSize="text-1xl"
       />
 
-      <div className="rounded-full bg-[#00C896] p-2">
+      <div className="rounded-full bg-[#243347] p-2">
         <AIcon data={data.icon} />
       </div>
     </Link>
@@ -41,7 +41,7 @@ export function ABtnBold({ data }) {
   return (
     <Link
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-[#00C896] bg-[#00C896] px-8 py-5 transition-transform duration-300 hover:scale-105"
+      className="flex items-center gap-5 rounded-full border-4 border-[#243347] bg-[#243347] px-8 py-5 transition-transform duration-300 hover:scale-105"
     >
       <AText
         data={data.text}

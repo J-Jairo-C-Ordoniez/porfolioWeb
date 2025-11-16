@@ -4,7 +4,7 @@ import MListBlog from "../molecules/mLIstBlog";
 export default function OListBlog({ data, idCurrent }) {
   return (
     <>
-      <ATitleSection data="LEER MÁS" fontSize="1.2rem" color="#999999" />
+      <ATitleSection data="LEER MÁS" fontSize="text-lg" color="#999999" />
 
       {data.items.map(
         (item) =>

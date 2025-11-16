@@ -11,7 +11,7 @@ export default function AList({ data, fontSize = "1.2rem" }) {
           />
           <div className="min-w-0">
             <div className="text-sm text-gray-800 dark:text-gray-200">
-              <AText data={item.text} fontSize={fontSize} color="#ACB4BF" />
+              <AText data={item.text} />
             </div>
           </div>
         </li>

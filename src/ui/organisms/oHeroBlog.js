@@ -1,14 +1,14 @@
 import APicture from "../atoms/aPicture";
 import AText from "../atoms/aText";
-import { ATitleBold, ATitleMain, ATitleSection } from "../atoms/aTitle";
+import { ATitleBold, ATitleMain } from "../atoms/aTitle";
 
 export default function OHeroBlog({ data }) {
   return (
     <header>
       <article className="space-y-4">
-        <ATitleMain data={data.title} color="#EAECEF" fontSize="3rem" />
+        <ATitleMain data={data.title} color="#e0e0e0" fontSize="text-3xl" />
 
-        <AText data={data.description} fontSize="1.2rem" color="#ACB4BF" />
+        <AText data={data.description} fontSize="text-lg" />
       </article>
       <article className="mt-10 flex items-center gap-4">
         <div className="h-10 w-10 rounded-full bg-[#090909] p-1">

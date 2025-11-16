@@ -7,14 +7,14 @@ import AText from "../atoms/aText";
 
 export default function MBlogContent({ data }) {
   return (
-    <article className="space-y-5 border-t border-[#22222281] pt-10">
+    <article className="space-y-5 border-t border-slate-600/20 ring-t-1 ring-slate-700/6 pt-10">
       {data.map((item) => {
         if (item.type === "title")
           return (
             <ATitleBold
               key={item.id}
               data={item.value}
-              fontSize="1.4rem"
+              fontSize="text-xl"
               color="#F1F3F5"
             />
           );
@@ -24,8 +24,6 @@ export default function MBlogContent({ data }) {
             <AText
               key={item.id}
               data={item.value}
-              color="#ACB4BF"
-              fontSize="1.2rem"
             />
           );
 
