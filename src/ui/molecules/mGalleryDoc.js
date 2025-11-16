@@ -26,14 +26,14 @@ export default function MGalleryDoc({ data }) {
   return (
     <>
       <motion.figure
-        className="rounded-2xl border border-[#1a1a1a] bg-[#0f0f0f] p-4 px-10 shadow-inner"
+        className="rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 p-4 px-10 shadow-inner"
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.08 }}
       >
         <button
           onClick={() => setOpen(true)}
-          className="mb-4 flex items-center justify-center"
+          className="mb-4 w-full h-60 flex items-center justify-center"
         >
           <APicture src={data.src} alt={data.title} size="400" />
         </button>

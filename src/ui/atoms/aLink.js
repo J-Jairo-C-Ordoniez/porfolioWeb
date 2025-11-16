@@ -16,19 +16,19 @@ export default function ALink({ children, href, target = "_self" }) {
 export function ALinkDoc({
   data,
   href,
-  background = "#121212",
+  background = "#00000000",
   color = "#999999",
 }) {
   return (
     <Link
-      className="transition-scale block rounded-l-full p-1 transition-colors duration-300 hover:scale-106"
+      className="transition-scale block rounded-l-full p-1 pl-4 transition-colors duration-300 hover:scale-106"
       style={{ background }}
       href={href}
     >
       <AText 
         data={data.title} 
         color={color} 
-        fontSize="text-4xl"
+        fontSize="text-lg"
       />
     </Link>
   );

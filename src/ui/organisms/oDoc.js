@@ -15,23 +15,19 @@ export default function ODoc({ data }) {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    const mainContainer = document.querySelector(".scrollProjects");
-    if (!mainContainer) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) setVisibleItem(entry.target.id);
-        });
+        })
       },
-      {
-        root: mainContainer,
+      { 
         threshold: 0.05,
         rootMargin: "0px 0px -20% 0px",
       },
     );
 
-    const items = contentRef.current?.querySelectorAll("article");
+    const items = contentRef.current?.querySelectorAll("article")
     items?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -45,8 +41,8 @@ export default function ODoc({ data }) {
     ) || [];
 
   return (
-    <div className="flex h-[92vh] text-sm text-gray-200">
-      <aside className="hidden w-[20vw] py-4 pr-10 md:block">
+    <div className="flex justify-center scrollProjects">
+      <aside className="w-[20vw] h-fit py-4 pr-10 sticky top-0">
         <MMenuDoc
           data={data}
           setActiveSection={setActiveSection}
@@ -54,9 +50,9 @@ export default function ODoc({ data }) {
         />
       </aside>
 
-      <main className="scrollbar-hide scrollProjects flex w-[80vw] gap-4 overflow-x-hidden overflow-y-auto pl-20">
-        <section className="w-[80%] p-6" ref={contentRef}>
-          <header className="z-10 m-auto mb-6 flex w-[80%] items-center justify-between gap-3 rounded-full border border-[#1e1e1e] bg-[#101010] px-6 py-3 text-[#b3b3b3] transition-all duration-75 hover:border-[#00C89620]">
+      <main className="scrollbar-hide flex w-[80vw] gap-4 pl-20">
+        <section className="w-[80%] p-6 overflow-x-hidden" ref={contentRef}>
+          <header className="z-10 m-auto mb-10 flex w-[80%] items-center justify-between gap-3 rounded-full border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 px-6 py-3 text-[#b3b3b3] transition-all duration-75 hover:border-[#00C89620]">
             <MSearchDoc
               currentSection={currentSection}
               searchTerm={searchTerm}
@@ -79,11 +75,12 @@ export default function ODoc({ data }) {
           </div>
         </section>
 
-        <aside className="sticky top-0 hidden w-[20%] py-4 pl-6 md:block">
-          <nav className="sticky top-20 space-y-2 text-sm">
+        <aside className="w-[20%] h-fit py-4 pl-6 sticky top-0">
+          <nav className="space-y-2 text-sm overflow-x-hidden">
             <ATitleSection
-              data={currentSection?.title.toUpperCase() || "SECCIÓN"}
-              fontSize="1rem"
+              data="EN ESTA SECCIÓN"
+              fontSize="text-md"
+              color="#999"
             />
 
             {currentSection?.items.map((item) => (
@@ -92,7 +89,7 @@ export default function ODoc({ data }) {
                 data={item}
                 href={`#${item.id}`}
                 background={parseInt(visibleItem) === item.id && "#00C89615"}
-                color={parseInt(visibleItem) === item.id && "#00C896"}
+                color={(parseInt(visibleItem) === item.id) ? "#00C896" : "#b3b3b3"}
               />
             ))}
           </nav>

@@ -9,7 +9,7 @@ export default function MCardDoc({ data }) {
   return (
     <article id={data.id} className="doc-card space-y-4">
       <div className="mb-4">
-        <ATitleBold data={data.title} color="#e0e0e0" fontSize="1.8rem" />
+        <ATitleBold data={data.title} color="#e0e0e0" fontSize="text-3xl" />
       </div>
 
       {data.content.map((item) => {
@@ -18,7 +18,7 @@ export default function MCardDoc({ data }) {
             <ATitleSection
               key={item.id}
               data={item.value}
-              fontSize="1.4rem"
+              fontSize="text-2xl"
               color="#e0e0e0"
             />
           );

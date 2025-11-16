@@ -12,12 +12,19 @@ export default function MHeroDoc({ data, onClick }) {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col items-center justify-between gap-10 md:flex-row"
+      className="w-full flex flex-col items-center justify-between lg:flex-row"
     >
-      <div className="w-[50%]">
-        <ATitleBold data={data.title} color="#e0e0e0" fontSize="3rem" />
+      <div className="w-[100%] p-10 lg:w-[60%] lg:p-2">
+        <ATitleBold 
+          data={data.title} 
+          color="#e0e0e0" 
+          fontSize="text-5xl" 
+        />
 
-        <AText data={data.description} fontSize="1.2rem" />
+        <AText 
+          data={data.description} 
+          fontSize="text-lg" 
+        />
 
         <div className="mt-8 flex items-center gap-6">
           <ABtnCTA data={data.Btn} onClick={onClick} />
@@ -33,7 +40,7 @@ export default function MHeroDoc({ data, onClick }) {
       </div>
 
       <motion.figure
-        className="flex h-80 w-80 items-center justify-center rounded-xl bg-gradient-to-tr from-[#141414] to-[#1a1a1a] shadow-2xl"
+        className="flex h-80 w-80 items-center justify-center rounded-xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.2 }}

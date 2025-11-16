@@ -42,8 +42,8 @@ export default function MSearchDoc({
 
       <div>
         <p className="space-x-2">
-          <span className="rounded-md bg-[#090909] px-2 py-1">Ctrl</span>
-          <span className="rounded-md bg-[#090909] px-2 py-1">K</span>
+          <span className="rounded-md bg-[#0e141d] px-2 py-1">Ctrl</span>
+          <span className="rounded-md bg-[#0e141d] px-2 py-1">K</span>
         </p>
       </div>
     </>

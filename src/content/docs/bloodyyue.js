@@ -227,7 +227,19 @@ function SearchableVideoList({ videos }) {
               id: 1,
               type: "text",
               value:
-                "Las plataformas de exhibición de arte digital suelen carecer de personalización, rendimiento y coherencia visual. Además, no ofrecen una experiencia fluida entre contenido visual y narrativo.",
+                "En la actualidad, vender arte digital se ha convertido en un desafío constante para los artistas independientes. Las redes sociales, aunque ofrecen alcance global, se han transformado en un espacio saturado donde la visibilidad depende de algoritmos opacos y de la inversión en publicidad. Esto ha generado una brecha entre la calidad del arte y su capacidad de llegar a un público realmente interesado."
+            },
+            {
+              id: 2,
+              type: "text",
+              value:
+                "Muchos artistas digitales dependen casi por completo de plataformas externas para exhibir y vender sus obras, lo que los deja expuestos a la falta de control sobre sus datos, a la pérdida de derechos sobre su contenido y, en algunos casos, a entornos poco seguros donde el fraude o la apropiación indebida de obras son frecuentes. A esto se suma la ausencia de espacios que combinen comunidad, exposición y comercio de forma ética y sostenible.",
+            },
+            {
+              id: 3,
+              type: "text",
+              value:
+                "En síntesis, el principal problema identificado es la falta de un canal confiable, transparente y equitativo para que los artistas digitales puedan conectar con sus compradores, gestionar sus obras y asegurar su propiedad sin depender de intermediarios abusivos.",
             },
           ],
         },
@@ -239,7 +251,7 @@ function SearchableVideoList({ videos }) {
               id: 1,
               type: "text",
               value:
-                "BloodyYue propone una solución basada en componentes reutilizables, diseño atómico y un backend optimizado que gestiona obras, artistas y contenido multimedia de forma estructurada. El frontend usa SSR (Server Side Rendering) para mejorar el rendimiento y SEO.",
+                "BloodyYue nace como respuesta a esta problemática. Su objetivo es construir un entorno digital donde la artista bloodyyue pueda mostrar, vender y proteger su trabajo bajo sus propios términos, priorizando la confianza, la trazabilidad y la independencia creativa.",
             },
           ],
         },

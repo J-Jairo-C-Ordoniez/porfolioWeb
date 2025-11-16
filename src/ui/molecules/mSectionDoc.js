@@ -6,8 +6,11 @@ import APicture from "../atoms/aPicture";
 
 export default function MSectionDoc({ data }) {
   return (
-    <article className="rounded-2xl border border-[#1b1b1b] bg-[#101010] p-6 shadow-md">
-      <ATitleBold data={data.title} fontSize="1.4rem" />
+    <article className="rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 p-6">
+      <ATitleBold
+        data={data.title}
+        fontSize="text-2xl"
+      />
 
       <div className="mt-4 flex flex-wrap gap-2">
         {data.labels.map((label) => (
@@ -20,11 +23,18 @@ export default function MSectionDoc({ data }) {
         <AText data={data.description} />
       </span>
 
-      <div className="my-6 flex items-center justify-center">
+      <div className="my-6 w-full h-60">
         {data.src.type === "code" ? (
-          <ACode code={data.src.content} language={data.src.language} />
+          <ACode 
+            code={data.src.content} 
+            language={data.src.language} 
+          />
         ) : (
-          <APicture src={data.src.content} alt={data.src.alt} size="400" />
+          <APicture
+            src={data.src.content}
+            alt={data.src.alt}
+            size="100"
+          />
         )}
       </div>
     </article>
