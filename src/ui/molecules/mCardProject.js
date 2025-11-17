@@ -9,7 +9,7 @@ export default function MCardProject({ data }) {
   return (
     <>
       {data.direction === "left" && (
-        <figure className="flex w-[100%] h-50 lg:h-100 lg:w-[50%]">
+        <figure className="flex w-[100%] h-50 lg:h-60 lg:w-[50%]">
           <APicture
             src={data.poster}
             alt={data.title}
@@ -52,7 +52,7 @@ export default function MCardProject({ data }) {
       </article>
 
       {data.direction === "right" && (
-        <figure className="flex w-[100%] h-50 order-first lg:order-none lg:h-100 lg:w-[50%]">
+        <figure className="flex w-[100%] h-50 order-first lg:order-none lg:h-60 lg:w-[50%]">
           <APicture src={data.poster} alt={data.title} size="100" />
         </figure>
       )}
