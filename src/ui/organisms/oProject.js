@@ -75,7 +75,7 @@ export default function OProject({ data }) {
           custom={i}
           variants={{
             hidden: { opacity: 0, y: 40, scale: 0.95 },
-            visible: (i) => ({
+            visible: () => ({
               opacity: 1,
               y: 0,
               scale: 1,

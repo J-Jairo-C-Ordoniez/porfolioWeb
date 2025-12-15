@@ -1,5 +1,4 @@
 import { ATitleBold } from "../atoms/aTitle";
-import APicture from "../atoms/aPicture";
 import ARed from "../atoms/aRed";
 import AIcon from "../atoms/aIcon";
 import MMenu from "../molecules/mMenu";

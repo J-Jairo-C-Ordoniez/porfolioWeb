@@ -98,10 +98,10 @@ export const bloodyyueDoc = {
           language: "sql",
           content: `
 CREATE TABLE users (
-  userId INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(50),
-  email VARCHAR(50) UNIQUE,
-  password VARCHAR(255),
+  userId INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  email VARCHAR(50) UNIQUE,
+  password VARCHAR(255),
 -- ...`,
         },
         labels: [

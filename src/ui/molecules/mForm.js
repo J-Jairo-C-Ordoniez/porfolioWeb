@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 
 import AIcon from "../atoms/aIcon";
 import ARed from "../atoms/aRed";
 import AText from "../atoms/aText";
 
 export default function ContactSection() {
-  const [state, handleSubmit, reset] = useForm("mrbywadq");
+  const [state, handleSubmit] = useForm("mrbywadq");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

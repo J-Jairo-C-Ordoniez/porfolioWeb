@@ -1,5 +1,4 @@
-import { ATitleBold, ATitleSection } from "@/ui/atoms/aTitle";
-import APicture from "../../../ui/atoms/aPicture";
+import { ATitleBold } from "@/ui/atoms/aTitle";
 import MForm from "@/ui/molecules/mForm";
 
 export default function SContact({ data }) {

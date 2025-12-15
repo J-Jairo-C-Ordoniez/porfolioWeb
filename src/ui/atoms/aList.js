@@ -1,6 +1,6 @@
 import AText from "./aText";
 
-export default function AList({ data, fontSize = "1.2rem" }) {
+export default function AList({ data }) {
   return (
     <ul className="my-4 pl-6">
       {data.map((item) => (

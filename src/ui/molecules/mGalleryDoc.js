@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { ATitleBold } from "../atoms/aTitle";
 import APicture from "../atoms/aPicture";
 import AText from "../atoms/aText";
-import { ABtn, ABtnCTA } from "../atoms/aBtn";
+import { ABtn } from "../atoms/aBtn";
 
 export default function MGalleryDoc({ data }) {
   const [open, setOpen] = useState(false);
