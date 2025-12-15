@@ -19,39 +19,36 @@ import SContact from "../pages/home/contact/sContact";
 import OHeader from "../ui/organisms/oHeader";
 import OFooter from "../ui/organisms/oFooter";
 
-export async function generateMetadata() {
-  return {
-    metadataBase: new URL("https://tu-dominio.com"),
-    title: "J Jairo C Ordoñez",
-    description:
-      "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
-    openGraph: {
-      title: "J Jairo C Ordoñez",
-      description:
-        "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
-      url: "https://jj.com/",
-      siteName: "J Jairo C Ordoñez",
-      images: [
-        {
-          url: "/avatar.png",
-          width: 1200,
-          height: 630,
-          alt: "Avatar de J Jairo C Ordoñez",
-        },
-      ],
-      locale: "es_COL",
-      type: "website",
-    },
+export const metadata = {
+  title: "Inicio",
+  alternates: {
+    canonical: "https://tu-dominio.com",
+  },
+};
 
-    icons: {
-      icon: "/Logo.svg",
-    },
-  };
-}
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "J Jairo C Ordoñez",
+  url: "https://tu-dominio.com",
+  sameAs: [
+    "https://github.com/tu-usuario",
+    "https://linkedin.com/in/tu-usuario",
+  ],
+  jobTitle: "Desarrollador Web",
+  worksFor: {
+    "@type": "Organization",
+    name: "Freelance",
+  },
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <OHeader data={cHeader} />
       <main>
         <SHero data={cHero} />

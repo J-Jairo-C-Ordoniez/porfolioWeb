@@ -14,8 +14,20 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: dataBlog.subtitle,
+    description: dataBlog.description,
+    image: dataBlog.avatar,
+    url: dataBlog.url,
+    author: {
+      "@type": "Person",
+      name: "J Jairo C Ordoñez",
+    },
+  };
+
   return {
-    metadataBase: new URL("https://tu-dominio.com"),
     title: dataBlog.subtitle,
     description: dataBlog.description,
     openGraph: {
@@ -32,9 +44,14 @@ export async function generateMetadata({ params }) {
         },
       ],
       locale: "es_COL",
-      type: "website",
+      type: "article",
     },
-
+    alternates: {
+      canonical: dataBlog.url,
+    },
+    other: {
+      "script:ld+json": JSON.stringify(jsonLd),
+    },
     icons: {
       icon: dataBlog.avatar,
     },
@@ -57,6 +74,23 @@ export default async function BlogPage({ params }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: dataBlog.subtitle,
+            description: dataBlog.description,
+            image: dataBlog.avatar,
+            url: dataBlog.url,
+            author: {
+              "@type": "Person",
+              name: "J Jairo C Ordoñez",
+            },
+          }),
+        }}
+      />
       <OHeader data={dataBlog.head} />
       <SBlog data={dataBlog} />
     </>

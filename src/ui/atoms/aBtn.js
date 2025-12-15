@@ -2,7 +2,7 @@ import Link from "next/link";
 import AText from "./aText";
 import AIcon from "./aIcon";
 
-export function ABtn({ data, onClick, dataId = "", color = "#b3b3b3" }) {
+export function ABtn({ data, onClick, dataId = "", color = "var(--color-text-secondary)" }) {
   return (
     <button
       className="flex cursor-pointer items-center gap-3 rounded-full px-3 py-2 text-[.9rem] font-light transition-transform duration-300 hover:scale-105"
@@ -22,7 +22,7 @@ export function ABtnLinear({ data }) {
   return (
     <Link
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-[#243347] transition-transform duration-300 hover:scale-105 px-6 py-3"
+      className="flex items-center gap-5 rounded-full border-4 border-bg-card transition-transform duration-300 hover:scale-105 px-6 py-3"
     >
       <AText
         data={data.text}
@@ -30,7 +30,7 @@ export function ABtnLinear({ data }) {
         fontSize="text-1xl"
       />
 
-      <div className="rounded-full bg-[#243347] p-2">
+      <div className="rounded-full bg-bg-card p-2">
         <AIcon data={data.icon} />
       </div>
     </Link>
@@ -41,7 +41,7 @@ export function ABtnBold({ data }) {
   return (
     <Link
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-[#243347] bg-[#243347] px-8 py-5 transition-transform duration-300 hover:scale-105"
+      className="flex items-center gap-5 rounded-full border-4 border-bg-card bg-bg-card px-8 py-5 transition-transform duration-300 hover:scale-105"
     >
       <AText
         data={data.text}
@@ -54,7 +54,7 @@ export function ABtnBold({ data }) {
   );
 }
 
-export function ABtnCTA({ data, onClick, dataId = "", color = "#b3b3b3" }) {
+export function ABtnCTA({ data, onClick, dataId = "", color = "var(--color-text-secondary)" }) {
   return (
     <button
       className="cursor-pointer rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-sky-500 px-10 py-5 font-bold shadow-lg shadow-fuchsia-500/20 transition-all duration-300 hover:scale-106 hover:shadow-fuchsia-400/30"
@@ -62,7 +62,7 @@ export function ABtnCTA({ data, onClick, dataId = "", color = "#b3b3b3" }) {
       data-id={dataId}
       onClick={onClick}
     >
-      <AText data={data.text} color="#b3b3b3" fontSize="1rem" />
+      <AText data={data.text} color="var(--color-text-secondary)" fontSize="1rem" />
     </button>
   );
 }
@@ -70,8 +70,8 @@ export function ABtnCTA({ data, onClick, dataId = "", color = "#b3b3b3" }) {
 export default function ABtnDoc({
   children,
   onClick,
-  color = "#b3b3b3",
-  background = "#121212",
+  color = "var(--color-text-secondary)",
+  background = "var(--color-bg-dark)",
 }) {
   return (
     <button

@@ -69,7 +69,7 @@ export default function OProject({ data }) {
       {data.map((project, i) => (
         <motion.article
           key={project.id}
-          className="mx-auto my-10 flex flex-col items-center justify-between gap-10 rounded-4xl border border-slate-600/20 bg-[#1A2534] py-15 px-24 ring-1 ring-slate-700/6 w-[100%] sm:w-[98%] sm:flex-col lg:w-[96%] lg:flex-row xl:w-[90%]"
+          className="mx-auto my-10 flex flex-col items-center justify-between gap-10 rounded-4xl border border-slate-600/20 bg-[#1A2534] py-10 px-6 ring-1 ring-slate-700/6 w-full sm:w-[98%] sm:flex-col lg:w-[96%] lg:flex-row xl:w-[90%]"
           initial="hidden"
           animate={active ? "visible" : "hidden"}
           custom={i}

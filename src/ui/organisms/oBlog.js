@@ -11,7 +11,7 @@ export default function OBlog({ data }) {
 
   return (
     <>
-      <div className="m-auto my-10 w-[95%] space-y-6">
+      <div className="m-auto my-10 w-full px-5 space-y-6">
         {visibleBlogs.map((blog) => (
           <MCardBlog key={blog.id} data={blog} />
         ))}

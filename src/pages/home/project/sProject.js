@@ -72,15 +72,15 @@ export default function SProject({ data }) {
   }, [activeMenu]);
 
   return (
-    <section 
-      id={data.id} 
-      className="overflow-x-hidden px-10 py-10 sm:px-12 md:px-20 lg:px-32 xl:px-35"
+    <section
+      id={data.id}
+      className="overflow-x-hidden px-5 py-10 sm:px-8 md:px-12 lg:px-20 xl:px-35"
     >
 
-      <ATitleSection 
-        data={data.title} 
-        color="#e0e0e0" 
-        textAlign="center" 
+      <ATitleSection
+        data={data.title}
+        color="#e0e0e0"
+        textAlign="center"
       />
 
       <MMenuProject

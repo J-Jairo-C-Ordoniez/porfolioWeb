@@ -3,18 +3,26 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text-main: #e0e0e0;
+  --text-secondary: #b3b3b3;
+  --bg-card: #243347;
+  --bg-dark: #121212;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-dark: var(--bg-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #101828; /* #121212 */
+    --background: #101828;
     --foreground: #ededed;
   }
 }

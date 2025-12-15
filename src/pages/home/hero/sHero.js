@@ -6,7 +6,7 @@ export default function SHero({ data }) {
   return (
     <section
       id={data.id}
-      className="flex flex-col items-center justify-between gap-10 overflow-x-hidden px-10 py-10 sm:px-12 sm:flex-col sm:py-30 md:px-20 md:flex-col lg:px-32 lg:py-30 lg:flex-row xl:px-35 xl:flex-row"
+      className="flex flex-col items-center justify-between gap-10 overflow-x-hidden px-5 py-10 sm:px-8 sm:flex-col sm:py-30 md:px-12 md:flex-col lg:px-20 lg:py-30 lg:flex-row xl:px-35 xl:flex-row"
     >
       <ODetail data={data} />
 
@@ -19,9 +19,9 @@ export default function SHero({ data }) {
       </article>
 
       <article className="flex w-full justify-center text-center lg:w-[30%] lg:justify-start lg:text-left">
-        <AText 
-          data={data.user.description} 
-          fontSize="text-md lg:text-lg" 
+        <AText
+          data={data.user.description}
+          fontSize="text-md lg:text-lg"
         />
       </article>
     </section>

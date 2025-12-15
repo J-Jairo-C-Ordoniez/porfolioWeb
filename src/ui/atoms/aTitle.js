@@ -1,6 +1,6 @@
 export function ATitleMain({
   data,
-  color = "#e0e0e0",
+  color = "var(--color-text-main)",
   textAlign = "left",
   fontSize = "text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]",
 }) {
@@ -19,7 +19,7 @@ export function ATitleMain({
 
 export function ATitleSection({
   data,
-  color = "#e0e0e0",
+  color = "var(--color-text-main)",
   textAlign = "left",
   fontSize = "text-3xl sm:text-3xl md:text-4xl",
 }) {
@@ -39,7 +39,7 @@ export function ATitleSection({
 export function ATitleName({
   name,
   lastName,
-  color = "#e0e0e0",
+  color = "var(--color-text-main)",
   textAlign = "left",
 }) {
   return (
@@ -58,7 +58,7 @@ export function ATitleName({
 
 export function ATitleBold({
   data,
-  color = "#b3b3b3",
+  color = "var(--color-text-secondary)",
   textAlign = "left",
   fontSize = "text-1xl"
 }) {

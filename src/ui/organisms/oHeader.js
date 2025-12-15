@@ -10,7 +10,7 @@ export default function OHeader({ data }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="flex w-full flex-wrap items-center justify-between px-10 py-6 sm:px-12 md:px-20 lg:px-32 xl:px-35">
+    <header className="flex w-full flex-wrap items-center justify-between px-5 py-6 sm:px-8 md:px-12 lg:px-20 xl:px-35">
       <div className="flex items-center gap-4">
         <MLogo data={data.logo} />
         <ATitleMain data={data.name} fontSize="1rem" />
