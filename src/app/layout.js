@@ -1,5 +1,5 @@
-import { Poppins, Inter } from "next/font/google";
-import OMotionLayout from "../ui/organisms/oMotionLayaut";
+﻿import { Poppins, Inter } from "next/font/google";
+import OMotionLayout from "../components/organisms/MotionLayout";
 import "../styles/globals.css";
 
 const poppins = Poppins({
@@ -55,7 +55,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${poppins.variable} ${inter.variable}`}>
-      <body className="m-0 h-[100vh] scroll-smooth bg-[#121212] p-0 text-white">
+      <body className="m-0 h-[100vh] bg-[#101828] p-0 text-white">
         <OMotionLayout>{children}</OMotionLayout>
       </body>
     </html>

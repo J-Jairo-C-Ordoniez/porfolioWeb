@@ -1,5 +1,5 @@
-import blogs from "../content/blogs/main";
-import projects from "../content/docs/main";
+﻿import blogs from "../data/blogs/ain";
+import projects from "../data/docs/ain";
 
 export default async function sitemap() {
     const baseUrl = "https://tu-dominio.com";

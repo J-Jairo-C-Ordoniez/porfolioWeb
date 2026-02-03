@@ -1,7 +1,7 @@
-import MError404 from "../../../ui/molecules/mError404";
-import projects from "../../../content/docs/main";
-import OHeader from "../../../ui/organisms/oHeader";
-import SDoc from "../../../pages/doc/sDoc";
+import MError404 from "../../../components/molecules/Error404";
+import projects from "../../../data/docs/main";
+import OHeader from "../../../components/organisms/Header";
+import SDoc from "../../../sections/doc/Doc";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;

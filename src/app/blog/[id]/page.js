@@ -1,7 +1,7 @@
-import MError404 from "../../../ui/molecules/mError404";
-import OHeader from "../../../ui/organisms/oHeader";
-import blogs from "../../../content/blogs/main";
-import SBlog from "../../../ui/sections/sBlog";
+import MError404 from "../../../components/molecules/Error404";
+import OHeader from "../../../components/organisms/Header";
+import blogs from "../../../data/blogs/main";
+import SBlog from "../../../sections/blog/Blog";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
