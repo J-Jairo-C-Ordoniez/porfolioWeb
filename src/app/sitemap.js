@@ -1,8 +1,8 @@
-﻿import blogs from "../data/blogs/ain";
-import projects from "../data/docs/ain";
+﻿import blogs from "../data/blogs/main";
+import projects from "../data/docs/main";
 
 export default async function sitemap() {
-    const baseUrl = "https://tu-dominio.com";
+    const baseUrl = "https://jhonatan-dev.com";
 
     const routes = ["", "/blog", "/docs"].map((route) => ({
         url: `${baseUrl}${route}`,
