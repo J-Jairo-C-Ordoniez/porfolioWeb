@@ -17,7 +17,7 @@ export default function OProject({ data }) {
     const ctx = gsap.context(() => {
       const cards = containerRef.current.children;
 
-      Array.from(cards).forEach((card, index) => {
+      Array.from(cards).forEach((card) => {
         gsap.set(card, { opacity: 0, y: 80, scale: 0.9 });
         gsap.set(card.querySelector('figure'), { scale: 1.1, opacity: 0 });
 
