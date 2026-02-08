@@ -1,7 +1,7 @@
 const cHeader = {
   name: "J Jairo C Ordoñez",
   logo: {
-    src: "/logo.svg",
+    src: "/Logo.svg",
     alt: "Logo de mi portafolio",
     link: "/",
   },
