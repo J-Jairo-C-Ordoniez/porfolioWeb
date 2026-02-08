@@ -3,8 +3,8 @@ import { ATitleName, ATitleBold } from "../atoms/Title";
 
 export default function ODetail({ data }) {
   return (
-    <article className="w-[100%] sm:w-[100%] md:w-[100%] lg:w-[60%] xl:w-[50%]">
-      <div className="flex flex-col gap-2">
+    <article className="w-full">
+      <div className="flex flex-col gap-2 w-full">
         <ATitleName 
           name={data.user.name} 
           lastName={data.user.lastName} 

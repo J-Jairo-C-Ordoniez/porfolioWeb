@@ -1,4 +1,6 @@
-﻿import { ATitleBold } from "../atoms/Title";
+﻿"use client";
+
+import { ATitleBold } from "../atoms/Title";
 import ACode from "../atoms/Code";
 import AList from "../atoms/List";
 import AQuote from "../atoms/Quote";
@@ -7,28 +9,36 @@ import AText from "../atoms/Text";
 
 export default function MBlogContent({ data }) {
   return (
-    <article className="space-y-5 border-t border-slate-600/20 ring-t-1 ring-slate-700/6 pt-10">
+    <article className="space-y-8 text-lg leading-relaxed text-slate-300">
       {data.map((item) => {
         if (item.type === "title")
           return (
-            <ATitleBold
-              key={item.id}
-              data={item.value}
-              fontSize="text-xl"
-              color="#F1F3F5"
-            />
+            <div key={item.id} className="pt-8 mb-4">
+              <ATitleBold
+                data={item.value}
+                fontSize="text-xl font-bold"
+                color="#F1F3F5"
+              />
+            </div>
           );
 
         if (item.type === "text")
           return (
-            <AText
-              key={item.id}
-              data={item.value}
-            />
+            <div key={item.id} className="mb-6">
+              <AText
+                data={item.value}
+                fontSize="text-lg leading-8"
+                color="#cbd5e1"
+              />
+            </div>
           );
 
         if (item.type === "quote")
-          return <AQuote key={item.id} data={item.value} />;
+          return (
+            <div key={item.id} className="my-8 border-l-4 border-[#00C896] pl-6 italic text-xl text-slate-400 bg-slate-800/20 py-4 pr-4 rounded-r-lg">
+              <AQuote data={item.value} />
+            </div>
+          );
 
         if (item.type === "table")
           return <ATableDoc key={item.id} data={item.value} />;
@@ -38,7 +48,9 @@ export default function MBlogContent({ data }) {
 
         if (item.type === "code")
           return (
-            <ACode key={item.id} code={item.value} language={item.language} />
+            <div key={item.id} className="my-8">
+              <ACode code={item.value} language={item.language} />
+            </div>
           );
       })}
     </article>

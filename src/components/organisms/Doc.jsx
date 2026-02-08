@@ -1,15 +1,16 @@
 ﻿"use client";
 
 import { useState, useEffect, useRef } from "react";
-import { ATitleSection } from "../atoms/Title";
+import { ATitleBold, ATitleSection } from "../atoms/Title";
 import { ALinkDoc } from "../atoms/Link";
 import MMenuDoc from "../molecules/MenuDoc";
 import MSearchDoc from "../molecules/SearchDoc";
 import AText from "../atoms/Text";
 import MCardDoc from "../molecules/CardDoc";
 import AIcon from "../atoms/Icon";
+import ARed from "../atoms/Red";
 
-export default function ODoc({ data }) {
+export default function ODoc({ data, headData }) {
   const [activeSection, setActiveSection] = useState(data[0]?.id || null);
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleItem, setVisibleItem] = useState(null);
@@ -22,19 +23,19 @@ export default function ODoc({ data }) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) setVisibleItem(entry.target.id);
-        })
+        });
       },
       {
-        threshold: 0.05,
-        rootMargin: "0px 0px -20% 0px",
+        threshold: 0.2, 
+        rootMargin: "-10% 0px -50% 0px",
       },
     );
 
-    const items = contentRef.current?.querySelectorAll("article")
+    const items = contentRef.current?.querySelectorAll("article");
     items?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [activeSection]);
+  }, [activeSection, searchTerm]); 
 
   const currentSection = data.find((sec) => sec.id === activeSection);
 
@@ -44,82 +45,128 @@ export default function ODoc({ data }) {
     ) || [];
 
   return (
-    <div className="flex flex-col justify-center lg:flex-row">
-      <aside className="w-full h-fit py-4 pr-10 sticky top-0 lg:w-[20vw]">
-        <div className="hidden lg:block">
+    <div className="flex w-full max-w-[1920px] mx-auto min-h-screen">
+      {/* Mobile Menu Button */}
+      <button
+        className="fixed bottom-6 right-6 z-50 rounded-full bg-[#00C896] p-3 shadow-lg lg:hidden"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Menu"
+      >
+        <AIcon data={isMenuOpen ? "PanelRightOpen" : "PanelLeftOpen"} />
+      </button>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-[#101828] p-6 lg:hidden overflow-y-auto">
+          <div className="flex justify-end mb-4">
+            <button onClick={() => setIsMenuOpen(false)}>
+              <AIcon data="Close" />
+            </button>
+          </div>
           <MMenuDoc
             data={data}
-            setActiveSection={setActiveSection}
+            setActiveSection={(id) => {
+              setActiveSection(id);
+              setIsMenuOpen(false);
+            }}
             activeSection={activeSection}
           />
         </div>
+      )}
 
-        <button
-          className="pl-10 cursor-pointer text-[#e0e0e0] transition-transform duration-200 hover:scale-104 focus:outline-none lg:hidden"
-          aria-label="Abrir menú"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <AIcon data={isMenuOpen ? "PanelRightOpen" : "PanelLeftOpen"} />
-        </button>
-
-
-        {isMenuOpen && (
-          <div className="absolute top-16 left-0 z-10 w-full bg-[#101828] pr-20 py-4 lg:hidden">
-            <MMenuDoc
-              data={data}
-              setActiveSection={setActiveSection}
-              activeSection={activeSection}
-              onClose={() => setIsMenuOpen(false)}
-            />
-          </div>
-        )}
+      {/* Left Sidebar */}
+      <aside className="sticky top-0 h-screen w-64 flex-none overflow-y-auto border-r border-slate-800 hidden lg:block py-8 pl-8 pr-4">
+        <MMenuDoc
+          data={data}
+          setActiveSection={setActiveSection}
+          activeSection={activeSection}
+        />
       </aside>
 
-      <main className="scrollbar-hide flex w-full gap-4 pl-0 lg-[80vw] lg:pl-20">
-        <section className="w-full p-6 overflow-x-hidden lg:w-[80%]" ref={contentRef}>
-          <header className="z-10 m-auto mb-10 flex w-[100%] items-center justify-between gap-3 rounded-full border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 px-6 py-3 text-[#b3b3b3] transition-all duration-75 hover:border-[#00C89620] lg:w-[80%]">
-            <MSearchDoc
-              currentSection={currentSection}
-              searchTerm={searchTerm}
-              setSearchTerm={setSearchTerm}
-            />
-          </header>
-
-          <div className="mt-4 space-y-10 px-4 pb-20 lg:px-20">
-            {filteredItems.map((item) => (
-              <MCardDoc key={item.id} data={item} />
-            ))}
-
-            {filteredItems.length === 0 && (
-              <AText
-                data="No se encontraron resultados para tu búsqueda."
-                color="#b3b3b3"
-                textAlign="center"
+      {/* Main Content */}
+      <main className="flex-auto min-w-0" ref={contentRef}>
+        <div className="max-w-4xl mx-auto px-6 py-10 lg:px-12">
+          {/* Search Bar */}
+          <div className="mb-12">
+            <header className="flex w-full items-center gap-3 rounded-xl border border-slate-700/50 bg-[#1A2534] px-4 py-3 text-slate-400 focus-within:border-[#00C896] focus-within:ring-1 focus-within:ring-[#00C896] transition-all">
+              <MSearchDoc
+                currentSection={currentSection}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
               />
+            </header>
+          </div>
+
+          <div className="space-y-16 pb-20">
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item) => (
+                <MCardDoc key={item.id} data={item} />
+              ))
+            ) : (
+              <div className="text-center py-20">
+                <AText
+                  data="No se encontraron resultados para tu búsqueda."
+                  color="#b3b3b3"
+                  textAlign="center"
+                />
+              </div>
             )}
           </div>
-        </section>
 
-        <aside className="w-[20%] h-fit py-4 pl-6 sticky top-0 hidden lg:block">
-          <nav className="space-y-2 text-sm overflow-x-hidden">
-            <ATitleSection
-              data="EN ESTA SECCIÓN"
-              fontSize="text-md"
-              color="#999"
-            />
+          {/* Footer with project links */}
+          {headData?.menu && (
+            <footer className="border-t border-slate-800 mt-16 pt-12 pb-8">
+              <ATitleBold
+                data="¿Quieres ver el proyecto completo?"
+                color="#e0e0e0"
+                fontSize="text-xl"
+                textAlign="center"
+              />
 
+              <AText
+                data="Accede al demo y al repositorio para ver la implementación completa."
+                textAlign="center"
+              />
+
+              <ul className="mt-8 flex flex-wrap list-none justify-center gap-4 relative z-10">
+                {headData.menu.map((link) => (
+                  <li key={link.id}>
+                    <ARed href={link.href}>
+                      <AIcon data={link.icon} />
+                      <AText data={link.text} textAlign="center" />
+                    </ARed>
+                  </li>
+                ))}
+              </ul>
+            </footer>
+          )}
+        </div>
+      </main>
+
+      {/* Right Sidebar (TOC) */}
+      <aside className="sticky top-0 h-screen w-64 flex-none overflow-y-auto py-10 pr-8 hidden xl:block">
+        <div className="pl-4 border-l border-slate-800">
+          <ATitleSection
+            data="EN ESTA PÁGINA"
+            fontSize="text-xs font-semibold tracking-wider"
+            color="#9CA3AF"
+          />
+          <nav className="mt-4 flex flex-col gap-2">
             {currentSection?.items.map((item) => (
               <ALinkDoc
                 key={item.id}
                 data={item}
                 href={`#${item.id}`}
-                background={parseInt(visibleItem) === item.id && "#00C89615"}
-                color={(parseInt(visibleItem) === item.id) ? "#00C896" : "#b3b3b3"}
+                background="transparent"
+                color={
+                  visibleItem == item.id ? "#00C896" : "#6B7280"
+                }
+                className={`text-sm transition-colors hover:text-[#00C896] text-left block py-1 ${visibleItem == item.id ? "font-medium" : ""}`}
               />
             ))}
           </nav>
-        </aside>
-      </main>
+        </div>
+      </aside>
     </div>
   );
 }

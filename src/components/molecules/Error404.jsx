@@ -1,6 +1,7 @@
 ﻿"use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 import { ATitleBold } from "../atoms/Title";
 import APicture from "../atoms/Picture";
@@ -9,29 +10,43 @@ import ARed from "../atoms/Red";
 import AIcon from "../atoms/Icon";
 
 export default function MError404({ title, description, isPage }) {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(containerRef.current, {
+        opacity: 0,
+        y: 50,
+        duration: 0.6,
+        ease: "power3.out",
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <motion.section
+    <section
+      ref={containerRef}
       className="m-auto my-10 flex flex-col items-center justify-center overflow-hidden p-10 h-[80vh] w-[80vw]"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
     >
       <div className="w-30 h-30">
-        <APicture 
-          src="/404.png" 
-          alt="Avatar - Error 404" 
-          size="100" 
+        <APicture
+          src="/404.png"
+          alt="Avatar - Error 404"
+          size="100"
         />
       </div>
 
-      <ATitleBold 
-        data={title} 
-        color="#e0e0e0" 
+      <ATitleBold
+        data={title}
+        color="#e0e0e0"
         textAlign="center"
-        fontSize="text-md lg:text-xl" 
+        fontSize="text-md lg:text-xl"
       />
 
-      <AText 
-        data={description} 
+      <AText
+        data={description}
         textAlign="center"
       />
 
@@ -45,6 +60,6 @@ export default function MError404({ title, description, isPage }) {
           <AText data="Volver" />
         </ARed>
       )}
-    </motion.section>
+    </section>
   );
 }

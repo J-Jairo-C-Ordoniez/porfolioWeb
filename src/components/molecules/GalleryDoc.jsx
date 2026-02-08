@@ -1,35 +1,40 @@
 ﻿"use client";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { ATitleBold } from "../atoms/Title";
 import APicture from "../atoms/Picture";
 import AText from "../atoms/Text";
 import { ABtn } from "../atoms/Btn";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function MGalleryDoc({ data }) {
   const [open, setOpen] = useState(false);
+  const figureRef = useRef(null);
 
-  /* useEffect(() => {
-
-        if (open) {
-            document.addEventListener("click", handleClickOutside);
-        } else {
-            document.removeEventListener("click", handleClickOutside);
-        }
-
-        return () => {
-            document.removeEventListener("click", handleClickOutside);
-        };
-    }, [open]); */
+  useEffect(() => {
+    gsap.fromTo(
+      figureRef.current,
+      { opacity: 0, y: 15 },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.08,
+        scrollTrigger: {
+          trigger: figureRef.current,
+          start: "top 85%",
+        },
+      }
+    );
+  }, []);
 
   return (
     <>
-      <motion.figure
-        className="rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 p-4 px-10 shadow-inner"
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.08 }}
+      <figure
+        ref={figureRef}
+        className="rounded-2xl border border-slate-600/20 bg-[#1A2534] ring-1 ring-slate-700/6 p-4 px-10 shadow-inner opacity-0"
       >
         <button
           onClick={() => setOpen(true)}
@@ -39,7 +44,7 @@ export default function MGalleryDoc({ data }) {
         </button>
 
         <AText data={data.description} textAlign="center" />
-      </motion.figure>
+      </figure>
       {open && (
         <dialog
           open={open}
@@ -51,10 +56,17 @@ export default function MGalleryDoc({ data }) {
           <ATitleBold data={data.title} color="#e0e0e0" fontSize="1.2rem" />
 
           <form method="dialog" className="mt-6 flex justify-end">
-            <ABtn
-              data={{ icon: "close", text: "Cerrar" }}
-              onClick={() => setOpen(false)}
-            />
+            <button
+              // Use a simple button instead of ABtn to handle onClick easily without issues, 
+              // or ensure ABtn handles onClick correctly. ABtn seems to take data.
+              // Reusing ABtn as in original code.
+              onClick={(e) => {
+                e.preventDefault();
+                setOpen(false);
+              }}
+            >
+              <ABtn data={{ icon: "close", text: "Cerrar" }} />
+            </button>
           </form>
         </dialog>
       )}

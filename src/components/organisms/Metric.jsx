@@ -1,7 +1,7 @@
 ﻿"use client";
 
-import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
 
 import MCardMetric from "../molecules/CardMetric";
 import MDialog from "../molecules/Dialog";
@@ -9,23 +9,26 @@ import MDialog from "../molecules/Dialog";
 export default function OMetric({ data }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(false);
-  const controls = useAnimation();
-
-  const getAnimationProps = () => ({
-    x: ["0%", "-100%"],
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "loop",
-        duration: 30,
-        ease: "linear",
-      },
-    },
-  });
+  const containerRef = useRef(null);
+  const tweenRef = useRef(null);
 
   useEffect(() => {
-    controls.start(getAnimationProps());
-  }, [controls]);
+    const ctx = gsap.context(() => {
+      const contentWidth = containerRef.current.scrollWidth / 2;
+
+      // Set initial position
+      gsap.set(containerRef.current, { x: 0 });
+
+      tweenRef.current = gsap.to(containerRef.current, {
+        x: -contentWidth,
+        duration: 40,
+        ease: "none",
+        repeat: -1,
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, [data]);
 
   const handleOpen = (metric) => {
     setSelected(metric);
@@ -34,12 +37,11 @@ export default function OMetric({ data }) {
 
   return (
     <article className="overflow-hidden py-20 relative">
-      <motion.div
-        className="flex w-full gap-10"
-        animate={controls}
-        initial={{ x: 0 }}
-        onMouseEnter={() => controls.stop()}
-        onMouseLeave={() => controls.start(getAnimationProps())}
+      <div
+        ref={containerRef}
+        className="flex w-max gap-10"
+        onMouseEnter={() => tweenRef.current?.pause()}
+        onMouseLeave={() => tweenRef.current?.play()}
       >
         {[...data, ...data].map((metric, i) => (
           <MCardMetric
@@ -48,7 +50,7 @@ export default function OMetric({ data }) {
             onClick={() => handleOpen(metric)}
           />
         ))}
-      </motion.div>
+      </div>
 
       {selected && <MDialog data={selected} open={open} setOpen={setOpen} />}
     </article>

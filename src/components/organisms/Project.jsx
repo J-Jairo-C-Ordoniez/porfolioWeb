@@ -1,94 +1,112 @@
 ﻿"use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import MCardProject from "../molecules/CardProject";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function OProject({ data }) {
   const containerRef = useRef(null);
-  const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const contentProjects = containerRef.current;
-    if (!contentProjects) return;
+    if (!containerRef.current) return;
 
-    contentProjects.setAttribute("tabindex", "-1");
+    const ctx = gsap.context(() => {
+      const cards = containerRef.current.children;
 
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.6) {
-            setActive(true);
-            contentProjects.focus({ preventScroll: true });
-          } else {
-            setActive(false);
+      Array.from(cards).forEach((card, index) => {
+        gsap.set(card, { opacity: 0, y: 80, scale: 0.9 });
+        gsap.set(card.querySelector('figure'), { scale: 1.1, opacity: 0 });
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
+
+        tl.to(card, {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+        })
+          .to(card.querySelector('figure'), {
+            scale: 1,
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.out",
+          }, "-=0.5")
+          .from(card.querySelector('article').children, {
+            y: 20,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.4,
+            ease: "power2.out",
+          }, "-=0.4");
+      });
+
+      Array.from(cards).forEach((card) => {
+        card.addEventListener('mouseenter', () => {
+          gsap.to(card, {
+            y: -12,
+            scale: 1.01,
+            boxShadow: "0 25px 50px rgba(0, 200, 150, 0.2)",
+            duration: 0.4,
+            ease: "power2.out",
+          });
+
+          const figure = card.querySelector('figure img');
+          if (figure) {
+            gsap.to(figure, {
+              scale: 1.08,
+              duration: 0.5,
+              ease: "power2.out",
+            });
           }
         });
-      },
-      { threshold: [0.6] },
-    );
 
-    obs.observe(contentProjects);
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, {
+            y: 0,
+            scale: 1,
+            boxShadow: "0 0 0 rgba(0, 200, 150, 0)",
+            duration: 0.4,
+            ease: "power2.out",
+          });
 
-    function onWheel(e) {
-      if (!active) return;
+          const figure = card.querySelector('figure img');
+          if (figure) {
+            gsap.to(figure, {
+              scale: 1,
+              duration: 0.5,
+              ease: "power2.out",
+            });
+          }
+        });
+      });
+    }, containerRef);
 
-      const contentProjects = containerRef.current;
-      const canScrollY =
-        contentProjects.scrollHeight > contentProjects.clientHeight + 1;
-
-      if (!canScrollY) return;
-
-      const atTop = contentProjects.scrollTop === 0;
-      const atBottom =
-        contentProjects.scrollTop + contentProjects.clientHeight >=
-        contentProjects.scrollHeight;
-
-      if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
-        return;
-      }
-
-      e.preventDefault();
-      contentProjects.scrollTop += e.deltaY;
-    }
-
-    window.addEventListener("wheel", onWheel, { passive: false });
-
-    return () => {
-      obs.disconnect();
-      window.removeEventListener("wheel", onWheel);
-    };
-  }, [active]);
+    return () => ctx.revert();
+  }, [data]);
 
   return (
     <div
       ref={containerRef}
-      className="scrollProject mt-4 h-[80vh] overflow-hidden overscroll-contain rounded-2xl focus:outline-none"
+      className="mt-10 space-y-10 pb-10"
     >
-      {data.map((project, i) => (
-        <motion.article
+      {data.map((project) => (
+        <article
           key={project.id}
-          className="mx-auto my-10 flex flex-col items-center justify-between gap-10 rounded-4xl border border-slate-600/20 bg-[#1A2534] py-10 px-6 ring-1 ring-slate-700/6 w-full sm:w-[98%] sm:flex-col lg:w-[96%] lg:flex-row xl:w-[90%]"
-          initial="hidden"
-          animate={active ? "visible" : "hidden"}
-          custom={i}
-          variants={{
-            hidden: { opacity: 0, y: 40, scale: 0.95 },
-            visible: () => ({
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              transition: {
-                duration: 0.5,
-                delay: 0.15,
-                ease: "easeOut",
-              },
-            }),
-          }}
+          className="mx-auto flex flex-col items-center justify-between gap-10 rounded-4xl border border-slate-600/20 bg-[#1A2534] py-10 px-6 ring-1 ring-slate-700/6 w-full sm:w-[98%] sm:flex-col lg:w-[96%] lg:flex-row xl:w-[90%] transition-all duration-300 overflow-hidden cursor-pointer"
         >
           <MCardProject data={project} />
-        </motion.article>
+        </article>
       ))}
     </div>
   );

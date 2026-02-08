@@ -1,22 +1,25 @@
-﻿import ABtnDoc from "../atoms/Btn";
-import AText from "../atoms/Text";
+﻿"use client";
 
-export default function MMenuDoc({ data, setActiveSection, activeSection, onClose }) {
+export default function MMenuDoc({
+  data,
+  setActiveSection,
+  activeSection,
+  onClose,
+}) {
   return (
-    <nav className="relative z-100000000000000000 space-y-2 w-full h-[100vh]">
-      <ul>
+    <nav className="w-full">
+      <ul className="space-y-1">
         {data.map((section) => (
           <li key={section.id} onClick={onClose}>
-            <ABtnDoc
+            <button
               onClick={() => setActiveSection(section.id)}
-              background={activeSection === section.id && "#00C89620"}
-              color={activeSection === section.id && "#00C896"}
+              className={`flex w-full items-center rounded-md px-4 py-2 text-sm transition-colors ${activeSection === section.id
+                ? "bg-[#00C896]/10 text-[#00C896] font-medium"
+                : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-200"
+                }`}
             >
-              <AText
-                data={section.title}
-                color={activeSection === section.id ? "#00C896" : "#b3b3b3"}
-              />
-            </ABtnDoc>
+              <span>{section.title}</span>
+            </button>
           </li>
         ))}
       </ul>

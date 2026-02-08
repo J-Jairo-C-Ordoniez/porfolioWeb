@@ -1,11 +1,15 @@
 ﻿"use client";
 
 import { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { ATitleSection } from "../../../components/atoms/Title";
 import { MMenuProject } from "../../../components/molecules/MenuList";
 import OProject from "../../../components/organisms/Project";
 import MError404 from "../../../components/molecules/Error404";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SProject({ data }) {
   const [activeMenu, setActiveMenu] = useState(data.menu[0].status || false);
@@ -13,66 +17,33 @@ export default function SProject({ data }) {
     data.items[activeMenu] || false,
   );
   const containerRef = useRef(null);
-  const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const contentProjects = containerRef.current;
-    if (!contentProjects) return;
+    const ctx = gsap.context(() => {
+      gsap.from(containerRef.current.children, {
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+        },
+      });
+    }, containerRef);
 
-    contentProjects.setAttribute("tabindex", "-1");
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.6) {
-            setActive(true);
-            contentProjects.focus({ preventScroll: true });
-          } else {
-            setActive(false);
-          }
-        });
-      },
-      { threshold: [0.6] },
-    );
-
-    obs.observe(contentProjects);
-
-    function onWheel(e) {
-      if (!active) return;
-
-      const contentProjects = containerRef.current;
-      const canScrollY =
-        contentProjects.scrollHeight > contentProjects.clientHeight + 1;
-
-      if (!canScrollY) return;
-
-      const atTop = contentProjects.scrollTop === 0;
-      const atBottom =
-        contentProjects.scrollTop + contentProjects.clientHeight >=
-        contentProjects.scrollHeight;
-
-      if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
-        return;
-      }
-
-      e.preventDefault();
-      contentProjects.scrollTop += e.deltaY;
-    }
-
-    window.addEventListener("wheel", onWheel, { passive: false });
-
-    return () => {
-      obs.disconnect();
-      window.removeEventListener("wheel", onWheel);
-    };
-  }, [active]);
+    return () => ctx.revert();
+  }, []);
 
   useEffect(() => {
     setProjectsOptions(data.items[activeMenu] || false);
   }, [activeMenu]);
 
+
   return (
     <section
+      ref={containerRef}
       id={data.id}
       className="overflow-x-hidden px-5 py-10 sm:px-8 md:px-12 lg:px-20 xl:px-35"
     >

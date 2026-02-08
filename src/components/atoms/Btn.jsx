@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import AText from "./Text";
 import AIcon from "./Icon";
+import { useMagneticButton } from "../../hooks/useMagneticButton";
 
 export function ABtn({ data, onClick, dataId = "", color = "var(--color-text-secondary)" }) {
   return (
@@ -19,10 +20,13 @@ export function ABtn({ data, onClick, dataId = "", color = "var(--color-text-sec
 }
 
 export function ABtnLinear({ data }) {
+  const buttonRef = useMagneticButton(0.4);
+
   return (
     <Link
+      ref={buttonRef}
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-bg-card transition-transform duration-300 hover:scale-105 px-6 py-3"
+      className="flex items-center gap-5 rounded-full border-4 border-bg-card transition-all duration-300 hover:scale-105 px-6 py-3 hover:shadow-lg hover:shadow-purple-500/20"
     >
       <AText
         data={data.text}
@@ -38,10 +42,13 @@ export function ABtnLinear({ data }) {
 }
 
 export function ABtnBold({ data }) {
+  const buttonRef = useMagneticButton(0.4);
+
   return (
     <Link
+      ref={buttonRef}
       href={data.href}
-      className="flex items-center gap-5 rounded-full border-4 border-bg-card bg-bg-card px-8 py-5 transition-transform duration-300 hover:scale-105"
+      className="flex items-center gap-5 rounded-full border-4 border-bg-card bg-bg-card px-8 py-5 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20"
     >
       <AText
         data={data.text}
