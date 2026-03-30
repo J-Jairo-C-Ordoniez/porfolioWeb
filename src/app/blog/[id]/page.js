@@ -1,5 +1,5 @@
-import MError404 from "../../../components/molecules/Error404";
-import OHeader from "../../../components/organisms/Header";
+import MError404 from "../../../components/structure/main/ui/Error404";
+import OHeader from "../../../components/structure/header/Header";
 import blogs from "../../../data/blogs/main";
 import SBlog from "../../../sections/blog/Blog";
 

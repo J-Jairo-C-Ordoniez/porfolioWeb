@@ -1,4 +1,4 @@
-const cHero = {
+const data = {
   id: "home",
   user: {
     name: "Jhon Jairo",
@@ -32,4 +32,4 @@ const cHero = {
   ],
 };
 
-export default cHero;
+export default data;

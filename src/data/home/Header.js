@@ -1,4 +1,4 @@
-const cHeader = {
+const data = {
   name: "J Jairo C Ordoñez",
   logo: {
     src: "/Logo.svg",
@@ -6,15 +6,16 @@ const cHeader = {
     link: "/",
   },
 
-  menu: [
-    { id: 1, href: "#home", text: "Inicio" },
-    { id: 2, href: "#projects", text: "Proyectos" },
-    { id: 3, href: "#testimonies", text: "Testimonios" },
-    { id: 4, href: "#about", text: "Sobre mí" },
-    { id: 5, href: "#skills", text: "Habilidades" },
-    { id: 6, href: "#blog", text: "Blog" },
-    { id: 7, href: "#contact", text: "Contacto" },
-  ],
+  menu: {
+    left: [
+      { id: 1, href: "#about", text: "Sobre mí", ariaLabel: "Sobre mí" },
+      { id: 2, href: "#skills", text: "Habilidades", ariaLabel: "Habilidades" },
+    ],
+    right: [
+      { id: 3, href: "#projects", text: "Proyectos", ariaLabel: "Proyectos" },
+      { id: 4, href: "#blog", text: "Blog", ariaLabel: "Blog" }
+    ],
+  },
 };
 
-export default cHeader;
+export default data;

@@ -1,6 +1,6 @@
 import MError404 from "../../../components/molecules/Error404";
 import projects from "../../../data/docs/main";
-import OHeader from "../../../components/organisms/Header";
+import OHeader from "../../../components/structure/header/Header";
 import SDoc from "../../../sections/doc/Doc";
 
 export async function generateMetadata({ params }) {

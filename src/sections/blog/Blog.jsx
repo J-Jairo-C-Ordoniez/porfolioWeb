@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import cBlog from "../../data/home/Blog";
-import OListBlog from "../../components/organisms/ListBlog";
-import OHeroBlog from "../../components/organisms/HeroBlog";
-import MBlogContent from "../../components/molecules/BlogContent";
+import OHeroBlog from "../../components/structure/main/sections/HeroBlog";
+import MBlogContent from "../../components/structure/main/ui/BlogContent";
+import OListBlog from "../../components/structure/main/sections/ListBlog";
 
 export default function SBlog({ data }) {
   return (
