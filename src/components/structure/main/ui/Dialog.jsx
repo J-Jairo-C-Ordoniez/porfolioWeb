@@ -1,8 +1,11 @@
 import { useEffect, useRef } from "react";
+import * as Icon from "lucide-react";
+import Text from "./Text";
 import gsap from "gsap";
 
 export default function MDialog({ data, open, setOpen }) {
   const dialogRef = useRef(null);
+  const AIcon = Icon[data.icon];
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -55,25 +58,23 @@ export default function MDialog({ data, open, setOpen }) {
     <dialog
       ref={dialogRef}
       open={true}
-      className="fixed inset-0 m-auto z-[200] max-w-lg border border-white/5 bg-background p-12 lg:p-16 shadow-[0_0_100px_rgba(0,0,0,0.8)] hidden"
+      className="fixed inset-0 m-auto z-200 max-w-lg border border-white/5 bg-background p-6 lg:p-16 hidden"
     >
       <div className="flex flex-col gap-10">
         <div className="flex items-center gap-5 border-b border-white/5 pb-8">
           <div className="flex h-12 w-12 items-center justify-center bg-white/[0.03] text-accent">
-            {/* <AIcon data={data.icon} size={24} /> */}
+            <AIcon size={24} />
           </div>
           <h2 className="text-primary/60 text-xs lg:text-sm uppercase tracking-wider font-medium">
             {data.value}
           </h2>
         </div>
 
-        <p className="text-primary/60 text-xs lg:text-sm uppercase tracking-wider font-medium">
-          {data.detail}
-        </p>
+        <Text text={data.detail} />
 
         <div className="mt-6 flex justify-end">
           <button
-            className="group relative h-12 bg-white/[0.05] px-8 transition-all duration-300 hover:bg-accent"
+            className="text-primary/60 group cursor-pointer relative h-12 bg-primary/10 px-8 transition-all duration-300 hover:bg-accent"
             onClick={(e) => {
               e.preventDefault();
               setOpen(false);
