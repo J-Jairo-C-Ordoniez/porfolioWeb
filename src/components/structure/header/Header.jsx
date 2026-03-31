@@ -12,7 +12,7 @@ export default function Header() {
           <Link
             href="/"
             aria-label="Inicio, J Jairo C Ordoñez"
-            className="text-primary/80 hover:text-primary transition-colors cursor-pointer text-md tracking-wider font-semibold uppercase"
+            className="text-primary/80 hover:text-primary transition-colors cursor-pointer text-sm tracking-wider font-medium uppercase"
           >
             <span className="hidden sm:inline">J Jairo C Ordoñez</span>
             <span className="sm:hidden">JC</span>
