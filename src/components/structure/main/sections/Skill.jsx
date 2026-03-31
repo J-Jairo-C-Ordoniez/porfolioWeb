@@ -4,7 +4,8 @@ import { useEffect, useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import data from "../../../../data/home/Skill"
-import * as Icon from "lucide-react";
+import MenuSkill from "../ui/MenuSkill";
+import CardSkill from "../ui/CardSkill";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +14,7 @@ export default function SSkill() {
   const [skillsOptions, setSkillsOptions] = useState(
     data.items[activeMenu] || false
   );
-  
+
   const containerRef = useRef(null);
   const gridRef = useRef(null);
 
@@ -52,44 +53,36 @@ export default function SSkill() {
   }, [skillsOptions]);
 
   return (
-    <section 
+    <section
       ref={containerRef}
-      id={data.id} 
-      className="py-32"
+      id={data.id}
+      className="relative min-h-[10vh] overflow-x-hidden flex justify-center"
     >
-      <header className="skill-header mb-24 flex flex-col items-center text-center px-6">
-        <h2 className="mb-6 font-black tracking-tighter" >
-          {data.title}
-        </h2>
-        <div className="h-px w-12 bg-accent opacity-50" />
-        
-        <div className="mt-12">
-          {/* <MMenuSkill
+      <div className="container mx-auto py-10 px-4">
+        <header className="mb-10 flex flex-col">
+          <h2 className="text-xl font-medium text-primary tracking-wider uppercase pb-4 pl-2 border-b border-primary/10">
+            {data.title}
+          </h2>
+
+          <MenuSkill
             data={data.menu}
             setStateMenu={setActiveMenu}
             stateMenu={activeMenu}
-          /> */}
-        </div>
-      </header>
+          />
+        </header>
 
-      {/* <div 
-        ref={gridRef}
-        className="grid grid-cols-2 gap-px bg-white/5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 border-y border-white/5"
-      >
-        {skillsOptions?.map((skill) => (
-          <div 
-            key={skill.id} 
-            className="group flex flex-col items-center justify-center gap-6 bg-background py-16 transition-colors hover:bg-white/[0.02]"
-          >
-            <div className="text-4xl text-accent opacity-60 transition-transform duration-500 group-hover:scale-110 group-hover:opacity-100">
-              <AIcon data={skill.icon} />
-            </div>
-            <span className="font-sans font-caps text-[10px] tracking-widest text-text-secondary group-hover:text-accent">
-              {skill.name.split(":")[0]}
-            </span>
-          </div>
-        ))}
-      </div> */}
+        <article
+          ref={gridRef}
+          className="grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+        >
+          {skillsOptions?.map((skill) => (
+            <CardSkill 
+              key={skill.id} 
+              data={skill} 
+            />
+          ))}
+        </article>
+      </div>
     </section>
   );
 }
