@@ -1,6 +1,5 @@
-import { ATitleBold } from "../atoms/Title";
-import { AText } from "../atoms/Text";
-import { AIcon } from "../atoms/Icon";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function MDialog({ data, open, setOpen }) {
   const dialogRef = useRef(null);
@@ -61,16 +60,16 @@ export default function MDialog({ data, open, setOpen }) {
       <div className="flex flex-col gap-10">
         <div className="flex items-center gap-5 border-b border-white/5 pb-8">
           <div className="flex h-12 w-12 items-center justify-center bg-white/[0.03] text-accent">
-            <AIcon data={data.icon} size={24} />
+            {/* <AIcon data={data.icon} size={24} /> */}
           </div>
-          <ATitleBold
-            data={data.value}
-            color="text-text-main"
-            fontSize="text-xl uppercase tracking-widest"
-          />
+          <h2 className="text-primary/60 text-xs lg:text-sm uppercase tracking-wider font-medium">
+            {data.value}
+          </h2>
         </div>
 
-        <AText data={data.detail} fontSize="text-lg" color="text-text-secondary" className="leading-relaxed opacity-80" />
+        <p className="text-primary/60 text-xs lg:text-sm uppercase tracking-wider font-medium">
+          {data.detail}
+        </p>
 
         <div className="mt-6 flex justify-end">
           <button

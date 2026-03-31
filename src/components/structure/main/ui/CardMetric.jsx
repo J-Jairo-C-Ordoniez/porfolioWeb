@@ -1,25 +1,20 @@
-import { ATitleBold } from "../atoms/Title";
-import { AIcon } from "../atoms/Icon";
-import { ALabel } from "../atoms/Label";
+import * as Icon from "lucide-react";
 
-export default function MCardMetric({ data, onClick }) {
+export default function CardMetric({ data, onClick }) {
+  const AIcon = Icon[data.icon];
+
   return (
     <div
-      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center gap-6 border border-white/5 bg-white/[0.01] p-10 transition-all duration-500 hover:border-accent hover:bg-white/[0.03]"
+      className="group flex shrink-0 cursor-pointer flex-col items-center justify-center gap-4 border border-white/5 p-6 transition-all duration-500 hover:border-accent hover:bg-background/50"
       onClick={onClick}
     >
       <div className="text-accent opacity-60">
-        <AIcon data={data.icon} size={24} />
+        <AIcon size={20} />
       </div>
 
-      <ATitleBold 
-        data={data.value} 
-        color="text-text-main" 
-        fontSize="text-lg lg:text-xl" 
-        className="uppercase tracking-widest font-bold"
-      />
-
-      <ALabel data={data.label} />
+      <h2 className="text-primary/60 text-xs lg:text-sm uppercase tracking-wider font-medium">
+        {data.value}
+      </h2>
     </div>
   );
 }

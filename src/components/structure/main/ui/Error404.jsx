@@ -1,10 +1,12 @@
-import { ATitleBold } from "../atoms/Title";
-import { APicture } from "../atoms/Picture";
-import { AText } from "../atoms/Text";
-import { ARed } from "../atoms/Red";
-import { AIcon } from "../atoms/Icon";
+"use client";
 
-export default function MError404({ title, description, isPage }) {
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Text from "./Text";
+import gsap from "gsap";
+
+export default function Error404({ title, description, isPage }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -23,46 +25,39 @@ export default function MError404({ title, description, isPage }) {
   return (
     <section
       ref={containerRef}
-      className="m-auto flex flex-col items-center justify-center p-12 lg:p-24 min-h-[70vh] w-full"
+      className="m-auto flex flex-col items-center justify-center p-8 lg:p-12 min-h-[calc(100vh-400px)] w-full"
     >
-      <div className="w-40 h-40 grayscale contrast-125 mb-12">
-        <APicture
+      <div className="w-40 h-40">
+        <Image
           src="/404.png"
           alt="Avatar - Error 404"
-          size="100"
+          width={400}
+          height={400}
         />
       </div>
 
-      <div className="flex flex-col items-center gap-6 text-center max-w-xl">
-        <ATitleBold
-          data={title}
-          color="text-text-main"
-          textAlign="text-center"
-          fontSize="text-2xl lg:text-4xl"
-          className="uppercase tracking-widest font-bold"
-        />
+      <div className="space-y-4 max-w-xl">
+        <h2 className="text-center text-primary/90 text-xl lg:text-2xl uppercase tracking-wider font-semibold">
+          {title}
+        </h2>
 
-        <AText
-          data={description}
-          textAlign="text-center"
-          fontSize="text-lg"
-          color="text-text-secondary"
+        <Text
+          text={description}
           className="opacity-70 leading-relaxed"
         />
       </div>
 
-      <div className="my-12 flex items-center justify-center rounded-none border border-white/5 bg-white/[0.02] px-12 py-6">
-        <span className="font-sans font-black text-6xl lg:text-8xl tracking-tighter text-accent/20">
+      <div className="my-8 flex items-center justify-center rounded-none border border-primary/5 bg-primary/900 px-10 py-4">
+        <span className="font-sans font-black text-5xl lg:text-7xl tracking-wider text-accent/20">
           404
         </span>
       </div>
 
       {isPage && (
         <div className="mt-8">
-          <ARed href='/' className="!px-10 !py-5 bg-accent hover:bg-accent-secondary !text-bg-dark border-none transition-all uppercase tracking-widest text-xs font-bold">
-            <AIcon data="ArrowLeft" size={16} />
-            <span>Go Back Home</span>
-          </ARed>
+          <Link href='/' className="!px-10 !py-5 bg-accent hover:bg-accent-secondary !text-bg-dark border-none transition-all uppercase tracking-widest text-xs font-bold">
+            <span>Regresar</span>
+          </Link>
         </div>
       )}
     </section>

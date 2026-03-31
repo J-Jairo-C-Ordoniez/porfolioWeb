@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import MenuProject from "../ui/MenuProject";
 import CardProject from "../ui/CardProject";
+import Error404 from "../ui/Error404";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,8 +56,8 @@ export default function Project() {
       id={data.id}
       className="relative min-h-[calc(100vh-100px)] overflow-x-hidden flex justify-center"
     >
-      <div className="container mx-auto py-10">
-        <header className="project-header mb-10 flex flex-col">
+      <div className="container mx-auto py-10 px-4">
+        <header className="mb-10 flex flex-col">
           <h3 className="text-xl font-medium text-primary tracking-wider uppercase pb-4 pl-2 border-b border-primary/10">
             {data.title}
           </h3>
@@ -78,10 +79,11 @@ export default function Project() {
             ))}
           </div>
         ) : (
-          {/* <MError404
+          <Error404
             title="¡Ups! No hay proyectos aquí"
             description="Estamos trabajando en nuevas ideas y pronto verás aquí proyectos increíbles. Mantente atento."
-          /> */}
+            isPage={false}
+          />
         )}
       </div>
     </section>

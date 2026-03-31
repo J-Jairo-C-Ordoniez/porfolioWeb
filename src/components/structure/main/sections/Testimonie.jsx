@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import data from "../../../../data/home/Testimonie";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
+import data from "../../../../data/home/Testimonie";
+import CardMetric from "../ui/CardMetric";
 import CardTestimonie from "../ui/CardTestimonie";
+import Dialog from "../ui/Dialog";
+import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,19 +57,19 @@ export default function STestimonials() {
       id="testimonies"
       className="relative min-h-[calc(100vh-100px)] overflow-x-hidden flex justify-center"
     >
-      <div className="container mx-auto py-10">
-        <header className="test-header mb-24">
-          <span className="font-sans text-xs tracking-wider text-accent opacity-80 mb-4 block uppercase font-bold">
+      <div className="container mx-auto py-10 px-4">
+        <header className="mb-10 flex flex-col">
+          <span className="pl-2 font-sans text-xs tracking-wider text-accent opacity-80 mb-2 block uppercase font-bold">
             Testimonials
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-wider max-w-2xl font-bold text-primary">
+          <h3 className="text-xl font-medium text-primary tracking-wider uppercase pb-4 pl-2 border-b border-primary/10">
             {data.title}
-          </h2>
+          </h3>
         </header>
 
         <div
           ref={gridRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16"
+          className="grid justify-center items-center p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16"
         >
           {data.items?.map((testimonie) => (
             <CardTestimonie
@@ -77,27 +79,30 @@ export default function STestimonials() {
           ))}
         </div>
 
-        {/* Embedded Metrics Scroller */}
-        {/* {data.metrics && (
-        <div className="mt-40 border-t border-white/5 pt-32 overflow-hidden relative">
-          <div
-            ref={metricRef}
-            className="flex w-max gap-12 px-12"
-            onMouseEnter={() => tweenRef.current?.pause()}
-            onMouseLeave={() => tweenRef.current?.play()}
-          >
-            {[...data.metrics, ...data.metrics].map((metric, i) => (
+        {data.metrics && (
+          <div className="mt-10 overflow-hidden relative">
+            <div
+              ref={metricRef}
+              className="flex w-max gap-12 px-12"
+              onMouseEnter={() => tweenRef.current?.pause()}
+              onMouseLeave={() => tweenRef.current?.play()}
+            >
+              {[...data.metrics, ...data.metrics].map((metric, i) => (
               <CardMetric
                 key={i}
                 data={metric}
                 onClick={() => handleOpen(metric)}
               />
             ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {selected && <Dialog data={selected} open={open} setOpen={setOpen} />} */}
+        {selected && <Dialog 
+          data={selected} 
+          open={open} 
+          setOpen={setOpen} 
+        />}
       </div>
     </section>
   );
