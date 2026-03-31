@@ -80,7 +80,7 @@ export default function MDialog({ data, open, setOpen }) {
               setOpen(false);
             }}
           >
-            <span className="font-sans font-caps text-[10px] tracking-widest text-text-main group-hover:text-background transition-colors">
+            <span className="font-sans font-caps text-xs tracking-wider uppercase text-primary/60 group-hover:text-background transition-colors">
               Close Detail
             </span>
           </button>

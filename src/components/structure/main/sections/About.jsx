@@ -1,26 +1,29 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import { ATitleBold, ATitleSection } from "../ui/Title";
-import { AText } from "../ui/Text";
-import { ALabel } from "../ui/Label";
-import { APicture } from "../ui/Picture";
-import { ARed } from "../ui/Red";
-import { AIcon } from "../ui/Icon";
+import data from "../../../../data/home/About";
+import * as Icon from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import gsap from "gsap";
+import CardMetric from "../ui/CardMetric";
+import Dialog from "../ui/Dialog";
+import Text from "../ui/Text";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SAbout({ data }) {
+export default function SAbout() {
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const contentRef = useRef(null);
+  const metricRef = useRef(null);
+  const tweenRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Elegant reveal
       gsap.from([titleRef.current, contentRef.current], {
         opacity: 0,
         y: 30,
@@ -32,67 +35,132 @@ export default function SAbout({ data }) {
           start: "top 80%",
         },
       });
+
+      if (metricRef.current) {
+        const contentWidth = metricRef.current.scrollWidth / 2;
+        gsap.set(metricRef.current, { x: 0 });
+        tweenRef.current = gsap.to(metricRef.current, {
+          x: -contentWidth,
+          duration: 40,
+          ease: "none",
+          repeat: -1,
+        });
+      }
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
+  const handleOpen = (metric) => {
+    setSelected(metric);
+    setOpen(true);
+  };
+
   return (
-    <section 
+    <section
       ref={containerRef}
-      id={data.id} 
-      className="py-32 px-6 sm:px-12 md:px-20 lg:px-32 xl:px-40"
+      id={data.id}
+      className="relative min-h-[calc(100vh-100px)] overflow-x-hidden flex items-center justify-center"
     >
-      <div className="flex flex-col items-center gap-24">
-        {/* Balanced Header */}
-        <div ref={titleRef} className="flex flex-col items-center text-center max-w-4xl">
-          <ATitleSection data="About the Author" className="mb-12" />
-          <ATitleBold data={data.title} fontSize="text-4xl md:text-5xl" className="mb-12 opacity-80" />
-          <AText 
-            data={data.subtitle} 
-            fontSize="text-xl md:text-2xl" 
-            color="text-accent" 
-            className="font-caps tracking-[0.3em]"
-          />
-        </div>
-
-        {/* Symmetric Content Grid */}
-        <div 
-          ref={contentRef}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 border-t border-white/5 pt-24"
+      <div className="container mx-auto py-10 px-4">
+        <header
+          ref={titleRef}
+          className="mb-10 border-b border-primary/10 pb-4"
         >
-          <div className="flex flex-col gap-8">
-            <span className="font-sans font-caps text-[10px] tracking-widest text-accent">Biography</span>
-            <AText data={data.start} fontSize="text-lg" color="text-text-main" className="leading-relaxed font-light" />
-            <AText data={data.professional} fontSize="text-lg" color="text-text-secondary" className="leading-relaxed font-light" />
-            
-            <div className="mt-8 flex gap-6">
-              {data.redes?.map((red) => (
-                <ARed key={red.id} href={red.href} target="_blank" className="text-text-secondary transition-colors hover:text-accent">
-                  <AIcon data={red.icon} className="h-5 w-5" />
-                </ARed>
-              ))}
-            </div>
-          </div>
+          <h2 className="text-xl font-medium text-primary tracking-wider uppercase pb-2">
+            {data.title}
+          </h2>
+          <p className="text-xs md:text-sm text-accent font-caps tracking-wider uppercase">{data.subtitle}</p>
+        </header>
 
-          <div className="flex flex-col gap-12">
-            <span className="font-sans font-caps text-[10px] tracking-widest text-accent">Core Values</span>
+        <section
+          ref={contentRef}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 p-4"
+        >
+          <article className="flex flex-col gap-8">
+            <h3 className="font-sans font-caps text-xs lg:text-sm tracking-wider uppercase text-accent">
+              Biografía
+            </h3>
+
+            <Text
+              text={data.start}
+              aling="left"
+            />
+
+            <Text
+              text={data.professional}
+              aling="left"
+            />
+
+            <div className="mt-8 flex gap-6">
+              {data.redes?.map((red) => {
+                const IconComponent = Icon[red.icon];
+                return (
+                  <Link
+                    key={red.id}
+                    href={red.href || "#"}
+                    target="_blank"
+                    className="!p-2 border-none ring-0 bg-transparent hover:text-accent text-primary"
+                  >
+                    <IconComponent size={20} />
+                  </Link>
+                );
+              })}
+            </div>
+          </article>
+
+          <article className="flex flex-col gap-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               {data.values?.map((value) => (
-                <div key={value.id} className="flex flex-col gap-2">
-                  <span className="font-sans font-caps text-xs tracking-widest text-text-main">{value.text}</span>
-                  <div className="h-px w-full bg-white/5" />
+                <div
+                  key={value.id}
+                  className="flex flex-col gap-2"
+                >
+                  <span className="font-sans font-caps text-xs uppercase tracking-wider text-secondary/60 border-b border-secondary/10 pb-2">
+                    {value.text}
+                  </span>
                 </div>
               ))}
             </div>
-            
-            <div className="mt-auto pt-12">
-              <div className="relative aspect-square w-48 overflow-hidden grayscale contrast-125 opacity-40">
-                <APicture src={data.photo.src} alt={data.photo.alt} size="100" className="object-cover" />
+
+            <div className="mt-auto p-10">
+              <div className="relative aspect-square w-fit h-fit">
+                <Image
+                  src={data.photo.src}
+                  alt={data.photo.alt}
+                  width={200}
+                  height={200}
+                  className="object-cover"
+                />
               </div>
             </div>
+          </article>
+        </section>
+
+        {data.metrics && (
+          <div className="mt-10 overflow-hidden relative">
+            <div
+              ref={metricRef}
+              className="flex w-max gap-12 px-12"
+              onMouseEnter={() => tweenRef.current?.pause()}
+              onMouseLeave={() => tweenRef.current?.play()}
+            >
+              {[...data.metrics, ...data.metrics].map((metric, i) => (
+                <CardMetric
+                  key={i}
+                  data={metric}
+                  onClick={() => handleOpen(metric)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {selected && <Dialog
+          data={selected}
+          open={open}
+          setOpen={setOpen}
+        />}
       </div>
     </section>
   );

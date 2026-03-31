@@ -3,16 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import data from "../../../../data/home/Testimonie";
-import CardMetric from "../ui/CardMetric";
 import CardTestimonie from "../ui/CardTestimonie";
-import Dialog from "../ui/Dialog";
 import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function STestimonials() {
-  const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(null);
+
   const containerRef = useRef(null);
   const gridRef = useRef(null);
   const metricRef = useRef(null);
@@ -31,25 +28,9 @@ export default function STestimonials() {
           start: "top 80%",
         },
       });
-
-      if (metricRef.current) {
-        const contentWidth = metricRef.current.scrollWidth / 2;
-        gsap.set(metricRef.current, { x: 0 });
-        tweenRef.current = gsap.to(metricRef.current, {
-          x: -contentWidth,
-          duration: 40,
-          ease: "none",
-          repeat: -1,
-        });
-      }
     }, containerRef);
     return () => ctx.revert();
   }, [data]);
-
-  const handleOpen = (metric) => {
-    setSelected(metric);
-    setOpen(true);
-  };
 
   return (
     <section
@@ -78,31 +59,6 @@ export default function STestimonials() {
             />
           ))}
         </div>
-
-        {data.metrics && (
-          <div className="mt-10 overflow-hidden relative">
-            <div
-              ref={metricRef}
-              className="flex w-max gap-12 px-12"
-              onMouseEnter={() => tweenRef.current?.pause()}
-              onMouseLeave={() => tweenRef.current?.play()}
-            >
-              {[...data.metrics, ...data.metrics].map((metric, i) => (
-              <CardMetric
-                key={i}
-                data={metric}
-                onClick={() => handleOpen(metric)}
-              />
-            ))}
-            </div>
-          </div>
-        )}
-
-        {selected && <Dialog 
-          data={selected} 
-          open={open} 
-          setOpen={setOpen} 
-        />}
       </div>
     </section>
   );
