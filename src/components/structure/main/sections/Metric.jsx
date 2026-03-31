@@ -15,8 +15,6 @@ export default function OMetric({ data }) {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const contentWidth = containerRef.current.scrollWidth / 2;
-
-      // Set initial position
       gsap.set(containerRef.current, { x: 0 });
 
       tweenRef.current = gsap.to(containerRef.current, {

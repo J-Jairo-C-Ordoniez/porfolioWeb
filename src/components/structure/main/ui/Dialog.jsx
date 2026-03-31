@@ -81,7 +81,7 @@ export default function MDialog({ data, open, setOpen }) {
             }}
           >
             <span className="font-sans font-caps text-xs tracking-wider uppercase text-primary/60 group-hover:text-background transition-colors">
-              Close Detail
+              Cerrar
             </span>
           </button>
         </div>

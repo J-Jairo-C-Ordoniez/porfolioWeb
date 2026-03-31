@@ -4,7 +4,7 @@ import Text from "../ui/Text";
 
 export default function CardProject({ data }) {
   return (
-    <article className="flex w-full flex-col gap-6 group px-4 py-2">
+    <article className="flex w-full flex-col gap-6 group p-4 border border-primary/5 transition-all duration-500 hover:border-accent">
       <figure className="relative aspect-video w-full overflow-hidden">
         <Image
           src={data.poster}

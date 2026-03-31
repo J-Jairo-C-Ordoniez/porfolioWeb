@@ -1,28 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import { ATitleSection } from "../ui/Title";
-import { ABtn } from "../ui/Btn";
-import { CardBlog } from "../ui/CardBlog";
+import data from "../../../../data/home/Blog";
+import CardBlog from "../ui/CardBlog";
 
-export default function SBlog({ data }) {
+export default function SBlog() {
   const [showAll, setShowAll] = useState(false);
   const visibleBlogs = showAll ? data.items : data.items.slice(0, 4);
 
   return (
-    <section id={data.id} className="py-32 px-6 sm:px-12 md:px-20 lg:px-32 xl:px-40">
-      <header className="mb-24 flex flex-col items-center text-center">
-        <ATitleSection data={data.title} className="mb-6 font-black tracking-tighter" />
-        <div className="h-px w-12 bg-accent opacity-50" />
-      </header>
+    <section
+      id={data.id}
+      className="relative min-h-[calc(100vh-100px)] overflow-x-hidden flex justify-center"
+    >
+      <div className="container mx-auto py-10 px-4">
+        <header className="mb-10 flex flex-col">
+          <h3 className="text-xl font-medium text-primary tracking-wider uppercase pb-4 pl-2 border-b border-primary/10">
+            {data.title}
+          </h3>
+        </header>
 
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-        {visibleBlogs.map((blog) => (
-          <CardBlog key={blog.id} data={blog} />
-        ))}
-      </div>
+        <article className="grid grid-cols-1 gap-x-12 gap-y-24 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-10 xl:gap-y-16">
+          {visibleBlogs.map((blog) => (
+            <CardBlog key={blog.id} data={blog} />
+          ))}
+        </article>
 
-      {data.items.length > 4 && (
+        {/* {data.items.length > 4 && (
         <div className="mt-20 flex justify-center">
           <ABtn
             onClick={() => setShowAll(!showAll)}
@@ -33,7 +37,8 @@ export default function SBlog({ data }) {
             className="border-b border-white/10 pb-2 hover:border-accent"
           />
         </div>
-      )}
+      )} */}
+      </div>
     </section>
   );
 }
