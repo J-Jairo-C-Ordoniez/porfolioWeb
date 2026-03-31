@@ -2,6 +2,7 @@ import Hero from "./sections/Hero";
 import Project from "./sections/Project";
 import Testimonie from "./sections/Testimonie";
 import About from "./sections/About";
+import Skill from "./sections/Skill";
 
 export default function Main() {
     return (
@@ -10,6 +11,7 @@ export default function Main() {
             <Project />
             <Testimonie />
             <About />
+            <Skill />
         </main>
     );
 }

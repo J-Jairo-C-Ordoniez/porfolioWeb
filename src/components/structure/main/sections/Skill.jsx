@@ -1,17 +1,14 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// UI imports from the new flat structure
-import { ATitleSection } from "../ui/Title";
-import { AIcon } from "../ui/Icon";
-import { MMenuSkill } from "../ui/MenuList";
+import gsap from "gsap";
+import data from "../../../../data/home/Skill"
+import * as Icon from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function SSkill({ data }) {
+export default function SSkill() {
   const [activeMenu, setActiveMenu] = useState(data.menu[0].status || false);
   const [skillsOptions, setSkillsOptions] = useState(
     data.items[activeMenu] || false
@@ -20,15 +17,12 @@ export default function SSkill({ data }) {
   const containerRef = useRef(null);
   const gridRef = useRef(null);
 
-  // Sync skills with active filter
   useEffect(() => {
     setSkillsOptions(data.items[activeMenu] || false);
   }, [activeMenu, data.items]);
 
-  // Entrance animations
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header reveal
       gsap.from(".skill-header", {
         y: 20,
         opacity: 0,
@@ -40,7 +34,6 @@ export default function SSkill({ data }) {
         },
       });
 
-      // Staggered grid reveal
       if (gridRef.current) {
         gsap.from(gridRef.current.children, {
           y: 30,
@@ -65,19 +58,21 @@ export default function SSkill({ data }) {
       className="py-32"
     >
       <header className="skill-header mb-24 flex flex-col items-center text-center px-6">
-        <ATitleSection data={data.title} className="mb-6 font-black tracking-tighter" />
+        <h2 className="mb-6 font-black tracking-tighter" >
+          {data.title}
+        </h2>
         <div className="h-px w-12 bg-accent opacity-50" />
         
         <div className="mt-12">
-          <MMenuSkill
+          {/* <MMenuSkill
             data={data.menu}
             setStateMenu={setActiveMenu}
             stateMenu={activeMenu}
-          />
+          /> */}
         </div>
       </header>
 
-      <div 
+      {/* <div 
         ref={gridRef}
         className="grid grid-cols-2 gap-px bg-white/5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 border-y border-white/5"
       >
@@ -94,7 +89,7 @@ export default function SSkill({ data }) {
             </span>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
