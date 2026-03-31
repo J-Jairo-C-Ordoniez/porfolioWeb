@@ -1,45 +1,42 @@
-import { ATitleBold } from "../main/ui/Title";
-import { ARed } from "../main/ui/Red";
-import { AIcon } from "../main/ui/Icon";
-import MMenu from "../main/ui/Menu";
-import { AText } from "../main/ui/Text";
+import Link from "next/link";
+import data from "../../../data/home/Footer";
+import Text from "../main/ui/Text";
+import * as Icon from "lucide-react";
 
-export default function OFooter({ data }) {
-  if (!data) return null;
-
+export default function Footer() {
   return (
-    <footer className="w-full border-t border-white/5 bg-background py-24">
-      <article className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-6">
-        <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <ATitleBold 
-            data={data.title} 
-            fontSize="text-xl md:text-2xl" 
-            className="uppercase tracking-[0.3em] font-light opacity-80" 
-          />
-          <div className="h-px w-12 bg-accent opacity-40 mx-auto" />
-        </div>
-
-        <div className="w-full max-w-2xl px-6">
-          <MMenu data={data.menu} />
+    <footer className="w-full bg-background font-inter min-h-16 py-8 border-t border-primary/5">
+      <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+        <div>
+          <Link
+            href="/"
+            aria-label="Inicio, J Jairo C Ordoñez"
+            className="text-primary/80 hover:text-primary transition-colors cursor-pointer text-sm tracking-wider font-medium uppercase"
+          >
+            <span className="hidden sm:inline">J Jairo C Ordoñez</span>
+            <span className="sm:hidden">JC</span>
+          </Link>
         </div>
 
         <div className="flex gap-10">
-          {data.social?.map((red) => (
-            <ARed key={red.id} href={red.href} className="!p-2 border-none bg-transparent hover:text-accent opacity-60 hover:opacity-100 transition-all">
-              <AIcon data={red.icon} size={20} />
-            </ARed>
-          ))}
+          {data.social?.map((red) => {
+            const IconComponent = Icon[red.icon];
+            return (
+              <Link
+                key={red.id}
+                href={red.href}
+                className="text-primary/80 hover:text-primary transition-colors cursor-pointer text-xs tracking-wider uppercase"
+              >
+                {IconComponent && <IconComponent size={20} />}
+              </Link>
+            );
+          })}
         </div>
 
-        <div className="mt-8 flex flex-col items-center gap-4 border-t border-white/5 pt-12 w-full max-w-xs">
-          <AText 
-            data={data.copyright} 
-            fontSize="text-[10px]" 
-            color="text-text-secondary" 
-            className="font-caps tracking-widest opacity-40"
-          />
-        </div>
-      </article>
+        <Text
+          text={data.copyright}
+        />
+      </div>
     </footer>
   );
 }

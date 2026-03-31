@@ -1,5 +1,6 @@
 import Header from "../components/structure/header/Header";
 import Main from "../components/structure/main/main"
+import Footer from "../components/structure/footer/Footer"
 
 export const metadata = {
   title: "J Jairo C Ordoñez",
@@ -31,7 +32,7 @@ export default function Home() {
       />
       <Header />
       <Main />
-      {/* <Footer data={dataFooter} /> */}
+      <Footer />
     </>
   );
 }
