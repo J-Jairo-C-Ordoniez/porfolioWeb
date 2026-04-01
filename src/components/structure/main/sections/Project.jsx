@@ -57,7 +57,7 @@ export default function Project() {
       className="relative min-h-[calc(100vh-100px)] overflow-x-hidden flex justify-center"
     >
       <div className="container mx-auto py-10 px-4">
-        <header className="mb-10 flex flex-col">
+        <header className="project-header mb-10 flex flex-col">
           <h3 className="text-xl font-medium text-primary tracking-wider uppercase pb-4 pl-2 border-b border-primary/10">
             {data.title}
           </h3>

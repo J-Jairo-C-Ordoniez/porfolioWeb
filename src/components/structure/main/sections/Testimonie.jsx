@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import data from "../../../../data/home/Testimonie";
 import CardTestimonie from "../ui/CardTestimonie";
@@ -12,8 +12,6 @@ export default function STestimonials() {
 
   const containerRef = useRef(null);
   const gridRef = useRef(null);
-  const metricRef = useRef(null);
-  const tweenRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
