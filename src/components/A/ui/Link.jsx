@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AText } from "./Text";
+import { AText } from "../../structure/main/ui/Text";
 
 export function ALink({ children, href, target = "_self" }) {
   return (
@@ -25,9 +25,9 @@ export function ALinkDoc({
       style={{ background }}
       href={href}
     >
-      <AText 
-        data={data.title} 
-        color={color} 
+      <AText
+        data={data.title}
+        color={color}
         fontSize="text-lg"
       />
     </Link>

@@ -1,5 +1,5 @@
 import { AIcon } from "./Icon";
-import { AText } from "./Text";
+import { AText } from "../../structure/main/ui/Text";
 
 export function ALabel({ data }) {
   return (

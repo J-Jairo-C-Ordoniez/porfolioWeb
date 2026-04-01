@@ -2,7 +2,7 @@
 
 import cBlog from "../../data/home/Blog";
 import OHeroBlog from "../../components/structure/main/sections/HeroBlog";
-import MBlogContent from "../../components/structure/main/ui/BlogContent";
+import MBlogContent from "../../components/A/ui/BlogContent";
 import OListBlog from "../../components/A/ListBlog";
 
 export default function SBlog({ data }) {

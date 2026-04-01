@@ -1,51 +1,9 @@
 export const bloodyyueDoc = {
   id: "bloodyyue",
-  title: "BloodyYue - Documentación",
-  description:
-    "Documentación técnica detallada del proyecto BloodyYue, un portal web moderno y escalable construido con Next.js y MySQL.",
-  avatar: "/projects/project1/logo.png",
+  title: "BloodyYue",
+  description: "Documentación técnica detallada del proyecto BloodyYue, un portal web moderno y escalable construido con Next.js y MySQL.",
+  avatar: "/logo.svg",
   url: "https://bloodyyue.com",
-
-  head: {
-    name: "J Jairo | BloodyYue",
-    logo: {
-      src: "/logo.svg",
-      alt: "Logo institucional",
-      link: "/docs/bloodyyue",
-    },
-
-    menu: [
-      {
-        id: 1,
-        text: "Código Fuente",
-        href: "https://github.com/jjairoordonez/bloodyyue",
-        icon: "Github",
-      },
-      {
-        id: 2,
-        text: "Ver Demo",
-        href: "https://bloodyyue.com",
-        icon: "ExternalLink",
-      },
-    ],
-  },
-
-  hero: {
-    title: "BloodyYue",
-    logo: "/projects/project1/logo.png",
-    description:
-      "Una plataforma personalizada hecha a medida para la artista BloodyYue. Un espacio donde ella puede gestionar, mostrar y vender su arte digital con total control, sin depender de redes sociales o intermediarios.",
-    Btn: { id: 1, text: "Ver Detalles", icon: "FileText" },
-    link: { id: 2, text: "Ver Galería", icon: "Image", href: "#gallery" },
-
-    tecnologies: [
-      { id: 1, text: "Next.js", color: "#607D8B" },
-      { id: 2, text: "TailwindCSS", color: "#38BDF8" },
-      { id: 3, text: "Node.js", color: "#8CC84B" },
-      { id: 4, text: "Express.js", color: "#607D8B" },
-      { id: 5, text: "MySQL", color: "#FF5722" },
-    ]
-  },
 
   documentation: [
     {

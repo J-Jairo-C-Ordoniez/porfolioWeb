@@ -1,4 +1,4 @@
-import { ATitleSection, ATitleBold } from "../ui/Title";
+import { ATitleSection, ATitleBold } from "../../../A/ui/Title";
 import MForm from "../ui/Form";
 
 export default function SContact({ data }) {

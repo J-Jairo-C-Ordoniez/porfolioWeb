@@ -3,11 +3,7 @@
 import { useRef, useEffect } from "react";
 import { Search } from "lucide-react";
 
-export default function MSearchDoc({
-  currentSection,
-  searchTerm,
-  setSearchTerm,
-}) {
+export default function SearchDoc({ currentSection, searchTerm, setSearchTerm }) {
   const inputRef = useRef(false);
 
   useEffect(() => {
@@ -28,7 +24,7 @@ export default function MSearchDoc({
 
   return (
     <>
-      <div className="flex w-[90%] items-center gap-4">
+      <div className="flex w-full items-center gap-4">
         <Search />
         <input
           ref={inputRef}
@@ -36,7 +32,7 @@ export default function MSearchDoc({
           placeholder={`Buscar en ${currentSection?.title || "documentación"}...`}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-[80%] bg-transparent text-sm text-[#e0e0e0] placeholder-[#b3b3b3] outline-none"
+          className="w-full bg-transparent text-sm text-secondary/80 placeholder-secondary/40 outline-none tracking-wider font-medium"
         />
       </div>
 

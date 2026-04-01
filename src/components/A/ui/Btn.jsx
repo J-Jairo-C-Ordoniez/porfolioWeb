@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AIcon } from "./Icon";
-import { useMagneticButton } from "../../../../hooks/useMagneticButton";
+import { useMagneticButton } from "../../../hooks/useMagneticButton";
 
 export function ABtn({ data, onClick, dataId = "", className = "" }) {
   return (

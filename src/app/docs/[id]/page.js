@@ -1,11 +1,11 @@
-import MError404 from "../../../components/molecules/Error404";
-import projects from "../../../data/docs/main";
-import OHeader from "../../../components/structure/header/Header";
-import SDoc from "../../../sections/doc/Doc";
+import Error404 from "../../../components/structure/main/ui/Error404";
+import data from "../../../data/docs/main";
+import Header from "../../../components/doc/header/Header";
+import Main from "../../../components/doc/main/Main";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const dataProject = await projects[id];
+  const dataProject = await data[id];
 
   if (!dataProject) {
     return {
@@ -44,11 +44,11 @@ export async function generateMetadata({ params }) {
 
 export default async function DocPage({ params }) {
   const { id } = await params;
-  const dataProject = await projects[id];
+  const dataProject = await data[id];
 
   if (!dataProject) {
     return (
-      <MError404
+      <Error404
         title={`Upss! Proyecto ${id} no encontrado`}
         description="Lo sentimos, pero el proyecto que estás buscando no existe o ha sido movido."
         isPage
@@ -58,8 +58,11 @@ export default async function DocPage({ params }) {
 
   return (
     <>
-      <OHeader data={dataProject.head} />
-      <SDoc data={dataProject} />
+      <Header
+        title={dataProject.title}
+        link={`/docs/${id}`}
+      />
+      <Main data={dataProject.documentation} />
     </>
   );
 }

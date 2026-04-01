@@ -1,4 +1,4 @@
-import { AText } from "./Text";
+import { AText } from "../../structure/main/ui/Text";
 
 export function AList({ data }) {
   return (

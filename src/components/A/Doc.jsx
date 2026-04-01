@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { ATitleBold, ATitleSection } from "../structure/main/ui/Title";
-import { ALinkDoc } from "../structure/main/ui/Link";
-import MMenuDoc from "../structure/main/ui/MenuDoc";
-import MSearchDoc from "../structure/main/ui/SearchDoc";
+import { ATitleBold, ATitleSection } from "./ui/Title";
+import { ALinkDoc } from "./ui/Link";
+import MMenuDoc from "../doc/main/ui/Menu";
+import MSearchDoc from "../doc/main/ui/Search";
 import { AText } from "../structure/main/ui/Text";
-import MCardDoc from "../structure/main/ui/CardDoc";
-import { AIcon } from "../structure/main/ui/Icon";
-import { ARed } from "../structure/main/ui/Red";
+import MCardDoc from "../doc/main/ui/CardDoc";
+import { AIcon } from "./ui/Icon";
+import { ARed } from "./ui/Red";
 
 export default function ODoc({ data, headData }) {
   const [activeSection, setActiveSection] = useState(data[0]?.id || null);
@@ -26,7 +26,7 @@ export default function ODoc({ data, headData }) {
         });
       },
       {
-        threshold: 0.2, 
+        threshold: 0.2,
         rootMargin: "-10% 0px -50% 0px",
       },
     );
@@ -35,7 +35,7 @@ export default function ODoc({ data, headData }) {
     items?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [activeSection, searchTerm]); 
+  }, [activeSection, searchTerm]);
 
   const currentSection = data.find((sec) => sec.id === activeSection);
 
