@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import * as Icon from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";

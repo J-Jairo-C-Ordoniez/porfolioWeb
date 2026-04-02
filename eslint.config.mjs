@@ -7,6 +7,9 @@ export default defineConfig([
   { ignores: [".next/**", "node_modules/**"] },
   pluginReact.configs.flat.recommended,
   {
+    settings: {
+      react: { version: "detect" }
+    },
     files: ["**/*.{js,mjs,cjs,jsx}"],
     plugins: {
       js

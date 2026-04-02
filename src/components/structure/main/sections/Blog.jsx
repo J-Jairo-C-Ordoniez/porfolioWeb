@@ -5,7 +5,7 @@ import data from "../../../../data/home/Blog";
 import CardBlog from "../ui/CardBlog";
 
 export default function SBlog() {
-  const [showAll, setShowAll] = useState(false);
+  const [showAll] = useState(false);
   const visibleBlogs = showAll ? data.items : data.items.slice(0, 4);
 
   return (
@@ -25,19 +25,6 @@ export default function SBlog() {
             <CardBlog key={blog.id} data={blog} />
           ))}
         </article>
-
-        {/* {data.items.length > 4 && (
-        <div className="mt-20 flex justify-center">
-          <ABtn
-            onClick={() => setShowAll(!showAll)}
-            data={{
-              text: showAll ? "Show Less" : "View All Stories",
-              icon: showAll ? "PanelLeftOpen" : "PanelBottomOpen",
-            }}
-            className="border-b border-white/10 pb-2 hover:border-accent"
-          />
-        </div>
-      )} */}
       </div>
     </section>
   );

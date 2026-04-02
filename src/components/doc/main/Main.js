@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import * as Icons from "lucide-react";
 import Menu from "./ui/Menu";
 import Search from "./ui/Search";
 import CardDoc from "./ui/CardDoc";
-import Link from "next/link";
 
 export default function Main({ data }) {
     const [activeSection, setActiveSection] = useState(data[0]?.id || null);
