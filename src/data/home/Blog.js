@@ -1,11 +1,11 @@
-﻿const cBlog = {
+﻿const data = {
   id: "blog",
   title: "Ideas y Experiencias",
 
   items: [
     {
       id: "desingUI",
-      category: { text: "UI/UX", color: "#2196F3" },
+      category: "UI/UX",
       href: "/blog/desingUI",
       title: "Cómo diseñar interfaces minimalistas sin perder funcionalidad",
       excerpt:
@@ -19,7 +19,7 @@
     },
     {
       id: 2,
-      category: { text: "Arquitectura", color: "#FF9800" },
+      category: "Arquitectura",
       href: "/blog/rchiquecture",
       title: "Atomic Design: mi experiencia aplicándolo en proyectos reales",
       excerpt:
@@ -33,7 +33,7 @@
     },
     {
       id: 3,
-      category: { text: "Bases de Datos", color: "#4CAF50" },
+      category: "Bases de Datos",
       href: "/blog/dataBase",
       title: "Cómo estructuro bases de datos relacionales con MySQL",
       excerpt:
@@ -47,7 +47,7 @@
     },
     {
       id: 4,
-      category: { text: "Frontend", color: "#9C27B0" },
+      category: "Frontend",
       href: "/blog/reactNext",
       title: "React + Next.js: patrones que realmente funcionan",
       excerpt:
@@ -61,7 +61,7 @@
     },
     {
       id: 5,
-      category: { text: "Productividad", color: "#FF5722" },
+      category: "Productividad",
       href: "/blog/productivity",
       title: "Mi flujo de trabajo con Git y control de versiones",
       excerpt:
@@ -75,7 +75,7 @@
     },
     {
       id: 6,
-      category: { text: "UI/UX", color: "#00BCD4" },
+      category: "UI/UX",
       href: "/blog/typografia",
       title: "El arte de elegir tipografías en proyectos web",
       excerpt:
@@ -89,7 +89,7 @@
     },
     {
       id: 7,
-      category: { text: "Backend", color: "#3F51B5" },
+      category: "Backend",
       href: "/blog/iddlewares",
       title: "Middleware esenciales en una API Node.js",
       excerpt:
@@ -103,7 +103,7 @@
     },
     {
       id: 8,
-      category: { text: "Reflexión", color: "#607D8B" },
+      category: "Reflexión",
       href: "/blog/reflexion",
       title: "Lo que aprendí al migrar proyectos de monolito a microservicios",
       excerpt:
@@ -118,4 +118,4 @@
   ],
 };
 
-export default cBlog;
+export default data;

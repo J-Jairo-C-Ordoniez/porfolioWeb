@@ -1,4 +1,4 @@
-const cSkill = {
+const data = {
   id: "skills",
   title: "Habilidades",
   menu: [
@@ -91,4 +91,4 @@ const cSkill = {
   },
 };
 
-export default cSkill;
+export default data;

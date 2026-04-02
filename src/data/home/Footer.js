@@ -1,4 +1,4 @@
-const cFooter = {
+const data = {
   title: "J Jairo C Ordoñez",
   copyright: `© ${new Date().getFullYear()} J Jairo C Ordoñez`,
   logo: {
@@ -33,4 +33,4 @@ const cFooter = {
   ],
 };
 
-export default cFooter;
+export default data;
