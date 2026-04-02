@@ -6,7 +6,7 @@ export default function Header({ title = "", link = "/" }) {
             <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-center">
                 <Link
                     href={link}
-                    aria-label="Proyecto, J Jairo C Ordoñez"
+                    aria-label="Blog, J Jairo C Ordoñez"
                     className="text-primary/80 hover:text-primary transition-colors cursor-pointer text-sm tracking-wider font-medium uppercase"
                 >
                     <span className="hidden sm:inline">J Jairo | {title}</span>

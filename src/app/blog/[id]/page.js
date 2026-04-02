@@ -1,11 +1,11 @@
-import MError404 from "../../../components/structure/main/ui/Error404";
-import OHeader from "../../../components/structure/header/Header";
-import blogs from "../../../data/blogs/main";
-import SBlog from "../../../sections/blog/Blog";
+import Error404 from "../../../components/structure/main/ui/Error404";
+import data from "../../../data/blogs/main";
+import Header from "../../../components/blog/header/Header";
+import Main from "../../../components/blog/main/Main";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const dataBlog = await blogs[id];
+  const dataBlog = await data[id];
 
   if (!dataBlog) {
     return {
@@ -13,19 +13,6 @@ export async function generateMetadata({ params }) {
       description: "Blog no encontrado",
     };
   }
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: dataBlog.subtitle,
-    description: dataBlog.description,
-    image: dataBlog.avatar,
-    url: dataBlog.url,
-    author: {
-      "@type": "Person",
-      name: "J Jairo C Ordoñez",
-    },
-  };
 
   return {
     title: dataBlog.subtitle,
@@ -49,9 +36,6 @@ export async function generateMetadata({ params }) {
     alternates: {
       canonical: dataBlog.url,
     },
-    other: {
-      "script:ld+json": JSON.stringify(jsonLd),
-    },
     icons: {
       icon: dataBlog.avatar,
     },
@@ -60,12 +44,12 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPage({ params }) {
   const { id } = await params;
-  const dataBlog = await blogs[id];
+  const dataBlog = await data[id];
 
   if (!dataBlog) {
     return (
-      <MError404
-        title={`Upss! Blog ${id} no encontrado`}
+      <Error404
+        title={`Upss! Blog no encontrado`}
         description="Lo sentimos, pero el blog que estás buscando no existe o ha sido movido."
         isPage
       />
@@ -74,25 +58,11 @@ export default async function BlogPage({ params }) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: dataBlog.subtitle,
-            description: dataBlog.description,
-            image: dataBlog.avatar,
-            url: dataBlog.url,
-            author: {
-              "@type": "Person",
-              name: "J Jairo C Ordoñez",
-            },
-          }),
-        }}
+      <Header
+        title={dataBlog.subtitle}
+        link={`/blog/${id}`}
       />
-      <OHeader data={dataBlog.head} />
-      <SBlog data={dataBlog} />
+      <Main data={dataBlog} />
     </>
   );
 }

@@ -12,7 +12,7 @@ const desingUI = {
     logo: {
       src: "/logo.svg",
       alt: "Logo de mi portafolio",
-      link: "/docs/bloodyyue",
+      link: "/blog",
     },
   },
 
@@ -22,6 +22,7 @@ const desingUI = {
     date: "2025-10-19",
     readTime: "5 min",
   },
+
   items: [
     {
       id: 1,
@@ -62,14 +63,6 @@ const desingUI = {
         "La jerarquía se consigue con tamaño, contraste, espaciado y posición. En interfaces minimalistas el espacio en blanco funciona como herramienta para separar bloques y guiar la mirada: no temas al vacío, úsalo para enfatizar lo importante.",
     },
     {
-      id: 7,
-      type: "img",
-      value: {
-        src: "/images/minimal-ui-example.png",
-        alt: "Ejemplo de interfaz minimalista con mucho espacio en blanco y tipografía clara",
-      },
-    },
-    {
       id: 8,
       type: "quote",
       value:
@@ -90,15 +83,17 @@ const desingUI = {
       id: 11,
       type: "table",
       value: {
-        heads: [
+        headers: [
           { id: 1, title: "Elemento" },
           { id: 2, title: "Minimalismo efectivo" },
           { id: 3, title: "Peligro a evitar" },
         ],
-        values: [
-          { id: 1, title: "Botones" },
-          { id: 2, title: "Acción clara" },
-          { id: 3, title: "etiqueta directa" },
+        rows: [
+          [
+            { id: 1, title: "Botones" },
+            { id: 2, title: "Acción clara" },
+            { id: 3, title: "etiqueta directa" },
+          ],
         ],
       },
     },
