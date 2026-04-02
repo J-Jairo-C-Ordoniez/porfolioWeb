@@ -2,8 +2,8 @@ export const modayestiloDoc = {
   id: "modayestilo",
   title: "Moda y Estilo",
   description: "Sistema integral de Gestión de Catálogo e Inventario, proporcionando una vitrina digital pública y un panel administrativo avanzado.",
-  avatar: "/projects/project3.png",
-  url: "https://modayestilo.vercel.app",
+  avatar: "/Logo.svg",
+  url: "https://moda-estilo-phi.vercel.app/",
 
   documentation: [
     {
@@ -17,7 +17,7 @@ export const modayestiloDoc = {
                 {
                    id: 1,
                    type: "image",
-                   value: "/projects/project3.png",
+                   value: "/projects/modayestilo/others/home.png",
                    alt: "Preview de la Plataforma Moda y Estilo"
                 },
                 {
@@ -29,8 +29,8 @@ export const modayestiloDoc = {
                    id: 3,
                    type: "buttons",
                    value: [
-                      { text: "Ver Demo en Vivo", href: "https://modayestilo.vercel.app" },
-                      { text: "Ver Repositorio", href: "https://github.com/ModayEstilo/modayestilo.git" }
+                      { text: "Ver Demo", href: "https://moda-estilo-phi.vercel.app/" },
+                      { text: "Ver Repositorio", href: "https://github.com/J-Jairo-C-Ordoniez/ModaEstilo" },
                    ]
                 }
              ]

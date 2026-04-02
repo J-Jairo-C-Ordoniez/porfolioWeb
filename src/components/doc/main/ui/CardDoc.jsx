@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CardDoc({ data }) {
   if (!data) return null;
 
@@ -110,32 +112,37 @@ export default function CardDoc({ data }) {
 
           if (item.type === "image")
             return (
-              <div key={item.id} className="w-full my-8 rounded-xl overflow-hidden border border-white/5">
-                <img 
-                  src={item.value} 
-                  alt={item.alt || "Document image"} 
-                  className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" 
+              <figure 
+                key={item.id} 
+                className="relative aspect-video w-120 overflow-hidden"
+              >
+                <Image
+                  src={item.value}
+                  alt={item.alt || "Document image"}
+                  width={400}
+                  height={400}
+                  className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
-              </div>
+              </figure>
             );
 
           if (item.type === "buttons")
             return (
               <div key={item.id} className="flex flex-wrap gap-4 my-6">
                 {item.value.map((btn, i) => (
-                  <a 
-                    key={i} 
-                    href={btn.href} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="px-6 py-2 bg-primary/5 hover:bg-primary/10 border border-primary/20 text-text-primary rounded-full transition-colors text-sm tracking-widest uppercase font-light"
+                  <a
+                    key={i}
+                    href={btn.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary/80 px-6 py-2 bg-primary/5 hover:bg-primary/10 border border-primary/20 text-text-primary rounded-full transition-colors text-sm tracking-widest uppercase font-light"
                   >
                     {btn.text}
                   </a>
                 ))}
               </div>
             );
-            
+
           return null;
         })}
       </div>

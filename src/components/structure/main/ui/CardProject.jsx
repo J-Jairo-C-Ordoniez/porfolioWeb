@@ -11,7 +11,7 @@ export default function CardProject({ data }) {
           alt={data.title}
           width={400}
           height={400}
-          className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
+          className="h-full w-full  transition-all duration-700 group-hover:scale-105"
         />
       </figure>
 

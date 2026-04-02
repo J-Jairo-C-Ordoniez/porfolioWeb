@@ -1,510 +1,228 @@
 export const bloodyyueDoc = {
   id: "bloodyyue",
   title: "BloodyYue",
-  description: "Documentación técnica detallada del proyecto BloodyYue, un portal web moderno y escalable construido con Next.js y MySQL.",
+  description: "Plataforma web personalizada que permite a la artista digital BloodyYue gestionar su portafolio, ventas y comunicación con clientes de manera centralizada y segura.",
   avatar: "/logo.svg",
   url: "https://bloodyyue.com",
 
   documentation: [
     {
-      id: "start",
-      title: "Introducción",
+      id: "hero",
+      title: "Hero",
       items: [
         {
           id: 1,
-          title: "El Problema",
+          title: "Resumen del Proyecto",
           content: [
             {
               id: 1,
-              type: "text",
-              value:
-                "Vender arte digital hoy en día es difícil. Las redes sociales están saturadas y sus algoritmos hacen que el trabajo de artistas como BloodyYue se pierda entre tanto contenido, quitándoles el control sobre quién ve su arte y cómo lo vende."
+              type: "image",
+              value: "/logo.svg",
+              alt: "BloodyYue Platform"
             },
             {
               id: 2,
               type: "text",
-              value:
-                "Depender de plataformas externas es arriesgado. Se pierde el control de los datos, los derechos de autor son vulnerables y no siempre es el entorno más seguro para vender. Hacía falta un lugar propio que uniera comunidad, exposición y ventas de forma honesta y segura.",
+              value: "BloodyYue es una plataforma integral diseñada para que la artista digital gestione de forma independiente su portafolio, el proceso de sus comisiones y la comunicación directa con sus clientes, brindando una experiencia profesional y asegurando su completa independencia creativa."
             },
             {
               id: 3,
-              type: "text",
-              value:
-                "En resumen: faltaba un espacio confiable donde la artista pudiera manejar su carrera y sus obras sin las restricciones de las grandes plataformas.",
-            },
-          ],
-        },
-        {
-          id: 3,
-          title: "Solución",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Creé BloodyYue como una respuesta directa a estos retos. Diseñé un sistema donde la artista tiene el mando absoluto, donde su trabajo está protegido y puede conectar con su público sin ruidos externos, priorizando su independencia creativa.",
-            },
-          ],
-        },
-        {
-          id: 4,
-          title: "Resultados",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "El resultado es una plataforma rápida, bonita y fácil de usar. Un sitio que refleja el estilo visual de BloodyYue y que funciona bien, uniendo diseño y técnica de forma natural.",
-            },
-          ],
-        },
-      ],
+              type: "buttons",
+              value: [
+                { text: "Visitar Demo", href: "https://bloodyyue.com" },
+                { text: "Repositorio Web", href: "#" }
+              ]
+            }
+          ]
+        }
+      ]
     },
-
     {
-      id: "overview",
-      title: "Objetivos del Proyecto",
+      id: "vision",
+      title: "Contexto Visual y Negocio",
       items: [
         {
           id: 1,
-          title: "Objetivo",
+          title: "El Desafío del Arte Digital",
           content: [
             {
-              id: 1,
-              type: "text",
-              value:
-                "Diseñar un sitio a medida para BloodyYue que le permita organizar todo su trabajo de forma centralizada, facilitar sus ventas y presentar una imagen profesional y sólida que mezcle técnica y arte.",
+               id: 1,
+               type: "text",
+               value: "En la actualidad, vender arte digital se ha convertido en un desafío constante para los artistas independientes. Las redes sociales, aunque ofrecen alcance global, se han transformado en un espacio saturado donde la visibilidad depende de algoritmos opacos y de la inversión en publicidad."
             },
-          ],
-        },
-        {
-          id: 2,
-          title: "Metas Clave",
-          content: [
             {
-              id: 1,
-              type: "list",
-              value: [
-                { id: 1, text: "Hacer más fácil el acceso a su catálogo y catálogos de precios." },
-                { id: 2, text: "Crear filtros sencillos para manejar pedidos complejos." },
-                { id: 3, text: "Tener un panel de control para ver cómo van las ventas y métricas." },
-                { id: 4, text: "Centralizar los mensajes y el seguimiento de cada pedido." },
-                { id: 5, text: "Mantener una estética única y profesional en toda la plataforma." }
-              ]
+               id: 2,
+               type: "quote",
+               value: "Muchos artistas digitales dependen casi por completo de plataformas externas, lo que los deja expuestos a la pérdida de control, pérdida de derechos sobre su contenido y fraude."
+            },
+            {
+               id: 3,
+               type: "text",
+               value: "En síntesis, el principal problema detectado fue la falta de un canal confiable, transparente y equitativo para conectar con compradores y gestionar colecciones libremente."
             }
           ]
         },
         {
-          id: 3,
-          title: "Alcance",
+          id: 2,
+          title: "La Solución",
           content: [
             {
-              id: 1,
-              type: "text",
-              value:
-                "El sistema ha sido diseñado específicamente como el punto de encuentro exclusivo entre la artista BloodyYue y su audiencia. La plataforma permite:",
-            },
-            {
-              id: 2,
-              type: "list",
-              value: [
+               id: 1,
+               type: "text",
+               value: "BloodyYue nace como respuesta a esta problemática. Su objetivo central es construir un entorno digital donde la artista homónima pueda mostrar, vender y proteger su trabajo bajo sus propios términos, blindando la trazabilidad y la independencia creativa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+       id: "goals",
+       title: "Fundamentos y Objetivos",
+       items: [
+          {
+             id: 1,
+             title: "Objetivo General",
+             content: [
                 {
-                  id: 1,
-                  text: "Mostrar el portafolio artístico con categorías, post, testimonios y descripciones.",
-                },
-                {
-                  id: 2,
-                  text: "Publicar información sobre precios y políticas de comisiones.",
-                },
-                {
-                  id: 3,
-                  text: "Implementar un panel administrativo para la gestión de obras, mensajes y ventas.",
-                },
-                {
-                  id: 4,
-                  text: "Ofrecer una experiencia visual coherente con la identidad artística de BloodyYue, optimizada para cualquier dispositivo.",
-                },
-                {
-                  id: 5,
-                  text: "Mensajería en tiempo real y contacto por formularios y correo.",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: 4,
-          title: "Limitaciones",
-          content: [
-            {
-              id: 1,
-              type: "list",
-              value: [
-                {
-                  id: 1,
-                  text: "No se desarrollará una aplicación móvil nativa, solo versión web responsive.",
-                },
-                {
-                  id: 2,
-                  text: "Las métricas avanzadas de analítica (como seguimiento de usuarios) quedarán para una fase posterior.",
+                   id: 1,
+                   type: "text",
+                   value: "Diseñar y desarrollar una plataforma web personalizada que unifique presencia profesional, catálogo de comisiones, interacciones limitadas al comercio y gestión interna mediante roles (Común vs Admin)."
                 }
-              ],
-            },
-          ],
-        },
-      ],
+             ]
+          },
+          {
+             id: 2,
+             title: "Mejoras Clave a Implementar",
+             content: [
+                {
+                   id: 1,
+                   type: "list",
+                   value: [
+                      { id: 1, text: "Mejorar la experiencia del cliente incorporando filtros de seriedad, solicitud condicionada y testimonios certificados." },
+                      { id: 2, text: "Optimizar la gestión de la artista dotándola con un panel interno para métricas, facturación y bandeja controlada de mensajes." },
+                      { id: 3, text: "Diferenciar su marca comercial aplicando la metodología Atomic Design y animaciones sutiles (branding)." },
+                      { id: 4, text: "Construir todo lo anterior en una arquitectura moderna MVC altamente mantenible." }
+                   ]
+                }
+             ]
+          }
+       ]
     },
-
     {
-      id: "architecturalDecisions",
-      title: "Arquitectura general del sistema y Tecnologías",
-      items: [
-        {
-          id: 1,
-          title: "Arquitectura propuesta",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Para BloodyYue, usaremos una arquitectura modular y escalable, separando claramente las capas: Usuario ⇄ Frontend ⇄ Backend ⇄ Base de datos ",
-            }
-          ],
-        },
-        {
-          id: 2,
-          title: "Frontend",
-          content: [
-            {
-              id: 1,
-              type: "title",
-              value: "Framework",
-            },
-            {
-              id: 2,
-              type: "list",
-              value: [
-                { id: 1, text: "Next.js" }
-              ],
-            },
-            {
-              id: 3,
-              type: "title",
-              value: "Estilos",
-            },
-            {
-              id: 4,
-              type: "list",
-              value: [
-                { id: 1, text: "Tailwind CSS" },
-                { id: 2, text: "Framer Motion" }
-              ],
-            },
-            {
-              id: 5,
-              type: "title",
-              value: "Arquitectura: Atomic Design",
-            },
-            {
-              id: 6,
-              type: "list",
-              value: [
-                { id: 1, text: "Renderizar la interfaz del sitio (portafolio, contacto, galería, políticas, etc.)" },
-                { id: 2, text: "Conectarse con el backend mediante API REST." },
-                { id: 3, text: "Manejar rutas públicas (home, portafolio, contacto) y privadas (dashboard de la artista)." },
-                { id: 4, text: "Implementar componentes reutilizables (átomos, moléculas, organismos, plantillas)." }
-              ],
-            },
-          ],
-        },
-        {
-          id: 3,
-          title: "Backend",
-          content: [
-            {
-              id: 1,
-              type: "title",
-              value: "Tecnologías base",
-            },
-            {
-              id: 2,
-              type: "list",
-              value: [
-                { id: 1, text: "Node.js" },
-                { id: 2, text: "Express" }
-              ],
-            },
-            {
-              id: 3,
-              type: "title",
-              value: "Arquitectura: Modelo-Vista-Controlador (MVC).",
-            },
-            {
-              id: 4,
-              type: "list",
-              value: [
-                { id: 1, text: "Servir los datos al frontend mediante endpoints REST." },
-                { id: 2, text: "Gestionar la lógica de negocio (ventas, solicitudes, contacto, autenticación)." },
-                { id: 3, text: "Controlar validaciones y seguridad básica (tokens, sanitización de inputs)." },
-                { id: 4, text: "Conectarse con la base de datos MySQL." }
-              ],
-            },
-            {
-              id: 5,
-              type: "title",
-              value: "Capas dentro del backend",
-            },
-            {
-              id: 6,
-              type: "list",
-              value: [
-                { id: 1, text: "Middlewares: reciben peticiones del frontend antes que los controladores como capa de seguridad." },
-                { id: 2, text: "Controladores: reciben peticiones del frontend." },
-                { id: 3, text: "Servicios: ejecutan la lógica (por ejemplo, crear venta, filtrar mensajes)." },
-                { id: 4, text: "Modelos: interactúan directamente con la base de datos." },
-                { id: 5, text: "Rutas: exponen los endpoints REST (ejemplo: /api/artworks, /api/sales)." }
-              ],
-            },
-          ],
-        },
-      ],
+       id: "architecture",
+       title: "Diseño y Arquitectura",
+       items: [
+          {
+             id: 1,
+             title: "Patrón Arquitectónico Estricto",
+             content: [
+                {
+                   id: 1,
+                   type: "text",
+                   value: "A diferencia de diseños estáticos, este modelo adoptó una separación modular severa:"
+                },
+                {
+                   id: 2,
+                   type: "code",
+                   value: "Usuario ⇄ Frontend ⇄ Backend ⇄ Base de datos"
+                }
+             ]
+          },
+          {
+             id: 2,
+             title: "Tecnologías por Roles",
+             content: [
+                {
+                   id: 1,
+                   type: "table",
+                   headers: ["Capa del Sistema", "Definición Tecnológica", "Responsabilidad Asignada"],
+                   rows: [
+                      ["Frontend", "Next.js + TailwindCSS + Atomic Design", "Renderizar UI (átomos, moléculas, plantillas), manejar rutas blindadas y componentes CSR/SSR."],
+                      ["Backend", "Node.js + Express (API REST)", "Recepcionar peticiones del usuario, sanitización (Middlewares) y ejecución sobre la DB pura."],
+                      ["Database", "MySQL (Enfoque Relacional)", "Soporte absoluto para transacciones ACID, evitando colisión de chat e historiales."]
+                   ]
+                }
+             ]
+          },
+          {
+             id: 3,
+             title: "Flujo Lógico Inter-capas Orientado",
+             content: [
+                {
+                   id: 1,
+                   type: "code",
+                   value: `    Frontend (Next.js)      
+        ↓   (HTTP request) 
+    Backend (Node.js / Express)      
+        ↓   (SQL queries) 
+    Base de datos (MySQL)`
+                }
+             ]
+          }
+       ]
     },
-
     {
-      id: "nonFunctionalRequirements",
-      title: "Especificaciones Técnicas",
-      items: [
-        {
-          id: 1,
-          title: "Eficiencia Operativa (Performance)",
-          content: [
-            {
-              id: 1,
-              type: "list",
-              value: [
-                { id: 1, text: "Latencia de respuesta en endpoints REST inferior a 300ms bajo condiciones operativas estándar." },
-                { id: 2, text: "Tiempo de carga de interfaz crítica (First Contentful Paint) inferior a 2 segundos en redes móviles 4G." },
-                { id: 3, text: "Soporte de concurrencia mínima de 200 usuarios simultáneos sin degradación de la experiencia de usuario." },
-                { id: 4, text: "Implementación de estrategias de renderizado híbrido (ISR/SSR) para la optimización de SEO y performance." },
-                { id: 5, text: "Optimización de activos visuales mediante compresión adaptativa y servicio según resolución de dispositivo." }
-              ]
-            }
-          ]
-        },
-        {
-          id: 2,
-          title: "Modularidad y Escalabilidad",
-          content: [
-            {
-              id: 1,
-              type: "list",
-              value: [
-                { id: 1, text: "Arquitectura desacoplada que permite la extensión de funcionalidades sin comprometer la estabilidad del núcleo." },
-                { id: 2, text: "Capacidad de expansión del catálogo mediante indexación eficiente sin impacto en tiempos de consulta." },
-                { id: 3, text: "Sistema de diseño atómico que permite la incorporación de nuevas vistas manteniendo la integridad visual." }
-              ]
-            }
-          ]
-        },
-        {
-          id: 3,
-          title: "Seguridad y Gobernanza de Datos",
-          content: [
-            {
-              id: 1,
-              type: "list",
-              value: [
-                { id: 1, text: "Encriptación de tráfico extremo a extremo mediante protocolos TLS/SSL (HTTPS)." },
-                { id: 2, text: "Implementación de políticas de sanitización y validación de esquemas de entrada en la capa de servicios." },
-                { id: 3, text: "Control de acceso basado en roles y permisos para la segregación de privilegios administrativos." },
-                { id: 4, text: "Gestión de sesiones mediante tokens JWT con mecanismos de expiración y renovación controlada." },
-                { id: 5, text: "Mitigación de vectores de ataque de fuerza bruta mediante rate limiting en endpoints de autenticación." }
-              ]
-            }
-          ]
-        },
-        {
-          id: 4,
-          title: "Accesibilidad y UX Técnica",
-          content: [
-            {
-              id: 1,
-              type: "list",
-              value: [
-                { id: 1, text: "Cumplimiento de estándares de accesibilidad WCAG 2.1 nivel AA." },
-                { id: 2, text: "Retroalimentación háptica y visual instantánea para todos los estados de interacción del sistema." },
-                { id: 3, text: "Validación semántica de formularios con mensajes de error accesibles y preventivos." },
-                { id: 4, text: "Jerarquía de contenido estructurada para facilitar la navegación asistida por lectores de pantalla." }
-              ]
-            }
-          ]
-        }
-      ]
+       id: "nonFunctional",
+       title: "Requisitos Mínimos (Performance y UX)",
+       items: [
+          {
+             id: 1,
+             title: "Métricas Base Comprometidas",
+             content: [
+                {
+                   id: 1,
+                   type: "list",
+                   value: [
+                      { id: 1, text: "Rendimiento Límite: Cargas de FCP < 2 segundos, APIs con latencia inferior a los 300ms a 200 CCU." },
+                      { id: 2, text: "Escalabilidad Frontend: Diseño modular enfocado para evitar rupturas de estilos al añadir catálogos inmensos." },
+                      { id: 3, text: "Seguridad Perimetral: HTTPS forzado en producciones, Hash criptográfico en passwords, Tokens de rotación JWT y Rate-Limitings." },
+                      { id: 4, text: "UX Estricta A11Y: Validación semántica y accesibilidad nivel AA (WCAG 2.1) indispensable." }
+                   ]
+                }
+             ]
+          }
+       ]
     },
-
     {
-      id: "databaseDesign",
-      title: "Esquema de Datos",
-      items: [
-        {
-          id: 1,
-          title: "Diccionario de Datos",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value: "Definición técnica de las entidades y atributos que componen el modelo de persistencia del sistema."
-            },
-            {
-              id: 2,
-              type: "list",
-              value: [
-                { id: 1, text: "Settings: Configuraciones dinámicas, identidad visual y políticas de plataforma." },
-                { id: 2, text: "Users: Gestión de identidad, perfiles de usuario y roles de acceso." },
-                { id: 3, text: "Codes: para la verificación de identidad y recuperación de acceso." },
-                { id: 4, text: "Roles: Definición de privilegios y niveles de autoridad en el sistema." },
-                { id: 5, text: "Permits: Granularidad de acciones permitidas para cada rol administrativo." },
-                { id: 6, text: "Testimonies: testimonios de clientes." },
-                { id: 7, text: "Labels: Etiquetas para post y comissions." },
-                { id: 8, text: "Commissions: Especificaciones, precios y estados del catálogo transaccional." },
-                { id: 9, text: "CartItems: Persistencia de ítems en proceso de adquisición." },
-                { id: 10, text: "Sales: Registro histórico de transacciones y conciliación de pagos." },
-                { id: 11, text: "detailsSale: Trazabilidad del estado de entrega y procesamiento de pedidos." },
-                { id: 12, text: "Posts: Gestión de contenido dinámico y comunicación interactiva." }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      id: "retrospective",
-      title: "Retrospectiva",
-      items: [
-        {
-          id: 1,
-          title: "Más que una landing, un sistema",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Lo que comenzó como una simple landing visual terminó siendo una plataforma completa. Esto me obligó a repensar la arquitectura, la seguridad y cómo fluyen los datos."
-            },
-          ],
-        },
-        {
-          id: 2,
-          title: "Abordar soluciones",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Separar bien el frontend, el backend y los módulos de negocio me permitió reducir el desorden y facilitar las pruebas. Entendí que la arquitectura no es algo teórica que solo suena bien, sino una herramienta necesaria para que nada se rompa al crecer."
-            },
-          ],
-        },
-        {
-          id: 3,
-          title: "Problemas, errores y aprendizaje",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Lidiar con cookies, tokens y HTTPS me enseñó cómo decide el navegador y cómo viaja la información de forma segura. Cada error que corregí fue una capa más de aprendizaje sobre qué implica desarrollar una plataforma, algunos de los retos fueron:",
-            },
-            {
-              id: 2,
-              type: "text",
-              value:
-                "Primero, la gestión de autenticación fue una batalla real. Me enfrenté a tokens de acceso y de refresco que no se comportaban como esperaba; las cookies 'llegaban' al cliente pero el navegador, en un silencio conspirador, se negaba a guardarlas. Descubrí que la causa real era un simple 'fetch' sin credentials: 'include' y un HTTPS local mal configurado que chocaba con los certificados CA. Ahí entendí que, aunque el backend esté perfecto, el navegador es quien decide qué es seguro y qué no.",
-            },
-            {
-              id: 3,
-              type: "text",
-              value:
-                "Luego vino el 'boss final' del proyecto: el HTTPS local. Las cookies httpOnly no persistían y Chrome ignoraba mis certificados. Resulta que tenía mkcert instalado dos veces (npm vs sistema) y la CA no estaba bien configurada. Al final, logré levantar tanto la API como el frontend con HTTPS real, haciendo que las cookies funcionaran exactamente como en producción.",
-            },
-            {
-              id: 4,
-              type: "text",
-              value:
-                "También hubo momentos tensos entre WebSockets y HTTP. De pronto, el chat empezó a causar errores inesperados en endpoints normales, incluso sin sockets activos. La causa era Socket.io interceptando flujos y un navegador con sesiones viejas y caché persistente. ¿La solución inesperada? Probar en otro navegador. Aprendí que no todo error está en el código; a veces es solo 'estado fantasma' del cliente.",
-            },
-            {
-              id: 5,
-              type: "text",
-              value:
-                "A medida que el proyecto crecía, lidié con una arquitectura de API que ya no cabía en un solo archivo. Había mucha lógica mezclada y era difícil de mantener. Decidí separar la API por módulos de negocio, con un index por módulo y queries separadas por intención (GET, POST, etc.). Esto convirtió el backend en algo mantenible y predecible.",
-            },
-            {
-              id: 6,
-              type: "text",
-              value:
-                "En cuanto al diseño, el gran reto fue el equilibrio. Tenía demasiadas secciones gráficas juntas que hacían la landing pesada visualmente. Opté por alternar secciones gráficas y textuales, usando cards para dar un ritmo visual y manteniendo la identidad oscura y minimalista. El resultado fue un diseño con respiración visual, no solo algo que se viera bonito.",
-            },
-            {
-              id: 7,
-              type: "text",
-              value:
-                "Pero el aprendizaje transversal más importante fue aprender a manejar conceptos técnicos que aún no dominaba completamente y, aun así, ser capaz de avanzar. Entendí que el verdadero valor está en descifrar el problema sobre la marcha.",
-            },
-          ],
-        },
-        {
-          id: 4,
-          title: "Equilibrio entre diseño y función",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Busqué que el sitio fuera coherente visualmente sin sacrificar la velocidad ni la facilidad de uso. Aprendí que el buen diseño no es solo 'verlo bonito', sino comunicar orden, intención y profesionalismo."
-            },
-          ],
-        },
-        {
-          id: 6,
-          title: "Errores, paciencia y método",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Desde bugs difíciles hasta configuraciones complejas, este proyecto me exigió mucha paciencia. Me ayudó a interiorizar que los problemas en programación no se evitan, se entienden y se resuelven con método."
-            },
-          ],
-        },
-        {
-          id: 7,
-          title: "De prototipo a producto",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "BloodyYue hoy es funcional, seguro y escalable. No lo veo como un simple prototipo, sino como un producto real que está listo para ser usado por un cliente de verdad."
-            },
-          ],
-        },
-        {
-          id: 8,
-          title: "Mi aprendizaje principal",
-          content: [
-            {
-              id: 1,
-              type: "text",
-              value:
-                "Este proyecto me dejó una lección grabada: programar no es solo escribir código que funcione hoy, es tomar decisiones que sigan funcionando mañana."
-            },
-          ],
-        }
-      ],
-    },
-  ],
+       id: "database",
+       title: "Agrupación del Modelo de Datos",
+       items: [
+          {
+             id: 1,
+             title: "Subsistemas Integrados Globalmente",
+             content: [
+                {
+                   id: 1,
+                   type: "table",
+                   headers: ["Subsistema Dominante", "Entidades a Controlar"],
+                   rows: [
+                      ["Autenticación y Perfil", "Users, Roles, Permits, rolXpermits, Notifications"],
+                      ["Marketing Artístico", "Posts, typePosts, Labels, labelsXposts, PostsReactions"],
+                      ["Transacciones Monetarias", "Commissions, labelsXcommissions, Cart, CartItems, Sales, detailsSale"],
+                      ["Comunicación Restringida", "Chats, ChatsItems, Testimonies"],
+                      ["Configuraciones Globales", "Settings (Textos del portafolio, Hero, SEO dinámico)"]
+                   ]
+                }
+             ]
+          },
+          {
+             id: 2,
+             title: "Detalles Críticos de Integridad",
+             content: [
+                {
+                   id: 1,
+                   type: "list",
+                   value: [
+                      { id: 1, text: "CartItems restringe rigurosamente los pedidos: ['selected', 'unavailable', 'discarded', 'purchased']." },
+                      { id: 2, text: "Los sistemas de Chat quedan automáticamente inactivos a menos que intervenga un registro en proceso sobre la base de Sales." },
+                      { id: 3, text: "El Rol común no puede interactuar jamás con otros usuarios comunes, imposibilitando spam entre ellos mismos." }
+                   ]
+                }
+             ]
+          }
+       ]
+    }
+  ]
 };
 
 export default bloodyyueDoc;
