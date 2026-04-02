@@ -1,4 +1,4 @@
-﻿const data = {
+const data = {
   id: "projects",
   title: "Mi Trabajo Reciente",
 
@@ -26,9 +26,32 @@
   items: {
     personal: [
       {
+        id: "modayestilo",
+        title: "Moda y Estilo",
+        direction: "left",
+        labels: {
+          text: "Gestión"
+        },
+        description:
+          "Sistema de Gestión de Catálogo e Inventario para un negocio local, permitiendo control ágil desde un panel administrativo y una vitrina web moderna para los clientes.",
+        poster: "/projects/project3.png",
+        links: [
+          {
+            id: 1,
+            text: "Ver Demo",
+            href: "https://modayestilo.vercel.app"
+          },
+          {
+            id: 2,
+            text: "Ver Documentación",
+            href: "/docs/modayestilo"
+          },
+        ],
+      },
+      {
         id: "bloodyyue",
         title: "BloodyYue",
-        direction: "left",
+        direction: "right",
         labels: {
           text: "Creativo"
         },

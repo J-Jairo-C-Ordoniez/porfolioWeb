@@ -70,7 +70,7 @@ export default function CardDoc({ data }) {
                       {row.map((cell, j) => (
                         <td
                           key={j}
-                          className="py-3 px-4 text-text-secondary"
+                          className="py-3 px-4 text-secondary/80 tracking-wider"
                         >
                           {cell}
                         </td>
@@ -96,6 +96,44 @@ export default function CardDoc({ data }) {
                   </li>
                 ))}
               </ul>
+            );
+
+          if (item.type === "code")
+            return (
+              <pre
+                key={item.id}
+                className="bg-black/50 border border-primary/10 p-4 rounded-lg overflow-x-auto text-sm text-secondary/90 font-mono my-4"
+              >
+                <code>{item.value}</code>
+              </pre>
+            );
+
+          if (item.type === "image")
+            return (
+              <div key={item.id} className="w-full my-8 rounded-xl overflow-hidden border border-white/5">
+                <img 
+                  src={item.value} 
+                  alt={item.alt || "Document image"} 
+                  className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity" 
+                />
+              </div>
+            );
+
+          if (item.type === "buttons")
+            return (
+              <div key={item.id} className="flex flex-wrap gap-4 my-6">
+                {item.value.map((btn, i) => (
+                  <a 
+                    key={i} 
+                    href={btn.href} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="px-6 py-2 bg-primary/5 hover:bg-primary/10 border border-primary/20 text-text-primary rounded-full transition-colors text-sm tracking-widest uppercase font-light"
+                  >
+                    {btn.text}
+                  </a>
+                ))}
+              </div>
             );
             
           return null;
