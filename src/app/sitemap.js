@@ -1,5 +1,5 @@
-﻿import blogs from "../data/blogs/main";
-import projects from "../data/docs/main";
+﻿import blogs from "@/features/blog/data/main";
+import projects from "@/features/docs/data/main";
 
 export default async function sitemap() {
     const baseUrl = "https://jhonatan-dev.com";

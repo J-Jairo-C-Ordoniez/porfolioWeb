@@ -1,6 +1,6 @@
 import Link from "next/link";
-import data from "../../../data/home/Footer";
-import Text from "../main/ui/Text";
+import data from "@/shared/data/Footer";
+import Text from "@/features/home/components/ui/Text";
 import * as Icon from "lucide-react";
 
 export default function Footer() {

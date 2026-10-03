@@ -1,5 +1,5 @@
 import Link from "next/link";
-import data from "../../../data/home/Header";
+import data from "@/shared/data/Header";
 import Nav from "./ui/Nav"
 
 export default function Header() {

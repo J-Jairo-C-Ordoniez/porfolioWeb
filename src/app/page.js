@@ -1,6 +1,5 @@
-import Header from "../components/structure/header/Header";
-import Main from "../components/structure/main/main"
-import Footer from "../components/structure/footer/Footer"
+import Main from "@/features/home/components/main"
+import Footer from "@/shared/components/footer/Footer"
 
 export const metadata = {
   title: "J Jairo C Ordoñez",
@@ -30,7 +29,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Header />
       <Main />
       <Footer />
     </>

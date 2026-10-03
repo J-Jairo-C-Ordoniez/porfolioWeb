@@ -1,7 +1,7 @@
-import Error404 from "../../../components/structure/main/ui/Error404";
-import data from "../../../data/docs/main";
-import Header from "../../../components/doc/header/Header";
-import Main from "../../../components/doc/main/Main";
+import Error404 from "@/features/home/components/ui/Error404";
+import data from "@/features/docs/data/main";
+import Header from "@/features/docs/components/header/Header";
+import Main from "@/features/docs/components/main/Main";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
