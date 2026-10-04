@@ -18,10 +18,10 @@ const KodaResolution = forwardRef(function KodaResolution(_, ref) {
       ref={ref}
       className="absolute inset-0 flex flex-col justify-center items-end px-[8vw]"
     >
-      <p className="koda-res1 max-w-5xl text-primary/80 text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">
+      <p className="koda-res1 max-w-5xl text-primary/80 text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">
         <Words>Había procesos fragmentados que necesitaban funcionar juntos.</Words>
       </p>
-      <p className="koda-res2 mt-8 max-w-5xl text-primary text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">
+      <p className="koda-res2 mt-8 max-w-5xl text-primary text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight">
         <Words>KODA nació para convertir ese conjunto de procesos en un sistema coherente.</Words>
       </p>
       <Link
