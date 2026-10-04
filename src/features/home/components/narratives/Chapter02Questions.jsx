@@ -65,7 +65,7 @@ export default function Chapter02Questions() {
         Entonces aparecen las preguntas:
       </p>
       <div className="w-1/2 shrink-0" />
-      <div className="relative flex items-center justify-start w-full xl:w-1/2 shrink-0 pr-[8vw]">
+      <div className="relative flex items-center justify-start w-full xl:w-1/2 shrink-0 px-[8vw]">
         {QUESTIONS.map((q, i) => (
           <p
             key={i}
