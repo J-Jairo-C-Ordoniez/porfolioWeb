@@ -64,7 +64,7 @@ export default function Chapter02Questions() {
       <p className="absolute top-[16vw] xl:top-[8vw] left-[8vw] text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight max-w-4xl">
         Entonces aparecen las preguntas:
       </p>
-      <div className="w-1/2 shrink-0" />
+      <div className="w-0 xl:w-1/2 shrink-0" />
       <div className="relative flex items-center justify-start w-full xl:w-1/2 shrink-0 px-[8vw]">
         {QUESTIONS.map((q, i) => (
           <p
