@@ -22,9 +22,7 @@ export default function Chapter02Insight() {
       if (typeof window !== "undefined" && window.__storyScrollTween) {
         clearInterval(initInterval);
 
-        // Pequeño timeout adicional para garantizar que los pines anteriores se hayan refrescado
         setTimeout(() => {
-          // 1. Lead paragraph — entrada más pronunciada
           gsap.fromTo(".ch2i-lead",
             { opacity: 0, y: 120 },
             {
@@ -34,13 +32,12 @@ export default function Chapter02Insight() {
               ease: "power3.out",
               scrollTrigger: {
                 trigger: ".ch2i-lead",
-                start: "top 85%", // Dispara un poco más abajo para que se note
+                start: "top 85%",
                 toggleActions: "play none none reverse",
               },
             }
           );
 
-          // 2. Lista — slide lateral más evidente
           gsap.fromTo(".ch2i-item",
             { opacity: 0, x: -80 },
             {
@@ -66,17 +63,16 @@ export default function Chapter02Insight() {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="w-full bg-background text-primary overflow-hidden">
-
-      {/* FRAME 1 — Lead + Lista */}
-      <section className="h-screen w-full flex flex-col justify-center px-20 gap-16">
-        {/* Lead */}
+    <div
+      ref={containerRef}
+      className="w-full bg-background text-primary overflow-hidden"
+    >
+      <section className="h-screen w-full flex flex-col justify-center px-[8vw] gap-16">
         <p className="ch2i-lead text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary/70 leading-tight max-w-4xl">
           Empecé a interesarme no solo por cómo funcionaba un producto, sino por las{" "}
           <span className="text-primary font-semibold">decisiones que había detrás de él.</span>
         </p>
 
-        {/* Lista con líneas separadoras */}
         <div className="ch2i-list flex flex-col w-full max-w-4xl ml-auto">
           {LIST_ITEMS.map((item, i) => (
             <p
@@ -88,7 +84,6 @@ export default function Chapter02Insight() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }

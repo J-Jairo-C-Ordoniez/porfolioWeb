@@ -96,7 +96,7 @@ export default function LearningToBuild() {
 
       <article
         ref={frame2Ref}
-        className="h-screen w-full flex flex-col justify-center px-32"
+        className="h-screen w-full flex flex-col justify-center px-[8vw]"
       >
         <div className="flex justify-start w-full">
           <p className="text-2xl md:text-4xl lg:text-5xl font-light tracking-tight text-background/70 w-full md:w-3/4 leading-relaxed">

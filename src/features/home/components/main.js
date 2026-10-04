@@ -47,7 +47,6 @@ export default function Main() {
     if (trackRef.current) {
       ro.observe(trackRef.current);
     }
-
     return () => {
       window.__storyScrollTween = null;
       ro.disconnect();

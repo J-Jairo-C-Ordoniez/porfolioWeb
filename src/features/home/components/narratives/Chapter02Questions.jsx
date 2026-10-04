@@ -17,7 +17,6 @@ export default function Chapter02Questions() {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    // Estado inicial de las preguntas
     gsap.set(".ch2q-question", { opacity: 0, y: 60 });
 
     const initInterval = setInterval(() => {
@@ -34,7 +33,6 @@ export default function Chapter02Questions() {
           },
         });
 
-        // Cada pregunta entra, se queda y sale
         QUESTIONS.forEach((_, i) => {
           tl
             .to(`.ch2q-question-${i}`, {
@@ -59,20 +57,15 @@ export default function Chapter02Questions() {
   }, { scope: containerRef });
 
   return (
-    <div
+    <article
       ref={containerRef}
       className="relative w-full h-screen bg-background overflow-hidden flex"
     >
-      {/* Top-left: texto contextual — una o dos líneas máximo */}
-      <p className="absolute top-12 left-20 text-4xl md:text-5xl font-medium tracking-tight text-primary/70 leading-snug max-w-lg">
+      <p className="absolute top-[8vw] left-[8vw] text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight max-w-4xl">
         Entonces aparecen las preguntas:
       </p>
-
-      {/* Izquierda: espacio vacío que balancea el peso visual */}
       <div className="w-1/2 shrink-0" />
-
-      {/* Derecha: preguntas rotando — estilo ch2-line-2 */}
-      <div className="relative flex items-center justify-start w-1/2 shrink-0 pr-20">
+      <div className="relative flex items-center justify-start w-1/2 shrink-0 pr-[8vw]">
         {QUESTIONS.map((q, i) => (
           <p
             key={i}
@@ -82,6 +75,6 @@ export default function Chapter02Questions() {
           </p>
         ))}
       </div>
-    </div>
+    </article>
   );
 }
