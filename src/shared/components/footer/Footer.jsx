@@ -1,6 +1,5 @@
 import Link from "next/link";
 import data from "@/shared/data/Footer";
-import Text from "@/features/home/components/ui/Text";
 import * as Icon from "lucide-react";
 
 export default function Footer() {
@@ -33,9 +32,9 @@ export default function Footer() {
           })}
         </div>
 
-        <Text
-          text={data.copyright}
-        />
+        <span className="text-primary/40 text-xs tracking-wider">
+          {data.copyright}
+        </span>
       </div>
     </footer>
   );
