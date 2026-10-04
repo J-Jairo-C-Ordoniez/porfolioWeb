@@ -61,11 +61,11 @@ export default function Chapter02Questions() {
       ref={containerRef}
       className="relative w-full h-screen bg-background overflow-hidden flex"
     >
-      <p className="absolute top-[8vw] left-[8vw] text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight max-w-4xl">
+      <p className="absolute top-[16vw] xl:top-[8vw] left-[8vw] text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight max-w-4xl">
         Entonces aparecen las preguntas:
       </p>
       <div className="w-1/2 shrink-0" />
-      <div className="relative flex items-center justify-start w-1/2 shrink-0 pr-[8vw]">
+      <div className="relative flex items-center justify-start w-full xl:w-1/2 shrink-0 pr-[8vw]">
         {QUESTIONS.map((q, i) => (
           <p
             key={i}

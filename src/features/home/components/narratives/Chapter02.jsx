@@ -56,11 +56,11 @@ export default function Chapter02() {
       ref={sectionRef}
       className="h-screen w-full bg-background flex flex-col justify-center items-end px-[8vw] pb-20"
     >
-      <p className="ch2-line-1 text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-right w-2/3 leading-tight mb-8">
+      <p className="ch2-line-1 text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-right w-full xl:w-2/3 leading-tight mb-8">
         con ello comencé a descubrir que una solución podía funcionar perfectamente…
       </p>
 
-      <p className="ch2-line-2 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-right w-2/3 leading-tight">
+      <p className="ch2-line-2 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-right w-full xl:w-2/3 leading-tight">
         y aun así no ser una buena solución.
       </p>
     </section>
