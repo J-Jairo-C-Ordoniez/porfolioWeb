@@ -16,10 +16,10 @@ const KodaProblem = forwardRef(function KodaProblem(_, ref) {
       ref={ref}
       className="absolute inset-0 flex flex-col justify-center px-[8vw]"
     >
-      <p className="koda-f4-label mb-10 text-primary/30 font-medium uppercase tracking-widest text-xs md:text-sm">
+      <p className="koda-f4-label mb-10 text-primary/80 text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">
         El problema no era simplemente:
       </p>
-      <p className="koda-f4-quote text-primary font-bold tracking-tight leading-tight text-3xl md:text-5xl lg:text-7xl">
+      <p className="koda-f4-quote text-primary text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-none">
         <Words>&ldquo;necesitan un sistema de inventario.&rdquo;</Words>
       </p>
     </article>

@@ -1,30 +1,30 @@
 import { forwardRef } from "react";
 
 const COMPLEXITY = [
-  "productos y variantes",
-  "inventario en tiempo real",
-  "clientes y fiados",
-  "catálogo digital",
+  "productos",
+  "inventario",
+  "clientes",
+  "catálogo",
   "empleados",
-  "conversaciones por WhatsApp",
+  "conversaciones",
 ];
 
 const KodaComplexity = forwardRef(function KodaComplexity(_, ref) {
   return (
     <article
       ref={ref}
-      className="absolute inset-0 flex flex-col justify-center items-end px-[8vw]"
+      className="absolute inset-0 flex flex-col justify-center gap-10 px-[8vw]"
     >
-      <p className="koda-f3-label mb-10 text-primary/30 font-medium text-right uppercase tracking-widest text-xs md:text-sm">
-        Pero detrás de una venta:
+      <p className="koda-f3-label mb-10 text-primary/80 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-none">
+        Pero detrás hay:
       </p>
       <ul className="flex flex-col items-end gap-4">
         {COMPLEXITY.map((item, i) => (
           <li
             key={i}
-            className="koda-list-item text-primary font-medium text-right text-2xl md:text-3xl lg:text-4xl"
+            className="koda-list-item text-primary text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight"
           >
-            {item}.
+            {item}
           </li>
         ))}
       </ul>

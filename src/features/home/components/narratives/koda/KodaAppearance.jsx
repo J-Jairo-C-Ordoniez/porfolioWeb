@@ -16,7 +16,7 @@ const KodaAppearance = forwardRef(function KodaAppearance(_, ref) {
       ref={ref}
       className="absolute inset-0 flex flex-col justify-center px-[8vw]"
     >
-      <p className="koda-f2 text-primary/60 leading-snug font-normal max-w-xl text-2xl md:text-3xl lg:text-4xl">
+      <p className="koda-f2 text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight max-w-xl text-primary">
         <Words>Una tienda de ropa local puede parecer sencilla desde fuera.</Words>
       </p>
     </article>
