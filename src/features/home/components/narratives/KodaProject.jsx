@@ -165,7 +165,7 @@ export default function KodaProject() {
         </p>
         <p className="koda-f4-quote text-primary font-bold tracking-tight leading-tight"
            style={{ fontSize: fsXl }}>
-          <Words>"necesitan un sistema de inventario."</Words>
+          <Words>&ldquo;necesitan un sistema de inventario.&rdquo;</Words>
         </p>
       </div>
 

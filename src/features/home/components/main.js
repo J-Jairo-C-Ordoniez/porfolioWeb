@@ -16,9 +16,6 @@ import ChapterDecide from "./narratives/ChapterDecide";
 import DreamLabsProject from "./narratives/DreamLabsProject";
 import ChapterBuild from "./narratives/ChapterBuild";
 import ChapterClosing from "./narratives/ChapterClosing";
-// import Chapter04 from "./narratives/Chapter04";
-// import Chapter05 from "./narratives/Chapter05";
-// import Chapter06 from "./narratives/Chapter06";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -84,9 +81,6 @@ export default function Main() {
       <DreamLabsProject />
       <ChapterBuild />
       <ChapterClosing />
-      {/* <Chapter04 /> */}
-      {/* <Chapter05 /> */}
-      {/* <Chapter06 /> */}
     </main>
   );
 }

@@ -64,8 +64,6 @@ export default function ChapterBuild() {
           },
         });
 
-        const S = 1 / 5;
-
         // ── FRAME 1 ────────────────────────────────────────────
         tl.to(f1.current, { autoAlpha: 1, duration: 0.01 }, 0.00)
           .fromTo(".cb-f1-title",

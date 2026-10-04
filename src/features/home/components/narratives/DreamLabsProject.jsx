@@ -60,8 +60,6 @@ export default function DreamLabsProject() {
           },
         });
 
-        const S = 1 / 5; // 0.2
-
         // ── FRAME 1: DREAMLABS ────────────────────────────────────────────
         tl.to(f1.current, { autoAlpha: 1, duration: 0.01 }, 0.00)
           .fromTo(".dl-title",
