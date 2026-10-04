@@ -7,10 +7,8 @@ import { useGSAP } from "@gsap/react";
 import HeroStory from "./narratives/HeroStory";
 import StoryLine from "./narratives/StoryLine";
 import LearningToBuild from "./narratives/LearningToBuild";
-import Chapter02 from "./narratives/Chapter02";
-import Chapter02Questions from "./narratives/Chapter02Questions";
-import Chapter02Insight from "./narratives/Chapter02Insight";
-import Chapter03 from "./narratives/Chapter03";
+import Question from "./narratives/Question";
+import Grasp from "./narratives/Grasp";
 import KodaProject from "./narratives/KodaProject";
 import ChapterDecide from "./narratives/ChapterDecide";
 import DreamLabsProject from "./narratives/DreamLabsProject";
@@ -71,10 +69,8 @@ export default function Main() {
       </section>
 
       <LearningToBuild />
-      <Chapter02 />
-      <Chapter02Questions />
-      <Chapter02Insight />
-      <Chapter03 />
+      <Question />
+      <Grasp />
       <KodaProject />
       <ChapterDecide />
       <DreamLabsProject />

@@ -10,7 +10,7 @@ import { ArrowUpRight, X, Menu as MenuIcon } from "lucide-react";
 const HISTORY_LINKS = [
   { id: "01", label: "Construir", href: "/#build" },
   { id: "02", label: "Cuestionar", href: "/#question" },
-  { id: "03", label: "Comprender", href: "/#understand" },
+  { id: "03", label: "Comprender", href: "/#grasp" },
   { id: "04", label: "Decidir", href: "/#decide" },
   { id: "05", label: "Construir con sentido", href: "/#build-meaning" },
   { id: "06", label: "Lo que sigue", href: "/#next" },

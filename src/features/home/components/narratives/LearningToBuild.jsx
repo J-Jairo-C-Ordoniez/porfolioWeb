@@ -99,7 +99,7 @@ export default function LearningToBuild() {
         className="h-screen w-full flex flex-col justify-center px-[8vw]"
       >
         <div className="flex justify-start w-full">
-          <p className="text-2xl md:text-4xl lg:text-5xl font-light tracking-tight text-background/70 w-full md:w-3/4 leading-relaxed">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-light tracking-tight text-background/80 w-full md:w-3/4 leading-relaxed">
             {splitText("a trabajar con React, Next.js y otras herramientas que poco a poco fueron formando mi base como desarrollador.", "frame2-word")}
           </p>
         </div>
