@@ -97,7 +97,7 @@ export default function GlobalMenu() {
         </header>
 
         <div className="min-h-screen flex flex-col lg:flex-row px-[8vw] py-24 pt-32 gap-16 lg:gap-8">
-          <div className="w-full lg:w-1/3 flex flex-col justify-end mt-16 lg:mt-0">
+          <div className="w-full lg:w-1/3 flex flex-col justify-end mt-[8vw] lg:mt-0">
             <p className="menu-item text-primary/80 text-sm font-normal uppercase tracking-tight mb-4">
               Contacto
             </p>
