@@ -11,6 +11,11 @@ import Chapter02 from "./narratives/Chapter02";
 import Chapter02Questions from "./narratives/Chapter02Questions";
 import Chapter02Insight from "./narratives/Chapter02Insight";
 import Chapter03 from "./narratives/Chapter03";
+import KodaProject from "./narratives/KodaProject";
+import ChapterDecide from "./narratives/ChapterDecide";
+import DreamLabsProject from "./narratives/DreamLabsProject";
+import ChapterBuild from "./narratives/ChapterBuild";
+import ChapterClosing from "./narratives/ChapterClosing";
 // import Chapter04 from "./narratives/Chapter04";
 // import Chapter05 from "./narratives/Chapter05";
 // import Chapter06 from "./narratives/Chapter06";
@@ -74,6 +79,11 @@ export default function Main() {
       <Chapter02Questions />
       <Chapter02Insight />
       <Chapter03 />
+      <KodaProject />
+      <ChapterDecide />
+      <DreamLabsProject />
+      <ChapterBuild />
+      <ChapterClosing />
       {/* <Chapter04 /> */}
       {/* <Chapter05 /> */}
       {/* <Chapter06 /> */}

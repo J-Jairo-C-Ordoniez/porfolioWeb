@@ -1,6 +1,7 @@
 import { Poppins, Inter } from "next/font/google";
 import "@/shared/styles/globals.css";
 import SmoothScrolling from "@/shared/components/SmoothScrolling";
+import GlobalMenu from "@/shared/components/GlobalMenu";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${poppins.variable} ${inter.variable} scroll-smooth`}>
       <body className="m-0 min-h-screen bg-background p-0 text-foreground antialiased overflow-x-hidden selection:bg-primary selection:text-background">
+        <GlobalMenu />
         <SmoothScrolling>
           {children}
         </SmoothScrolling>

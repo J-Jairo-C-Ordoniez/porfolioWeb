@@ -25,7 +25,7 @@ export default function HeroStory() {
       }, {
         y: 0,
         opacity: 1,
-        duration: 2,
+        duration: 1.5,
         ease: "power2.out",
       })
       .fromTo(".hero-text-1", {
@@ -34,25 +34,28 @@ export default function HeroStory() {
       }, {
         y: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 0.8,
         ease: "power2.out",
-      }, "-=1")
+      }, "-=0.8")
       .fromTo(".hero-letter", {
         y: 20,
         opacity: 0,
       }, {
         y: 0,
         opacity: 1,
-        duration: 0.5,
-        stagger: 0.04,
+        duration: 0.35,
+        stagger: 0.02,
         ease: "power2.out",
-      })
-      .from(".hero-text-3", {
+      }, "-=0.2") // Start slightly overlapping with the previous text
+      .fromTo(".hero-text-3", {
         y: 20,
         opacity: 0,
-        duration: 1.5,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
         ease: "power2.out",
-      }, "+=0.5");
+      }, "-=0.1"); // Start immediately after letters
   }, { scope: container });
 
   return (
@@ -62,14 +65,14 @@ export default function HeroStory() {
     >
       <div
         ref={letterRef}
-        className="absolute select-none flex items-center justify-center font-extrabold leading-none z-0 pointer-events-none text-[60vw] text-background [text-shadow:10px_10px_30px_rgba(0,0,0,0.05),_-10px_-10px_30px_rgba(255,255,255,1)]"
+        className="absolute select-none flex items-center justify-center font-extrabold leading-none z-0 pointer-events-none text-[60vw] text-background opacity-0 [text-shadow:10px_10px_30px_rgba(0,0,0,0.05),_-10px_-10px_30px_rgba(255,255,255,1)]"
       >
         J
       </div>
 
       <div className="relative z-10 max-w-4xl px-8 flex flex-col items-start w-full">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-primary mb-6">
-          <span className="hero-text-1 block">Soy Jhon Jairo.</span>
+          <span className="hero-text-1 block opacity-0">Soy Jhon Jairo.</span>
 
           <span className="text-primary/80 font-normal mt-4 block text-4xl md:text-5xl lg:text-7xl tracking-tight">
             {descriptionLines.map((line, lineIndex) => (
@@ -91,7 +94,7 @@ export default function HeroStory() {
           </span>
         </h1>
 
-        <div className="hero-text-3 mt-8">
+        <div className="hero-text-3 mt-8 opacity-0">
           <p className="group flex items-center gap-3 text-xs md:text-sm tracking-widest uppercase font-semibold text-primary cursor-pointer">
             Descubre mi historia
             <ArrowRight size={22} strokeWidth={2} />

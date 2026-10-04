@@ -56,126 +56,71 @@ Porque una aplicación no existe aislada, existe dentro de un sistema.
 
 
 KODA nació de mirar ese sistema.
-
-Una tienda de ropa puede parecer sencilla desde fuera.
-
+Una tienda de ropa local puede parecer sencilla desde fuera.
 Pero detrás de una venta existen productos, variantes, inventario, clientes, pagos, fiados, catálogo, empleados y conversaciones por WhatsApp.
 
 El problema no era simplemente:
-
 “necesitan un sistema de inventario”.
 
 Había procesos fragmentados que necesitaban funcionar juntos.
-
-Entonces:
-
 KODA nació para convertir ese conjunto de procesos en un sistema coherente.
-
-Y una pequeña CTA:
 
 Conocer KODA →
 
-No contamos todo el proyecto. La historia solo utiliza KODA como evidencia de la forma en que piensas.
-
-Esto coincide con la evolución que describes en el README: pasar de “crear un sistema de inventario” a comprender el negocio y reducir la fricción de sus operaciones.
-
 04 — Decidir
 Comprender cambia las decisiones.
+Cuando entiendes el problema, empiezas a mirar una interfaz de otra manera y comienzas a preguntarte cosas como:
 
-Cuando entiendes el problema, empiezas a mirar una interfaz de otra manera.
+¿Qué necesita estar ahí?
+¿Qué puede desaparecer?
+¿Qué debe ser evidente?
 
-Ya no se trata de poner más cosas.
-
-Se trata de saber:
-
-qué necesita estar ahí.
-
-qué puede desaparecer.
-
-qué debe ser evidente.
-
-Aquí introduciría tu filosofía de minimalismo:
+aquí entra mi filosofía sobre el minimalismo:
 
 Para mí, el minimalismo no consiste simplemente en utilizar menos elementos.
-
 Consiste en reducir el ruido.
-
 Reducir la fricción.
-
 Hacer más evidente lo importante.
 
-Que el usuario no tenga que luchar contra la interfaz para conseguir lo que vino a hacer.
-
-Y entonces UX/UI aparece naturalmente:
-
+Y entonces el diseño UX/UI aparece naturalmente:
 Investigación.
 Arquitectura de información.
 Flujos.
-Wireframes.
-Prototipos.
 Interfaces.
 Interacciones.
 
-No como pasos que sigo porque sí.
+Como herramientas para tomar mejores decisiones.
 
-Sino como herramientas para tomar mejores decisiones.
-
-Aquí entra DREAMLABS
-Y entonces empecé a aplicar esa forma de pensar desde el principio.
-
+DREAMLABS
+Entonces empecé a aplicar esa forma de pensar desde el principio.
 Antes de diseñar DreamLabsPC, no quería empezar por una pantalla.
 
 Quería entender el negocio.
-
 Su propuesta.
 Su fundador.
 Sus clientes.
 Su estética.
-Lo que significa comprar y personalizar un PC.
-
-Después:
-
-Descubrí que un PC podía ser mucho más que hardware.
-
-Rendimiento. Personalización. Estética. Identidad.
-
-Y de ahí:
+Lo que significa comprar y personalizar un PC y descubrí que un PC podía ser mucho más que hardware, era:
+Rendimiento. 
+Personalización. 
+Estética. 
+Identidad.
 
 La experiencia empezó a construirse alrededor de esa idea.
-
-Aquí podemos mostrar visualmente:
-
-Investigación → Concepto → Narrativa → Experiencia → Motion
-
-Y CTA:
-
 Explorar DreamLabs →
 
-Esto está directamente alineado con el proceso documentado para DreamLabs: investigar negocio, sector, propuesta, fundador, cliente y estética antes de plantear la experiencia narrativa.
-
 05 — Construir con sentido
-
-Ahora sí llegamos al punto donde aparece tu especialidad.
-
-Y después de todo eso, construyo.
-
+Después de todo eso, construyo.
 Frontend.
-
 Arquitectura.
-
 Interacción.
-
 Motion.
-
 Tecnología.
 
-Pero inmediatamente aclaramos:
 
 La tecnología no es el punto de partida.
-
 Es una herramienta dentro de una cadena de decisiones.
 
-Aquí aparece tu recorrido completo:
 
 Contexto
 ↓
@@ -193,95 +138,33 @@ Interfaz
 ↓
 Tecnología
 
-Y:
 
-React, Next.js, TypeScript, Tailwind, arquitectura, bases de datos, GSAP…
-
-son parte de cómo convierto esas decisiones en algo que las personas puedan utilizar.
-
-Entonces podemos introducir GSAP:
-
-Incluso cuando trabajo con motion, la pregunta no es:
-
-“¿Qué animación puedo hacer?”
-
-sino:
-
-“¿Qué debería sentir, entender o mirar el usuario en este momento?”
-
-Y aquí aparece tu principio:
-
-No quiero simplemente animar elementos.
-
-Quiero animar la atención.
-
-Aquí aparecen los demás proyectos
-
-En vez de hacer un carrusel de proyectos, podemos hacer pequeñas apariciones dentro de esta misma parte.
-
-BloodyYue
-
-Otros proyectos me han llevado a explorar sistemas de contenido, comunicación, usuarios y experiencias visuales.
-
-Ver BloodyYue →
-
-Focusfy
-
-Otros nacieron simplemente de querer experimentar con interacción, productividad y experiencia visual.
-
+Otros proyectos nacieron simplemente de querer experimentar con interacción, productividad y experiencia visual.
 Ver Focusfy →
 
-TIM
-
-Y algunos no buscan resolver un problema comercial.
-
+Y otros no buscan resolver un problema comercial.
 Buscan explorar algo diferente:
-
 interacción, emoción, comunidad y expresión.
-
 Ver TIM →
 
-Así cada proyecto demuestra una faceta diferente, en lugar de convertirse en una lista.
 
 06 — Lo que sigue
 
-Y aquí cerramos la historia.
-
-No con una conclusión del tipo "estas son mis habilidades".
-
-Volvemos a la idea inicial.
-
-Todavía estoy construyendo.
-
+Aún estoy construyendo.
 Sigo aprendiendo.
-
 Sigo haciendo preguntas.
-
 Sigo probando nuevas formas de diseñar, desarrollar y comunicar.
 
-Pero mi forma de abordar los proyectos ha cambiado.
-
-Y hacemos aparecer lentamente:
 
 Primero comprender.
-
 ↓
-
 Después decidir.
-
 ↓
-
 Finalmente construir.
 
-Pausa.
-
-Y finalmente:
 
 Porque para mí, crear un producto digital no consiste únicamente en hacerlo funcionar.
-
 Consiste en entender por qué debería existir, para quién y qué puede hacer mejor.
-
-Y cierre:
 
 Eso es lo que estoy construyendo.
 
