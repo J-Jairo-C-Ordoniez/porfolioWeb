@@ -10,11 +10,11 @@ export default function QuestionList() {
       <h3 className="absolute top-[16vw] xl:top-[8vw] left-[8vw] text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight max-w-4xl text-primary/80">
         Entonces aparecen las preguntas:
       </h3>
-      <div className="relative flex items-center justify-end w-full shrink-0 px-[8vw]">
+      <div className="absolute inset-0 flex items-center px-[8vw]">
         {QUESTIONS.map((q, i) => (
           <p
             key={i}
-            className={`q-question q-question-${i} absolute text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary leading-tight w-full md:w-fit`}
+            className={`q-question q-question-${i} absolute left-[8vw] right-[8vw] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary leading-tight`}
           >
             {q}
           </p>

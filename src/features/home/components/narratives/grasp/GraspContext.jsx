@@ -14,7 +14,7 @@ export default function GraspContext() {
           comprendo
         </p>
 
-        <div className="absolute inset-0 flex items-center justify-end px-[8vw]">
+        <div className="absolute inset-0 flex items-center justify-end px-[8vw] pt-[12vw]">
           <ul className="flex flex-col items-end gap-5">
             {CONTEXT_LIST.map((item, i) => (
               <li

@@ -9,7 +9,7 @@ import StoryLine from "./narratives/StoryLine";
 import LearningToBuild from "./narratives/LearningToBuild";
 import Question from "./narratives/Question";
 import Grasp from "./narratives/Grasp";
-import KodaProject from "./narratives/KodaProject";
+import Koda from "./narratives/Koda";
 import ChapterDecide from "./narratives/ChapterDecide";
 import DreamLabsProject from "./narratives/DreamLabsProject";
 import ChapterBuild from "./narratives/ChapterBuild";
@@ -71,7 +71,7 @@ export default function Main() {
       <LearningToBuild />
       <Question />
       <Grasp />
-      <KodaProject />
+      <Koda />
       <ChapterDecide />
       <DreamLabsProject />
       <ChapterBuild />
