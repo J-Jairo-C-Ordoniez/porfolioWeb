@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowUpRight, X, Menu as MenuIcon } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const HISTORY_LINKS = [
   { id: "01", label: "Construir", href: "/#build" },
@@ -29,15 +29,14 @@ export default function GlobalMenu() {
   const menuRef = useRef(null);
   const overlayRef = useRef(null);
   const pathname = usePathname();
+  const { contextSafe } = useGSAP({ scope: menuRef });
 
-  // Close menu on route change
   useEffect(() => {
     if (isOpen) {
       closeMenu();
     }
   }, [pathname]);
 
-  const { contextSafe } = useGSAP({ scope: menuRef });
 
   const openMenu = contextSafe(() => {
     setIsOpen(true);
@@ -49,7 +48,7 @@ export default function GlobalMenu() {
     gsap.fromTo(
       ".menu-item",
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, stagger: 0.05, ease: "power3.out", delay: 0.4 }
+      { y: 0, opacity: 1, duration: 0.5, stagger: 0.04, ease: "power3.out", delay: 0.3 }
     );
   });
 
@@ -70,71 +69,66 @@ export default function GlobalMenu() {
   });
 
   return (
-    <div ref={menuRef} className="z-50">
-      {/* Botón flotante global */}
+    <nav
+      ref={menuRef}
+      className="z-50"
+    >
       <button
         onClick={openMenu}
-        className={`fixed top-8 right-8 z-[60] w-14 h-14 rounded-full border border-primary/20 flex items-center justify-center bg-background/50 backdrop-blur hover:bg-primary hover:text-background transition-colors duration-300 ${isOpen ? "pointer-events-none opacity-0" : "opacity-100"}`}
+        className={`fixed top-8 right-8 z-[60] w-14 h-14 rounded-full cursor-pointer border border-primary/20 flex items-center justify-center bg-background/50 backdrop-blur hover:bg-primary hover:text-background transition-colors duration-300 ${isOpen ? "pointer-events-none opacity-0" : "opacity-100"}`}
         aria-label="Abrir Menú"
       >
         <MenuIcon size={24} />
       </button>
 
-      {/* Overlay del Menú */}
       <div
         ref={overlayRef}
         className="fixed inset-0 z-[70] bg-background text-primary overflow-y-auto"
         style={{ clipPath: "inset(0% 0% 100% 0%)" }}
       >
-        {/* Header del overlay */}
-        <div className="absolute top-8 right-8 flex items-center gap-6">
+        <header className="absolute top-8 right-8 flex items-center gap-6">
           <button
             onClick={closeMenu}
-            className="w-14 h-14 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-background transition-colors duration-300"
+            className="w-14 h-14 rounded-full border border-primary cursor-pointer flex items-center justify-center hover:bg-primary hover:text-background transition-colors duration-300"
             aria-label="Cerrar Menú"
           >
             <X size={24} />
           </button>
-        </div>
+        </header>
 
-        <div className="min-h-screen flex flex-col lg:flex-row px-[8vw] py-24 pt-32 gap-16 lg:gap-8">
-          
-          {/* Lado Izquierdo: Título y Contacto */}
-          <div className="w-full lg:w-1/3 flex flex-col justify-between">
-            <h2 className="menu-item text-primary font-bold text-xl md:text-2xl uppercase tracking-widest">
-              Menu
-            </h2>
-
-            <div className="mt-16 lg:mt-0">
-              <p className="menu-item text-primary/40 text-sm font-semibold uppercase tracking-widest mb-6">
-                Contacto
-              </p>
-              <a href="mailto:hola@ejemplo.com" className="menu-item text-2xl md:text-3xl font-medium flex items-center gap-4 hover:opacity-70 transition-opacity">
-                Hablemos <ArrowUpRight size={28} />
-              </a>
-            </div>
+        <div className="min-h-screen flex flex-col lg:flex-row px-28 py-24 pt-32 gap-16 lg:gap-8">
+          <div className="w-full lg:w-1/3 flex flex-col justify-end mt-16 lg:mt-0">
+            <p className="menu-item text-primary/80 text-sm font-normal uppercase tracking-tight mb-4">
+              Contacto
+            </p>
+            <Link
+              href="mailto:cordobaojhonjairo21@gmail.com"
+              className="menu-item text-2xl md:text-3xl font-medium flex items-center gap-4 text-primary hover:text-primary/80 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enviar correo electrónico a Jhon Jairo"
+            >
+              Hablemos
+            </Link>
           </div>
 
-          {/* Lado Derecho: Links estructurados */}
           <div className="w-full lg:w-2/3 flex flex-col md:flex-row gap-16 md:gap-24">
-            
-            {/* Columna Historia */}
             <div className="flex-1">
-              <p className="menu-item text-primary/40 text-sm font-semibold uppercase tracking-widest border-b border-primary/20 pb-4 mb-6">
+              <p className="menu-item text-primary/80 text-sm font-normal uppercase tracking-tight mb-4 border-b border-primary/20 pb-4">
                 Historia
               </p>
               <ul className="flex flex-col">
                 {HISTORY_LINKS.map((link, idx) => (
-                  <li key={idx} className="border-b border-primary/10">
+                  <li
+                    key={idx}
+                    className="border-b border-primary/10"
+                  >
                     <Link
                       href={link.href}
                       onClick={closeMenu}
-                      className="menu-item group flex items-center justify-between py-5 hover:pl-4 transition-all duration-300"
+                      className="menu-item group flex items-center justify-between py-5 hover:pl-4 duration-300 text-primary hover:text-primary/80 transition-all"
                     >
-                      <div className="flex items-baseline gap-4">
-                        <span className="text-primary/40 text-xs font-semibold tracking-widest">{link.id}.</span>
-                        <span className="text-2xl md:text-3xl font-medium">{link.label}</span>
-                      </div>
+                      <span className="text-2xl md:text-3xl font-medium">{link.label}</span>
                       <ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   </li>
@@ -142,33 +136,31 @@ export default function GlobalMenu() {
               </ul>
             </div>
 
-            {/* Columna Proyectos */}
             <div className="flex-1">
-              <p className="menu-item text-primary/40 text-sm font-semibold uppercase tracking-widest border-b border-primary/20 pb-4 mb-6">
+              <p className="menu-item text-primary/80 text-sm font-normal uppercase tracking-tight mb-4 border-b border-primary/20 pb-4">
                 Proyectos
               </p>
               <ul className="flex flex-col">
                 {PROJECT_LINKS.map((link, idx) => (
-                  <li key={idx} className="border-b border-primary/10">
+                  <li
+                    key={idx}
+                    className="border-b border-primary/10"
+                  >
                     <Link
                       href={link.href}
                       onClick={closeMenu}
-                      className="menu-item group flex items-center justify-between py-5 hover:pl-4 transition-all duration-300"
+                      className="menu-item group flex items-center justify-between py-5 hover:pl-4 duration-300 text-primary hover:text-primary/80 transition-all"
                     >
-                      <div className="flex items-baseline gap-4">
-                        <span className="text-primary/40 text-xs font-semibold tracking-widest">{link.id}.</span>
-                        <span className="text-2xl md:text-3xl font-medium">{link.label}</span>
-                      </div>
+                      <span className="text-2xl md:text-3xl font-medium">{link.label}</span>
                       <ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

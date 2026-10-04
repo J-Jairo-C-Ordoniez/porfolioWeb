@@ -46,7 +46,7 @@ export default function HeroStory() {
         duration: 0.35,
         stagger: 0.02,
         ease: "power2.out",
-      }, "-=0.2") // Start slightly overlapping with the previous text
+      }, "-=0.2")
       .fromTo(".hero-text-3", {
         y: 20,
         opacity: 0,
@@ -55,7 +55,7 @@ export default function HeroStory() {
         opacity: 1,
         duration: 0.8,
         ease: "power2.out",
-      }, "-=0.1"); // Start immediately after letters
+      }, "-=0.1");
   }, { scope: container });
 
   return (
@@ -65,7 +65,7 @@ export default function HeroStory() {
     >
       <div
         ref={letterRef}
-        className="absolute select-none flex items-center justify-center font-extrabold leading-none z-0 pointer-events-none text-[60vw] text-background opacity-0 [text-shadow:10px_10px_30px_rgba(0,0,0,0.05),_-10px_-10px_30px_rgba(255,255,255,1)]"
+        className="absolute select-none flex items-center justify-center font-extrabold leading-none z-0 pointer-events-none text-[120vw] md:text-[90vw] xl:text-[60vw] text-background opacity-0 [text-shadow:10px_10px_30px_rgba(0,0,0,0.05),_-10px_-10px_30px_rgba(255,255,255,1)]"
       >
         J
       </div>
@@ -94,8 +94,8 @@ export default function HeroStory() {
           </span>
         </h1>
 
-        <div className="hero-text-3 mt-8 opacity-0">
-          <p className="group flex items-center gap-3 text-xs md:text-sm tracking-widest uppercase font-semibold text-primary cursor-pointer">
+        <div className="hero-text-3 mt-4 opacity-0">
+          <p className="group flex items-center gap-3 text-sm md:text-md tracking-widest uppercase font-semibold text-primary cursor-pointer">
             Descubre mi historia
             <ArrowRight size={22} strokeWidth={2} />
           </p>
