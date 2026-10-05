@@ -88,6 +88,7 @@ export default function ChapterClosing() {
   return (
     <section
       ref={containerRef}
+      id="next"
       className="relative w-full h-screen overflow-hidden bg-background text-primary"
     >
       <article 
