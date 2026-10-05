@@ -82,9 +82,6 @@ export default function ChapterClosing() {
     }, 100);
   }, { scope: containerRef });
 
-  const fsLg    = "clamp(1.5rem, 3vw, 2.6rem)";
-  const fsXl    = "clamp(2rem, 5vw, 4.5rem)";
-
   return (
     <section
       ref={containerRef}
