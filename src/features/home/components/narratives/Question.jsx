@@ -111,10 +111,14 @@ export default function Question() {
   }, { scope: containerRef });
 
   return (
-    <div id="question" ref={containerRef} className="w-full">
+    <section 
+      id="question" 
+      ref={containerRef} 
+      className="w-full"
+    >
       <QuestionIntro />
       <QuestionList />
       <QuestionInsight />
-    </div>
+    </section>
   );
 }

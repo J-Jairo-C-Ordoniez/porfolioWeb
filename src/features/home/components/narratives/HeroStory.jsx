@@ -61,6 +61,7 @@ export default function HeroStory() {
   return (
     <section
       ref={container}
+      id="build"
       className="relative w-screen h-screen flex flex-col justify-center items-center overflow-hidden bg-background shrink-0"
     >
       <div

@@ -103,6 +103,7 @@ export default function ChapterDecide() {
   return (
     <section
       ref={containerRef}
+      id="decide"
       className="relative w-full h-screen overflow-hidden bg-background text-primary"
     >
       <article
