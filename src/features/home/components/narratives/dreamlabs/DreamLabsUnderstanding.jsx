@@ -1,0 +1,4 @@
+import { forwardRef } from "react";
+const ITEMS = ["Su propuesta", "Su fundador", "Sus clientes", "Su estética"];
+const Words = ({ children }) => String(children).split(" ").map((word, index) => <span key={index} className="dl-word inline-block mr-[0.28em]">{word}</span>);
+export default forwardRef(function DreamLabsUnderstanding(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><p className="dl-f3-label mb-10 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-background leading-tight"><Words>Quería entender:</Words></p><ul className="flex flex-col items-end gap-5">{ITEMS.map((item) => <li key={item} className="dl-understanding-item text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-background/80 leading-tight">{item}</li>)}</ul></article>; });

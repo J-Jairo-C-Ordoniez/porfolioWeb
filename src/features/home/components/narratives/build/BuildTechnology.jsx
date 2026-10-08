@@ -1,0 +1,3 @@
+import { forwardRef } from "react";
+const Words = ({ children }) => String(children).split(" ").map((word, index) => <span key={index} className="cb-word inline-block mr-[0.28em]">{word}</span>);
+export default forwardRef(function BuildTechnology(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><p className="cb-f2-line1 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary leading-tight max-w-5xl mb-10"><Words>La tecnología no es el punto de partida.</Words></p><p className="cb-f2-line2 text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary/80 leading-tight max-w-5xl"><Words>Es una herramienta dentro de una cadena de decisiones.</Words></p></article>; });

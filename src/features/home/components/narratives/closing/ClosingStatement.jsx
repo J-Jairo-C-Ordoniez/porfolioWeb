@@ -1,0 +1,3 @@
+import { forwardRef } from "react";
+const Words = ({ children }) => String(children).split(" ").map((word, index) => <span key={index} className="cc-word inline-block mr-[0.28em]">{word}</span>);
+export default forwardRef(function ClosingStatement(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><p className="cc-f3-line2 text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary/80 leading-tight max-w-5xl"><Words>Para mí, crear un producto digital consiste en entender por qué debería existir, para quién y qué puede hacer mejor.</Words></p></article>; });

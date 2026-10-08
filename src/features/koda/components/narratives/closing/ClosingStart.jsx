@@ -1,0 +1,3 @@
+export default function ClosingStart() {
+  return <article className="closing-frame closing-frame--start absolute inset-0 flex items-center justify-end px-6 text-right opacity-0 sm:px-8 md:px-12 lg:px-20"><div className="max-w-6xl"><h2 className="closing-start text-5xl font-bold leading-none tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">KODA no nació para reemplazar una libreta.</h2><p className="closing-lead mt-8 text-2xl font-normal tracking-tight text-background/70 md:mt-12 md:text-4xl">Nació porque una forma de trabajar que antes era suficiente empezó a quedarse pequeña.</p></div></article>;
+}

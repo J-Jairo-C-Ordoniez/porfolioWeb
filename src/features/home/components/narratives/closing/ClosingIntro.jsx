@@ -1,0 +1,4 @@
+import { forwardRef } from "react";
+const LINES = ["Sigo aprendiendo.", "Sigo haciendo preguntas.", "Sigo probando nuevas formas de diseñar, desarrollar y comunicar."];
+const Words = ({ children }) => String(children).split(" ").map((word, index) => <span key={index} className="cc-word inline-block mr-[0.28em]">{word}</span>);
+export default forwardRef(function ClosingIntro(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><div className="overflow-hidden mb-8"><h2 className="cc-f1-title text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary max-w-5xl">Aún estoy construyendo.</h2></div><div className="flex flex-col gap-4">{LINES.map((line) => <p key={line} className="cc-f1-line text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary/80 leading-tight"><Words>{line}</Words></p>)}</div></article>; });

@@ -1,0 +1,5 @@
+import { forwardRef } from "react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+const Words = ({ children }) => String(children).split(" ").map((word, index) => <span key={index} className="cb-word inline-block mr-[0.28em]">{word}</span>);
+export default forwardRef(function BuildFocusfy(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><p className="cb-f4-text text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-primary/80 leading-tight max-w-5xl mb-10"><Words>Otros proyectos nacieron de querer experimentar con interacción, productividad y experiencia visual.</Words></p><Link href="/projects/focusfy" className="cb-cta-1 group inline-flex items-center gap-4 mt-24 text-2xl w-fit md:text-3xl font-medium border-b border-primary/20 pb-2 text-primary hover:text-primary/80 transition-all">Ver Focusfy<ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" /></Link></article>; });

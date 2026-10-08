@@ -1,0 +1,3 @@
+import { forwardRef } from "react";
+const Words = ({ children }) => String(children).split(" ").map((word, index) => <span key={index} className="dl-word inline-block mr-[0.28em]">{word}</span>);
+export default forwardRef(function DreamLabsIntro(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><div className="overflow-hidden"><h2 className="dl-title text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-background">DREAMLABS</h2></div><p className="dl-f1-sub mt-8 text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-background/80 leading-tight"><Words>El siguiente proyecto. Otra forma de pensar.</Words></p></article>; });

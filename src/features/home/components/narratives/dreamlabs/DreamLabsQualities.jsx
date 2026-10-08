@@ -1,0 +1,3 @@
+import { forwardRef } from "react";
+const QUALITIES = ["Rendimiento", "Personalización", "Estética", "Identidad"];
+export default forwardRef(function DreamLabsQualities(_, ref) { return <article ref={ref} className="absolute inset-0 flex flex-col justify-center px-[8vw]"><p className="dl-f4-label mb-10 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-background/80 leading-tight max-w-5xl">Y descubrí que un PC podía ser mucho más que hardware, era:</p><ul className="flex flex-col gap-5">{QUALITIES.map((quality) => <li key={quality} className="dl-quality text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-background leading-tight">{quality}</li>)}</ul></article>; });

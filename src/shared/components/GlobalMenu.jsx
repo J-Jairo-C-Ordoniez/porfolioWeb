@@ -68,6 +68,10 @@ export default function GlobalMenu() {
     });
   });
 
+  if (pathname === "/projects/koda") {
+    return null;
+  }
+
   return (
     <nav
       ref={menuRef}
