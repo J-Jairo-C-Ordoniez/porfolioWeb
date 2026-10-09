@@ -1,6 +1,7 @@
 "use client";
 
 import Hero from "./narratives/Hero";
+import Highlights from "./narratives/Highlights";
 import Business from "./narratives/Business";
 import Growth from "./narratives/Growth";
 import Problem from "./narratives/Problem";
@@ -13,6 +14,7 @@ export default function Main() {
   return (
     <main className="overflow-x-clip bg-background text-primary">
       <Hero />
+      <Highlights />
       <Business />
       <Growth />
       <Problem />

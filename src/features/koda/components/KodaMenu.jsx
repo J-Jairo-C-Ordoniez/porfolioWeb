@@ -154,9 +154,15 @@ export default function KodaMenu() {
         <div className="flex min-h-screen flex-col gap-16 px-6 pb-24 pt-32 sm:px-8 md:px-12 lg:px-20 xl:flex-row xl:gap-8">
           <div className="mt-20 flex w-full flex-col justify-end xl:mt-0 xl:w-1/4">
             <p className="koda-menu-item mb-4 text-sm font-normal uppercase tracking-tight text-primary/80">Caso de estudio</p>
-            <Link href="/projects/koda" onClick={closeMenu} className="koda-menu-item text-2xl font-medium text-primary transition-all hover:text-primary/80 md:text-3xl">
-              KODA
-            </Link>
+            <a
+              href="https://kodaebon.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+              className="koda-menu-item text-2xl font-medium text-primary transition-all hover:text-primary/80 md:text-3xl"
+            >
+              Explorar KODA
+            </a>
           </div>
 
           <div className="flex w-full flex-col gap-12 md:flex-row md:gap-10 xl:w-3/4 xl:gap-8">
