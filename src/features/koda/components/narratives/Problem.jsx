@@ -7,8 +7,8 @@ import ProblemConclusion from "./problem/ProblemConclusion";
 export default function Problem() {
   return (
     <section 
-      id="el-problema" 
-      className="bg-primary/5 text-primary w-full overflow-hidden flex flex-col gap-6 md:gap-10"
+      id="the-problem" 
+      className="bg-primary/5 text-primary w-full overflow-hidden flex flex-col gap-10 md:gap-20"
     >
       <ProblemStart />
       <ProblemGrid />

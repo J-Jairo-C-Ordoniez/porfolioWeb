@@ -82,7 +82,7 @@ export default function GrowthStart() {
         </h2>
       </header>
 
-      <div className="growth-card w-full opacity-0 will-change-transform flex flex-col-reverse md:flex-row gap-8 md:gap-10 lg:gap-16 items-start bg-primary/5 rounded-[2rem] p-6 md:p-8 lg:p-12">
+      <div className="growth-card w-fullsfo opacity-0 will-change-tranrm flex flex-col-reverse md:flex-row gap-8 md:gap-10 lg:gap-16 items-start bg-primary/5 rounded-[2rem] p-6 md:p-8 lg:p-12">
         <section className="w-full md:w-2/5 flex flex-col gap-3 items-start">
           {items.map((item, index) => {
             const isActive = activeIndex === index;
