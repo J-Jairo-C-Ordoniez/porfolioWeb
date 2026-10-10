@@ -133,11 +133,11 @@ export default function Highlights() {
       id="highlights"
       className="overflow-hidden min-h-screen flex flex-col justify-center items-center bg-primary/5 py-14 text-primary sm:py-16 lg:py-20"
     >
-      <div className="w-full px-6 md:px-8 lg:px-12 xl:px-20">
+      <header className="w-full px-6 md:px-8 lg:px-12 xl:px-20">
         <h2 className="highlights-title text-left text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-priamry w-full md:w-3/4 leading-relaxed opacity-0 will-change-transform">
           Todo en su lugar.
         </h2>
-      </div>
+      </header>
 
       <div
         className="highlights-carousel mt-8 w-screen opacity-0 will-change-transform md:mt-10"

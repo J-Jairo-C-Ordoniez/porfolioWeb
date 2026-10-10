@@ -9,7 +9,6 @@ import BusinessContext from "./business/BusinessContext";
 import BusinessIntro from "./business/BusinessIntro";
 import BusinessNotes from "./business/BusinessNotes";
 import BusinessTurn from "./business/BusinessTurn";
-import BusinessWorks from "./business/BusinessWorks";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -27,31 +26,30 @@ export default function Business() {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: () => `+=${track.scrollWidth}`,
+          end: () => `+=${track.scrollWidth - window.innerWidth}`,
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,
         },
       });
 
-      gsap.from(".business-intro-lead", { y: 48, opacity: 0, duration: 0.6, ease: "power3.out" });
-      gsap.from(".business-intro-statement", { y: 110, opacity: 0, duration: 0.9, delay: 0.15, ease: "power4.out" });
+      gsap.from(".business-intro-lead", { y: 28, opacity: 0, duration: 0.55, ease: "power3.out" });
+      gsap.from(".business-intro-statement", { y: 72, opacity: 0, duration: 0.8, delay: 0.12, ease: "power4.out" });
 
       [
-        [".business-note", ".business-frame--notes", { x: -72, stagger: 0.18 }],
-        [".business-context-lead, .business-context-statement", ".business-frame--context", { y: 72, stagger: 0.15 }],
-        [".business-works-statement", ".business-frame--works", { scale: 0.85 }],
-        [".business-turn-statement, .business-turn-conclusion", ".business-frame--turn", { y: 90, stagger: 0.18 }],
+        [".business-note", ".business-frame--notes", { y: 24, stagger: 0.12 }],
+        [".business-context-lead, .business-context-statement", ".business-frame--context", { y: 40, stagger: 0.12 }],
+        [".business-turn-conclusion", ".business-frame--turn", { y: 56 }],
       ].forEach(([target, trigger, properties]) => {
         gsap.from(target, {
           ...properties,
           opacity: 0,
-          duration: 0.7,
+          duration: 0.6,
           ease: "power3.out",
           scrollTrigger: {
             trigger,
             containerAnimation: horizontalScroll,
-            start: "left 75%",
+            start: "left 72%",
             toggleActions: "play none none reverse",
           },
         });
@@ -61,12 +59,15 @@ export default function Business() {
   );
 
   return (
-    <section id="el-negocio" ref={containerRef} className="h-screen overflow-hidden bg-primary text-background">
+    <section
+      id="business"
+      ref={containerRef}
+      className="h-screen overflow-hidden bg-background text-primary"
+    >
       <div className="business-track flex h-screen w-max">
         <BusinessIntro />
         <BusinessNotes />
         <BusinessContext />
-        <BusinessWorks />
         <BusinessTurn />
       </div>
     </section>

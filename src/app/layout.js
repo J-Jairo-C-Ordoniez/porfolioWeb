@@ -15,16 +15,15 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://tu-dominio.com"),
+  metadataBase: new URL("https://j-jairo-c-ordonez.vercel.app/"),
   title: {
-    default: "J Jairo C Ordoñez",
-    template: "%s | J Jairo C Ordoñez",
+    default: "J Jairo C Ordoñez"
   },
   description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
   openGraph: {
     title: "J Jairo C Ordoñez",
     description: "Construyo experiencias web minimalistas, claras y profesionales, con un enfoque creativo que une funcionalidad, diseño y tecnología para dar vida a tus ideas.",
-    url: "https://tu-dominio.com",
+    url: "https://j-jairo-c-ordonez.vercel.app/",
     siteName: "J Jairo C Ordoñez",
     images: [
       {
