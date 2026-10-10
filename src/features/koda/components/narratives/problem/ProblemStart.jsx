@@ -1,3 +1,40 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
+
 export default function ProblemStart() {
-  return <article className="problem-frame problem-frame--start absolute inset-0 flex items-center justify-center px-6 text-center opacity-0 sm:px-8 md:px-12 lg:px-20"><h2 className="problem-start max-w-6xl text-5xl font-bold leading-none tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">Pero el problema no era el cuaderno.</h2></article>;
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.fromTo(".problem-title", 
+      { autoAlpha: 0, y: 30 },
+      { 
+        autoAlpha: 1, 
+        y: 0, 
+        duration: 1, 
+        ease: "power3.out", 
+        scrollTrigger: { 
+          trigger: containerRef.current, 
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        } 
+      }
+    );
+  }, { scope: containerRef });
+
+  return (
+    <header 
+      ref={containerRef} 
+      className="w-full px-[8vw] pt-24 pb-12 flex flex-col justify-center">
+      <h2 className="problem-title opacity-0 will-change-transform text-left text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-primary w-full md:w-3/4 leading-relaxed">
+        El problema no era el cuaderno.<br/>
+        <span className="font-light text-primary/70">Era todo lo que había detrás.</span>
+      </h2>
+    </header>
+  );
 }

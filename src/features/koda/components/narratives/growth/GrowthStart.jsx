@@ -12,19 +12,27 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 const items = [
   {
     title: "Más productos",
-    description: "El inventario crece y el control manual genera graves pérdidas."
+    description: "El inventario crece y el control manual genera graves pérdidas.",
+    img: "/inventario.png",
+    alt: "Inventario descontrolado"
   },
   {
     title: "Más ventas",
-    description: "Mayor volumen exige rapidez; anotar a mano retrasa cada transacción."
+    description: "Mayor volumen exige rapidez; anotar a mano retrasa cada transacción.",
+    img: "/ventas.png",
+    alt: "Registro de ventas"
   },
   {
     title: "Más clientes",
-    description: "Aumentan los fiados; es vital registrar la deuda sin errores."
+    description: "Aumentan los fiados; es vital registrar la deuda sin errores.",
+    img: "/clientes.png",
+    alt: "Clientes y fiados"
   },
   {
     title: "Más cosas que recordar",
-    description: "La carga mental sube al dispersarse la información del negocio."
+    description: "La carga mental sube al dispersarse la información del negocio.",
+    img: "/cargaMental.png",
+    alt: "Carga mental acumulada"
   }
 ];
 
@@ -122,17 +130,21 @@ export default function GrowthStart() {
         </section>
 
         <figure className="w-full md:w-3/5">
-          <div className="growth-image opacity-0 will-change-transform relative w-full aspect-[4/3] md:aspect-[16/10] rounded-2xl overflow-hidden">
-            <Image
-              src="/libreta.jpeg"
-              alt={`Visualización de ${items[activeIndex].title}`}
-              fill
-              className="object-cover"
-              priority
-            />
+          <div className="growth-image opacity-0 will-change-transform relative w-full aspect-[4/3] md:aspect-[16/10] rounded-2xl overflow-hidden bg-primary/5">
+            {items.map((item, index) => (
+              <Image
+                key={item.img}
+                src={item.img}
+                alt={item.alt}
+                fill
+                className={`object-cover transition-opacity duration-500 ease-in-out ${
+                  index === activeIndex ? "opacity-100" : "opacity-0"
+                }`}
+                priority={index === 0}
+              />
+            ))}
           </div>
         </figure>
-
       </div>
     </article>
   );
