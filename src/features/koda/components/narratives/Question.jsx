@@ -4,29 +4,127 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import QuestionOrigin from "./question/QuestionOrigin";
-import QuestionSignals from "./question/QuestionSignals";
-import QuestionStart from "./question/QuestionStart";
 
-if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
+import QuestionStart from "./question/QuestionStart";
+import QuestionSignals from "./question/QuestionSignals";
+import QuestionOrigin from "./question/QuestionOrigin";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function Question() {
   const containerRef = useRef(null);
-  useGSAP(() => {
-    gsap.set(".question-frame", { autoAlpha: 0 });
-    const timeline = gsap.timeline({ scrollTrigger: { trigger: containerRef.current, start: "top top", end: () => `+=${window.innerHeight * 4}`, pin: true, scrub: 1, invalidateOnRefresh: true } });
-    timeline
-      .set(".question-frame--start", { autoAlpha: 1 })
-      .fromTo(".question-title", { y: 110, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, ease: "power4.out" })
-      .fromTo(".question-lead", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, "-=0.25")
-      .to(".question-frame--start", { autoAlpha: 0, duration: 0.3 }, "+=0.65")
-      .set(".question-frame--signals", { autoAlpha: 1 })
-      .fromTo(".question-understanding", { y: 64, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" })
-      .fromTo(".question-signal", { x: 64, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, stagger: 0.1, ease: "power3.out" }, "-=0.18")
-      .to(".question-frame--signals", { autoAlpha: 0, duration: 0.3 }, "+=0.6")
-      .set(".question-frame--origin", { autoAlpha: 1 })
-      .fromTo(".question-origin-lead", { y: 64, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" })
-      .fromTo(".question-origin-name", { y: 110, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power4.out" }, "-=0.2");
-  }, { scope: containerRef });
-  return <section id="la-pregunta" ref={containerRef} className="relative h-screen overflow-hidden bg-background text-primary"><QuestionStart /><QuestionSignals /><QuestionOrigin /></section>;
+
+  useGSAP(
+    () => {
+      const track = containerRef.current.querySelector(".question-track");
+
+      const horizontalScroll = gsap.to(track, {
+        x: () => -(track.scrollWidth - window.innerWidth),
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: () => `+=${track.scrollWidth - window.innerWidth}`,
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      gsap.fromTo(
+        ".question-lead",
+        { y: 28, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }
+      );
+      gsap.fromTo(
+        ".question-statement",
+        { y: 72, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, delay: 0.12, ease: "power4.out" }
+      );
+
+      gsap.fromTo(
+        ".question-signals-lead",
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".question-frame--signals",
+            containerAnimation: horizontalScroll,
+            start: "left 72%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".question-signal",
+        { y: 24, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".question-frame--signals",
+            containerAnimation: horizontalScroll,
+            start: "left 65%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      gsap.fromTo(
+        ".question-origin-lead",
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".question-frame--origin",
+            containerAnimation: horizontalScroll,
+            start: "left 72%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+      gsap.fromTo(
+        ".question-origin-statement",
+        { y: 72, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: ".question-frame--origin",
+            containerAnimation: horizontalScroll,
+            start: "left 60%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    },
+    { scope: containerRef }
+  );
+
+  return (
+    <section
+      id="the-question"
+      ref={containerRef}
+      className="h-screen overflow-hidden bg-background text-primary"
+    >
+      <div className="question-track flex h-screen w-max">
+        <QuestionStart />
+        <QuestionSignals />
+        <QuestionOrigin />
+      </div>
+    </section>
+  );
 }

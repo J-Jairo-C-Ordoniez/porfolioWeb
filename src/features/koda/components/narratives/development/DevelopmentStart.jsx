@@ -1,3 +1,46 @@
+"use client";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
+
 export default function DevelopmentStart() {
-  return <article className="development-frame development-frame--start absolute inset-0 flex items-center px-6 opacity-0 sm:px-8 md:px-12 lg:px-20"><div className="max-w-6xl"><h2 className="development-start text-5xl font-bold leading-none tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">Después de comprender y decidir, tocaba construir.</h2><p className="development-lead mt-8 text-2xl font-normal tracking-tight text-primary/70 md:mt-12 md:text-4xl">KODA necesitaba conectar el negocio por dentro.</p></div></article>;
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".dev-start-title",
+      { autoAlpha: 0, y: 40 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, { scope: containerRef });
+
+  return (
+    <article
+      ref={containerRef}
+      className="w-full px-[8vw] py-20 flex flex-col justify-center min-h-screen"
+    >
+      <header className="max-w-5xl">
+        <h2 className="dev-start-title opacity-0 will-change-transform text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-primary leading-tight">
+          Después de comprender y decidir,
+          <span className="block mt-4 font-light text-primary/80">
+            tocaba construir.
+          </span>
+        </h2>
+      </header>
+    </article>
+  );
 }

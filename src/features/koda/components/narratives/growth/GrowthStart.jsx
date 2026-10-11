@@ -106,8 +106,8 @@ export default function GrowthStart() {
                   </div>
                   <span
                     className={`transition-all duration-500 text-md md:text-lg lg:text-xl font-bold tracking-tight leading-relaxed ${isActive
-                      ? "text-lg text-primary block"
-                      : "text-base text-primary/80 group-hover:text-primary truncate"
+                      ? "text-primary block"
+                      : "text-primary/80 group-hover:text-primary truncate"
                       }`}
                   >
                     {item.title}.

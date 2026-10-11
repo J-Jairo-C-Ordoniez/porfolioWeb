@@ -14,9 +14,9 @@ const columns = [
       ["Cuando dejó de ser suficiente", "#when-it-was-not-enough"],
       ["El problema", "#the-problem"],
       ["La pregunta", "#the-question"],
-      ["El negocio", "#business-in-use"],
-      ["Construir el sistema", "#build-the-system"],
-      ["Lo que es KODA", "#what-is-koda"],
+      ["Experiencia", "#experience"],
+      ["Desarrollo", "#development"],
+      ["Lo que es KODA", "#closing"],
     ],
   },
   {

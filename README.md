@@ -223,7 +223,7 @@ Eso es lo que estoy construyendo.
 
 - KODA nació de esa pregunta.
 
-### El negocio
+### Experiencia
 - Una vez entendido el problema, había que decidir qué debía existir.
     - ¿Qué necesita ver el dueño?
     - ¿Qué necesita hacer un vendedor mientras atiende a un cliente?
@@ -238,7 +238,7 @@ Eso es lo que estoy construyendo.
 - Incluso el flujo principal de venta debía resolverse en pocos pasos.
 - [Ver Decisiones UX/UI](/EVIDENCIAS / Decisiones UX/UI)  <!-- ruta: /koda/evidence/ux-ui-decisions/ -->
 
-### Construir el sistema
+### Desarrollo
 - Después de comprender y decidir, tocaba construir.
 - KODA necesitaba conectar el negocio por dentro.
 - Una venta debía actualizar el inventario.
