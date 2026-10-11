@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "J Jairo C Ordoñez",
     images: [
       {
-        url: "/avatar.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Avatar de J Jairo C Ordoñez",
@@ -48,7 +48,7 @@ export const metadata = {
     },
   },
   icons: {
-    icon: "/Logo.svg",
+    icon: "/logo.png",
   },
 };
 

@@ -29,10 +29,10 @@ const questions = [
 ];
 
 const galleryImages = [
-  { src: "/catalog.png", alt: "Catálogo de productos" },
-  { src: "/sales.png", alt: "Registro de ventas" },
-  { src: "/summary.png", alt: "Resumen del negocio" },
-  { src: "/team.png", alt: "Equipo de trabajo" },
+  { src: "/koda/productCatalog.png", alt: "Catálogo de productos" },
+  { src: "/koda/salesPos.png", alt: "Registro de ventas" },
+  { src: "/koda/dailySummary.png", alt: "Resumen del negocio" },
+  { src: "/koda/teamManagement.png", alt: "Equipo de trabajo" },
 ];
 
 const GALLERY_DELAY = 9000;

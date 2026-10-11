@@ -128,7 +128,7 @@ export default function KodaMenu() {
         type="button"
         onClick={openMenu}
         aria-label="Abrir menú de KODA"
-        className={`fixed right-8 top-8 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-primary/20 bg-background/50 backdrop-blur transition-colors duration-300 hover:bg-primary hover:text-background ${
+        className={`fixed right-8 top-8 z-50 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border border-primary/20 bg-background/50 backdrop-blur transition-colors duration-300 hover:bg-primary hover:text-background ${
           isOpen ? "pointer-events-none opacity-0" : "opacity-100"
         }`}
       >
@@ -145,7 +145,7 @@ export default function KodaMenu() {
             type="button"
             onClick={closeMenu}
             aria-label="Cerrar menú de KODA"
-            className="koda-menu-item flex h-14 w-14 items-center justify-center rounded-full border border-primary transition-colors duration-300 hover:bg-primary hover:text-background"
+            className="koda-menu-item cursor-pointer flex h-14 w-14 items-center justify-center rounded-full border border-primary transition-colors duration-300 hover:bg-primary hover:text-background"
           >
             <X size={24} />
           </button>

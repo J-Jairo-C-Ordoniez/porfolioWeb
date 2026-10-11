@@ -13,25 +13,25 @@ const items = [
   {
     title: "Más productos",
     description: "El inventario crece y el control manual genera graves pérdidas.",
-    img: "/inventario.png",
+    img: "/koda/manualInventory.png",
     alt: "Inventario descontrolado"
   },
   {
     title: "Más ventas",
     description: "Mayor volumen exige rapidez; anotar a mano retrasa cada transacción.",
-    img: "/ventas.png",
+    img: "/koda/manualSales.png",
     alt: "Registro de ventas"
   },
   {
     title: "Más clientes",
     description: "Aumentan los fiados; es vital registrar la deuda sin errores.",
-    img: "/clientes.png",
+    img: "/koda/storeCustomers.png",
     alt: "Clientes y fiados"
   },
   {
     title: "Más cosas que recordar",
     description: "La carga mental sube al dispersarse la información del negocio.",
-    img: "/cargaMental.png",
+    img: "/koda/mentalLoad.png",
     alt: "Carga mental acumulada"
   }
 ];

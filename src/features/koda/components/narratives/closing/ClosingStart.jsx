@@ -47,7 +47,7 @@ export default function ClosingHero() {
         <figure className="relative w-full aspect-[16/10] max-h-[70vh] overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-primary/5 border border-primary/10">
           <div className="closing-hero-photo-mask relative h-full w-full">
             <Image
-              src="/closing.png"
+              src="/koda/closingHero.png"
               alt="Persona operando KODA en su laptop"
               fill
               className="object-cover"

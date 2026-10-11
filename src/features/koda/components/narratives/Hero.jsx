@@ -92,7 +92,7 @@ export default function Hero() {
           <div className="koda-hero-photo-mask overflow-hidden rounded-2xl bg-primary/5 [clip-path:inset(0_5%_100%_5%)] motion-reduce:[clip-path:inset(0_0_0_0)] md:rounded-[2rem]">
             <Image
               className="koda-hero-photo h-auto w-full object-cover motion-reduce:scale-100"
-              src="/fotoPrincipal.png"
+              src="/koda/mainHero.png"
               alt="Persona trabajando en el dashboard de KODA desde una boutique"
               width={1254}
               height={1254}

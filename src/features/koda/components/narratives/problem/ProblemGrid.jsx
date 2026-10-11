@@ -46,7 +46,7 @@ export default function ProblemGrid() {
 
         <figure className="w-full md:w-1/2 h-[600px] md:h-full relative min-h-[600px]">
           <Image
-            src="/fotoPrincipal.png"
+            src="/koda/mainHero.png"
             alt="Controlar negocio"
             fill
             className="object-cover"
@@ -66,7 +66,7 @@ export default function ProblemGrid() {
 
         <figure className="w-full md:w-1/2 h-[600px] md:h-full relative min-h-[600px]">
           <Image
-            src="/sales.png"
+            src="/koda/salesPos.png"
             alt="Controlar negocio"
             fill
             className="object-cover"
@@ -87,7 +87,7 @@ export default function ProblemGrid() {
 
           <figure className="w-full h-[500px] md:h-full relative min-h-[500px]">
             <Image
-              src="/catalog.png"
+              src="/koda/productCatalog.png"
               alt="Controlar negocio"
               fill
               className="object-cover"
@@ -107,7 +107,7 @@ export default function ProblemGrid() {
 
           <figure className="w-full h-[500px] relative min-h-[500px]">
             <Image
-              src="/clientes.png"
+              src="/koda/storeCustomers.png"
               alt="Controlar negocio"
               fill
               className="object-cover"
@@ -144,7 +144,7 @@ export default function ProblemGrid() {
         </header>
 
         <figure className="w-full lg:w-1/2 h-[400px] lg:h-full relative lg:min-h-[650px]">
-          <Image src="/libreta.jpeg" alt="Sistema entrelazado" fill className="object-cover" />
+          <Image src="/koda/manualNotebook.jpeg" alt="Sistema entrelazado" fill className="object-cover" />
         </figure>
       </article>
     </section>
