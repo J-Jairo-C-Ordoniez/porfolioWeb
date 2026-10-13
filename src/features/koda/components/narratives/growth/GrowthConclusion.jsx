@@ -46,15 +46,15 @@ export default function GrowthConclusion() {
           Pero cada vez era más difícil saber exactamente qué estaba pasando.
         </p>
 
-        <div className="flex w-full justify-end">
+        {/* <div className="flex w-full justify-end">
           <Link
-            href="/projects/koda/evidence/research"
+            href="/projects/koda/research"
             className="group inline-flex items-center w-fit gap-4 mt-24 text-2xl md:text-3xl font-medium border-b border-primary/20 pb-2 text-primary hover:text-primary/80 transition-all"
           >
             Ver la investigación
             <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
           </Link>
-        </div>
+        </div> */}
       </div>
     </article>
   );

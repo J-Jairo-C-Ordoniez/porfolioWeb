@@ -154,7 +154,8 @@ Eso es lo que estoy construyendo.
 - Arquitectura
 - Tecnologías
 - Implementación
-- Proceso
+
+## Metodologia
 - Design Thinking
 - Evolución
 
@@ -283,3 +284,253 @@ Eso es lo que estoy construyendo.
 
 - Porque el objetivo fue que el negocio fuera más entendible.
 - [Explorar KODA](https://kodaebon.vercel.app/) 
+
+## Ruta Investigación Koda
+### comprar una camiseta.
+- No estaba buscando un proyecto. 
+- Tampoco tenía un plan de investigación.
+- Entré a una tienda de ropa, porque había visto una camiseta que me gustaba. Me la probé, la compré y, en medio de esa experiencia tan cotidiana, terminé haciendo algo que cambiaría mi manera de entender el desarrollo de software: preguntarle a alguien del negocio cómo funcionaba todo aquello que yo no podía ver como cliente.
+- En ese momento, yo quería crear productos digitales para negocios locales. Quería practicar lo que estaba aprendiendo, ganar experiencia y aprender a comunicar mejor mis ideas. Así que, cuando empecé a conocer un poco más sobre el funcionamiento de aquella tienda, vi una oportunidad.
+- Me llamó la atención que el inventario y las ventas no parecían estar conectados en un mismo proceso. Había un computador, pero no parecía formar parte activa de la operación.
+- Mi primera reacción fue pensar que podía construir algo para resolverlo.
+- Todavía no sabía que, antes de aprender a construir una solución, necesitaba aprender a comprender por qué alguien querría utilizarla.
+
+- recusos visuales: La tienda y la camiseta
+
+### construir el sistema era suficiente.
+- Aquel primer proyecto se llamó *Moda y Estilo*.
+- Durante algo más de un mes trabajé en el sistema. Programaba entre semana y, cuando era posible, me reunía los sábados para presentar los avances. Era mi primera experiencia trabajando en un proyecto para un negocio real, y también estaba aprendiendo a comunicarme con un cliente.
+- Pero había algo que todavía no entendía bien.
+- Cuando llegaba el momento de presentar lo que había hecho, me concentraba demasiado en explicar el sistema: cómo funcionaba, qué había construido y qué podía hacer técnicamente.
+- Me costaba conectar esas explicaciones con algo mucho más importante: por qué aquello podía ser útil para el negocio.
+- Finalmente, terminé el sistema y lo presenté. Sin embargo, el negocio no llegó a incorporarlo a su trabajo cotidiano.
+- Recuerdo esa experiencia como un punto de inflexión porque me obligó a enfrentar una diferencia que hasta entonces no había comprendido del todo: una cosa es terminar un producto y otra conseguir que tenga sentido para las personas que deberían utilizarlo.
+- Yo había visto una oportunidad desde mi perspectiva como desarrollador. Pero eso no significaba que hubiera comprendido suficientemente la perspectiva del negocio.
+- El sistema podía estar terminado. El problema, en cambio, seguía sin estar resuelto de la manera que yo esperaba.
+- Y si quería volver a intentarlo, necesitaba cambiar algo más que el código.
+
+- recursos visuales: Moda y Estilo
+
+### Dejé de buscar una tienda que necesitara software.
+- Después de aquella experiencia, empecé a estudiar otras formas de abordar los proyectos. Me interesé por la experiencia de usuario, el pensamiento sistémico, la comunicación y el storytelling. Más adelante, el Design Thinking también empezó a conectar muchas de esas inquietudes.
+- Quería entender cómo tomar mejores decisiones antes de empezar a construir.
+- Así que volví a las tiendas de ropa, pero esta vez con otra actitud.
+- Entraba como cliente. Observaba cómo se organizaban y, cuando surgía la oportunidad, conversaba con las personas que trabajaban allí. No tenía un estudio formal ni un registro exhaustivo de cada visita. Eran exploraciones que me ayudaban a contrastar mis primeras ideas con lo que encontraba en la realidad.
+- Y lo que encontraba no siempre encajaba con mis suposiciones.
+- Recuerdo una tienda pequeña, de apariencia moderna y cuidada, donde una persona mayor seguía confiando en un libro físico para llevar las cuentas.
+- En otra tienda, un propietario joven utilizaba Excel para controlar parte de su negocio.
+- Dos experiencias distintas. Ninguna me permitía sacar conclusiones sobre todos los comerciantes, pero ambas me ayudaron a cuestionar una idea que podía haber dado por sentada: que la relación de una persona con la tecnología se podía deducir fácilmente por su edad, por la apariencia del establecimiento o por tener un computador a mano.
+- No podía.
+- Empecé a entender que, antes de proponer una herramienta, tenía que conocer la manera en que cada negocio trabajaba, las costumbres que había construido y la relación que mantenía con las herramientas que ya utilizaba.
+- La pregunta dejó de ser solamente qué podía digitalizar.
+- Quería comprender qué estaba ocurriendo realmente.
+
+### Algo más que un inventario.
+- Cuanto más pensaba en aquellas experiencias, más difícil me resultaba reducir el problema a una sola tarea.
+- Un negocio de ropa no es únicamente una colección de prendas almacenadas en algún lugar. Detrás de cada producto hay decisiones, movimientos y relaciones: qué hay disponible, qué falta, qué se vende, qué se debe, quién compra y cómo se mantiene la información al día.
+- También están las conversaciones con los clientes, las consultas por WhatsApp o redes sociales y las tareas que alguien debe realizar para que todo siga funcionando.
+- No todas esas situaciones aparecieron de la misma manera en mis visitas, ni tenía evidencia suficiente para afirmar que fueran un problema generalizado. Pero empecé a reconocerlas como partes de un mismo contexto que merecía ser comprendido antes de diseñar una solución.
+- Eso cambió mi forma de mirar el negocio.
+- Ya no quería tomar una tarea aislada y convertirla automáticamente en una aplicación. Quería entender cómo se relacionaba con las demás y qué podía ocurrir cuando la información y las operaciones se encontraban separadas.
+- Fue una de las ideas que terminaría influyendo en KODA: **el reto no era simplemente digitalizar una tarea, sino pensar en cómo las distintas partes del negocio podían trabajar juntas.**
+
+### Utilizar el sistema no debia ser otro problema
+- Había otra observación que me generaba curiosidad.
+- Aunque algunos de los negocios que conocí no utilizaban aplicaciones especializadas para administrar sus operaciones, las personas sí podían estar familiarizadas con otras herramientas digitales, como las redes sociales.
+- Me pregunté si podía aprovechar esa familiaridad para diseñar una interfaz que resultara más fácil de comprender.
+- La idea no era convertir un sistema de gestión en una red social. Era explorar si algunos patrones visuales e interacciones conocidos podían ayudar a las personas a orientarse sin tener que aprenderlo todo desde cero.
+- Lo planteé como una hipótesis y exploré informalmente algunas propuestas con compañeros o usuarios. Aquellas aproximaciones me permitieron cuestionar cómo se entendían las interfaces que estaba construyendo, pero no constituían una validación formal con comerciantes ni demostraban que la solución fuera adecuada para todos.
+- Aun así, esa exploración me ayudó a ampliar mi manera de pensar el diseño.
+- Una interfaz no tenía que ser comprensible solamente para quien la construía. Tenía que tener sentido para quien iba a utilizarla.
+- Y eso significaba prestar atención no solo a qué opciones estaban disponibles, sino también a cómo se presentaban, cómo se relacionaban y qué esperaba encontrar una persona en cada momento.
+
+### La investigación
+- Cuando miro hacia atrás, no veo un estudio que me entregara una lista definitiva de requisitos para KODA.
+- Veo una primera experiencia que no salió como esperaba, distintas formas de gestionar pequeños negocios y una serie de preguntas que comenzaron a cambiar mi manera de trabajar.
+- Aprendí que una solución técnicamente funcional no garantiza su adopción. Que no podía interpretar las necesidades de un negocio únicamente desde mi perspectiva como desarrollador. Y que una decisión de interfaz debía considerar a la persona que iba a utilizarla, no solo la estructura que yo necesitaba programar.
+- KODA nació como un proyecto nuevo, inspirado por esos aprendizajes.
+- Por eso, antes de definir cómo debía organizarse el sistema, necesitaba comprender mejor el negocio, sus actores y las relaciones entre sus operaciones.
+- No tenía todas las respuestas. Pero había dejado de asumir que ya las tenía.
+- **Primero comprender. Después decidir. Finalmente construir.**
+
+
+## Ruta Sistema y Actores
+### Una venta
+- Alguien entra a una tienda, encuentra una prenda y decide comprarla.
+- El vendedor revisa el precio, registra la venta y recibe el pago. Parece una operación sencilla. Y, en efecto, lo es.
+- Pero hay algo más ocurriendo.
+- Esa prenda ya no está disponible en la misma cantidad. La venta debe quedar registrada. Si el cliente paga una parte y deja el resto pendiente, aparece una deuda que alguien tendrá que recordar. Y si el negocio comparte su catálogo por WhatsApp, la información de ese producto también debería mantenerse actualizada.
+- Una sola operación puede cambiar varias cosas al mismo tiempo.
+- El problema empieza cuando cada una de esas cosas se gestiona por separado.
+
+### Las piezas
+- Cuando empecé a observar cómo funcionaban los pequeños negocios de ropa, mi atención estaba puesta en sus procesos: cómo organizaban los productos, cómo controlaban las existencias y cómo registraban las ventas.
+- Sin embargo, cuanto más intentaba comprender el negocio, más difícil resultaba separar una tarea de las demás.
+- El inventario dependía de las ventas. Las ventas involucraban a los empleados y a los clientes. Los pagos podían generar cuentas pendientes. Y la información de los productos podía terminar en distintos lugares.
+- No eran problemas independientes que pudieran resolverse uno por uno sin considerar lo demás.
+- Eran piezas de una misma operación.
+- Y aunque cada negocio tenía su propia forma de trabajar, había una pregunta que empezaba a tomar más importancia que cualquier función individual:
+- **¿Cómo se relaciona todo lo que ocurre dentro del negocio?**
+
+### Entender quienes son los usuarios
+- Para responder esa pregunta, no bastaba con enumerar las funciones que debía tener el sistema. También necesitaba comprender quiénes participaban en el negocio, qué necesitaba cada uno y cómo sus acciones afectaban a los demás.
+- El dueño necesitaba mantener una visión general y tomar decisiones.
+- El empleado necesitaba atender al cliente y registrar una venta sin convertirla en una tarea complicada.
+- El cliente necesitaba encontrar información clara y tener una experiencia sencilla.
+- Y el sistema debía ayudar a que las operaciones y los datos permanecieran conectados.
+- Pero las personas no eran los únicos elementos importantes. También estaban los productos, sus variantes, las existencias, las ventas, los pagos y las cuentas pendientes.
+- Cada elemento tenía un propósito, pero su verdadero valor aparecía cuando entendíamos sus relaciones.
+- Una variante no era solo un registro: representaba una opción concreta de un producto y tenía sus propias existencias. Una venta no era solo una cifra: podía modificar el inventario, registrar un pago y dejar un saldo pendiente.
+- Comprender los actores significaba comprender también lo que ocurría entre ellos.
+
+### El sistema
+- Podía haber convertido cada necesidad en una función y cada elemento en una sección del menú. De hecho, esa fue una de las trampas en las que caí durante las primeras etapas de KODA.
+- Pensar en términos de entidades y operaciones me ayudaba a organizar la lógica del software, pero no necesariamente a organizar la experiencia de quien lo utilizaba.
+- El negocio no necesitaba navegar por una representación de la base de datos. Necesitaba realizar su trabajo.
+- Esa diferencia cambió mi manera de abordar el problema.
+- En lugar de preguntarme únicamente qué información debía guardar, empecé a pensar en qué debía suceder cuando alguien realizaba una acción y qué otras partes del negocio debían responder a ella.
+- Registrar una venta debía tener sentido para el inventario. Registrar un abono debía conservar la información de la deuda. Consultar un producto debía permitir comprender sus variantes y existencias.
+- Las relaciones no podían depender de que una persona recordara actualizar cada parte manualmente.
+- Tenían que formar parte del funcionamiento del sistema.
+
+### Diseñar
+- Esta comprensión también cambió la forma en que debía organizar la interfaz.
+- Si el dueño necesitaba comprender el estado del negocio, tenía que poder encontrar la información relevante sin recorrer secciones desconectadas.
+- Si un empleado necesitaba vender, el proceso debía facilitar esa tarea, no obligarlo a comprender cómo estaban organizados los datos internamente.
+- Y si una persona consultaba un producto, sus variantes y existencias debían presentarse de una manera que tuviera sentido para su trabajo.
+- La estructura del sistema debía responder a las relaciones del negocio, pero la interfaz debía responder a las necesidades de las personas.
+- No eran dos objetivos opuestos. Eran dos partes de la misma solución.
+- Esta distinción fue importante para KODA: conectar las operaciones por dentro y hacerlas comprensibles por fuera.
+
+[Explorar las decisiones UX/UI →](/projects/koda/evidence/ux-ui-decisions/)
+
+### El negocio
+- Al final, comprender el negocio de esta manera me permitió cambiar la pregunta con la que estaba construyendo.
+- Ya no se trataba de reunir inventario, ventas, clientes y deudas en una misma aplicación.
+- Se trataba de conseguir que esas partes funcionaran de manera coherente.
+- Que una acción tuviera en cuenta sus consecuencias. Que la información no perdiera sentido al pasar de una sección a otra. Y que cada persona pudiera realizar su trabajo sin cargar con toda la complejidad que existía detrás.
+- Esa fue la idea que empezó a dar forma a KODA.
+- No como una colección de módulos que compartían una interfaz, sino como un sistema construido alrededor de las relaciones que mantienen en funcionamiento un negocio.
+- Porque comprender las partes era necesario.
+- Pero comprender cómo se conectaban fue lo que permitió empezar a diseñar el sistema.
+
+[Explorar la arquitectura →](/projects/koda/development/architecture/)
+
+## Ruta decisiones ux/ui
+### La interfaz
+- Cuando empecé a construir la primera versión de KODA, tenía claro qué información debía gestionar el sistema.
+- Productos, categorías, variantes, inventario, ventas, clientes y deudas. Cada elemento tenía su lugar y cada uno necesitaba sus propias operaciones.
+- Desde el punto de vista técnico, organizarlo parecía lógico: si existía una entidad, debía poder consultarla, crearla, editarla y eliminarla.
+- Así que trasladé esa lógica a la interfaz.
+- El resultado tenía sentido para mí, porque conocía la estructura que había detrás. Pero había algo que todavía no estaba teniendo suficientemente en cuenta:
+- **La persona que utiliza un sistema no piensa necesariamente en las mismas estructuras con las que fue construido.**
+- Un vendedor no entra a trabajar pensando en entidades, relaciones o registros. Entra porque necesita encontrar un producto, atender a un cliente y completar una venta.
+- Y esa diferencia terminó cambiando mi manera de diseñar KODA.
+
+### la organización
+- La primera versión comenzó a llenarse de secciones y opciones. Cada entidad encontraba su representación en el menú y muchas operaciones se resolvían mediante ventanas modales.
+- Yo estaba intentando que todo estuviera disponible, pero no me había detenido lo suficiente a pensar en cómo debía encontrarse cada cosa.
+- El menú creció hasta convertirse en una representación de la estructura interna del software. Y las ventanas modales, que parecían una solución práctica para realizar operaciones sin abandonar la página, empezaron a complicar la experiencia y a dificultar la adaptación a pantallas pequeñas.
+- La interfaz contenía las funciones que necesitaba, pero eso no significaba que fueran fáciles de descubrir o utilizar.
+- Cuando mostré algunas partes a compañeros y exploré informalmente cómo encontraban determinadas opciones, aparecieron dificultades que yo no había percibido mientras desarrollaba.
+- No fue una evaluación formal de usabilidad, pero sí una señal importante: lo que resultaba evidente para quien había construido el sistema no necesariamente lo era para quien intentaba utilizarlo.
+- **Tener todas las opciones disponibles no significa que sea fácil encontrar la correcta.**
+
+### La pregunta
+- Comencé a preguntarme qué necesitaba hacer una persona y qué información debía tener a su alcance para conseguirlo.
+- Eso significaba distinguir entre dos cosas que antes había tratado casi como si fueran la misma: la organización interna de los datos y la organización de la experiencia.
+- La primera debía ayudar a que el sistema funcionara correctamente. La segunda debía ayudar a que las personas pudieran trabajar con él.
+- Ambas tenían que relacionarse, pero no tenían por qué verse iguales.
+- También retomé una idea que había surgido al observar los hábitos tecnológicos de algunos negocios: utilizar patrones visuales familiares podía ayudar a reducir la sensación de estar aprendiendo una herramienta completamente desconocida.
+- No podía asumir que esa familiaridad garantizara una buena experiencia. Era una hipótesis de diseño que debía orientar mis decisiones, no un resultado demostrado.
+
+### Un lugar para cada cosa
+- Volví a pensar en la organización general de KODA.
+- La interfaz necesitaba una estructura reconocible, con una navegación principal que permitiera cambiar entre las grandes áreas del negocio y un espacio central dedicado al trabajo de cada sección.
+- En la versión actual, esa organización se concreta en tres zonas:
+
+- **Navegación principal:** permite acceder a las áreas principales del sistema.
+- **Área de trabajo:** concentra el contenido y las operaciones de la sección seleccionada.
+- **Panel contextual:** reúne acciones e información relacionadas con lo que se está consultando.
+- El objetivo era separar responsabilidades para que la interfaz tuviera una jerarquía más clara.
+- La navegación principal debía orientar. El contenido central debía permitir trabajar. Y el panel contextual debía ofrecer herramientas relacionadas con el contexto actual, sin competir constantemente con la tarea principal.
+- En lugar de mostrar todas las opciones al mismo tiempo, la interfaz podía revelar las que tenían sentido en cada momento.
+- Esta organización también permitió pensar la experiencia como algo que debía adaptarse a diferentes pantallas, no como una versión de escritorio reducida.
+
+### Cambios del Diseño
+- Una de las decisiones más importantes apareció al trabajar con los productos.
+- Un producto de ropa puede tener distintas variantes, como tallas o colores, y cada variante puede tener sus propias existencias.
+- Técnicamente, esos datos pueden organizarse en tablas y registros. Pero quien administra una tienda necesita reconocer qué producto está consultando y entender sus opciones sin tener que reconstruir mentalmente toda esa información.
+- Por eso, en la interfaz de KODA, las variantes se presentan mediante elementos visuales que facilitan su reconocimiento, en lugar de depender exclusivamente de una tabla de datos.
+- La intención no es hacer que todo se vea más bonito. Es permitir que la información tenga sentido para la tarea que se está realizando.
+- El panel contextual sigue la misma lógica. Desde allí se pueden encontrar acciones relacionadas con la sección, como crear una categoría o un producto, además de explorar la estructura de categorías, productos y variantes.
+- Cuando se inicia una creación, el área principal puede dedicarse a esa tarea y explicar qué se está creando y para qué sirve, en lugar de limitarse a presentar un conjunto de campos.
+- También importa lo que sucede cuando el usuario cambia de selección, consulta todas las variantes o navega entre categorías. Cada estado debe conservar una lógica comprensible.
+- Son decisiones pequeñas cuando se observan por separado. Pero, juntas, determinan si una interfaz ayuda a trabajar o exige esfuerzo adicional para entenderla.
+- Diseñar no consiste únicamente en decidir qué información aparece. También consiste en decidir cómo se relaciona, cuándo aparece y qué puede dejar de ocupar nuestra atención.
+
+### Lógica responsive
+- El diseño responsive planteaba otra pregunta: ¿cómo conservar esa organización cuando ya no hay espacio para mostrar todas las zonas al mismo tiempo?
+- Reducir las columnas y comprimir sus elementos habría permitido encajar la interfaz, pero no necesariamente habría producido una experiencia cómoda.
+- En KODA, la navegación principal pasa a la parte inferior en dispositivos móviles. El panel contextual, por su parte, se puede abrir mediante un botón lateral cuando se necesita acceder a sus opciones.
+- Así, el contenido central conserva el protagonismo y las herramientas secundarias siguen disponibles sin ocupar permanentemente un espacio que la pantalla no puede ofrecer.
+- La intención no era reproducir exactamente el escritorio en el móvil. Era mantener la lógica de la experiencia y adaptar la forma de acceder a sus elementos.
+
+### Menos ruido
+- Todas estas decisiones comparten una misma intención: reducir la distancia entre lo que una persona quiere hacer y lo que necesita comprender para hacerlo.
+- Eso también influye en el aspecto visual.
+- La jerarquía, el espacio, el contraste y la organización de los elementos no son únicamente recursos estéticos. Ayudan a distinguir lo importante, reconocer las acciones disponibles y comprender dónde nos encontramos.
+
+### El negocio
+- Al mirar el recorrido completo, el cambio más importante no fue una columna nueva, un menú diferente o una tarjeta para representar las variantes.
+- Fue cambiar el criterio con el que tomaba las decisiones.
+- La primera versión me enseñó que podía construir una interfaz coherente con la estructura del software y, aun así, dejar preguntas sin resolver sobre cómo las personas encontrarían y utilizarían sus funciones.
+- Ahora KODA parte de una intención distinta: organizar la experiencia alrededor del trabajo que necesita realizar el negocio.
+- Eso implica pensar en la navegación, en la información que debe tener prioridad, en las acciones disponibles en cada contexto y en cómo se comporta la interfaz en diferentes dispositivos.
+
+- [Explorar la arquitectura →](/projects/koda/development/architecture/)
+
+
+## Ruta arquitectura
+### El problema no terminaba en la interfaz
+- Cuanto más crecía KODA, más importante se volvía entender como estructurar su codigo
+- No bastaba con conseguir que las funciones trabajaran. También necesitaba una estructura que me permitiera entender dónde vivía cada responsabilidad, cómo se relacionaba con las otras y dónde debía realizar los cambios.
+
+### Organizar
+- KODA reúne diferentes áreas del negocio, interfaces para distintos contextos y operaciones que comparten información.
+- Si toda esa lógica terminara mezclada, cualquier modificación podría obligarme a recorrer demasiados archivos para comprender sus consecuencias. Y cuanto más dependiera una parte de detalles internos de otra, más difícil sería cambiarla sin introducir nuevos problemas.
+- Por eso, la organización del proyecto debía responder a una intención: separar responsabilidades y mantener relaciones claras entre ellas.
+
+### El contexto
+- En el frontend, KODA utiliza la estructura de rutas de Next.js para organizar sus diferentes áreas.
+- Dentro de `src/app` aparecen grupos como `(admin)`, `(public)` y `(store)`. Esta organización permite distinguir contextos de navegación sin convertir toda la aplicación en una única superficie indiferenciada.
+- Por otra parte, `src/features` agrupa áreas funcionales como `auth`, `dashboard`, `help`, `landing`, `legal`, `store` y `super-admin`.
+- Esta separación responde a dos necesidades diferentes.
+- Las rutas organizan cómo se accede a las distintas partes de la aplicación. Las funcionalidades agrupan el código relacionado con las capacidades del producto.
+- La distinción es importante: una ruta define un contexto de acceso, mientras que una funcionalidad representa una responsabilidad dentro de la aplicación.
+- También existen directorios como `shared`, `styles`, `types`, `lib` e `infrastructure`, que reúnen código compartido, estilos, tipos y elementos de soporte del proyecto.
+- La intención es evitar que cada sección tenga que resolver por su cuenta problemas que pueden abordarse desde una estructura común.
+
+### Backend
+- La organización del backend sigue otra lógica: agrupar las operaciones según los dominios del negocio y separar las responsabilidades que intervienen en ellas.
+- Dentro de `src/backend/core` aparecen dominios como `catalog` y `customers`, junto con áreas para `employees`, `inventory` y `sales`.
+- En los dominios que se muestran en la estructura, la organización contempla tres responsabilidades:
+
+- **Controllers:** reciben y gestionan las solicitudes correspondientes a cada operación.
+- **Services:** concentran la lógica asociada a los casos de uso.
+- **Repositories:** organizan el acceso a los datos.
+- Los tipos de cada dominio también cuentan con un lugar propio.
+- Esta distribución permite distinguir entre recibir una petición, ejecutar las reglas de una operación y acceder a la información necesaria para resolverla.
+
+### El negocio
+- Los dominios separados no funcionan de manera aislada.
+- Una venta puede requerir información del catálogo, afectar las existencias y relacionarse con un cliente o con un pago. Por eso, además de organizar cada área, la arquitectura debe permitir coordinar operaciones que involucran a varias partes del sistema.
+- En la estructura del backend también aparece `aggregation/dashboard`, con directorios para controladores, servicios y reportes.
+- Su presencia refleja una separación entre las operaciones propias de cada dominio y una zona dedicada a reunir información para el panel de control y los reportes.
+
+### Base compartida
+- Además de las funcionalidades y los dominios, el proyecto contiene directorios como `crossCutting`, `infrastructure`, `shared` y `lib`.
+- Estos espacios forman parte de la organización transversal del código: responsabilidades y recursos que no pertenecen exclusivamente a una sola funcionalidad.
+- Separarlos permite evitar que cada dominio tenga que definir de nuevo elementos que deberían gestionarse de manera común.
+
+[Explorar las tecnologías →](/projects/koda/development/technologies/)

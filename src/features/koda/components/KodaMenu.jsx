@@ -19,30 +19,28 @@ const columns = [
       ["Lo que es KODA", "#closing"],
     ],
   },
-  {
+ /*  {
     label: "Evidencias",
     items: [
-      ["Investigación", "#research"],
-      ["Sistema y actores", "#system-and-actors"],
-      ["Decisiones UX/UI", "#ux-ui-decisions"],
+      ["Investigación", "/projects/koda/research"],
+      ["Sistema y actores", "/projects/koda/system-and-actors"],
+      ["Decisiones UX/UI", "/projects/koda/ux-ui-decisions"],
     ],
   },
   {
     label: "Desarrollo",
     items: [
-      ["Arquitectura", "#architecture"],
-      ["Tecnologías", "#technologies"],
-      ["Implementación", "#implementation"],
+      ["Arquitectura", "/projects/koda/architecture"],
+      ["Tecnologías", "/projects/koda/technologies"]
     ],
     secondary: {
       label: "Metodología",
       items: [
-        ["Proceso", "#proceso"],
-        ["Design Thinking", "#design-thinking"],
-        ["Evolución", "#evolucion"],
+        ["Design Thinking", "/projects/koda/design-thinking"],
+        ["Evolución", "/projects/koda/evolucion"],
       ],
     },
-  },
+  }, */
 ];
 
 function MenuColumn({ column, closeMenu }) {
@@ -154,7 +152,7 @@ export default function KodaMenu() {
         <div className="flex min-h-screen flex-col gap-16 px-6 pb-24 pt-32 sm:px-8 md:px-12 lg:px-20 xl:flex-row xl:gap-8">
           <div className="mt-20 flex w-full flex-col justify-end xl:mt-0 xl:w-1/4">
             <p className="koda-menu-item mb-4 text-sm font-normal uppercase tracking-tight text-primary/80">Caso de estudio</p>
-            <a
+            <Link
               href="https://kodaebon.vercel.app/"
               target="_blank"
               rel="noreferrer"
@@ -162,7 +160,7 @@ export default function KodaMenu() {
               className="koda-menu-item text-2xl font-medium text-primary transition-all hover:text-primary/80 md:text-3xl"
             >
               Explorar KODA
-            </a>
+            </Link>
           </div>
 
           <div className="flex w-full flex-col gap-12 md:flex-row md:gap-10 xl:w-3/4 xl:gap-8">

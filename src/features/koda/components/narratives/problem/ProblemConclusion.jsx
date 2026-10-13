@@ -45,7 +45,7 @@ export default function ProblemConclusion() {
             Era un sistema.
           </p>
 
-          <div className="p-conclusion-link opacity-0 will-change-transform mt-10 md:mt-16 flex justify-end">
+          {/* <div className="p-conclusion-link opacity-0 will-change-transform mt-10 md:mt-16 flex justify-end">
             <Link
               href="/projects/koda/evidence/system-and-actors"
               className="group inline-flex items-center w-fit gap-4 mt-24 text-2xl md:text-3xl font-medium border-b border-primary/20 pb-2 text-primary hover:text-primary/80 transition-all"
@@ -53,7 +53,7 @@ export default function ProblemConclusion() {
               Explorar el sistema y sus actores
               <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
-          </div>
+          </div> */}
 
         </div>
       </div>

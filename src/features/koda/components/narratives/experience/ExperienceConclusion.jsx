@@ -44,7 +44,7 @@ export default function ExperienceConclusion() {
             Cada decisión de interfaz existió para proteger el tiempo y la atención de quien opera.
           </p>
 
-          <div className="design-conclusion-link opacity-0 will-change-transform mt-10 md:mt-16 flex justify-end">
+          {/* <div className="design-conclusion-link opacity-0 will-change-transform mt-10 md:mt-16 flex justify-end">
             <Link
               href="/projects/koda/evidence/ux-ui-decisions"
               className="group inline-flex items-center w-fit gap-4 mt-24 text-2xl md:text-3xl font-medium border-b border-primary/20 pb-2 text-primary hover:text-primary/80 transition-all"
@@ -52,7 +52,7 @@ export default function ExperienceConclusion() {
               Ver las decisiones UX/UI
               <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </article>
