@@ -17,11 +17,16 @@ const data = {
   ],
 
   social: [
-    { id: 1, text: "GitHub", href: "https://github.com", icon: "Github" },
+    {
+      id: 1,
+      text: "GitHub",
+      href: "https://github.com/J-Jairo-C-Ordoniez",
+      icon: "Github",
+    },
     {
       id: 2,
       text: "Linkedin",
-      href: "https://Linkedin.com/",
+      href: "https://www.linkedin.com/in/j-jairo-c-ordonez-dev",
       icon: "Linkedin",
     },
     {
