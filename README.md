@@ -534,3 +534,205 @@ Eso es lo que estoy construyendo.
 - Separarlos permite evitar que cada dominio tenga que definir de nuevo elementos que deberían gestionarse de manera común.
 
 [Explorar las tecnologías →](/projects/koda/development/technologies/)
+
+
+## TIM — Historia principal
+
+## 01. El origen
+
+Hay artistas cuya música termina formando parte de la vida de otras personas.
+
+Una canción puede acompañar un momento, traer de vuelta un recuerdo o ayudar a alguien a atravesar una etapa difícil. Con el tiempo, aquello que comenzó como una obra deja de pertenecer únicamente a quien la creó y empieza a vivir también en quienes la escuchan.
+
+La música de Avicii representa esa conexión para muchas personas de su comunidad.
+
+Pero había algo que quería explorar más allá de sus canciones, sus actuaciones y su reconocimiento como artista: la persona que existía detrás de ese nombre.
+
+Así comenzó TIM, un proyecto personal inspirado en Tim Bergling y en el legado que dejó.
+
+No quería construir únicamente otro homenaje a su música. Quería explorar una manera de acercarme a su historia, a su proceso creativo y a las conexiones que su obra había generado con otras personas.
+
+Para encontrar esa dirección, necesitaba mirar más allá de mi propia interpretación y escuchar lo que la comunidad compartía sobre él.
+
+*Recursos visuales: una apertura cinematográfica, imágenes de Tim y una transición gradual hacia el nombre TIM.*
+
+[Explorar las evidencias →]
+
+---
+
+## 02. Before Avicii, there was Tim
+
+Avicii es el nombre por el que millones de personas llegaron a conocer su música.
+
+Tim Bergling era la persona detrás de ese nombre.
+
+Quería que la experiencia comenzara desde esa diferencia, no para separar al artista de su obra, sino para recordar que ambas dimensiones formaban parte de una misma historia.
+
+En un principio, consideré acercarme a su vida desde la infancia. Sin embargo, esa entrada no me parecía la más adecuada para comenzar una experiencia dirigida a personas que probablemente llegaran con referencias muy distintas sobre él.
+
+En lugar de empezar por un episodio biográfico, decidí partir de una faceta reconocible de su historia: la presión que vivió durante sus años de giras y la dificultad de detenerse.
+
+El documental *Avicii: True Stories* ofrecía un material especialmente significativo para hacerlo. Sus propias palabras permitían introducir una dimensión más humana sin tener que explicar de antemano quién era Tim ni intentar resumir su vida en unos cuantos datos.
+
+La experiencia comienza entonces con una idea sencilla:
+
+**Before Avicii, there was Tim.**
+
+A continuación, el texto da paso a un fragmento del documental. Sus palabras, las pausas y el ritmo de los subtítulos permiten que sea él quien introduzca la historia.
+
+No necesitaba anticipar todas las conclusiones ni explicar lo que el visitante debía sentir. Bastaba con abrir una perspectiva diferente y dejar que el propio material sostuviera ese momento.
+
+*Recursos visuales: título de apertura, fragmento de Avicii: True Stories, subtítulos sincronizados y composición tipográfica.*
+
+[Explorar las decisiones narrativas y visuales →]
+
+---
+
+## 03. Beyond the Stage
+
+Pero Tim no era únicamente la persona que aparecía en los escenarios ni la que hablaba sobre el agotamiento de las giras.
+
+También estaba la persona que experimentaba, componía, escuchaba, cambiaba de opinión y buscaba nuevas posibilidades dentro de la música.
+
+Quería que la experiencia pudiera mostrar ese otro lado sin convertirlo en una simple sucesión de imágenes de archivo.
+
+Para hacerlo, elegí material relacionado con la creación de *For a Better Day*, en el que Tim trabaja en el estudio junto a Alex.
+
+El cambio comienza con una frase que conecta la sección anterior con la siguiente:
+
+*Maybe it's time for a better day.*
+
+La frase funciona como una transición hacia un entorno diferente. Dejamos atrás el contexto de las giras y entramos en el espacio donde las ideas musicales toman forma.
+
+Aquí, el desplazamiento horizontal acompaña ese cambio de dirección. Los fragmentos audiovisuales, las frases y las imágenes del proceso creativo construyen una secuencia en la que podemos observar a Tim escuchando, probando y reaccionando a lo que está creando.
+
+Los comentarios sobre una guitarra, una línea de la canción o una idea que comienza a funcionar muestran algo que una fotografía promocional difícilmente podría transmitir de la misma manera: el proceso de descubrir una pieza musical mientras se construye.
+
+La intención no era presentar el estudio como una respuesta a todo lo que habíamos visto antes, sino ampliar la perspectiva. La historia de Tim también estaba hecha de curiosidad, experimentación y trabajo creativo.
+
+La sección termina con imágenes de la creación de *Wake Me Up*. Esa transición prepara el siguiente momento: salir del espacio del creador para acercarnos a la experiencia de quienes escuchan su música.
+
+*Recursos visuales: material de Stories on Stories — The Making of For a Better Day, tipografía cinética, desplazamiento horizontal y fragmento de The Making of Wake Me Up.*
+
+[Explorar el desarrollo de la experiencia →]
+
+---
+
+## 04. A Listener's Reflection
+
+Hasta aquí, la historia se había construido alrededor de Tim: su identidad, sus experiencias y su manera de crear.
+
+Pero su legado también existe fuera de su propia historia.
+
+En los comentarios que las personas comparten sobre su música aparecen recuerdos, experiencias personales y momentos en los que una canción adquirió un significado que iba mucho más allá de escucharla.
+
+Uno de esos testimonios llamó especialmente mi atención.
+
+Una persona relataba cómo *Wake Me Up* la había acompañado durante uno de los periodos más difíciles de su vida, marcado por una profunda depresión. En su mensaje también expresaba el dolor que sintió al conocer la muerte de Tim y cerraba con una reflexión sobre cómo Avicii permanece en quienes lo recuerdan.
+
+Decidí incorporar ese testimonio real, publicado en YouTube, porque permitía mostrar la conexión entre una obra musical y la experiencia personal de alguien que la escucha.
+
+No quería tratarlo como una cita decorativa ni reducir su contenido a una frase impactante.
+
+Por eso, el testimonio se desarrolla en distintos momentos. Cada fragmento tiene su propio espacio y ritmo, de modo que las palabras puedan leerse y que sus cambios de significado no queden comprimidos en una única pantalla.
+
+La experiencia se detiene en la voz de esa persona. Por un momento, Tim deja de ser el protagonista directo y aparece a través de lo que su música significó para alguien más.
+
+El cierre retoma una idea expresada en el propio testimonio:
+
+**Avicii is no longer with us. He is within us.**
+
+Una imagen de Tim sonriendo ocupa entonces la pantalla.
+
+No es una conclusión sobre lo que sienten todos sus seguidores. Es la perspectiva de una persona, compartida con la comunidad, que permite comprender de forma concreta una de las maneras en que su legado puede permanecer.
+
+*Recursos visuales: fragmentos del comentario original, composición tipográfica secuencial y retrato de Tim.*
+
+[Consultar las evidencias de la comunidad →]
+
+---
+
+## 05. The Last Show
+
+Hay recuerdos que pertenecen a una persona y otros que se construyen entre muchas.
+
+Después de acercarnos a la experiencia individual de quien encontró significado en una canción, quería recuperar otra dimensión del legado de Tim: los momentos que compartió directamente con su público.
+
+El 28 de agosto de 2016, Avicii realizó su última actuación en directo en Ushuaïa Ibiza, cerrando una etapa de su carrera dedicada a las giras.
+
+Para algunas de las personas presentes, aquella noche quedó registrada en fotografías, videos y recuerdos que todavía comparten con la comunidad.
+
+En lugar de presentar el acontecimiento únicamente como un episodio de su biografía, decidí dar espacio a esas memorias.
+
+La sección destaca primero a Tim y después abre paso a una galería de contenido compartido por personas que estuvieron allí. El visitante deja de contemplar exclusivamente material sobre el artista y encuentra también las huellas de quienes vivieron aquel momento.
+
+La galería convierte el cierre de una etapa profesional en un recuerdo colectivo. Cada fotografía y cada fragmento audiovisual representan una perspectiva particular de una experiencia compartida.
+
+Al final, la fecha y el lugar sitúan nuevamente la historia:
+
+**August 28, 2016**  
+*Ushuaïa Ibiza · Final Live Performance*
+
+*“I couldn’t have asked for a better last show.”*
+
+**The last show.**
+
+La sección no pretende reconstruir cada detalle de aquella noche. Busca reconocer el vínculo que puede existir entre un artista y las personas que compartieron una parte de su historia.
+
+*Recursos visuales: retrato de Avicii, galería de fotografías y videos de la comunidad, fecha y cierre tipográfico.*
+
+[Explorar la investigación de la comunidad →]
+
+---
+
+## 06. What Inspires
+
+La historia podría terminar aquí, con el recuerdo de una última actuación y las imágenes de quienes estuvieron presentes.
+
+Sin embargo, mientras exploraba el contenido de la comunidad, encontré otra dimensión que merecía formar parte del cierre: las personas que crean algo inspiradas por Avicii.
+
+No se trata solamente de recordar sus canciones o volver a mirar sus actuaciones. También hay quienes hacen ilustraciones, videos, proyectos creativos y homenajes propios a partir de lo que su música representa para ellos.
+
+Esa idea cambió el sentido que quería darle al final de TIM.
+
+Si el legado de un creador también puede encontrarse en lo que inspira en otras personas, la experiencia no tenía que terminar mirando exclusivamente hacia el pasado.
+
+Podía terminar abriendo una posibilidad.
+
+La sección comienza con una frase:
+
+**It begins again in the hands, hearts, and minds of others.**
+
+A partir de ella aparecen distintas ideas que expresan esa continuidad: melodías que cruzan fronteras, el valor de crear con honestidad, el deseo de una industria musical más humana, las comunidades que permanecen unidas y las nuevas voces que encuentran su propio camino.
+
+No como una lista de resultados que el proyecto pueda atribuirse, sino como distintas formas de interpretar aquello que puede seguir naciendo de una influencia creativa.
+
+El recorrido culmina con una reflexión:
+
+**The greatest tribute to a creator is not to build them a static monument to look back at, but to light a blank canvas for whatever you choose to create today.**
+
+La imagen final de Avicii acompaña su nombre y sus años de vida:
+
+**TIM BERGLING**  
+*1989 — 2018*
+
+La experiencia termina, pero la idea con la que termina es una invitación a continuar creando.
+
+*Recursos visuales: contenido creativo de la comunidad, composición tipográfica, imagen final de Avicii y créditos.*
+
+---
+
+## 07. Créditos y fuentes
+
+TIM es un proyecto personal y conmemorativo inspirado en Tim Bergling y su legado.
+
+La experiencia utiliza material audiovisual, imágenes, testimonios y recursos procedentes de distintas fuentes, entre ellas contenidos oficiales de Avicii y publicaciones de su comunidad. Las fuentes se identifican y enlazan en los créditos correspondientes.
+
+El proyecto no reclama la propiedad de materiales de terceros ni implica afiliación, patrocinio o respaldo oficial por parte de los titulares de derechos.
+
+**Creado por J Jairo C. Ordoñez.**
+
+[Explorar el proyecto →](https://tim-azure.vercel.app/)
+
+[Visitar el portafolio →](https://j-jairo-c-ordonez.vercel.app/)
+

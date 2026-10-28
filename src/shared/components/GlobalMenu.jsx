@@ -68,7 +68,7 @@ export default function GlobalMenu() {
     });
   });
 
-  if (pathname?.startsWith("/projects/koda")) {
+  if (pathname?.startsWith("/projects/koda") || pathname?.startsWith("/projects/tim")) {
     return null;
   }
 
