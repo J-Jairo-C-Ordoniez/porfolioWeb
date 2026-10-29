@@ -13,6 +13,7 @@ const navigationSections = [
     items: [
       ["Introducción", "#tim-hero"],
       ["Momentos", "#highlights"],
+      ["Escuchar", "#listen"],
       ["Investigación", "#research-spaces"],
       ["Hallazgos clave", "#findings"],
     ],
