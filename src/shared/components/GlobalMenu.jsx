@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowUpRight, X, Menu as MenuIcon } from "lucide-react";
@@ -29,43 +29,70 @@ export default function GlobalMenu() {
   const menuRef = useRef(null);
   const overlayRef = useRef(null);
   const pathname = usePathname();
+  const router = useRouter();
   const { contextSafe } = useGSAP({ scope: menuRef });
 
   useEffect(() => {
-    if (isOpen) {
-      closeMenu();
+    router.prefetch("/projects/koda");
+    router.prefetch("/projects/tim");
+  }, [router]);
+
+  const closeMenu = contextSafe((isRouteTransition = false) => {
+    if (isRouteTransition) {
+      gsap.to(".menu-item", {
+        opacity: 0,
+        y: 15,
+        duration: 0.15,
+        ease: "power2.in",
+      });
+      gsap.to(overlayRef.current, {
+        clipPath: "inset(0% 0% 100% 0%)",
+        duration: 0.25,
+        ease: "power3.inOut",
+        onComplete: () => setIsOpen(false),
+      });
+      return;
     }
-  }, [pathname]);
 
-
-  const openMenu = contextSafe(() => {
-    setIsOpen(true);
-    gsap.to(overlayRef.current, {
-      clipPath: "inset(0% 0% 0% 0%)",
-      duration: 0.8,
-      ease: "power4.inOut",
-    });
-    gsap.fromTo(
-      ".menu-item",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, stagger: 0.04, ease: "power3.out", delay: 0.3 }
-    );
-  });
-
-  const closeMenu = contextSafe(() => {
     gsap.to(".menu-item", {
-      y: 30,
+      y: 20,
       opacity: 0,
-      duration: 0.4,
+      duration: 0.25,
       ease: "power2.in",
     });
     gsap.to(overlayRef.current, {
       clipPath: "inset(0% 0% 100% 0%)",
-      duration: 0.8,
-      ease: "power4.inOut",
-      delay: 0.2,
+      duration: 0.4,
+      ease: "power3.inOut",
       onComplete: () => setIsOpen(false),
     });
+  });
+
+  const handleRouteClick = useCallback(() => {
+    closeMenu(true);
+  }, [closeMenu]);
+
+  useEffect(() => {
+    if (isOpen) {
+      closeMenu(true);
+    }
+  }, [pathname]);
+
+  const openMenu = contextSafe(() => {
+    setIsOpen(true);
+    router.prefetch("/projects/koda");
+    router.prefetch("/projects/tim");
+
+    gsap.to(overlayRef.current, {
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 0.5,
+      ease: "power3.out",
+    });
+    gsap.fromTo(
+      ".menu-item",
+      { y: 35, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.35, stagger: 0.03, ease: "power2.out", delay: 0.15 }
+    );
   });
 
   if (pathname?.startsWith("/projects/koda") || pathname?.startsWith("/projects/tim")) {
@@ -92,7 +119,7 @@ export default function GlobalMenu() {
       >
         <header className="absolute top-8 right-8 flex items-center gap-6">
           <button
-            onClick={closeMenu}
+            onClick={() => closeMenu(false)}
             className="w-14 h-14 rounded-full border border-primary cursor-pointer flex items-center justify-center hover:bg-primary hover:text-background transition-colors duration-300"
             aria-label="Cerrar Menú"
           >
@@ -129,7 +156,8 @@ export default function GlobalMenu() {
                   >
                     <Link
                       href={link.href}
-                      onClick={closeMenu}
+                      prefetch={true}
+                      onClick={() => closeMenu(false)}
                       className="menu-item group flex items-center justify-between py-5 hover:pl-4 duration-300 text-primary hover:text-primary/80 transition-all"
                     >
                       <span className="text-2xl md:text-3xl font-medium">{link.label}</span>
@@ -152,7 +180,9 @@ export default function GlobalMenu() {
                   >
                     <Link
                       href={link.href}
-                      onClick={closeMenu}
+                      prefetch={true}
+                      onMouseEnter={() => router.prefetch(link.href)}
+                      onClick={() => handleRouteClick(link.href)}
                       className="menu-item group flex items-center justify-between py-5 hover:pl-4 duration-300 text-primary hover:text-primary/80 transition-all"
                     >
                       <span className="text-2xl md:text-3xl font-medium">{link.label}</span>

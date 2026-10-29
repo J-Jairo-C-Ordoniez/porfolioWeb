@@ -90,6 +90,8 @@ export default function Decide() {
             { opacity: 1, x: 0, ease: "none", duration: 0.01, stagger: 0.018 }, 5 * S + S * 0.12)
       }
     }, 100);
+
+    return () => clearInterval(initInterval);
   }, { scope: containerRef });
 
   return (

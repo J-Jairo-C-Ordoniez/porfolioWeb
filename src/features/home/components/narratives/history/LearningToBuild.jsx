@@ -76,6 +76,7 @@ export default function LearningToBuild() {
       }
     }, 50);
 
+    return () => clearInterval(initInterval);
   }, { scope: panelRef });
 
   return (

@@ -99,23 +99,22 @@ export default function KodaMenu() {
     setIsOpen(true);
     gsap.to(overlayRef.current, {
       clipPath: "inset(0% 0% 0% 0%)",
-      duration: 0.8,
-      ease: "power4.inOut",
+      duration: 0.5,
+      ease: "power3.out",
     });
     gsap.fromTo(
       ".koda-menu-item",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, stagger: 0.04, ease: "power3.out", delay: 0.3 }
+      { y: 35, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.35, stagger: 0.03, ease: "power2.out", delay: 0.15 }
     );
   });
 
   const closeMenu = contextSafe(() => {
-    gsap.to(".koda-menu-item", { y: 30, opacity: 0, duration: 0.4, ease: "power2.in" });
+    gsap.to(".koda-menu-item", { y: 20, opacity: 0, duration: 0.25, ease: "power2.in" });
     gsap.to(overlayRef.current, {
       clipPath: "inset(0% 0% 100% 0%)",
-      duration: 0.8,
-      ease: "power4.inOut",
-      delay: 0.2,
+      duration: 0.35,
+      ease: "power3.inOut",
       onComplete: () => setIsOpen(false),
     });
   });

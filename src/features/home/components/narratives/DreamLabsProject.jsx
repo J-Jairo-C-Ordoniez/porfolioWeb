@@ -86,6 +86,8 @@ export default function DreamLabsProject() {
         ScrollTrigger.refresh();
       }
     }, 100);
+
+    return () => clearInterval(initInterval);
   }, { scope: containerRef });
 
   return (

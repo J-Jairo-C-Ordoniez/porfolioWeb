@@ -58,14 +58,14 @@ export default function Hero() {
         )
         .fromTo(
           ".tim-hero-photo-mask",
-          { clipPath: "inset(0 0% 100% 0%)" },
-          { clipPath: "inset(0 0% 0% 0%)", duration: 1.25, ease: "power4.inOut" },
-          "-=0.2"
+          { clipPath: "inset(0 5% 100% 5%)" },
+          { clipPath: "inset(0 0% 0% 0%)", duration: 1.2, ease: "power4.inOut" },
+          "-=0.05"
         )
         .fromTo(
           ".tim-hero-photo",
-          { scale: 1.08 },
-          { scale: 1, duration: 1.4, ease: "power3.out" },
+          { scale: 1.1 },
+          { scale: 1, duration: 1.35, ease: "power3.out" },
           "<"
         );
 
@@ -78,49 +78,51 @@ export default function Hero() {
     <section
       ref={containerRef}
       id="tim-hero"
-      className="relative w-full bg-background text-primary"
+      className="bg-primary pb-20 pt-25 text-background lg:pt-40"
     >
-      <div className="mx-auto max-w-5xl px-6 sm:px-8 md:px-12 text-center pt-70 pb-30">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-light tracking-tight leading-relaxed md:leading-relaxed text-primary/80">
-          {wordsList.map((item, wordIndex) => {
-            const letters = item.text.split("").map((letter, letterIndex) => (
-              <span
-                key={`${item.text}-${wordIndex}-${letterIndex}`}
-                className="tim-hero-letter inline-block opacity-0 will-change-transform"
-              >
-                {letter}
-              </span>
-            ));
+      <div className="container mx-auto max-w-7xl px-6 md:px-8 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-5xl text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-light tracking-tight leading-relaxed md:leading-relaxed text-background/80">
+            {wordsList.map((item, wordIndex) => {
+              const letters = item.text.split("").map((letter, letterIndex) => (
+                <span
+                  key={`${item.text}-${wordIndex}-${letterIndex}`}
+                  className="tim-hero-letter inline-block opacity-0 will-change-transform"
+                >
+                  {letter}
+                </span>
+              ));
 
-            return item.isStrong ? (
-              <strong
-                key={`${item.text}-${wordIndex}`}
-                className="mr-[0.3em] inline-block font-bold text-primary"
-              >
-                {letters}
-              </strong>
-            ) : (
-              <span key={`${item.text}-${wordIndex}`} className="mr-[0.3em] inline-block">
-                {letters}
-              </span>
-            );
-          })}
-        </h1>
-      </div>
-
-      <figure className="mt-16 sm:mt-20 md:mt-24 lg:mt-28 w-full">
-        <div className="tim-hero-photo-mask w-full overflow-hidden [clip-path:inset(0_0%_100%_0%)] motion-reduce:[clip-path:inset(0_0_0_0)]">
-          <Image
-            className="tim-hero-photo h-auto w-full object-cover select-none motion-reduce:scale-100"
-            src="/tim/aviciiHero.png"
-            alt="Tim Bergling (Avicii)"
-            width={1672}
-            height={941}
-            sizes="100vw"
-            priority
-          />
+              return item.isStrong ? (
+                <strong
+                  key={`${item.text}-${wordIndex}`}
+                  className="mr-[0.3em] inline-block font-bold text-background"
+                >
+                  {letters}
+                </strong>
+              ) : (
+                <span key={`${item.text}-${wordIndex}`} className="mr-[0.3em] inline-block">
+                  {letters}
+                </span>
+              );
+            })}
+          </h1>
         </div>
-      </figure>
+
+        <figure className="mt-10 md:mt-14">
+          <div className="tim-hero-photo-mask overflow-hidden rounded-2xl bg-background/5 [clip-path:inset(0_5%_100%_5%)] motion-reduce:[clip-path:inset(0_0_0_0)] md:rounded-[2rem]">
+            <Image
+              className="tim-hero-photo h-auto w-full object-cover motion-reduce:scale-100"
+              src="/tim/aviciiHero.png"
+              alt="Tim Bergling (Avicii)"
+              width={1672}
+              height={941}
+              sizes="(max-width: 768px) 100vw, (max-width: 1440px) 90vw, 1408px"
+              priority
+            />
+          </div>
+        </figure>
+      </div>
     </section>
   );
 }

@@ -536,203 +536,252 @@ Eso es lo que estoy construyendo.
 [Explorar las tecnologías →](/projects/koda/development/technologies/)
 
 
-## TIM — Historia principal
+# TIM
+## Escuchar antes de diseñar
+**Investigación cualitativa · Empatía · Observación digital**
 
-## 01. El origen
+Antes de definir cómo sería TIM, necesitaba comprender qué lugar ocupaba Avicii en las conversaciones de su comunidad.
 
-Hay artistas cuya música termina formando parte de la vida de otras personas.
+No quería construir una experiencia únicamente desde mi propia relación con su música ni asumir que su legado significaba lo mismo para todas las personas. Quería observar cómo los fans lo recordaban, qué compartían y qué aspectos de su historia seguían presentes en sus interacciones.
 
-Una canción puede acompañar un momento, traer de vuelta un recuerdo o ayudar a alguien a atravesar una etapa difícil. Con el tiempo, aquello que comenzó como una obra deja de pertenecer únicamente a quien la creó y empieza a vivir también en quienes la escuchan.
+Para ello, realicé una exploración cualitativa de comunidades y publicaciones digitales relacionadas con Avicii. El objetivo no era medir la opinión de toda su audiencia, sino identificar experiencias, expresiones y temas que pudieran ayudarme a formular una dirección para el proyecto.
 
-La música de Avicii representa esa conexión para muchas personas de su comunidad.
+### Una comunidad, distintos espacios
 
-Pero había algo que quería explorar más allá de sus canciones, sus actuaciones y su reconocimiento como artista: la persona que existía detrás de ese nombre.
+La investigación se desarrolló mediante observación digital no participante en cuatro espacios: Reddit, YouTube, Discord y la web oficial de Avicii.
 
-Así comenzó TIM, un proyecto personal inspirado en Tim Bergling y en el legado que dejó.
+Cada uno permitió observar manifestaciones diferentes de la relación entre el artista, su obra y las personas que mantienen vivo su recuerdo.
 
-No quería construir únicamente otro homenaje a su música. Quería explorar una manera de acercarme a su historia, a su proceso creativo y a las conexiones que su obra había generado con otras personas.
+### Reddit — Recordar, compartir y recrear
 
-Para encontrar esa dirección, necesitaba mirar más allá de mi propia interpretación y escuchar lo que la comunidad compartía sobre él.
+En las publicaciones observadas aparecían recuerdos de actuaciones, referencias a Ushuaïa, listas de reproducción de sets y homenajes dedicados a Avicii.
 
-*Recursos visuales: una apertura cinematográfica, imágenes de Tim y una transición gradual hacia el nombre TIM.*
+También encontré proyectos creados por fans, como propuestas relacionadas con videojuegos que incorporaban canciones como *Levels* y *Sky Full of Stars*, además de videos dedicados a presentar o recordar al artista.
 
-[Explorar las evidencias →]
+Estas publicaciones mostraban distintas maneras de mantener presente su música: compartir recuerdos, recuperar experiencias musicales y crear contenido inspirado en su obra.
 
----
+### YouTube — La música en la experiencia personal
 
-## 02. Before Avicii, there was Tim
+Entre los comentarios observados encontré testimonios que relacionaban canciones de Avicii con momentos concretos de la vida de quienes las escuchaban.
 
-Avicii es el nombre por el que millones de personas llegaron a conocer su música.
+Uno de ellos relataba cómo *Wake Me Up* había acompañado a una persona durante un periodo de depresión. También observé comentarios sobre la continuidad de la escucha de *Stories* y conversaciones relacionadas con material de estudio y canciones como *Your Lies* y *How Many Lovers*.
 
-Tim Bergling era la persona detrás de ese nombre.
+Estas interacciones ofrecían dos líneas de observación distintas: el significado personal que puede adquirir una canción y el interés que algunas personas expresan por el proceso creativo y el material musical menos conocido.
 
-Quería que la experiencia comenzara desde esa diferencia, no para separar al artista de su obra, sino para recordar que ambas dimensiones formaban parte de una misma historia.
+### Discord — El recuerdo en la vida cotidiana
 
-En un principio, consideré acercarme a su vida desde la infancia. Sin embargo, esa entrada no me parecía la más adecuada para comenzar una experiencia dirigida a personas que probablemente llegaran con referencias muy distintas sobre él.
+En Discord encontré expresiones más espontáneas de la relación de la comunidad con Tim: fanarts, fotografías, mensajes como «I MISS TIM» y conversaciones que combinaban humor, cariño y nostalgia.
 
-En lugar de empezar por un episodio biográfico, decidí partir de una faceta reconocible de su historia: la presión que vivió durante sus años de giras y la dificultad de detenerse.
+A diferencia de una publicación dedicada específicamente a recordar un acontecimiento, estas interacciones aparecían dentro de la dinámica cotidiana de la comunidad.
 
-El documental *Avicii: True Stories* ofrecía un material especialmente significativo para hacerlo. Sus propias palabras permitían introducir una dimensión más humana sin tener que explicar de antemano quién era Tim ni intentar resumir su vida en unos cuantos datos.
+Esto permitió observar que el recuerdo de Avicii también podía formar parte de conversaciones informales, sin necesidad de convertirse siempre en un homenaje elaborado.
 
-La experiencia comienza entonces con una idea sencilla:
+### Web oficial — Recuerdos y material de archivo
 
-**Before Avicii, there was Tim.**
+La web oficial reunía fotografías, recuerdos de actuaciones y material audiovisual relacionado con la trayectoria de Avicii, incluido contenido de su proceso creativo.
 
-A continuación, el texto da paso a un fragmento del documental. Sus palabras, las pausas y el ritmo de los subtítulos permiten que sea él quien introduzca la historia.
+Este material aportaba otra perspectiva: además de las interpretaciones y recuerdos compartidos por los fans, existían registros visuales y audiovisuales que permitían acercarse a diferentes momentos de su carrera.
 
-No necesitaba anticipar todas las conclusiones ni explicar lo que el visitante debía sentir. Bastaba con abrir una perspectiva diferente y dejar que el propio material sostuviera ese momento.
+### De las observaciones a los hallazgos
 
-*Recursos visuales: título de apertura, fragmento de Avicii: True Stories, subtítulos sincronizados y composición tipográfica.*
+Las evidencias recopiladas no describían a una comunidad homogénea. Sin embargo, permitieron identificar varios temas recurrentes en el material observado.
 
-[Explorar las decisiones narrativas y visuales →]
+**La música como experiencia personal.**
 
----
+Algunos testimonios vinculaban canciones concretas con etapas difíciles, recuerdos y experiencias individuales. La música aparecía asociada no solo a su escucha, sino también al significado que había adquirido en determinadas circunstancias.
 
-## 03. Beyond the Stage
+**El interés por la persona detrás del artista.**
 
-Pero Tim no era únicamente la persona que aparecía en los escenarios ni la que hablaba sobre el agotamiento de las giras.
+Las conversaciones sobre el estudio, el proceso creativo y el material musical menos conocido señalaban una dimensión de la historia de Tim que iba más allá de sus actuaciones y canciones publicadas.
 
-También estaba la persona que experimentaba, componía, escuchaba, cambiaba de opinión y buscaba nuevas posibilidades dentro de la música.
+**Una comunidad que también crea.**
 
-Quería que la experiencia pudiera mostrar ese otro lado sin convertirlo en una simple sucesión de imágenes de archivo.
+Los fanarts, videos, proyectos inspirados en sus canciones y recopilaciones de sets mostraban que algunos miembros de la comunidad no se limitaban a consumir contenido: también producían y compartían sus propias formas de expresión.
 
-Para hacerlo, elegí material relacionado con la creación de *For a Better Day*, en el que Tim trabaja en el estudio junto a Alex.
+**El recuerdo como experiencia compartida.**
 
-El cambio comienza con una frase que conecta la sección anterior con la siguiente:
+Las referencias a conciertos, Ushuaïa, fotografías y mensajes dedicados a Tim mostraban distintas maneras de mantener presente su legado, desde los recuerdos de acontecimientos concretos hasta expresiones espontáneas de afecto.
 
-*Maybe it's time for a better day.*
+Estos hallazgos fueron interpretaciones preliminares de las observaciones, no conclusiones representativas de todos los fans de Avicii.
 
-La frase funciona como una transición hacia un entorno diferente. Dejamos atrás el contexto de las giras y entramos en el espacio donde las ideas musicales toman forma.
+## 03. Lo que estas observaciones cambiaron
 
-Aquí, el desplazamiento horizontal acompaña ese cambio de dirección. Los fragmentos audiovisuales, las frases y las imágenes del proceso creativo construyen una secuencia en la que podemos observar a Tim escuchando, probando y reaccionando a lo que está creando.
+La investigación amplió el punto de partida del proyecto.
 
-Los comentarios sobre una guitarra, una línea de la canción o una idea que comienza a funcionar muestran algo que una fotografía promocional difícilmente podría transmitir de la misma manera: el proceso de descubrir una pieza musical mientras se construye.
+En lugar de centrar TIM exclusivamente en la música de Avicii o en una sucesión de acontecimientos biográficos, encontré motivos para explorar tres dimensiones relacionadas: la persona detrás del nombre artístico, su proceso creativo y las conexiones que su obra había generado en otras personas.
 
-La intención no era presentar el estudio como una respuesta a todo lo que habíamos visto antes, sino ampliar la perspectiva. La historia de Tim también estaba hecha de curiosidad, experimentación y trabajo creativo.
+Esto no significaba que todas las personas de la comunidad buscaran la misma experiencia, ni que los testimonios observados representaran una necesidad universal.
 
-La sección termina con imágenes de la creación de *Wake Me Up*. Esa transición prepara el siguiente momento: salir del espacio del creador para acercarnos a la experiencia de quienes escuchan su música.
+Significaba que existían perspectivas concretas que merecía la pena explorar mediante el diseño.
 
-*Recursos visuales: material de Stories on Stories — The Making of For a Better Day, tipografía cinética, desplazamiento horizontal y fragmento de The Making of Wake Me Up.*
+A partir de ellas, TIM comenzó a tomar forma como una experiencia narrativa que conectara la historia personal de Tim, su trabajo creativo y las experiencias compartidas por su comunidad.
 
-[Explorar el desarrollo de la experiencia →]
+**La decisión no surgió de asumir qué debía significar su legado para los demás, sino de encontrar distintas maneras en las que ese legado ya estaba presente.**
 
----
 
-## 04. A Listener's Reflection
 
-Hasta aquí, la historia se había construido alrededor de Tim: su identidad, sus experiencias y su manera de crear.
 
-Pero su legado también existe fuera de su propia historia.
 
-En los comentarios que las personas comparten sobre su música aparecen recuerdos, experiencias personales y momentos en los que una canción adquirió un significado que iba mucho más allá de escucharla.
 
-Uno de esos testimonios llamó especialmente mi atención.
 
-Una persona relataba cómo *Wake Me Up* la había acompañado durante uno de los periodos más difíciles de su vida, marcado por una profunda depresión. En su mensaje también expresaba el dolor que sintió al conocer la muerte de Tim y cerraba con una reflexión sobre cómo Avicii permanece en quienes lo recuerdan.
 
-Decidí incorporar ese testimonio real, publicado en YouTube, porque permitía mostrar la conexión entre una obra musical y la experiencia personal de alguien que la escucha.
+## # TIM — De un bug de animación a una decisión de arquitectura
 
-No quería tratarlo como una cita decorativa ni reducir su contenido a una frase impactante.
+**Caso de estudio · Depuración, accesibilidad y diseño de experiencias narrativas**
 
-Por eso, el testimonio se desarrolla en distintos momentos. Cada fragmento tiene su propio espacio y ritmo, de modo que las palabras puedan leerse y que sus cambios de significado no queden comprimidos en una única pantalla.
+Una experiencia narrativa basada en scroll funcionaba correctamente durante el desarrollo, pero algunos usuarios comenzaron a reportar un problema visual: varios bloques de texto aparecían superpuestos. La investigación permitió reproducir el error, identificar su causa y plantear una arquitectura en la que la integridad del contenido no dependa de las animaciones.
 
-La experiencia se detiene en la voz de esa persona. Por un momento, Tim deja de ser el protagonista directo y aparece a través de lo que su música significó para alguien más.
+## 01. El problema: un error que no conseguíamos reproducir
 
-El cierre retoma una idea expresada en el propio testimonio:
+El primer reporte llegó de un usuario que experimentó una superposición de textos durante la experiencia de TIM. El problema no aparecía en mis pruebas locales, ni al comprobar el comportamiento habitual en mi ordenador y teléfono.
 
-**Avicii is no longer with us. He is within us.**
+Inicialmente, no tenía evidencia suficiente para determinar si se trataba de un problema de compatibilidad entre navegadores, una diferencia en el renderizado o un error en la lógica de las animaciones.
 
-Una imagen de Tim sonriendo ocupa entonces la pantalla.
+La situación cambió cuando otro usuario confirmó que también había experimentado el problema. Ya no teníamos un único caso, aunque todavía necesitábamos comprobar si ambos reportes compartían la misma causa.
 
-No es una conclusión sobre lo que sienten todos sus seguidores. Es la perspectiva de una persona, compartida con la comunidad, que permite comprender de forma concreta una de las maneras en que su legado puede permanecer.
+### Mi primera hipótesis
 
-*Recursos visuales: fragmentos del comentario original, composición tipográfica secuencial y retrato de Tim.*
+Al observar que varios de los usuarios afectados parecían utilizar dispositivos Apple, consideré la posibilidad de que existiera una diferencia de comportamiento entre navegadores o sistemas operativos.
 
-[Consultar las evidencias de la comunidad →]
+Esta hipótesis era razonable como punto de partida, pero no podía darse por cierta sin reproducir el error en un entorno diferente.
 
----
+En lugar de modificar el código inmediatamente, decidí investigar el comportamiento por mi cuenta y buscar una manera de reproducirlo en condiciones controladas.
 
-## 05. The Last Show
+## 02. La investigación: reproducir antes de corregir
 
-Hay recuerdos que pertenecen a una persona y otros que se construyen entre muchas.
+Utilicé una simulación del navegador para probar la experiencia con diferentes condiciones de ejecución. Durante la investigación también revisé el código responsable de controlar la visibilidad y las transiciones de las escenas.
 
-Después de acercarnos a la experiencia individual de quien encontró significado en una canción, quería recuperar otra dimensión del legado de Tim: los momentos que compartió directamente con su público.
+El hallazgo decisivo fue una preferencia de accesibilidad del sistema operativo: `prefers-reduced-motion`.
 
-El 28 de agosto de 2016, Avicii realizó su última actuación en directo en Ushuaïa Ibiza, cerrando una etapa de su carrera dedicada a las giras.
+```typescript
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+```
 
-Para algunas de las personas presentes, aquella noche quedó registrada en fotografías, videos y recuerdos que todavía comparten con la comunidad.
+Esta consulta permite detectar si el usuario ha solicitado reducir el movimiento. En el código original, esa preferencia activaba una rama que mostraba simultáneamente varios bloques de texto y evitaba la creación de la secuencia de animación de GSAP.
 
-En lugar de presentar el acontecimiento únicamente como un episodio de su biografía, decidí dar espacio a esas memorias.
+### La prueba decisiva
 
-La sección destaca primero a Tim y después abre paso a una galería de contenido compartido por personas que estuvieron allí. El visitante deja de contemplar exclusivamente material sobre el artista y encuentra también las huellas de quienes vivieron aquel momento.
+Activé la emulación de movimiento reducido en Chrome DevTools y recorrí la sección afectada.
 
-La galería convierte el cierre de una etapa profesional en un recuerdo colectivo. Cada fotografía y cada fragmento audiovisual representan una perspectiva particular de una experiencia compartida.
+**El problema apareció.**
 
-Al final, la fecha y el lugar sitúan nuevamente la historia:
+Los textos se amontonaban en el mismo espacio, reproduciendo el comportamiento reportado por los usuarios. Después retiré temporalmente el condicional y repetí la prueba con la preferencia activada. El solapamiento dejó de producirse.
 
-**August 28, 2016**  
-*Ushuaïa Ibiza · Final Live Performance*
+Con esto confirmé que la condición de movimiento reducido desencadenaba el error en la implementación existente. La hipótesis inicial sobre una incompatibilidad específica de Safari dejó de ser la explicación principal.
 
-*“I couldn’t have asked for a better last show.”*
+## 03. La causa raíz: el contenido dependía de la animación
 
-**The last show.**
+La investigación reveló un problema más profundo que el condicional de accesibilidad.
 
-La sección no pretende reconstruir cada detalle de aquella noche. Busca reconocer el vínculo que puede existir entre un artista y las personas que compartieron una parte de su historia.
+En escenas como `TestimonialQuoteScene.tsx`, los distintos bloques de texto utilizaban una estructura similar a esta:
 
-*Recursos visuales: retrato de Avicii, galería de fotografías y videos de la comunidad, fecha y cierre tipográfico.*
+```css
+absolute inset-0 flex items-center justify-center
+```
 
-[Explorar la investigación de la comunidad →]
+Todos los bloques compartían las mismas coordenadas dentro de un contenedor que ocupaba un único viewport.
 
----
+Esta composición funcionaba porque GSAP y ScrollTrigger actuaban como directores de la secuencia:
 
-## 06. What Inspires
+1. GSAP ocultaba los bloques al inicializar la escena.
+2. ScrollTrigger fijaba temporalmente el viewport durante el recorrido.
+3. El progreso del scroll controlaba la aparición y desaparición de cada texto.
+4. La secuencia permitía leer las frases por separado, aunque estuvieran superpuestas físicamente en el DOM.
 
-La historia podría terminar aquí, con el recuerdo de una última actuación y las imágenes de quienes estuvieron presentes.
+El problema surgía cuando se activaba la alternativa de movimiento reducido. El código hacía visibles todos los bloques y abandonaba la secuencia que normalmente los alternaba.
 
-Sin embargo, mientras exploraba el contenido de la comunidad, encontré otra dimensión que merecía formar parte del cierre: las personas que crean algo inspiradas por Avicii.
+El navegador estaba mostrando correctamente los elementos según los estilos y estados que había recibido. El fallo estaba en la relación entre la estructura del contenido y la lógica de presentación.
 
-No se trata solamente de recordar sus canciones o volver a mirar sus actuaciones. También hay quienes hacen ilustraciones, videos, proyectos creativos y homenajes propios a partir de lo que su música representa para ellos.
+**La animación no solo controlaba cómo se mostraba el contenido: era también lo que impedía que el contenido se superpusiera.**
 
-Esa idea cambió el sentido que quería darle al final de TIM.
+Esta dependencia convirtió una condición de accesibilidad en un fallo de legibilidad.
 
-Si el legado de un creador también puede encontrarse en lo que inspira en otras personas, la experiencia no tenía que terminar mirando exclusivamente hacia el pasado.
+## 04. La mitigación inmediata
 
-Podía terminar abriendo una posibilidad.
+Como primera medida, decidí retirar temporalmente el condicional que provocaba el comportamiento defectuoso.
 
-La sección comienza con una frase:
+Esta decisión permitió recuperar la presentación correcta y comprobar que la preferencia de movimiento reducido estaba relacionada con el problema.
 
-**It begins again in the hands, hearts, and minds of others.**
+Sin embargo, no consideré esta medida una solución definitiva. Eliminar el condicional evita la rama defectuosa, pero no resuelve la dependencia arquitectónica que la hizo posible. Tampoco constituye, por sí solo, una implementación adecuada de la preferencia de movimiento reducido.
 
-A partir de ella aparecen distintas ideas que expresan esa continuidad: melodías que cruzan fronteras, el valor de crear con honestidad, el deseo de una industria musical más humana, las comunidades que permanecen unidas y las nuevas voces que encuentran su propio camino.
+La solución inmediata permitió estabilizar la experiencia mientras preparaba una propuesta más completa.
 
-No como una lista de resultados que el proyecto pueda atribuirse, sino como distintas formas de interpretar aquello que puede seguir naciendo de una influencia creativa.
+## 05. La solución de fondo: separar contenido y animación
 
-El recorrido culmina con una reflexión:
+Mi propuesta es cambiar la relación entre el contenido y el sistema de animación.
 
-**The greatest tribute to a creator is not to build them a static monument to look back at, but to light a blank canvas for whatever you choose to create today.**
+En lugar de colocar todos los bloques de texto en un único viewport y depender de GSAP para separarlos visualmente, cada bloque narrativo debe disponer de su propio espacio dentro del flujo del documento.
 
-La imagen final de Avicii acompaña su nombre y sus años de vida:
+La animación pasa a ser una capa de presentación que mejora la experiencia, en lugar de ser el mecanismo indispensable para conservar la estructura.
 
-**TIM BERGLING**  
-*1989 — 2018*
+### Arquitectura propuesta
 
-La experiencia termina, pero la idea con la que termina es una invitación a continuar creando.
+**01. Escena inicial**
 
-*Recursos visuales: contenido creativo de la comunidad, composición tipográfica, imagen final de Avicii y créditos.*
+El contenido ocupa su propio espacio y conserva una estructura legible sin necesidad de animaciones.
 
----
+**02. Escena narrativa**
 
-## 07. Créditos y fuentes
+Cada bloque mantiene su posición en el documento. Si una escena contiene mucho texto, su altura puede adaptarse al contenido en lugar de forzar todo dentro de un viewport fijo.
 
-TIM es un proyecto personal y conmemorativo inspirado en Tim Bergling y su legado.
+**03. Escena final**
 
-La experiencia utiliza material audiovisual, imágenes, testimonios y recursos procedentes de distintas fuentes, entre ellas contenidos oficiales de Avicii y publicaciones de su comunidad. Las fuentes se identifican y enlazan en los créditos correspondientes.
+El orden narrativo se conserva mediante la estructura del documento. Las transiciones pueden modificar la presentación, pero no deben determinar si los textos son legibles o si se superponen.
 
-El proyecto no reclama la propiedad de materiales de terceros ni implica afiliación, patrocinio o respaldo oficial por parte de los titulares de derechos.
+### Dos modos de experiencia
 
-**Creado por J Jairo C. Ordoñez.**
+**Movimiento reducido activado**
 
-[Explorar el proyecto →](https://tim-azure.vercel.app/)
+Los contenidos se recorren en su orden natural mediante el scroll, sin depender de las transiciones animadas para hacerse visibles. La experiencia debe seguir siendo completa, comprensible y accesible.
 
-[Visitar el portafolio →](https://j-jairo-c-ordonez.vercel.app/)
+**Movimiento normal**
 
+GSAP puede añadir las transiciones, la sincronización con el scroll y los recursos narrativos que caracterizan a TIM, siempre que estas mejoras no comprometan la estructura base.
+
+La intención no es eliminar las animaciones, sino hacer que la experiencia siga funcionando cuando deban reducirse o desactivarse.
+
+## 06. Decisiones técnicas para la refactorización
+
+La propuesta requiere revisar cómo están construidas las escenas, no simplemente cambiar una clase CSS.
+
+- **Estructura del documento:** reducir el uso de `position: absolute` para los bloques de contenido que necesitan conservar su orden. Los elementos decorativos y las capas que realmente requieran superposición pueden seguir utilizando posicionamiento absoluto.
+
+- **Altura flexible:** emplear `min-height: 100svh` cuando una escena deba ocupar al menos una pantalla, permitiendo que crezca si el contenido lo necesita. No todas las escenas deben tener una altura fija.
+
+- **Secciones con mucho texto:** revisar especialmente la sección de scroll horizontal, donde varios bloques pueden terminar amontonados si su altura, sus posiciones o sus estados de animación no se adaptan al contenido. En pantallas pequeñas, la legibilidad debe prevalecer sobre la composición original.
+
+- **Estados de animación:** revisar `pin`, `scrub`, `opacity`, `visibility` y `transform`, además de la inicialización y limpieza de los timelines. Desactivar una animación no debe dejar contenido oculto, fuera del flujo o inaccesible.
+
+- **Movimiento reducido:** definir una alternativa de presentación coherente que respete la preferencia del usuario sin sacrificar la lectura ni la navegación.
+
+Esta refactorización todavía debe implementarse y validarse. La mitigación inmediata y la solución arquitectónica son dos etapas distintas del trabajo.
+
+## 07. Qué cambió a partir de esta investigación
+
+El error comenzó como un problema visual difícil de reproducir. La segunda confirmación aumentó la relevancia del reporte, pero fue la posibilidad de reproducirlo bajo una condición específica la que permitió identificar su causa.
+
+El proceso dejó tres aprendizajes principales:
+
+**La evidencia debe preceder a la corrección.** Una correlación aparente con dispositivos Apple no era suficiente para atribuir el problema al navegador.
+
+**La accesibilidad debe formar parte de la arquitectura.** Una preferencia del usuario no debería convertir una experiencia legible en una composición ilegible.
+
+**Las animaciones no deben sostener la estructura del contenido.** Una experiencia narrativa puede depender de ellas para transmitir intención, ritmo y emoción, pero el orden y la legibilidad deben mantenerse independientemente de esa capa.
+
+### Estado del caso
+
+- Causa desencadenante identificada y reproducida.
+- Mitigación temporal aplicada y comprobada.
+- Dependencia entre posicionamiento absoluto y secuencia animada identificada.
+- Refactorización propuesta para separar la estructura del contenido de su presentación.
+- Validación pendiente de la implementación definitiva, incluyendo movimiento reducido, pantallas pequeñas y escenas con mucho texto.
+
+**Conclusión**
+
+Este caso cambió mi forma de interpretar el problema. Al principio buscaba una incompatibilidad entre navegadores; al reproducir el error y examinar la estructura de las escenas, encontré una dependencia entre la animación y la legibilidad del contenido.
+
+La corrección inmediata permitió recuperar la experiencia. La investigación, sin embargo, apuntó a una mejora más importante: construir una estructura capaz de conservar su integridad incluso cuando las condiciones de presentación cambian.
+
+En TIM, el objetivo no es únicamente conseguir que una animación funcione. Es conseguir que la experiencia siga teniendo sentido para quien la recorre, independientemente de cómo necesite interactuar con ella.

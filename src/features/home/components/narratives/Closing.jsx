@@ -67,6 +67,8 @@ export default function Closing() {
         ScrollTrigger.refresh();
       }
     }, 100);
+
+    return () => clearInterval(initInterval);
   }, { scope: containerRef });
 
   return (
