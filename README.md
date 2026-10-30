@@ -620,9 +620,93 @@ A partir de ellas, TIM comenzó a tomar forma como una experiencia narrativa que
 
 
 
+## Definición
+## Encontrar el centro de la historia
+
+### 01. El hallazgo
+
+Al observar las distintas formas en que su comunidad se relacionaba con Avicii, encontré algo que debía tener presente al construir la experiencia.
+
+Su música, sus presentaciones y su identidad artística eran una parte fundamental de su legado. Sin embargo, centrar toda la narrativa únicamente en esos elementos podía dejar en segundo plano a Tim Bergling: la persona detrás del nombre que millones de personas conocían.
+
+No quería contar solamente la historia de un artista. Quería construir una experiencia que permitiera acercarse a Tim, reconocer su relación con la música y explorar las distintas formas en que su legado continúa presente.
+
+### 02. Comprender las relaciones
+
+Para organizar esta idea, comencé a observar los elementos que aparecían alrededor de su historia y cómo se relacionaban entre sí.
+
+Tim Bergling se convirtió en el punto central de la estructura. A su alrededor se conectaban su identidad artística como Avicii, su trabajo creativo, la música, las presentaciones y la comunidad que mantiene vivo su legado.
+
+No se trataba de establecer una jerarquía entre estos elementos ni de abordarlos todos con la misma profundidad. Se trataba de comprender cuáles ayudaban a construir una historia coherente y cuáles aportaban algo significativo a la experiencia.
+
+### 03. Seleccionar qué contar
+
+De esta síntesis surgieron cinco líneas narrativas que orientarían la construcción de TIM:
+
+- **Conocer a Tim:** acercarse a la persona detrás de Avicii.
+- **Más allá del escenario:** explorar su faceta creativa y su relación con la música.
+- **Una canción, una historia personal:** mostrar cómo una canción puede adquirir un significado propio para quien la escucha.
+- **Un mismo show, muchos recuerdos:** reconocer las experiencias compartidas alrededor de sus presentaciones.
+- **Lo que inspira:** explorar cómo su música y su legado continúan motivando nuevas expresiones creativas.
+
+Estas líneas no buscaban representar todas las experiencias de su comunidad. Eran una selección de temas que, a partir de lo observado, permitían construir una experiencia con distintos puntos de acercamiento a Tim y su legado.
+
+### 04. De la síntesis a la experiencia
+
+Con estas líneas narrativas definidas, la siguiente decisión fue encontrar una manera de conectarlas dentro de una misma experiencia.
+
+TIM comenzaría acercando al visitante a la persona detrás de Avicii, para después recorrer su faceta creativa, las experiencias personales que despierta su música, los recuerdos asociados a sus presentaciones y las expresiones que su legado continúa inspirando.
+
+La intención no era presentar una biografía lineal, sino construir un recorrido que conectara distintas dimensiones de su historia.
 
 
 
+# Ideación
+## Dar forma a la experiencia
+
+### 01. Explorar diferentes puntos de entrada
+
+Con las líneas narrativas definidas, el siguiente paso fue encontrar una manera de introducir al visitante en la historia.
+
+Una de las primeras posibilidades fue comenzar desde la infancia de Tim. Era una forma de acercarse a su historia desde una perspectiva más personal, antes de que el mundo lo conociera como Avicii.
+
+También exploré la posibilidad de comenzar con una experiencia personal de un oyente. Una canción podía funcionar como punto de conexión entre la historia de Tim y las personas que habían encontrado algo propio en su música.
+
+Ambas alternativas ofrecían perspectivas distintas: una acercaba al visitante a la vida de Tim y la otra mostraba el vínculo que su música había construido con quienes la escuchaban.
+
+### 02. Construir un recorrido narrativo
+
+Más que presentar una sucesión de datos biográficos, quería que la experiencia conectara distintas dimensiones de su historia.
+
+La propuesta comenzó a organizarse alrededor de cinco momentos:
+
+- **Conocer a Tim:** introducir a la persona detrás de Avicii.
+- **Más allá del escenario:** acercarse a su proceso creativo y a su relación con la música.
+- **Una canción, una historia personal:** conectar su música con las experiencias de quienes la escuchan.
+- **Un mismo show, muchos recuerdos:** reunir las memorias y experiencias compartidas alrededor de sus presentaciones.
+- **Lo que inspira:** mostrar las expresiones creativas que continúan surgiendo a partir de su legado.
+
+Cada momento debía aportar una perspectiva diferente, pero todos debían sentirse parte de una misma experiencia.
+
+### 03. Elegir los recursos narrativos
+
+La naturaleza de la historia también condicionaba cómo debía contarse.
+
+La fotografía, los registros audiovisuales, la música, los testimonios y las creaciones de la comunidad ofrecían distintas formas de acercarse a Tim y a su legado.
+
+Por eso, la propuesta no se limitó a una narración textual. Comencé a explorar cómo combinar estos recursos con composición visual, tipografía en movimiento y transiciones que acompañaran el ritmo de la historia.
+
+La intención era que el movimiento no fuera solamente decorativo, sino que ayudara a establecer conexiones, dirigir la atención y dar continuidad al recorrido.
+
+### 04. De las ideas a una dirección
+
+A medida que exploraba las posibilidades, la propuesta comenzó a tomar una dirección más concreta.
+
+Quería una experiencia audiovisual y editorial, capaz de combinar momentos de contemplación con escenas de mayor movimiento, sin perder la claridad del recorrido.
+
+La idea inicial de comenzar desde la infancia de Tim evolucionaría posteriormente hacia una introducción contextual y una selección de material documental. Así, el visitante podría reconocer primero quién era Tim Bergling y después acercarse a las distintas dimensiones de su historia.
+
+Esta dirección se convirtió en el punto de partida para comenzar a diseñar y construir TIM.
 
 
 ## # TIM — De un bug de animación a una decisión de arquitectura

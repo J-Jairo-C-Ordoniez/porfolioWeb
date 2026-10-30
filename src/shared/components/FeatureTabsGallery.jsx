@@ -78,16 +78,16 @@ export default function FeatureTabsGallery({
   const sectionBg = isDark ? "bg-primary text-background" : "bg-background text-primary";
   const titleColor = isDark ? "text-background" : "text-primary";
   const cardContainerBg = isDark
-    ? "bg-background/5 border border-background/10"
+    ? "bg-background/5"
     : "bg-primary/5";
   const buttonActive = isDark
-    ? "bg-primary text-background border border-background/20 rounded-3xl p-5 md:p-6 w-full shadow-md"
+    ? "bg-primary text-background rounded-3xl p-5 md:p-6 w-full shadow-md"
     : "bg-background text-primary rounded-3xl p-5 md:p-6 w-full shadow-sm";
   const buttonInactive = isDark
-    ? "bg-background/5 hover:bg-background/10 text-background/80 hover:text-background rounded-full px-5 py-3 max-w-full"
+    ? "bg-primary/80 hover:bg-primary text-background/80 hover:text-background rounded-full px-5 py-3 max-w-full"
     : "bg-background/80 hover:bg-background text-primary/80 hover:text-primary rounded-full px-5 py-3 max-w-full";
   const iconWrapper = isDark
-    ? "w-7 h-7 rounded-full border border-background/60 text-background/80 group-hover:text-background group-hover:border-background shrink-0"
+    ? "w-7 h-7 rounded-full border border-background/80 text-background/80 group-hover:text-background group-hover:border-background shrink-0"
     : "w-7 h-7 rounded-full border border-primary/80 text-primary/80 group-hover:text-primary group-hover:border-primary shrink-0";
   const titleActive = isDark ? "text-background block" : "text-primary block";
   const titleInactive = isDark

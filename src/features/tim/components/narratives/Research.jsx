@@ -14,7 +14,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export default function Listen() {
+export default function Research() {
   const containerRef = useRef(null);
 
   useGSAP(
@@ -96,7 +96,7 @@ export default function Listen() {
 
   return (
     <section
-      id="listen"
+      id="research"
       ref={containerRef}
       className="h-screen overflow-hidden bg-primary text-background"
     >

@@ -7,7 +7,7 @@ export default function ListenIntro() {
         </p>
         <div className="mt-4 overflow-hidden md:mt-6">
           <h2 className="listen-intro-statement text-4xl font-bold tracking-tight text-background will-change-transform md:text-5xl lg:text-7xl">
-            había que entender a su comunidad.
+            había que entender quién era Avicii para su comunidad.
           </h2>
         </div>
       </div>
