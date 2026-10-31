@@ -13,6 +13,8 @@ const columns = [
       ["Investigación", "#research"],
       ["Definición", "#findings"],
       ["Ideación", "#ideation"],
+      ["Decisiones", "#decide"],
+      ["Legado", "#closing"],
     ],
   },
 ];

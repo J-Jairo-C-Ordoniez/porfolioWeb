@@ -7,6 +7,8 @@ import ResearchSpaces from "./narratives/ResearchSpaces";
 import Definition from "./narratives/Definition";
 import Synthesis from "./narratives/Synthesis";
 import Ideation from "./narratives/Ideation";
+import Decide from "./narratives/Decide";
+import Closing from "./narratives/Closing";
 
 export default function Main() {
   return (
@@ -18,6 +20,8 @@ export default function Main() {
       <Definition />
       <Synthesis />
       <Ideation />
+      <Decide />
+      <Closing />
     </main>
   );
 }

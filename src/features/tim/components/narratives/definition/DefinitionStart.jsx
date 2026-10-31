@@ -44,17 +44,14 @@ export default function DefinitionStart() {
   return (
     <article
       ref={containerRef}
-      className="flex min-h-[75vh] w-full flex-col justify-center px-[8vw] py-20"
+      className="flex min-h-screen w-full flex-col justify-center px-[8vw] py-20"
     >
       <div className="max-w-5xl">
-        <p className="def-start-lead will-change-transform mb-6 text-xl font-light tracking-tight text-background/80 opacity-0 md:mb-8 md:text-2xl lg:text-3xl">
-          Al observar cómo su comunidad se relacionaba con Avicii, encontré el punto de partida:
-        </p>
         <h2 className="def-start-title will-change-transform text-4xl font-bold leading-tight tracking-tight text-background opacity-0 md:text-6xl lg:text-7xl">
-          No quería contar solo al artista.
+          Observar a su comunidad me dio el punto de partida.
         </h2>
         <p className="def-start-sub will-change-transform mt-4 text-2xl font-light leading-tight tracking-tight text-background/80 opacity-0 md:mt-6 md:text-4xl lg:text-5xl">
-          Quería acercarme a la persona detrás del nombre.
+          No quería contar solo al artista, sino acercarme a la persona tras el nombre.
         </p>
       </div>
     </article>

@@ -78,7 +78,7 @@ export default function Hero() {
     <section
       ref={containerRef}
       id="tim-hero"
-      className="bg-primary pb-20 pt-25 text-background lg:pt-40"
+      className="bg-primary pb-20 pt-25 text-background lg:pt-60"
     >
       <div className="container mx-auto max-w-7xl px-6 md:px-8 lg:px-12 xl:px-20">
         <div className="mx-auto max-w-5xl text-center">
@@ -113,7 +113,7 @@ export default function Hero() {
           <div className="tim-hero-photo-mask overflow-hidden rounded-2xl bg-background/5 [clip-path:inset(0_5%_100%_5%)] motion-reduce:[clip-path:inset(0_0_0_0)] md:rounded-[2rem]">
             <Image
               className="tim-hero-photo h-auto w-full object-cover motion-reduce:scale-100"
-              src="/tim/aviciiHero.png"
+              src="/tim/TimMain.jpg"
               alt="Tim Bergling (Avicii)"
               width={1672}
               height={941}

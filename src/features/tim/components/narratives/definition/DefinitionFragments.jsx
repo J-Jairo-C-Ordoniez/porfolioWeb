@@ -8,11 +8,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 
 const relations = [
-  "Tim Bergling en el centro.",
-  "Avicii como su identidad artística.",
+  "Tim en el centro.",
+  "Avicii como artista.",
   "El proceso creativo y la música.",
-  "Los recuerdos compartidos en vivo.",
-  "Y una comunidad que mantiene vivo su legado.",
+  "Los recuerdos compartidos.",
+  "Y su comunidad",
 ];
 
 export default function DefinitionFragments() {

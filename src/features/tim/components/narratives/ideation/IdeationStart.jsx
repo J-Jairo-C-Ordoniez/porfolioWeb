@@ -6,31 +6,31 @@ const items = [
   {
     title: "Conocer a Tim",
     description: "Acercarse a la persona detrás de Avicii, más allá del nombre.",
-    img: "/tim/gallery1.png",
+    img: "/tim/galleryAvicii1.png",
     alt: "Tim Bergling",
   },
   {
     title: "Más allá del escenario",
     description: "Explorar su faceta creativa y su relación con la música.",
-    img: "/tim/gallery2.png",
+    img: "/tim/galleryAvicii2.png",
     alt: "Proceso creativo de Avicii",
   },
   {
     title: "Una canción, una historia personal",
     description: "Mostrar cómo una canción puede adquirir un significado propio.",
-    img: "/tim/gallery3.png",
+    img: "/tim/galleryAvicii3.png",
     alt: "Música y experiencia personal",
   },
   {
     title: "Un mismo show, muchos recuerdos",
     description: "Reconocer las experiencias compartidas alrededor de sus presentaciones.",
-    img: "/tim/gallery4.png",
+    img: "/tim/galleryAvicii4.png",
     alt: "Presentaciones en vivo de Avicii",
   },
   {
     title: "Lo que inspira",
     description: "Explorar cómo su música y legado continúan motivando nuevas expresiones.",
-    img: "/tim/gallery5.png",
+    img: "/tim/galleryAvicii5.png",
     alt: "El legado de Avicii",
   },
 ];

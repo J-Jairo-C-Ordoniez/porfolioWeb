@@ -6,25 +6,25 @@ const researchSpaces = [
   {
     title: "Reddit",
     description: "Recuerdos de actuaciones, proyectos de fans y homenajes dedicados a su música.",
-    img: "/tim/gallery1.png",
+    img: "/tim/galleryReddit.png",
     alt: "Comunidad de Avicii en Reddit",
   },
   {
     title: "YouTube",
     description: "Testimonios sobre el impacto personal de sus canciones y su proceso creativo.",
-    img: "/tim/gallery2.png",
+    img: "/tim/galleryYoutube.png",
     alt: "Comentarios e historias en YouTube",
   },
   {
     title: "Discord",
     description: "Expresiones espontáneas, fanarts y recuerdos afectivos dentro de la conversación diaria.",
-    img: "/tim/gallery3.png",
+    img: "/tim/galleryDiscord.png",
     alt: "Comunidad de Avicii en Discord",
   },
   {
     title: "Web oficial",
     description: "Fotografías, grabaciones de actuaciones y registros visuales de su trayectoria creativa.",
-    img: "/tim/gallery4.png",
+    img: "/tim/galleryWeb.png",
     alt: "Material de archivo en la web oficial de Avicii",
   },
 ];
