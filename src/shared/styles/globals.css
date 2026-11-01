@@ -42,3 +42,9 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+.tim-theme ::selection,
+.tim-theme *::selection {
+  background-color: #EFEDE3 !important;
+  color: #11120D !important;
+}

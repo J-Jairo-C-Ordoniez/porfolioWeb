@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -9,17 +10,45 @@ export default function BugHero() {
 
   useGSAP(
     () => {
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
       if (reducedMotion) {
-        gsap.set(".bug-hero-el", { autoAlpha: 1, y: 0 });
-        return;
+        gsap.set(".bug-hero-title, .bug-hero-subtitle", { autoAlpha: 1, y: 0 });
+        gsap.set(".bug-hero-photo-mask", { clipPath: "inset(0 0% 0% 0%)" });
+        gsap.set(".bug-hero-photo", { scale: 1 });
+        return undefined;
       }
 
-      gsap.fromTo(
-        ".bug-hero-el",
-        { autoAlpha: 0, y: 35 },
-        { autoAlpha: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out" }
-      );
+      const timeline = gsap.timeline();
+
+      timeline
+        .fromTo(
+          ".bug-hero-title",
+          { autoAlpha: 0, y: 64, scale: 0.96 },
+          { autoAlpha: 1, y: 0, scale: 1, duration: 1.1, ease: "power4.out" }
+        )
+        .fromTo(
+          ".bug-hero-subtitle",
+          { autoAlpha: 0, y: 20 },
+          { autoAlpha: 1, y: 0, duration: 0.35, ease: "power2.out" },
+          "-=0.2"
+        )
+        .fromTo(
+          ".bug-hero-photo-mask",
+          { clipPath: "inset(0 5% 100% 5%)" },
+          { clipPath: "inset(0 0% 0% 0%)", duration: 1.2, ease: "power4.inOut" },
+          "-=0.05"
+        )
+        .fromTo(
+          ".bug-hero-photo",
+          { scale: 1.1 },
+          { scale: 1, duration: 1.35, ease: "power3.out" },
+          "<"
+        );
+
+      return undefined;
     },
     { scope: containerRef }
   );
@@ -27,35 +56,39 @@ export default function BugHero() {
   return (
     <header
       ref={containerRef}
-      className="flex min-h-[75vh] w-full flex-col justify-center px-[8vw] pt-32 pb-16 md:pt-40 md:pb-24"
+      className="bg-background pb-20 pt-25 text-primary lg:pt-50"
     >
-      <div className="max-w-5xl">
-        {/* Metadatos y etiquetas */}
-        <div className="bug-hero-el will-change-transform mb-6 flex flex-wrap items-center gap-3">
-          <span className="rounded-full border border-background/20 bg-background/5 px-3.5 py-1 text-xs uppercase tracking-wider text-background/80 font-medium">
-            Caso de estudio
-          </span>
-          <span className="text-xs uppercase tracking-wider text-background/50">
-            TIM · Depuración & Accesibilidad
-          </span>
+      <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12 xl:px-20">
+        <div className="mx-auto max-w-6xl text-center">
+          <h1 className="bug-hero-title mb-6 text-4xl font-bold tracking-tight text-primary opacity-0 will-change-transform md:text-5xl lg:text-7xl">
+            Cuando la animación falla.
+          </h1>
+
+          <div className="mx-auto mt-6 max-w-5xl md:mt-5">
+            <p className="block text-2xl font-light leading-relaxed tracking-tight text-primary/80 md:text-4xl lg:text-5xl">
+              <strong className="bug-hero-subtitle mr-[0.3em] inline-block font-bold text-primary opacity-0 will-change-transform">
+                TIM.
+              </strong>
+              <span className="bug-hero-subtitle inline opacity-0 will-change-transform">
+                Depuración, accesibilidad y diseño de experiencias narrativas en la web.
+              </span>
+            </p>
+          </div>
         </div>
 
-        {/* Título principal con estilo editorial */}
-        <h1 className="bug-hero-el will-change-transform text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-background leading-tight">
-          De un bug de animación a una decisión de arquitectura
-        </h1>
-
-        {/* Subtítulo / Tagline */}
-        <p className="bug-hero-el will-change-transform mt-6 text-xl sm:text-2xl md:text-3xl font-light tracking-tight text-background/80 leading-relaxed max-w-4xl">
-          Depuración, accesibilidad y diseño de experiencias narrativas en la web.
-        </p>
-
-        {/* Resumen ejecutivo de apertura */}
-        <div className="bug-hero-el will-change-transform mt-10 border-l border-accent/60 pl-6 md:pl-8">
-          <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed text-background/70 max-w-3xl">
-            Una experiencia narrativa basada en scroll funcionaba correctamente durante el desarrollo, pero algunos usuarios comenzaron a reportar un problema visual: varios bloques de texto aparecían superpuestos. La investigación permitió reproducir el error, identificar su causa y plantear una arquitectura en la que la integridad del contenido no dependa de las animaciones.
-          </p>
-        </div>
+        <figure className="mt-10 md:mt-14">
+          <div className="bug-hero-photo-mask overflow-hidden rounded-2xl bg-primary/5 [clip-path:inset(0_5%_100%_5%)] motion-reduce:[clip-path:inset(0_0_0_0)] md:rounded-[2rem]">
+            <Image
+              className="bug-hero-photo h-auto w-full object-cover motion-reduce:scale-100"
+              src="/tim/bugPreferences.png"
+              alt="Caso de estudio de animación y arquitectura en TIM"
+              width={1254}
+              height={836}
+              sizes="(max-width: 768px) 100vw, (max-width: 1440px) 90vw, 1408px"
+              priority
+            />
+          </div>
+        </figure>
       </div>
     </header>
   );
