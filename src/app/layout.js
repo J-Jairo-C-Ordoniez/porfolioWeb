@@ -2,6 +2,7 @@ import { Poppins, Inter } from "next/font/google";
 import "@/shared/styles/globals.css";
 import SmoothScrolling from "@/shared/components/SmoothScrolling";
 import GlobalMenu from "@/shared/components/GlobalMenu";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -60,6 +61,7 @@ export default function RootLayout({ children }) {
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
+        <Analytics />
       </body>
     </html>
   );
