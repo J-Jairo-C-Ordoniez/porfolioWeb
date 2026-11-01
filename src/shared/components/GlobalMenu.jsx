@@ -18,10 +18,10 @@ const HISTORY_LINKS = [
 
 const PROJECT_LINKS = [
   { id: "01", label: "KODA", href: "/projects/koda" },
-  { id: "02", label: "DreamLabs", href: "/projects/dreamlabs" },
-  { id: "03", label: "BloodyYue", href: "/projects/bloodyyue" },
-  { id: "04", label: "Focusfy", href: "/projects/focusfy" },
-  { id: "05", label: "TIM", href: "/projects/tim" },
+  // { id: "02", label: "DreamLabs", href: "/projects/dreamlabs" },
+  // { id: "03", label: "BloodyYue", href: "/projects/bloodyyue" },
+  // { id: "04", label: "Focusfy", href: "/projects/focusfy" },
+  { id: "02", label: "TIM", href: "/projects/tim" },
 ];
 
 export default function GlobalMenu() {
